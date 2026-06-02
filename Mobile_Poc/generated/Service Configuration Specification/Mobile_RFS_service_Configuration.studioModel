@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:inventory="http://xmlns.oracle.com/communications/studio/model/inventory" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="inventory:ServiceConfigurationSpecification" id="sc=Mobile_RFS_service_Configuration" type="sc" typeName="Service Configuration Specification" name="Mobile_RFS_service_Configuration" resource="\Mobile_Poc\model\Mobile_RFS_service_Configuration.configuration">
+    <note lang="default"/>
+    <project>
+      <relation ref="ivprj=Mobile_Poc" type="Inventory Project" name="Dependency">
+        <target name="Mobile_Poc" typeName="Inventory Project"/>
+      </relation>
+    </project>
+    <dataElements>
+      <element id="sc=Mobile_RFS_service_Configuration+dataElement=odwWF9muTKyxb8SmtdIsHg" type="dataElement" typeName="Data Element" kind="Element" name="TN" path="/Mobile_RFS_service_Configuration/TN">
+        <displayName lang="default">TN</displayName>
+        <minOccurs inherited="false">0</minOccurs>
+        <maxOccurs inherited="false">1</maxOccurs>
+        <defaultValue inherited="false"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">true</internal>
+        <sensitive inherited="false">false</sensitive>
+        <dataElements/>
+        <specificationOptions>
+          <specificationOptionList>
+            <element>
+              <specification>
+                <relation ref="tns=IND_TelephoneNumber" type="Telephone Number Specification" name="Spec Option" kind="Entity">
+                  <target name="IND_TelephoneNumber" typeName="Telephone Number Specification"/>
+                </relation>
+              </specification>
+              <sequence>1</sequence>
+            </element>
+          </specificationOptionList>
+          <itemOptionType>Assignment</itemOptionType>
+        </specificationOptions>
+        <primitiveType>structure</primitiveType>
+      </element>
+      <element id="sc=Mobile_RFS_service_Configuration+dataElement=OktXtq7cTSCDU-1PkMn4bg" type="dataElement" typeName="Data Element" kind="Element" name="SIM" path="/Mobile_RFS_service_Configuration/SIM">
+        <displayName lang="default">SIM</displayName>
+        <minOccurs inherited="false">0</minOccurs>
+        <maxOccurs inherited="false">1</maxOccurs>
+        <defaultValue inherited="false"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">true</internal>
+        <sensitive inherited="false">false</sensitive>
+        <dataElements/>
+        <specificationOptions>
+          <specificationOptionList>
+            <element>
+              <specification>
+                <relation ref="lds=SIM" type="Logical Device Specification" name="Spec Option" kind="Entity">
+                  <target name="SIM" typeName="Logical Device Specification"/>
+                </relation>
+              </specification>
+              <sequence>1</sequence>
+            </element>
+          </specificationOptionList>
+          <itemOptionType>Assignment</itemOptionType>
+        </specificationOptions>
+        <primitiveType>structure</primitiveType>
+      </element>
+    </dataElements>
+    <relatedSpecificationList/>
+  </entity>
+</model:Model>

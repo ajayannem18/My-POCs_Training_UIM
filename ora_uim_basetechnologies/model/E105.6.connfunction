@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  $Header: SCEUIM/src/plugins/com.mslv.studio.inventory.core/src/com/mslv/studio/inventory/entities/templates/connfunction.xml /cgbusce_inv/2 2013/07/30 14:42:22 jijiwu Exp $ -->
+<!-- 
+ Copyright (c) 2012, 2013, Oracle and/or its affiliates. All rights reserved.
+
+   NAME
+     connfunction.xml - <one-line expansion of the name>
+
+   DESCRIPTION
+     <short description of component this file declares/defines>
+
+   NOTES
+     <other useful comments, qualifications, etc.>
+
+   MODIFIED   (MM/DD/YY)
+   rswamir     06/12/12 - Creation
+
+-->
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:data="http://www.oracle.com/communications/studio/core/model/common/data" xmlns:inv="http://www.mslv.com/studio/inventory/model/specification" xmlns="http://www.mslv.com/studio/inventory/model/specification" xsi:type="inv:ConnectivityFunctionType" name="E105.6">
+  <com:saveVersion>2</com:saveVersion>
+  <com:id>OE+OjizgSIuD9e20gqlpmQ</com:id>
+  <data:dataElementNode virtual="true">
+    <com:id>OE+OjizgSIuD9e20gqlpmQ</com:id>
+    <com:elementType>oracle.communications.studio.model.data.StudioModelDataElement</com:elementType>
+    <data:name>E105.6</data:name>
+    <data:displayName lang="[default]">E105.6</data:displayName>
+    <data:primitiveType>none</data:primitiveType>
+  </data:dataElementNode>
+  <data:dataElementDetails xsi:type="data:dataElementCommonDetail">
+    <com:id>-WjTKU9RSAKzKRYiunrtRQ</com:id>
+    <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+    <data:dataElementId>OE+OjizgSIuD9e20gqlpmQ</data:dataElementId>
+    <data:defaultValue></data:defaultValue>
+    <data:key></data:key>
+    <data:deprecated>false</data:deprecated>
+    <data:sensitive>false</data:sensitive>
+    <data:minLength>0</data:minLength>
+    <data:maxLength>40</data:maxLength>
+    <data:minMultiplicity>0</data:minMultiplicity>
+    <data:maxMultiplicity>-1</data:maxMultiplicity>
+  </data:dataElementDetails>
+  <inv:description>ME105.6</inv:description>
+  <inv:name>E105.6</inv:name>
+  <inv:category>FACILITY</inv:category>
+</com:modelEntity>

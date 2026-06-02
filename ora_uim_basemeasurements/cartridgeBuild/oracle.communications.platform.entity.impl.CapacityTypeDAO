@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><extent>
+  <object class="oracle.communications.platform.entity.impl.CapacityTypeDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/ora_uim_basemeasurements/model/Bandwidth.captype#7.8.0.0.0_b0" oid="oracle.communications.platform.entity.impl.CapacityTypeDAO-0" version="0">
+    <field name="id">"Bandwidth"</field>
+    <field name="name">"Bandwidth"</field>
+    <field name="description">"The form of capacity that is typically used to identify the amount of data transferred over a transmission medium, port or interface in a fixed amount of time."</field>
+    <field name="typeOfMeasurement">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.TypeOfMeasurementDAO-0</field>
+    <field mode="skip" name="capacityProvidedSpecification"/>
+    <field mode="skip" name="capacityRequiredSpecification"/>
+  </object>
+</extent>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<cplData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ilog/cpl/schema/data.xsd">
+  <addObject id="EMPTYSLOT-71c59fee:19e5e76c503:-7fa3" container="true">
+    <class>
+      MSLVSlot
+    </class>
+    <parent>
+      SHELF-71c59fee:19e5e76c503:-7fb6
+    </parent>
+    <children/>
+    <attribute name="name">
+      Cisco_Nexus_9372PX_E_EH
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        0
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="type">
+      EmptySlot
+    </attribute>
+    <attribute name="slotNumber">
+      1
+    </attribute>
+  </addObject>
+  <addObject id="EMPTYSLOT-71c59fee:19e5e76c503:-7fa2" container="true">
+    <class>
+      MSLVSlot
+    </class>
+    <parent>
+      SHELF-71c59fee:19e5e76c503:-7fb6
+    </parent>
+    <children/>
+    <attribute name="name">
+      Cisco_Nexus_9372PX_E_EH2
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        0
+      </xIndex>
+      <yIndex>
+        1
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="type">
+      EmptySlot
+    </attribute>
+    <attribute name="slotNumber">
+      2
+    </attribute>
+  </addObject>
+  <addObject id="SHELF-71c59fee:19e5e76c503:-7fb6" container="true">
+    <class>
+      ilog.tgo.model.IltShelf
+    </class>
+    <children>
+      <child>
+        EMPTYSLOT-71c59fee:19e5e76c503:-7fa2
+      </child>
+      <child>
+        EMPTYSLOT-71c59fee:19e5e76c503:-7fa3
+      </child>
+    </children>
+    <attribute name="name">
+      Cisco_Nexus_9372PX_E
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.IlpPoint">
+      <x>
+        149.0
+      </x>
+      <y>
+        128.0
+      </y>
+    </attribute>
+    <attribute name="type">
+      Standard
+    </attribute>
+    <attribute name="slotSizes" javaClass="ilog.tgo.model.internal.IltSlotSizes">
+      <height>
+        <value>
+          247
+        </value>
+        <value>
+          247
+        </value>
+      </height>
+      <width>
+        <value>
+          156
+        </value>
+      </width>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="xslotindex">
+      0
+    </attribute>
+  </addObject>
+</cplData>

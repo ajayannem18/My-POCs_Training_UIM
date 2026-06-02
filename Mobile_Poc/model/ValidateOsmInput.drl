@@ -1,0 +1,19 @@
+package oracle.communications.inventory.rules;
+import com.mobileService.ValidateOSMXml;
+import oracle.communications.inventory.api.framework.logging.Log;
+import oracle.communications.inventory.extensibility.extension.util.ExtensionPointContext;
+
+global Log log;
+ 
+ rule "Validate_XML_Input"
+   salience 0
+ 
+   when 
+   context:ExtensionPointContext();
+   
+   then 
+     ValidateOSMXml validate=new ValidateOSMXml();
+     System.out.println("Executing Validate xml method");
+     validate.validateXML(context);
+   
+   end    

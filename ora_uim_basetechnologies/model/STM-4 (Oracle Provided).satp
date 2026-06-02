@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:data="http://www.oracle.com/communications/studio/core/model/common/data" xmlns:inv="http://www.mslv.com/studio/inventory/model/specification" xmlns="http://www.mslv.com/studio/inventory/model/specification" xsi:type="inv:SignalTerminationPointSpecificationType" name="STM-4 (Oracle Provided)">
+  <com:displayName lang="[default]">STM-4</com:displayName>
+  <com:saveVersion>3</com:saveVersion>
+  <com:baseEntityRef>
+    <com:entity>SignalTerminationPoint</com:entity>
+    <com:entityType>inventoryEntity</com:entityType>
+    <com:relationship></com:relationship>
+  </com:baseEntityRef>
+  <com:id>dTe-wqH7Tz+Nh9cqOvU6nA</com:id>
+  <data:dataElementNode virtual="true">
+    <com:id>dTe-wqH7Tz+Nh9cqOvU6nA</com:id>
+    <com:elementType>oracle.communications.studio.model.data.StudioModelDataElement</com:elementType>
+    <data:name>STM-4 (Oracle Provided)</data:name>
+    <data:displayName lang="[default]">STM-4 (Oracle Provided)</data:displayName>
+    <data:primitiveType>none</data:primitiveType>
+  </data:dataElementNode>
+  <data:dataElementDetails xsi:type="data:dataElementCommonDetail">
+    <com:id>UAXtkdHOQS+-IIptVKf8tw</com:id>
+    <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+    <data:dataElementId>dTe-wqH7Tz+Nh9cqOvU6nA</data:dataElementId>
+    <data:defaultValue></data:defaultValue>
+    <data:key></data:key>
+    <data:deprecated>false</data:deprecated>
+    <data:sensitive>false</data:sensitive>
+    <data:minLength>0</data:minLength>
+    <data:maxLength>40</data:maxLength>
+    <data:minMultiplicity>0</data:minMultiplicity>
+    <data:maxMultiplicity>-1</data:maxMultiplicity>
+  </data:dataElementDetails>
+  <inv:relatedSpecification>
+    <com:entity>AUG-4</com:entity>
+    <com:entityType>processingsignal</com:entityType>
+    <com:relationship>MULTIPLEXES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>MULTIPLEXES</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:systemProvided>true</inv:systemProvided>
+  <inv:rateCode>
+    <com:entity>STM4</com:entity>
+    <com:entityType>ratecode</com:entityType>
+    <com:relationship></com:relationship>
+  </inv:rateCode>
+  <inv:transmissionSignalType>OPTICAL</inv:transmissionSignalType>
+  <inv:terminationPointSignalType>SYNCHRONOUS_TRANSPORT_MODULE</inv:terminationPointSignalType>
+  <inv:validForFacility>true</inv:validForFacility>
+</com:modelEntity>

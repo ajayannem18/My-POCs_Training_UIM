@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:inventory="http://xmlns.oracle.com/communications/studio/model/inventory" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="inventory:IPAddressResourceExtension" id="ipre=IPv6AddressBase" type="ipre" typeName="IP Address Resource Extension" name="IPv6AddressBase" resource="\ora_uim_basespecifications\model\IPv6AddressBase.ipresource">
+    <note lang="default"/>
+    <extends>
+      <relation ref="ie=IPv6Address" type="Inventory Entity" name="Dependency" kind="Entity">
+        <target name="IPv6Address" typeName="Inventory Entity"/>
+      </relation>
+    </extends>
+    <project>
+      <relation ref="ivprj=ora_uim_basespecifications" type="Inventory Project" name="Dependency">
+        <target name="ora_uim_basespecifications" typeName="Inventory Project"/>
+      </relation>
+    </project>
+    <dataElements>
+      <element id="ipre=IPv6AddressBase+dataElement=--+SjCB---+T--+ThYdvfQ~E:inventoryEntity--IPv6Address~address" type="dataElement" typeName="Data Element" kind="Element" name="address" path="/address" inherited="true">
+        <displayName lang="default">Address</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">45</maxLength>
+        <base>
+          <relation ref="ie=IPv6Address+dataElement=E:inventoryEntity--IPv6Address~address" type="Data Element" name="Type" kind="Element">
+            <target name="address" typeName="Data Element"/>
+            <inEntity name="IPv6Address" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="ipre=IPv6AddressBase+dataElement=--+SjCB---+T--+ThYdvfQ~E:inventoryEntity--IPv6Address~description" type="dataElement" typeName="Data Element" kind="Element" name="description" path="/description" inherited="true">
+        <displayName lang="default">description</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">255</maxLength>
+        <base>
+          <relation ref="ie=IPv6Address+dataElement=E:inventoryEntity--IPv6Address~description" type="Data Element" name="Type" kind="Element">
+            <target name="description" typeName="Data Element"/>
+            <inEntity name="IPv6Address" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <tag>
+          <name>Characteristic</name>
+          <description></description>
+        </tag>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="ipre=IPv6AddressBase+dataElement=--+SjCB---+T--+ThYdvfQ~ipv6AddressType" type="dataElement" typeName="Data Element" kind="Element" name="ipv6AddressType" path="/ipv6AddressType" inherited="true">
+        <displayName lang="default">IPv6 Address Type</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">50</maxLength>
+        <base>
+          <relation ref="ie=IPv6Address+dataElement=ipv6AddressType" type="Data Element" name="Type" kind="Element">
+            <target name="ipv6AddressType" typeName="Data Element"/>
+            <inEntity name="IPv6Address" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="ipre=IPv6AddressBase+dataElement=--+SjCB---+T--+ThYdvfQ~E:inventoryEntity--IPv6Address~macAddress" type="dataElement" typeName="Data Element" kind="Element" name="macAddress" path="/macAddress" inherited="true">
+        <displayName lang="default">Mac Address</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">17</maxLength>
+        <base>
+          <relation ref="ie=IPv6Address+dataElement=E:inventoryEntity--IPv6Address~macAddress" type="Data Element" name="Type" kind="Element">
+            <target name="macAddress" typeName="Data Element"/>
+            <inEntity name="IPv6Address" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="ipre=IPv6AddressBase+dataElement=--+SjCB---+T--+ThYdvfQ~E:inventoryEntity--IPv6Address~macAddressType" type="dataElement" typeName="Data Element" kind="Element" name="macAddressType" path="/macAddressType" inherited="true">
+        <displayName lang="default">Mac Address Type</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">50</maxLength>
+        <base>
+          <relation ref="ie=IPv6Address+dataElement=E:inventoryEntity--IPv6Address~macAddressType" type="Data Element" name="Type" kind="Element">
+            <target name="macAddressType" typeName="Data Element"/>
+            <inEntity name="IPv6Address" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="ipre=IPv6AddressBase+dataElement=--+SjCB---+T--+ThYdvfQ~E:inventoryEntity--IPv6Address~name" type="dataElement" typeName="Data Element" kind="Element" name="name" path="/name" inherited="true">
+        <displayName lang="default">name</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">50</maxLength>
+        <base>
+          <relation ref="ie=IPv6Address+dataElement=E:inventoryEntity--IPv6Address~name" type="Data Element" name="Type" kind="Element">
+            <target name="name" typeName="Data Element"/>
+            <inEntity name="IPv6Address" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <tag>
+          <name>Characteristic</name>
+          <description></description>
+        </tag>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="ipre=IPv6AddressBase+dataElement=--+SjCB---+T--+ThYdvfQ~E:inventoryEntity--IPv6Address~numericAddress" type="dataElement" typeName="Data Element" kind="Element" name="numericAddress" path="/numericAddress" inherited="true">
+        <displayName lang="default">Numeric Address</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ie=IPv6Address+dataElement=E:inventoryEntity--IPv6Address~numericAddress" type="Data Element" name="Type" kind="Element">
+            <target name="numericAddress" typeName="Data Element"/>
+            <inEntity name="IPv6Address" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>integer</primitiveType>
+      </element>
+    </dataElements>
+    <relatedSpecificationList/>
+  </entity>
+</model:Model>

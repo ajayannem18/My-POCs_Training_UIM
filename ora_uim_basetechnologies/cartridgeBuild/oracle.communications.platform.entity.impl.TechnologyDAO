@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><extent>
+  <object class="oracle.communications.platform.entity.impl.TechnologyDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/ora_uim_basetechnologies/model/MPLS.technology#7.8.0.0.0_b0" oid="oracle.communications.platform.entity.impl.TechnologyDAO-0" version="0">
+    <field name="name">"MPLS"</field>
+    <field name="description">"MPLS"</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.TechnologyDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/ora_uim_basetechnologies/model/Ethernet.technology#7.8.0.0.0_b0" oid="oracle.communications.platform.entity.impl.TechnologyDAO-1" version="0">
+    <field name="name">"Ethernet"</field>
+    <field name="description">"Ethernet"</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.TechnologyDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/ora_uim_basetechnologies/model/ATM.technology#7.8.0.0.0_b0" oid="oracle.communications.platform.entity.impl.TechnologyDAO-2" version="0">
+    <field name="name">"ATM"</field>
+    <field name="description">"ATM"</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.TechnologyDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/ora_uim_basetechnologies/model/Frame Relay.technology#7.8.0.0.0_b0" oid="oracle.communications.platform.entity.impl.TechnologyDAO-3" version="0">
+    <field name="name">"Frame Relay"</field>
+    <field name="description">"Frame Relay"</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.TechnologyDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/ora_uim_basetechnologies/model/DSL.technology#7.8.0.0.0_b0" oid="oracle.communications.platform.entity.impl.TechnologyDAO-4" version="0">
+    <field name="name">"DSL"</field>
+    <field name="description">"DSL"</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.TechnologyDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/ora_uim_basetechnologies/model/E-Carrier.technology#7.8.0.0.0_b0" oid="oracle.communications.platform.entity.impl.TechnologyDAO-5" version="0">
+    <field name="name">"E-Carrier"</field>
+    <field name="description">"E-Carrier"</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.TechnologyDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/ora_uim_basetechnologies/model/SDH.technology#7.8.0.0.0_b0" oid="oracle.communications.platform.entity.impl.TechnologyDAO-6" version="0">
+    <field name="name">"SDH"</field>
+    <field name="description">"SDH"</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.TechnologyDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/ora_uim_basetechnologies/model/T-Carrier.technology#7.8.0.0.0_b0" oid="oracle.communications.platform.entity.impl.TechnologyDAO-7" version="0">
+    <field name="name">"T-Carrier"</field>
+    <field name="description">"T-Carrier"</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.TechnologyDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/ora_uim_basetechnologies/model/SONET.technology#7.8.0.0.0_b0" oid="oracle.communications.platform.entity.impl.TechnologyDAO-8" version="0">
+    <field name="name">"SONET"</field>
+    <field name="description">"SONET"</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.TechnologyDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/ora_uim_basetechnologies/model/OTN.technology#7.8.0.0.0_b0" oid="oracle.communications.platform.entity.impl.TechnologyDAO-9" version="0">
+    <field name="name">"OTN"</field>
+    <field name="description">"OTN"</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.TechnologyDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/ora_uim_basetechnologies/model/J-Carrier.technology#7.8.0.0.0_b0" oid="oracle.communications.platform.entity.impl.TechnologyDAO-10" version="0">
+    <field name="name">"J-Carrier"</field>
+    <field name="description">"J-Carrier"</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.TechnologyDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/ora_uim_basetechnologies/model/WDM.technology#7.8.0.0.0_b0" oid="oracle.communications.platform.entity.impl.TechnologyDAO-11" version="0">
+    <field name="name">"WDM"</field>
+    <field name="description">"WDM"</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.TechnologyDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/ora_uim_basetechnologies/model/Undefined.technology#7.8.0.0.0_b0" oid="oracle.communications.platform.entity.impl.TechnologyDAO-12" version="0">
+    <field name="name">"Undefined"</field>
+    <field name="description">"Undefined"</field>
+  </object>
+</extent>

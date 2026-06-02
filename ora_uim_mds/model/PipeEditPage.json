@@ -1,0 +1,116 @@
+{
+    "attributes": {
+        "resourceSpecification": {
+            "isVisible": true,
+            "isRequired": true,
+            "displayName": "Specification",
+            "min": 0,
+            "max": 255
+        },
+        "gapPipe": {
+            "isVisible": true,
+            "isRequired": false,
+            "displayName": "gappipe",
+            "min": 0,
+            "max": 255
+        },
+        "id": {
+            "isVisible": true,
+            "isRequired": true,
+            "displayName": "id",
+            "min": 0,
+            "max": 255
+        },
+        "lifecycleState": {
+            "isVisible": true,
+            "isRequired": false,
+            "displayName": "Inventory Status",
+            "min": 0,
+            "max": 255
+        },
+        "name": {
+            "isVisible": true,
+            "isRequired": true,
+            "displayName": "name",
+            "min": 0,
+            "max": 255
+        },
+        "lifecycleSubState": {
+            "isVisible": true,
+            "isRequired": false,
+            "displayName": "Assignment Status",
+            "min": 0,
+            "max": 255
+        },
+        "description": {
+            "isVisible": true,
+            "isRequired": false,
+            "displayName": "description",
+            "min": 0,
+            "max": 255
+        },
+        "isVersioned": {
+            "isVisible": true,
+            "isRequired": false,
+            "displayName": "versioned",
+            "min": 0,
+            "max": 255
+        },
+        "allowSecondaryEnablement": {
+            "isVisible": true,
+            "isRequired": false,
+            "displayName": "ase",
+            "min": 0,
+            "max": 255
+        },
+        "medium": {
+            "isVisible": true,
+            "isRequired": false,
+            "displayName": "medium",
+            "min": 0,
+            "max": 255
+        },
+        "transmissionSignalType": {
+            "isVisible": true,
+            "isRequired": false,
+            "displayName": "Transmission Signal Type",
+            "min": 0,
+            "max": 255
+        },
+        "gridType": {
+            "isVisible": false,
+            "isRequired": false,
+            "displayName": "Grid Type",
+            "min": 0,
+            "max": 255
+        },
+        "lastModifiedDate": {
+            "isVisible": false,
+            "isRequired": false,
+            "displayName": "Last Modified Date",
+            "min": 0,
+            "max": 40
+        },
+        "createdUser": {
+            "isVisible": false,
+            "isRequired": false,
+            "displayName": "Created User",
+            "min": 0,
+            "max": 255
+        },
+        "startOperatingDate": {
+            "isVisible": false,
+            "isRequired": false,
+            "displayName": "Created Date",
+            "min": 0,
+            "max": 40
+        },
+        "lastModifiedUser": {
+            "isVisible": false,
+            "isRequired": false,
+            "displayName": "Last Modified User",
+            "min": 0,
+            "max": 255
+        }
+    }
+}

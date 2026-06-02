@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: Flow_Identifier_Project
+Bundle-Name: Flow_Identifier_Project
+Bundle-Version: 1.0.0.0.0
+Bundle-BuildTime: 2026-05-26 12:23:44
+Bundle-BuildNumber: 14
+Bundle-Category: Inventory
+Bundle-Vendor: InventoryCartridge
+Bundle-RequiredExecutionEnvironment: Oracle-Communications/Inventory-7.8.0,
+ JavaSE-1.8
+Bundle-RequiredTargetVersion: 7.8.0
+Require-Bundle: ora_uim_basetechnologies;bundle-version="7.8.0.0.0";bundle-category=Inventory;dependency-type=runtime

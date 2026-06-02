@@ -1,0 +1,286 @@
+<?xml version="1.0"?>
+<!--
+ Copyright (c) 2011, 2014, Oracle and/or its affiliates. All rights reserved.
+    Oracle Corporation and/or its affiliates. Other names may be trademarks of their respective owners. 
+
+    This sample file, which has been provided by Oracle Corporation as part of an Oracle(r) product for use
+    ONLY by licensed users of the product, includes CONFIDENTIAL and PROPRIETARY information of Oracle
+    Corporation.
+
+    This material is the confidential property of Oracle Corporation or its licensors and may be used,
+    reproduced, stored, or transmitted only in accordance with a valid Oracle license or sublicense
+    agreement.
+
+    USE OF THIS SOFTWARE IS GOVERNED BY THE TERMS AND CONDITIONS OF THE LICENSE
+    AGREEMENT AND LIMITED WARRANTY FURNISHED WITH THE PRODUCT.
+
+    IN PARTICULAR, YOU WILL INDEMNIFY AND HOLD ORACLE CORPORATION, ITS RELATED COMPANIES AND ITS SUPPLIERS,
+    HARMLESS FROM AND AGAINST ANY CLAIMS OR LIABILITIES ARISING OUT OF THE USE, REPRODUCTION, OR DISTRIBUTION
+    OF YOUR PROGRAMS, INCLUDING ANY CLAIMS OR LIABILITIES ARISING OUT OF OR RESULTING FROM THE USE,
+    MODIFICATION, OR DISTRIBUTION OF PROGRAMS OR FILES CREATED FROM, BASED ON, AND/OR DERIVED FROM THIS
+    SAMPLE SOURCE CODE FILE.
+	
+	AUTHOR : SHRAVAN KUMAR BUKKA
+-->
+<xs:schema 
+    targetNamespace="http://xmlns.oracle.com/communications/inventory/propertylocation"
+	xmlns:propertylocation="http://xmlns.oracle.com/communications/inventory/propertylocation" 
+    xmlns:invnum="http://xmlns.oracle.com/communications/inventory/number" 
+    xmlns:invprop="http://xmlns.oracle.com/communications/inventory/property" 
+    xmlns:invspec="http://xmlns.oracle.com/communications/inventory/specification" 
+    xmlns:invent="http://xmlns.oracle.com/communications/inventory/entity" 
+	xmlns:invplace="http://xmlns.oracle.com/communications/inventory/place"
+    xmlns="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified">
+	
+	 <!--  =================== Imports Start ==================== -->
+  <!-- Local Imports -->
+  <xs:import namespace="http://xmlns.oracle.com/communications/inventory/entity" schemaLocation="Entity.xsd"/>
+  <xs:import namespace="http://xmlns.oracle.com/communications/inventory/property" schemaLocation="Property.xsd"/>
+  <xs:import namespace="http://xmlns.oracle.com/communications/inventory/place" schemaLocation="Place.xsd"/>
+  
+   
+  <xs:complexType name="PropertyLocationType">
+	<xs:complexContent>
+		<xs:extension base="invplace:GeographicLocationType">
+			<xs:sequence>
+				<xs:sequence>
+					<xs:element name="propertyLocationIdentifier" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>The Property Identifier is the unique internal identifier for a Property Location. This property is derived from the Primary Property Address of the Property Location. It is formatted as a concatenated property address components delimited by a space.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="networkLocationCode">
+						<xs:annotation>
+							<xs:documentation>An alphanumeric code that identifies the property and declares that Property Location also serves as a 'Network Location' for the service provider's business and network infrastructure. It can be alphanumeric and all in UPPER case.</xs:documentation>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="50"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="isUserNamed" type="xs:boolean">
+						<xs:annotation>
+							<xs:documentation>Indicates that the name of the Property Location has been set by a UX or SOA user and should be respected until it is removed or empties by the UX or SOA user.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="isNetworkLocationNamed" type="xs:boolean">
+						<xs:annotation>
+							<xs:documentation>Indicates that the name of the Property Location has been set to the Network Location identity and should be respected as long as the Property Location is serving as a Network Location.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="areGeocoordinatesLocked" type="xs:boolean">
+						<xs:annotation>
+							<xs:documentation>Indicates that the geographic coordinate information for the Property Location is locked and should be respected regardless of Geocoding results.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="hasNonValidatedAddress" type="xs:boolean" default="true" >
+						<xs:annotation>
+							<xs:documentation>Indicates that at least one of the Property addresses is not 'Validated' by a address validation subsystem (such as GIS/eLocation)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="hasNonAcceptedAddress" type="xs:boolean" default="true" >
+						<xs:annotation>
+							<xs:documentation>Indicates that at least one non-validated property address has not been 'accepted' by the business.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="isServiceLocation" type="xs:boolean">
+							<xs:annotation>
+								<xs:documentation>Indicates that the Property Location serves as a Service Location. A Service Location identifies the geographic location where services are provided to a customer.  A Property Location can serve as both a Network Location and a Service Location.</xs:documentation>
+							</xs:annotation>
+					</xs:element>
+					<xs:element name="isNetworkLocation" type="xs:boolean">
+							<xs:annotation>
+								<xs:documentation>Indicates that the Property Location serves as a Network Location. A Service Network identifies the geographic location where services are provided to a customer.  A Property Location can serve as both a Network Location and a Service Location.</xs:documentation>
+							</xs:annotation>
+					</xs:element>
+					<!--Adding the complex type elements START-->
+					<xs:element name="NetworkEntityCode" type="propertylocation:NetworkEntityCodeType" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="PropertyAddress" type="propertylocation:PropertyAddressType" minOccurs="0" maxOccurs="unbounded"/>
+					<!--Adding the complex type elements END-->
+				</xs:sequence>
+			</xs:sequence>
+		</xs:extension>
+	</xs:complexContent>
+  </xs:complexType>
+  
+  <!-- *************************   PROPERTY ADDRESS ************************************************************ -->
+  <xs:complexType name="PropertyAddressType">
+		<xs:annotation>
+			<xs:documentation>
+			A Property address provides a textual way of describing how to find a property
+            </xs:documentation>
+		 </xs:annotation>
+		    		<xs:sequence>
+						<xs:element name="streetAddress">
+							<xs:annotation>
+								<xs:documentation>The street within the city, state, and country where a property is located</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="100"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+							<xs:element name="country">
+							<xs:annotation>
+								<xs:documentation>The country where a property is located. This is the ISO2 or ISO3 code for the country as defined by ISO-3166-1</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="3"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+							<xs:element name="state">
+							<xs:annotation>
+								<xs:documentation>The state within a country where a property is located. This is the ISO2 or ISO3 code for the state as defined by ISO-3166-2</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="3"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+							
+							<xs:element name="city">
+							<xs:annotation>
+								<xs:documentation>The component of a Property Address that describes city within a state and country where a property is located</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="70"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						
+						<xs:element name="postalCode">
+							<xs:annotation>
+								<xs:documentation>The postal code component of a Property Address. A postal code is appended to a postal address for the purpose of sorting mail</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="15"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="isValidated" type="xs:boolean">
+							<xs:annotation>
+								<xs:documentation>Indicates that the Primary Property has been validated via an address validation subsystem such as GIS, Geocoder, eLocation Services, etc. This indicator should be set when the Property Address information is validated. It should be un-set when the Property address information is 'stale' meaning it has been changed and no longer had assured integrity.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+							<xs:element name="isNonValidatedAddressAccepted" type="xs:boolean">
+							<xs:annotation>
+								<xs:documentation>Indicates that the Property address information has been declared to be acceptable by the business or SOA user regardless of the success of address validation. Under certain situations, the address information may be an alternative to a street address that would not be expected to be validated via street address validation such as a legal property description or STRAP. Under other situations, an address may not be present in the GIS map data or may be in a territory that does not have street addresses registered in the available map data.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+                        <xs:element name="subUnit">
+							<xs:annotation>
+								<xs:documentation>The sub-unit information for an address. This will be entered in the Property Location UI as a free-form text field. It will not be validated or used to drive behavior in the UIM application. This field is for Apartment, Suite, or Room type information.</xs:documentation>
+							</xs:annotation>
+                            <xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="30"/>
+								</xs:restriction>
+							</xs:simpleType>
+                        </xs:element> 
+                        <xs:element name="subArea">
+							<xs:annotation>
+								<xs:documentation>The name of a sub area within a city for an address. Big European cities may be divided into smaller areas. This will be entered in the Property Location UI as a free-form text field. This field will not be available for US country addresses.</xs:documentation>
+							</xs:annotation>
+                            <xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="50"/>
+								</xs:restriction>
+							</xs:simpleType>
+                        </xs:element> 	
+						<xs:element name="latitude" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>
+									The latitude of GeographicPlace.
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="longitude" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>
+									The longitude of GeographicPlace.
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="vertical" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>
+									The Vertical Coordinate of GeographicPlace.
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="horizontal" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>
+									The Horizontal Coordinate of GeographicPlace.
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="property" type="invprop:PropertyType" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Property holds the dynamic properties
+                                of a Location, a Site or an Address.
+                            </xs:documentation>
+                        </xs:annotation>
+					</xs:element>
+				</xs:sequence>
+	</xs:complexType>
+	<!-- ***************************************NETWORK ENTITY CODE *********************************************** -->
+	<xs:complexType name="NetworkEntityCodeType">
+		<xs:annotation>
+			<xs:documentation>Network Entity Codes provide a shorthand 'codified' way of uniquely identifying network entities such as Devices and the endpoints of Network Connectivity) within a Network Location</xs:documentation>
+		</xs:annotation>
+			<xs:sequence>
+				<xs:element name="name">
+					<xs:annotation>
+						<xs:documentation>The name of the network entity code. The name must be unique across all Network Entity Codes belonging to a Property Location. Network Entity Code names can be duplicated across Property Locations.</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="10"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="newName">
+					<xs:annotation>
+						<xs:documentation>The newName of the network entity code. This should be used only while modifying the Network Entity Codes. The newName must be unique across all Network Entity Codes belonging to a Property Location. Network Entity Code names can be duplicated across Property Locations.</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="10"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="description" type="xs:string">
+					<xs:annotation>	
+					<xs:documentation>description of the network entity code.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="operation" type="xs:string">
+					<xs:annotation>	
+					<xs:documentation>update operation(ADD, MODIFY and DELETE) to be performed with the Network Entity Code</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+					<xs:element name="networkLocationEntityCode">
+					<xs:annotation>	
+					<xs:documentation>This holds the combined NetworkLocationCode (from the PropertyLocation that owns the NetworkEntityCode) and NetworkEntityCode values (with delimiter). This attribute will be used in the Property Location search using a single criteria field where the user can enter all or a portion of the combined NetworkLocationCode. NetworkEntityCode. </xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="62"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+	</xs:complexType>
+  </xs:schema>

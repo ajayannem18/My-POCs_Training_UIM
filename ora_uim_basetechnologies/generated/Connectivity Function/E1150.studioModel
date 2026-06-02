@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:inventory="http://xmlns.oracle.com/communications/studio/model/inventory" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="inventory:ConnectivityFunction" id="cf=E1150" type="cf" typeName="Connectivity Function" name="E1150" resource="/ora_uim_basetechnologies/model/E1150.connfunction">
+    <note lang="default"/>
+    <project>
+      <relation ref="ivprj=ora_uim_basetechnologies" type="Inventory Project" name="Dependency">
+        <target name="ora_uim_basetechnologies" typeName="Inventory Project"/>
+      </relation>
+    </project>
+    <dataElements/>
+  </entity>
+</model:Model>

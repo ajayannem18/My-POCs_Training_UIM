@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<extent>
+  <object class="oracle.communications.platform.entity.impl.RuleSetEntityDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/FindServiceByDeviceId/model/findServiceByDeviceId.ruleset#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.RuleSetEntityDAO-0" version="0">
+    <field name="name">"findServiceByDeviceId"</field>
+    <field mode="skip" name="extensionPointRuleSets"/>
+    <field name="description">null</field>
+    <field name="type">null</field>
+    <field name="active">true</field>
+    <field name="xml">"package oracle.communications.inventory.rules;&#13;
+import com.findServiceById.FindServiceByDeviceId;&#13;
+import oracle.communications.inventory.api.framework.logging.Log;&#13;
+global Log log;&#13;
+&#13;
+rule "Find Service by Device Id"&#13;
+  salience 0&#13;
+ &#13;
+when&#13;
+&#13;
+then&#13;
+//System.out.println("Calling find service method");&#13;
+log.info("","Calling find service method");&#13;
+FindServiceByDeviceId.findServiceById();&#13;
+//System.out.println("find service method executed successfully");&#13;
+log.info("","Find service method executed successfully");&#13;
+&#13;
+&#13;
+end&#13;
+  &#13;
+"</field>
+    <field format="enum_name" name="runExtensionLanguage">GROOVY</field>
+    <field name="extensionContent">"package oracle.communications.inventory.rules;&#13;
+import com.findServiceById.FindServiceByDeviceId;&#13;
+&#13;
+&#13;
+System.out.println("Calling find service method");&#13;
+&#13;
+FindServiceByDeviceId.findServiceById();&#13;
+System.out.println("find service method executed successfully");&#13;
+s"</field>
+  </object>
+</extent>

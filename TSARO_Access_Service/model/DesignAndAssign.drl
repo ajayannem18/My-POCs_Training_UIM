@@ -1,0 +1,17 @@
+package oracle.communications.inventory.rules;
+import oracle.communications.inventory.api.framework.logging.Log;
+import oracle.communications.inventory.extensibility.extension.util.ExtensionPointContext;
+import mapperClass.AccessRFSDesigner;
+ 
+ 
+global Log log;
+ 
+rule "Design and assign"
+	salience 0
+	when
+    	context : ExtensionPointContext()      
+    then 
+    AccessRFSDesigner rfsDesigner= new AccessRFSDesigner();
+    System.out.println("Calling RFS Designer method");
+   rfsDesigner.design(context);
+    end

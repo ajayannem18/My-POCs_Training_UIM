@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:inventory="http://xmlns.oracle.com/communications/studio/model/inventory" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="inventory:ServiceConfigurationSpecification" id="sc=Mobile_CFS_Service_Configuration" type="sc" typeName="Service Configuration Specification" name="Mobile_CFS_Service_Configuration" resource="\Mobile_Poc\model\Mobile_CFS_Service_Configuration.configuration">
+    <note lang="default"/>
+    <project>
+      <relation ref="ivprj=Mobile_Poc" type="Inventory Project" name="Dependency">
+        <target name="Mobile_Poc" typeName="Inventory Project"/>
+      </relation>
+    </project>
+    <dataElements>
+      <element id="sc=Mobile_CFS_Service_Configuration+dataElement=mMI96wpATgaLliR2OYQOPg" type="dataElement" typeName="Data Element" kind="Element" name="RFS_Service_CI" path="/Mobile_CFS_Service_Configuration/RFS_Service_CI">
+        <displayName lang="default">RFS_Service_CI</displayName>
+        <minOccurs inherited="false">0</minOccurs>
+        <maxOccurs inherited="false">1</maxOccurs>
+        <defaultValue inherited="false"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">true</internal>
+        <sensitive inherited="false">false</sensitive>
+        <dataElements/>
+        <specificationOptions>
+          <specificationOptionList>
+            <element>
+              <specification>
+                <relation ref="ss=Mobile_RFS_Service" type="Service Specification" name="Spec Option" kind="Entity">
+                  <target name="Mobile_RFS_Service" typeName="Service Specification"/>
+                </relation>
+              </specification>
+              <sequence>1</sequence>
+            </element>
+          </specificationOptionList>
+          <itemOptionType>Assignment</itemOptionType>
+        </specificationOptions>
+        <primitiveType>structure</primitiveType>
+      </element>
+    </dataElements>
+    <rules>
+      <relation ref="rep=designAndAssign" type="Ruleset Extension Point" name="Rules" kind="Entity">
+        <target name="designAndAssign" typeName="Ruleset Extension Point"/>
+      </relation>
+    </rules>
+    <relatedSpecificationList/>
+  </entity>
+</model:Model>

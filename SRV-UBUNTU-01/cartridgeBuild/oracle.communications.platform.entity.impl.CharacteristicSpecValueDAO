@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<extent>
+  <object class="oracle.communications.platform.entity.impl.DiscreteCharSpecValueDAO" oid="oracle.communications.platform.entity.impl.CharacteristicSpecValueDAO-0" version="0">
+    <field name="defaultValue">false</field>
+    <field name="label">"ZTP Server"</field>
+    <field name="value">"code_0"</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.DiscreteCharSpecValueDAO" oid="oracle.communications.platform.entity.impl.CharacteristicSpecValueDAO-1" version="0">
+    <field name="defaultValue">false</field>
+    <field name="label">"DHCP Host"</field>
+    <field name="value">"code_1"</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.DiscreteCharSpecValueDAO" oid="oracle.communications.platform.entity.impl.CharacteristicSpecValueDAO-2" version="0">
+    <field name="defaultValue">false</field>
+    <field name="label">"Fabric Controller"</field>
+    <field name="value">"code_2"</field>
+  </object>
+</extent>

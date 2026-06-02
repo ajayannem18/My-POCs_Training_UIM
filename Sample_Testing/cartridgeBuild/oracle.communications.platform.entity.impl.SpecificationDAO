@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<extent>
+  <object class="oracle.communications.platform.entity.impl.PhysicalDeviceSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Sample_Testing/model/Huawei_sample_pd.physicalDevice#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-0" version="0">
+    <field name="name">"Huawei_sample_pd"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.PhysicalDeviceDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="startDate">1779733801000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.DeviceInterfaceSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Sample_Testing/model/sample_DeviceInterface.deviceInterface#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-1" version="0">
+    <field name="name">"sample_DeviceInterface"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.DeviceInterfaceDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="startDate">1779733801000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="rateCode">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.LogicalDeviceSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Sample_Testing/model/test_LogicalDevice.device#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-2" version="0">
+    <field name="name">"test_LogicalDevice"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.LogicalDeviceDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="consumerAllowSharedConsumption">false</field>
+    <field name="startDate">1779733801000</field>
+    <field name="relatedSpecs">
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-0</element>
+    </field>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="vendorName">null</field>
+    <field name="modelNumber">null</field>
+    <field name="partNumber">null</field>
+  </object>
+</extent>

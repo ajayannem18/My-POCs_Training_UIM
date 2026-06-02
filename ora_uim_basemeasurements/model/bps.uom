@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:inv="http://www.mslv.com/studio/inventory/model/specification" xmlns="http://www.mslv.com/studio/inventory/model/specification" xsi:type="inv:UnitOfMeasureType" name="bps">
+  <com:id>---jtCAn--+PuNAw---q0g</com:id>
+  <inv:unit>bps</inv:unit>
+  <inv:conversionFactor>1.0</inv:conversionFactor>
+  <inv:conversionFactorDescription>Multiplication factor to convert bits per second (bps) to bits per second (bps)</inv:conversionFactorDescription>
+  <inv:measurementType>
+    <com:entity>Bit Rate</com:entity>
+    <com:entityType>meastype</com:entityType>
+    <com:relationship>com.mslv.studio.inventory.capacity.uom.REL_TYPE_OF_MEASUREMENT</com:relationship>
+  </inv:measurementType>
+  <inv:name>Bits Per Second</inv:name>
+  <inv:description>Base unit of data transmission speed for Bit Rate type of measurement.  All units of measure of type Bit Rate convert to bits per second via their conversion factor.</inv:description>
+</com:modelEntity>

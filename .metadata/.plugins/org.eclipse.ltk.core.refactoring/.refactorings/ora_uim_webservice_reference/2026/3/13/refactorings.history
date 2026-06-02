@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ora_uim_webservice_reference/etc/COMPUTERNAME.properties&apos; to &apos;AJAYANNEM.properties&apos;" description="Rename resource &apos;COMPUTERNAME.properties&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="etc/COMPUTERNAME.properties" name="AJAYANNEM.properties" stamp="1774696278876" updateReferences="true"/>
+</session>

@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<!--
+ Copyright (c) 2011, 2013, Oracle and/or its affiliates. All rights reserved.
+    Oracle Corporation and/or its affiliates. Other names may be trademarks of their respective owners. 
+
+    This sample file, which has been provided by Oracle Corporation as part of an Oracle(r) product for use
+    ONLY by licensed users of the product, includes CONFIDENTIAL and PROPRIETARY information of Oracle
+    Corporation.
+
+    This material is the confidential property of Oracle Corporation or its licensors and may be used,
+    reproduced, stored, or transmitted only in accordance with a valid Oracle license or sublicense
+    agreement.
+
+    USE OF THIS SOFTWARE IS GOVERNED BY THE TERMS AND CONDITIONS OF THE LICENSE
+    AGREEMENT AND LIMITED WARRANTY FURNISHED WITH THE PRODUCT.
+
+    IN PARTICULAR, YOU WILL INDEMNIFY AND HOLD ORACLE CORPORATION, ITS RELATED COMPANIES AND ITS SUPPLIERS,
+    HARMLESS FROM AND AGAINST ANY CLAIMS OR LIABILITIES ARISING OUT OF THE USE, REPRODUCTION, OR DISTRIBUTION
+    OF YOUR PROGRAMS, INCLUDING ANY CLAIMS OR LIABILITIES ARISING OUT OF OR RESULTING FROM THE USE,
+    MODIFICATION, OR DISTRIBUTION OF PROGRAMS OR FILES CREATED FROM, BASED ON, AND/OR DERIVED FROM THIS
+    SAMPLE SOURCE CODE FILE.
+-->
+<xs:schema 
+    targetNamespace="http://xmlns.oracle.com/communications/inventory/place"
+    xmlns:invconfig="http://xmlns.oracle.com/communications/inventory/configuration" 
+    xmlns:invsvc="http://xmlns.oracle.com/communications/inventory/service" 
+    xmlns:invprop="http://xmlns.oracle.com/communications/inventory/property" 
+    xmlns:invrole="http://xmlns.oracle.com/communications/inventory/role" 
+    xmlns:invspec="http://xmlns.oracle.com/communications/inventory/specification" 
+    xmlns:invplace="http://xmlns.oracle.com/communications/inventory/place" 
+    xmlns:invent="http://xmlns.oracle.com/communications/inventory/entity" 
+    xmlns="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified">
+    <!--  =================== Imports Start ==================== -->
+    <!-- Local Imports -->
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/entity" schemaLocation="Entity.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/specification" schemaLocation="Specification.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/role" schemaLocation="Role.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/property" schemaLocation="Property.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/service" schemaLocation="Service.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/configuration" schemaLocation="Configuration.xsd"/>
+    <xs:complexType name="PlaceType">
+        <xs:annotation>
+            <xs:documentation>
+                PlaceType holds the Place information, along with Roles
+                and Services that are associated with the Place
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invent:EntityType">
+                <xs:sequence>
+                    <xs:element name="action" type="invent:EntityActionEnum" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Action holds the place Action which indicates whether the place needs
+                                to be added or deleted from an Entity. Valid values for this element
+                                are defined by EntityActionEnum.
+                                NOTE:
+                                  Only ADD and DELETE place are supported when updating an entity,
+                                  the UPDATE is not supported. The place action is meant to add or
+                                  delete the place/entity relationship. It's not meant to update
+                                  the role information.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="specification" type="invspec:SpecificationType" nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Specification information of the Place.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="id" type="xsd:string" nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                id is the unique key to identify a
+                                Place.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="name" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Name of the Place
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="description" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Description of a Place
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="role" type="invrole:RoleType" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Role information of the Place
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="startDate" type="xsd:dateTime" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Start Date of the Place
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="endDate" type="xsd:dateTime" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                End Date of the Place
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="property" type="invprop:PropertyType" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Property holds the dynamic properties
+                                of a Location, a Site or an Address.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="service" type="invsvc:ServiceType" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Service that are associated to the
+                                Place.
+
+                                TODO: change to xs:string to return a
+                                list of service ids instead of service
+                                instances.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+		    <xs:element name="configuration" type="invconfig:ConfigurationType" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Configuration Verions of a Place.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+					<xs:element name="latitude" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                latitude of the Place
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+					<xs:element name="longitude" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                longitude of the Place
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="GeographicAddressType">
+        <xs:annotation>
+            <xs:documentation>
+                GeographicAddressType holds the geographic address
+                information.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invplace:PlaceType">
+                <xs:sequence/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="GeographicLocationType">
+        <xs:annotation>
+            <xs:documentation>
+                GeographicLocationType holds the geographic location
+                information.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invplace:PlaceType">
+                <xs:sequence/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="GeographicSiteType">
+        <xs:annotation>
+            <xs:documentation>
+                GeographicSiteType holds the geographic site
+                information.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invplace:PlaceType">
+                <xs:sequence/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="PlaceCriteriaType">
+        <xs:annotation>
+            <xs:documentation>Criteria to uniquely identify a Place.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invent:EntityType">
+                <xs:sequence>
+                    <xs:element name="placeId" type="xsd:string" nillable="false" minOccurs="0" >
+                        <xs:annotation>
+                            <xs:documentation>Place Id</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+</xs:schema>
+

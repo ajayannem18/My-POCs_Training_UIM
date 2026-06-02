@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:data="http://www.oracle.com/communications/studio/core/model/common/data" xmlns:inv="http://www.mslv.com/studio/inventory/model/specification" xmlns="http://www.mslv.com/studio/inventory/model/specification" xmlns:layout="http://xmlns.oracle.com/communications/sce/poms/model/layout" xsi:type="inv:EquipmentHolderSpecificationType" name="X15-ControlBoard">
+  <com:saveVersion>2</com:saveVersion>
+  <com:baseEntityRef>
+    <com:entity>EquipmentHolder</com:entity>
+    <com:entityType>inventoryEntity</com:entityType>
+    <com:relationship>unknown</com:relationship>
+  </com:baseEntityRef>
+  <com:id>W6-JdsSzQEuiw1NACT0ANw</com:id>
+  <data:dataElementNode virtual="true">
+    <com:id>W6-JdsSzQEuiw1NACT0ANw</com:id>
+    <com:elementType>oracle.communications.studio.model.data.StudioModelDataElement</com:elementType>
+    <data:name>X15-ControlBoard</data:name>
+    <data:displayName lang="[default]">X15-ControlBoard</data:displayName>
+    <data:primitiveType>none</data:primitiveType>
+  </data:dataElementNode>
+  <data:dataElementDetails xsi:type="data:dataElementCommonDetail">
+    <com:id>wFwMrCNcQvGgy+bozMD3yA</com:id>
+    <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+    <data:dataElementId>W6-JdsSzQEuiw1NACT0ANw</data:dataElementId>
+    <data:defaultValue></data:defaultValue>
+    <data:key></data:key>
+    <data:deprecated>false</data:deprecated>
+    <data:sensitive>false</data:sensitive>
+    <data:minLength>0</data:minLength>
+    <data:maxLength>40</data:maxLength>
+    <data:minMultiplicity>0</data:minMultiplicity>
+    <data:maxMultiplicity>-1</data:maxMultiplicity>
+  </data:dataElementDetails>
+  <data:dataElementDetails xsi:type="layout:uiConfigurationType">
+    <com:id>ziOBw3W7S06wc9me87F9Sw</com:id>
+    <com:elementType>oracle.communications.sce.poms.model.data.LayoutDetailType</com:elementType>
+    <data:dataElementId>W6-JdsSzQEuiw1NACT0ANw</data:dataElementId>
+    <layout:layout>
+      <layout:page>Equipment Holder Editor</layout:page>
+      <layout:panel>Equipment Holder Edit Panel</layout:panel>
+    </layout:layout>
+    <layout:layout>
+      <layout:page>Equipment Holder Summary</layout:page>
+      <layout:panel>Equipment Holder Summary Panel</layout:panel>
+    </layout:layout>
+  </data:dataElementDetails>
+  <inv:relatedSpecification>
+    <com:entity>H901MPLA-ControlCard</com:entity>
+    <com:entityType>equipment</com:entityType>
+    <com:relationship>X15-ControlBoard To H901MPLA-ControlCard</com:relationship>
+    <inv:data xsi:type="inv:SpecificationRelationshipReferenceDataType">
+      <inv:relationship>CHILD</inv:relationship>
+      <inv:status>ACTIVE</inv:status>
+      <inv:parentsToChildMin>1</inv:parentsToChildMin>
+      <inv:parentsToChildMax>1</inv:parentsToChildMax>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>H901MPLB-ControlCard</com:entity>
+    <com:entityType>equipment</com:entityType>
+    <com:relationship>X15-ControlBoard To H901MPLB-ControlCard</com:relationship>
+    <inv:data xsi:type="inv:SpecificationRelationshipReferenceDataType">
+      <inv:relationship>CHILD</inv:relationship>
+      <inv:status>ACTIVE</inv:status>
+      <inv:parentsToChildMin>1</inv:parentsToChildMin>
+      <inv:parentsToChildMax>1</inv:parentsToChildMax>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>H901MPLC-ControlCard</com:entity>
+    <com:entityType>equipment</com:entityType>
+    <com:relationship>X15-ControlBoard To H901MPLC-ControlCard</com:relationship>
+    <inv:data xsi:type="inv:SpecificationRelationshipReferenceDataType">
+      <inv:relationship>CHILD</inv:relationship>
+      <inv:status>ACTIVE</inv:status>
+      <inv:parentsToChildMin>1</inv:parentsToChildMin>
+      <inv:parentsToChildMax>1</inv:parentsToChildMax>
+    </inv:data>
+  </inv:relatedSpecification>
+</com:modelEntity>

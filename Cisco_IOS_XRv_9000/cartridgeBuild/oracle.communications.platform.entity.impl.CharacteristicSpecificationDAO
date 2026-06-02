@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<extent>
+  <object class="oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO" guid="http://xmlns.oracle.com/communications/sce/dictionary/Cisco_IOS_XRv_9000/Cisco_IOS_XRv_9000/RAM.characteristic#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO-0" version="0">
+    <field name="name">"RAM"</field>
+    <field name="id">null</field>
+    <field name="description">""</field>
+    <field name="startDate">1779884102144</field>
+    <field name="minQty">0</field>
+    <field name="maxQty">1</field>
+    <field name="derivationFormula">null</field>
+    <field name="restrictedAssociationToSpec">false</field>
+    <field name="multiValued">false</field>
+    <field mode="skip" name="characteristicSpecUsages"/>
+    <field mode="skip" name="childCharSpecRels"/>
+    <field name="passwordType">false</field>
+    <field format="enum_name" name="primitiveType">STRING</field>
+    <field format="enum_name" name="controlType">TEXT_FIELD</field>
+    <field format="enum_name" name="valueType">ALPHANUMERIC</field>
+    <field format="enum_name" name="textCase">MIXED</field>
+    <field name="persisted">false</field>
+    <field name="displayLabel">"RAM"</field>
+    <field name="minLength">1</field>
+    <field name="maxLength">0</field>
+    <field name="values"/>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO" guid="http://xmlns.oracle.com/communications/sce/dictionary/Cisco_IOS_XRv_9000/Cisco_IOS_XRv_9000/vCPU.characteristic#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO-1" version="0">
+    <field name="name">"vCPU"</field>
+    <field name="id">null</field>
+    <field name="description">""</field>
+    <field name="startDate">1779884102146</field>
+    <field name="minQty">0</field>
+    <field name="maxQty">1</field>
+    <field name="derivationFormula">null</field>
+    <field name="restrictedAssociationToSpec">false</field>
+    <field name="multiValued">false</field>
+    <field mode="skip" name="characteristicSpecUsages"/>
+    <field mode="skip" name="childCharSpecRels"/>
+    <field name="passwordType">false</field>
+    <field format="enum_name" name="primitiveType">STRING</field>
+    <field format="enum_name" name="controlType">TEXT_FIELD</field>
+    <field format="enum_name" name="valueType">ALPHANUMERIC</field>
+    <field format="enum_name" name="textCase">MIXED</field>
+    <field name="persisted">false</field>
+    <field name="displayLabel">"V CPU"</field>
+    <field name="minLength">1</field>
+    <field name="maxLength">0</field>
+    <field name="values"/>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO" guid="http://xmlns.oracle.com/communications/sce/dictionary/Cisco_IOS_XRv_9000/Cisco_IOS_XRv_9000/Hypervisor.characteristic#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO-2" version="0">
+    <field name="name">"Hypervisor"</field>
+    <field name="id">null</field>
+    <field name="description">""</field>
+    <field name="startDate">1779884102146</field>
+    <field name="minQty">0</field>
+    <field name="maxQty">1</field>
+    <field name="derivationFormula">null</field>
+    <field name="restrictedAssociationToSpec">false</field>
+    <field name="multiValued">false</field>
+    <field mode="skip" name="characteristicSpecUsages"/>
+    <field mode="skip" name="childCharSpecRels"/>
+    <field name="passwordType">false</field>
+    <field format="enum_name" name="primitiveType">STRING</field>
+    <field format="enum_name" name="controlType">TEXT_FIELD</field>
+    <field format="enum_name" name="valueType">ALPHANUMERIC</field>
+    <field format="enum_name" name="textCase">MIXED</field>
+    <field name="persisted">false</field>
+    <field name="displayLabel">"Hypervisor"</field>
+    <field name="minLength">1</field>
+    <field name="maxLength">0</field>
+    <field name="values"/>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO" guid="http://xmlns.oracle.com/communications/sce/dictionary/Cisco_IOS_XRv_9000/Cisco_IOS_XRv_9000/Disk.characteristic#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO-3" version="0">
+    <field name="name">"Disk"</field>
+    <field name="id">null</field>
+    <field name="description">""</field>
+    <field name="startDate">1779884102146</field>
+    <field name="minQty">0</field>
+    <field name="maxQty">1</field>
+    <field name="derivationFormula">null</field>
+    <field name="restrictedAssociationToSpec">false</field>
+    <field name="multiValued">false</field>
+    <field mode="skip" name="characteristicSpecUsages"/>
+    <field mode="skip" name="childCharSpecRels"/>
+    <field name="passwordType">false</field>
+    <field format="enum_name" name="primitiveType">STRING</field>
+    <field format="enum_name" name="controlType">TEXT_FIELD</field>
+    <field format="enum_name" name="valueType">ALPHANUMERIC</field>
+    <field format="enum_name" name="textCase">MIXED</field>
+    <field name="persisted">false</field>
+    <field name="displayLabel">"Disk"</field>
+    <field name="minLength">1</field>
+    <field name="maxLength">0</field>
+    <field name="values"/>
+  </object>
+</extent>

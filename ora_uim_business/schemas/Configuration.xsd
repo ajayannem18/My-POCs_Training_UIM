@@ -1,0 +1,1381 @@
+<?xml version="1.0"?>
+<!--
+ Copyright (c) 2011, 2015, Oracle and/or its affiliates. All rights reserved.
+
+    This sample file, which has been provided by Oracle Corporation as part of an Oracle(r) product for use
+    ONLY by licensed users of the product, includes CONFIDENTIAL and PROPRIETARY information of Oracle
+    Corporation.
+
+    This material is the confidential property of Oracle Corporation or its licensors and may be used,
+    reproduced, stored, or transmitted only in accordance with a valid Oracle license or sublicense
+    agreement.
+
+    USE OF THIS SOFTWARE IS GOVERNED BY THE TERMS AND CONDITIONS OF THE LICENSE
+    AGREEMENT AND LIMITED WARRANTY FURNISHED WITH THE PRODUCT.
+
+    IN PARTICULAR, YOU WILL INDEMNIFY AND HOLD ORACLE CORPORATION, ITS RELATED COMPANIES AND ITS SUPPLIERS,
+    HARMLESS FROM AND AGAINST ANY CLAIMS OR LIABILITIES ARISING OUT OF THE USE, REPRODUCTION, OR DISTRIBUTION
+    OF YOUR PROGRAMS, INCLUDING ANY CLAIMS OR LIABILITIES ARISING OUT OF OR RESULTING FROM THE USE,
+    MODIFICATION, OR DISTRIBUTION OF PROGRAMS OR FILES CREATED FROM, BASED ON, AND/OR DERIVED FROM THIS
+    SAMPLE SOURCE CODE FILE.
+-->
+<xs:schema targetNamespace="http://xmlns.oracle.com/communications/inventory/configuration"
+           xmlns:invconfig="http://xmlns.oracle.com/communications/inventory/configuration"
+           xmlns:invparty="http://xmlns.oracle.com/communications/inventory/party"
+           xmlns:invplace="http://xmlns.oracle.com/communications/inventory/place"
+           xmlns:invprop="http://xmlns.oracle.com/communications/inventory/property"
+           xmlns:invspec="http://xmlns.oracle.com/communications/inventory/specification"
+           xmlns:invsvc="http://xmlns.oracle.com/communications/inventory/service"
+           xmlns:invbi="http://xmlns.oracle.com/communications/inventory/businessinteraction"
+           xmlns:invent="http://xmlns.oracle.com/communications/inventory/entity"
+           xmlns:invconnectivity="http://xmlns.oracle.com/communications/inventory/connectivity"
+           xmlns:invld="http://xmlns.oracle.com/communications/inventory/logicaldevice"
+           xmlns:invnetwork="http://xmlns.oracle.com/communications/inventory/network"
+           xmlns="http://www.w3.org/2001/XMLSchema"
+           xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <!--  ============= Imports Start ================= -->
+    <!-- Local Imports -->
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/entity"
+               schemaLocation="Entity.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/businessinteraction"
+               schemaLocation="BusinessInteraction.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/specification"
+               schemaLocation="Specification.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/property"
+               schemaLocation="Property.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/place"
+               schemaLocation="Place.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/party"
+               schemaLocation="Party.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/service"
+               schemaLocation="Service.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/connectivity"
+               schemaLocation="Connectivity.xsd"/>
+    <!-- ==== Entity Value Types ==== -->
+    <xs:complexType name="ConfigurationType">
+        <xs:annotation>
+            <xs:documentation>ConfigurationType holds the Configuration Version.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invent:EntityType">
+                <xs:sequence>
+                    <xs:element name="version" type="xs:int" nillable="true"
+                                minOccurs="0" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>Version number (integer)</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="previousVersion" type="xs:int"
+                                nillable="true" minOccurs="0" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>Previous Configuration version
+                                              number</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="id" type="xs:string" nillable="true"
+                                minOccurs="0" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>Configuration Id</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="name" type="xs:string" nillable="true"
+                                minOccurs="0" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>Name of the Configuration</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="action"
+                                type="invconfig:ConfigurationActionEnum"
+                                nillable="true" minOccurs="0" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>The type of action being designed
+                                              in this Configuration.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="state"
+                                type="invconfig:ConfigurationStateEnum"
+                                nillable="true" minOccurs="0" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>Current state of the Configuration</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="startDate" type="xsd:dateTime"
+                                nillable="true" minOccurs="0" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>Start Date of the Configuration</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="endDate" type="xsd:dateTime"
+                                nillable="true" minOccurs="0" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>End Date of the Configuration</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="effectiveDate" type="xsd:dateTime"
+                                nillable="true" minOccurs="0" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>Effective Date of the Configuration</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="configSpec"
+                                type="invspec:SpecificationType"
+                                nillable="false" minOccurs="0" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>Specification information of
+                                              Configuration.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="configurationItem"
+                                type="invconfig:ConfigurationItemType"
+                                minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>Specification information of
+                                              Configuration.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="property"
+                                type="invconfig:ConfigurationItemPropertyType"
+                                maxOccurs="unbounded" minOccurs="0">
+					</xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="ConfigurationItemType" abstract="true">
+        <xs:annotation>
+            <xs:documentation>Holds Configuration Item information.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" nillable="false"
+                        minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Name of the Configuration Item. It's the
+                                      name of the configuration item spec.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="label" type="string" maxOccurs="1" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>By default the label is the same as the
+                                      name, but it can be customized.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="identifier" type="string" maxOccurs="1"
+                        minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>This identifier is the type of
+                                      configuration concatenated with its entity
+                                      specification name and the entity id. For
+                                      example, for a Service that has the spec
+                                      name "MobileGSM" with id 20, the
+                                      identifier will be Service_MobileGSM_23.
+                                      For a Place with id 21, the identifier
+                                      will be Place_21.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="parentIdentifier" type="string" maxOccurs="1"
+                        minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>The identifier of the parent
+                                      configuration, if any</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="property"
+                        type="invconfig:ConfigurationItemPropertyType"
+                        nillable="true" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Property holds the dynamic properties of a
+                                      Configuration Item.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+			<xs:element name="entityLink" type="invent:EntityType" nillable="false" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The referenced entity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+            <xs:element name="entityAssignment"
+                        type="invconfig:EntityAssignmentType" nillable="true"
+                        minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Entity Assignment information, if any.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="entityReference"
+                        type="invconfig:EntityReferenceType" nillable="true"
+                        minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Entity Reference information, if any.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="configurationItem"
+                        type="invconfig:ConfigurationItemType" nillable="true"
+                        minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Child configuration items, if any.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="path" type="string" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>The path to the configuration item. The
+                                      path consists of the parent's
+                                      configuration name separated by a '/' and
+                                      terminated with the configuration item
+                                      name. For example, the path to the IMSI of
+                                      a Mobile Service, then path would be:Subscription/Primary
+                                      MSISDN/IMSI</xs:documentation>
+                </xs:annotation>
+            </xs:element>            
+            <xs:element name="tags" type="invent:TagType" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>
+                        Tags that are associated to ConfigItemSpec, if any.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="EntityAssignmentType">
+        <xs:annotation>
+            <xs:documentation>EntityAssignmentType that holds entity assignment
+                              information.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invent:EntityType">
+                <xs:sequence>
+                    <xs:element name="state"
+                                type="invconfig:AssignmentStateEnum"
+                                nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>Assignment state. Valid values are
+                                              PENDING_ASSIGN, ASSIGNED,
+                                              PENDING_UNASSIGN, UNASSIGNED,
+                                              DISCONNECTED, PENDING_AVAILABLE,
+                                              PENDING_UNAVAILABLE, PORTED,
+                                              UNAVAILABLE, and TRANSITIONAL</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="identifier" type="string" maxOccurs="1"
+                                minOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>Uniquely identify the assignment
+                                              on the configuration item. The
+                                              format of this identifier is
+                                              configItemId_Assignment_resourceId.
+                                              The configItemId is the unique
+                                              configuration identifier and the
+                                              resourceId is the id of the
+                                              assigned resource. This is an
+                                              example of the identifier:
+                                              123_Assignment_456</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="entity" type="xsd:anyType"
+                                nillable="false">
+                        <xs:annotation>
+                            <xs:documentation>The consumable entity that is
+                                              assigned.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="customProperty" type="invprop:PropertyType" nillable="true" 
+                        minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Custom Properties added for the entity Assignment/Reference.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="networkTarget" type="invconfig:NetworkTargetType" nillable="true"
+                                minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>Network Target information, if any.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>                    
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="EntityReferenceType">
+        <xs:annotation>
+            <xs:documentation>EntityReferenceType that holds entity reference
+                              information.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invent:EntityType">
+                <xs:sequence>
+                    <xs:element name="identifier" type="string" maxOccurs="1"
+                                minOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>Uniquely identify the reference on
+                                              the configuration item. The format
+                                              of this identifier is
+                                              configItemId_Reference_resourceId.
+                                              The configItemId is the unique
+                                              configuration identifier and the
+                                              resourceId is the id of the
+                                              referenced resource. This is an
+                                              example of the identifier:
+                                              123_Reference_456.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="state" type="invconfig:ReferenceStateEnum"
+                                nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>Reference state. Valid values are
+                                              PENDING_REFERENCE, REFERENCED,
+                                              PENDING_UNREFERENCE, and
+                                              UNREFERENCED.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="entity" type="xsd:anyType"
+                                nillable="false" maxOccurs="1" minOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>The consumable entity that is
+                                              referenced.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="customProperty" type="invprop:PropertyType" nillable="true" 
+                        minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Custom Properties added for the entity Assignment/Reference.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="networkTarget" type="invconfig:NetworkTargetType" nillable="true"
+                                minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>Network Target information, if any.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>                     
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <complexType name="ConfigurationItemPropertyType">
+        <xs:annotation>
+            <xs:documentation>CharacteristicType holds the characteristics
+                              information of an entity.</xs:documentation>
+        </xs:annotation>
+        <complexContent>
+            <extension base="invprop:PropertyType">
+                <!-- this is supposed to be a restriction not an extension -->
+                <sequence>
+                    <xs:element name="identifier" type="string" maxOccurs="1"
+                                minOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>Uniquely identify the property on
+                                              the configuration item. The format
+                                              of this identifier is
+                                              configItemId_Property_characteristicName.
+                                              The configItemId is the unique
+                                              configuration identifier and the
+                                              characteristicName is the
+                                              characteristic name This is an
+                                              example of the identifier:
+                                              123_Property_Bandwidth.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <xs:complexType name="ResourceReservationType">
+        <xs:annotation>
+            <xs:documentation>ResourceReservationType that holds resource
+                              reservation information.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invent:EntityType">
+                <xs:sequence>
+                    <xs:element name="state"
+                                type="invconfig:AssignmentStateEnum"
+                                nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>Assignment state.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="reservationNumber" type="xs:long"
+                                nillable="false">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="reservationType"
+                                type="invconfig:ReservationTypeEnum"
+                                nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </xs:element>
+					<xs:element name="startDate" type="xs:dateTime"
+                                nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="expiryDate" type="xs:dateTime"
+                                nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="reservedForType"
+                                type="invconfig:ReservedForTypeEnum"
+                                nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="reservedFor" type="xs:string"
+                                nillable="false">
+                        <xs:annotation>
+                            <xs:documentation/>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="resource" type="xsd:anyType"
+                                nillable="true">
+                        <xs:annotation>
+                            <xs:documentation>The consumable resource that is
+                                              reserved.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+					<xs:element name="reason" type="string"></xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="ServiceConfigurationType">
+        <xs:annotation>
+            <xs:documentation>ServiceConfigurationType holds the Service
+                              Configuration Version information.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invconfig:ConfigurationType">
+                <xs:sequence>
+                    <xs:element name="serviceConfigurationItem"
+                                type="invconfig:ServiceConfigurationItemType"
+                                minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>Specification information of
+                                              Configuration.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="ServiceConfigurationItemType">
+        <xs:complexContent>
+            <xs:extension base="invconfig:ConfigurationItemType"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="PlaceConfigurationType">
+        <xs:annotation>
+            <xs:documentation>PlaceConfigurationType holds the Place
+                              Configuration Version information.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invconfig:ConfigurationType"></xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="PlaceConfigurationItemType">
+        <xs:annotation>
+            <xs:documentation>...</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invconfig:ConfigurationItemType"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="LogicalDeviceConfigurationType">
+        <xs:annotation>
+            <xs:documentation>LogicalDeviceConfigurationType holds the
+                              LogicalDevice Configuration Version information.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invconfig:ConfigurationType">
+                <xs:sequence>
+                    <xs:element name="logicalDeviceConfigurationItem"
+                                type="invconfig:LogicalDeviceConfigurationItemType"
+                                minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>Specification information of
+                                              Configuration.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="LogicalDeviceConfigurationItemType">
+        <xs:annotation>
+            <xs:documentation>...</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invconfig:ConfigurationItemType"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="LDAccountConfigurationType">
+        <xs:annotation>
+            <xs:documentation>LDAccountConfigurationConfigurationType holds the
+                              LogicalDevice Account Configuration Version information.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invconfig:ConfigurationType">
+                <xs:sequence>
+                    <xs:element name="ldAccountConfigurationItem"
+                                type="invconfig:LDAccountConfigurationItemType"
+                                minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>LD Account Configuration items</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="LDAccountConfigurationItemType">
+        <xs:annotation>
+            <xs:documentation>...</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invconfig:ConfigurationItemType"/>
+        </xs:complexContent>
+    </xs:complexType>    
+    <xs:complexType name="NetworkConfigurationType">
+        <xs:annotation>
+            <xs:documentation>NetworkConfigurationType holds the Network
+                              Configuration Version information.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invconfig:ConfigurationType"></xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="NetworkConfigurationItemType">
+        <xs:annotation>
+            <xs:documentation>...</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invconfig:ConfigurationItemType"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="DeviceInterfaceConfigurationType">
+        <xs:annotation>
+            <xs:documentation>NetworkConfigurationType holds the Network
+                              Configuration Version information.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invconfig:ConfigurationType">
+                <xs:sequence>
+                    <xs:element name="networkConfigurationItem"
+                                type="invconfig:DeviceInterfaceConfigurationItemType"
+                                minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>Specification information of
+                                              Configuration.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="DeviceInterfaceConfigurationItemType">
+        <xs:annotation>
+            <xs:documentation>...</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invconfig:ConfigurationItemType"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="ConnectivityConfigurationType">
+        <xs:annotation>
+            <xs:documentation>Holds the Connectivity configuration information.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invconfig:ConfigurationType">
+                <xs:sequence>
+                    <xs:element name="connectivityNodeConfigurationItem"
+                                type="invconfig:ConnectivityNodeConfigurationItemType"
+                                minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>Only support TERM-A and TERM-Z</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="trailPath"
+                                type="invconnectivity:TrailPathType"
+                                minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>Trail path representing enablement
+                                              or a Connectivity Design.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="ConnectivitySegmentConfigurationItemType">
+        <xs:annotation>
+            <xs:documentation>This is used to represent a Connectivity design
+                              Segment as an Inventory Configuration item</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <extension base="invconfig:ConfigurationItemType">
+                <xs:sequence>
+                    <xs:element name="connectivity"
+                                type="invconnectivity:ConnectivityType"
+                                maxOccurs="1" minOccurs="1"></xs:element>
+					<xs:element name="trailPathRef"
+                                type="string" minOccurs="1" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>Trail path to which the configuration item is related to.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>								
+                </xs:sequence>
+            </extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="ConnectivityNodeConfigurationItemType">
+        <xs:annotation>
+            <xs:documentation>This node concept refers to the two end points of
+                              the connectivity and it is not to be confused with
+                              the Network Nodes in a Network.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <extension base="invconfig:ConfigurationItemType">
+                <xs:sequence>
+                    <xs:element name="node"
+                                type="invconnectivity:ConnectivityNodeType"
+                                maxOccurs="1" minOccurs="1"></xs:element>
+                </xs:sequence>
+            </extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ==== Configuration Difference Types ==== -->
+    <xs:complexType name="ConfigurationItemDifferenceType">
+        <xs:annotation>
+            <xs:documentation>The ConfigurationItemDifferenceType is the base
+                              for all ConfigurationItemDifference (ie: Place,
+                              Service, etc.), it holds common elements among
+                              child elements. The
+                              ConfigurationItemDifferenceType is abstract and
+                              its concrete implementations are
+                              AssignmentConfigurationItemDifferenceType,
+                              ReferenceConfigurationItemDifferenceType,
+                              PropertyConfigurationItemDifferenceType, and
+                              ConnectivityConfigurationItemDifferenceType.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="identifier" type="string" minOccurs="1"
+                        maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Each item/resource/property that can be
+                                      changed is given a unique identifier. This
+                                      identifier is unique within a
+                                      configuration. Based on the type of the
+                                      change and the identifier, that item can
+                                      be found and its old and new value
+                                      determined.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="configurationItemRef"
+                                type="string" minOccurs="1" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>Refers to the configurationitem on the source/target 
+											  for which the difference has been generated</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>								
+            <xs:element name="path" type="string" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>The path to the configuration item. The
+                                      path consists of the parent’s
+                                      configuration name separated by a ‘/’ and
+                                      terminated with the configuration item
+                                      name. For example, the path to the IMSI of
+                                      a Mobile Service, then path would be:Subscription/Primary
+                                      MSISDN/IMSI</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="type"
+                        type="invconfig:ConfigurationItemDifferenceTypeEnum"
+                        minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>The type of the change. The valid values
+                                      are CONFIG_ITEM, RESOURCE, and PROPERTY.
+                                      See the
+                                      ConfigurationItemDifferenceTypeEnum to
+                                      know which one applies to which type of
+                                      changes.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="action"
+                        type="invconfig:ConfigurationItemDifferenceActionEnum"
+                        minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>The action performed between the source
+                                      and target configurations. The valid
+                                      values are ADDED, CHANGED, DELETED,
+                                      ASSIGNED, UNASSIGNED, REFERENCED,
+                                      UNREFERENCED. See the
+                                      ConfigurationItemDifferenceActionEnum to
+                                      know which one applies to which config
+                                      item action.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="actionPerformedInTargetVersion" type="xs:boolean"
+                        minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>The actionPerformedInTargetVersion is a
+                                      boolean and it indicates if the resource
+                                      was modified in the target version (i.e.,
+                                      'true') or if it was modified in a
+                                      previous version (i.e., 'false'). For
+                                      example, if the user is comparing version
+                                      1 (i.e. the source) and version 4 (i.e.
+                                      the target), and if the version 2 and 3
+                                      are not cancelled; let assume a resource A
+                                      was assigned in version 1; if the resource
+                                      A was modified (e.g. unassigned) in
+                                      version 3, then the
+                                      actionPerformedInTargetVersion would be
+                                      set to 'false', but if the resource A was
+                                      modified in version 4 (i.e., the version
+                                      we want to compare), then the
+                                      actionPerformedInTargetVersion would be
+                                      set to 'true'</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="PropertyConfigurationItemDifferenceType">
+        <xs:annotation>
+            <xs:documentation>Concrete representation of
+                              ConfigurationItemDifferenceType. Used to hold the
+                              property differences on a configuration item.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invconfig:ConfigurationItemDifferenceType">
+                <xs:sequence>
+                    <xs:element name="name" type="string" minOccurs="1"
+                                maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>The property (characteristic) name.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="newValue" type="string" minOccurs="1"
+                                maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>The new property (characteristic)
+                                              value  from the target
+                                              configuration.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="oldValue" type="string" minOccurs="1"
+                                maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>The original property
+                                              (characteristic) value  from the
+                                              source configuration.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="AssignmentConfigurationItemDifferenceType">
+        <xs:annotation>
+            <xs:documentation>Concrete representation of
+                              ConfigurationItemDifferenceType. Used to hold the
+                              assignment differences on a configuration item.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invconfig:ConfigurationItemDifferenceType">
+                <xs:sequence>
+                    <xs:element name="assignmentType" type="string"
+                                minOccurs="1" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>The assignment type (ie: Place,
+                                              Service, LogicalDevice, etc).</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="assignmentId" type="string" minOccurs="1"
+                                maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>The ID of the assigned resource.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="configurationDifferenceRef"
+                                type="string" minOccurs="1" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>If the type is RESOURCE, and the
+                                              assigned resource has a
+                                              configuration, this attribute will
+                                              hold the identifier of the
+                                              corresponding
+                                              ConfigurationDifferenceType.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="ReferenceConfigurationItemDifferenceType">
+        <xs:annotation>
+            <xs:documentation>Concrete representation of
+                              ConfigurationItemDifferenceType. Used to hold the
+                              reference differences on a configuration item.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invconfig:ConfigurationItemDifferenceType">
+                <xs:sequence>
+                    <xs:element name="referenceType" type="string" minOccurs="1"
+                                maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>The reference type (ie: Place,
+                                              Service, LogicalDevice, etc).</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="referenceId" type="string" minOccurs="1"
+                                maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>The reference id.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="configurationDifferenceRef"
+                                type="string" minOccurs="1" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>If the type is RESOURCE, and the
+                                              referenced resource has a
+                                              configuration, this attribute will
+                                              hold the identifier of the
+                                              corresponding
+                                              ConfigurationDifferenceType.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="ConnectivityConfigurationItemDifferenceType">
+        <annotation>
+            <documentation>Concrete representation of
+                           ConfigurationItemDifferenceType. Used to hold the
+                           connectivity differences on a configuration item.</documentation>
+        </annotation>
+        <xs:complexContent>
+            <xs:extension base="invconfig:AssignmentConfigurationItemDifferenceType">
+                <xs:sequence>
+                    <xs:element name="typeOfConnectivity"
+                                type="invconnectivity:ConnectivityTypeEnum"
+                                maxOccurs="1" minOccurs="0">
+                        <annotation>
+                            <documentation>Valid values are JUMPER, CHANNEL,
+                                           CROSS_CONNECT, GAP, FACILITY and PIPE.</documentation>
+                        </annotation>
+                    </xs:element>
+                    <!--
+                    <xs:element name="assignmentType" type="string">
+                    <xs:annotation>
+                        <xs:documentation>  
+                        </xs:documentation>
+                    </xs:annotation>                    
+                    </xs:element>
+                    <xs:element name="assignmentId" type="string">
+                    <xs:annotation>
+                        <xs:documentation>  
+                        </xs:documentation>
+                    </xs:annotation>                    
+                    </xs:element>
+                    -->
+                    <xs:element name="nodeA" type="string" maxOccurs="1"
+                                minOccurs="1">
+                        <annotation>
+                            <documentation>End point of the segment that as
+                                           changed.</documentation>
+                        </annotation>
+                    </xs:element>
+                    <xs:element name="nodeZ" type="string" maxOccurs="1"
+                                minOccurs="1">
+                        <annotation>
+                            <documentation>End point of the segment that as
+                                           changed.</documentation>
+                        </annotation>
+                    </xs:element>
+                    <xs:element name="identification" type="string"
+                                maxOccurs="1" minOccurs="1">
+                        <annotation>
+                            <documentation>If the type is pipe, then it's
+                                           Spec_name_Pipe_id_Pipe_Name,
+                                           otherwise it's just the
+                                           identification of the connectivity.</documentation>
+                        </annotation>
+                    </xs:element>
+					<xs:element name="trailPathRef"
+                                type="string" minOccurs="1" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>Trail path to which the configuration item is related to.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>					
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="ConfigurationDifferenceType">
+        <xs:sequence>
+            <xs:element name="identifier" type="string" maxOccurs="1"
+                        minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>This identifier is the type of
+                                      configuration concatenated with its entity
+                                      specification name and the entity id. For
+                                      example, for a Service that has the spec
+                                      name "MobileGSM" with id 20, the
+                                      identifier will be Service_MobileGSM_23.
+                                      For a Place with id 21, the identifier
+                                      will be Place_21.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="action"
+                        type="invconfig:ConfigurationDifferenceTypeEnum">
+                <xs:annotation>
+                    <xs:documentation>The action that was performed on the
+                                      target configuration. For instance, if a
+                                      new target configuration version was
+                                      created and there is no source
+                                      configuration, then the configuration diff
+                                      action would be ADDED; if the target and
+                                      source configurations are the same, but
+                                      the child configuration has changed, then
+                                      the parent configuration diff action would
+                                      be UNCHANGEG, and the child configuration
+                                      diff would be CHANGED.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="parentIdentifier" type="string">
+                <xs:annotation>
+                    <xs:documentation>The identifier of the parent
+                                      configuration's Configurable entity, if any.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="parentConfigItemIdentifier" type="string">
+                <xs:annotation>
+                    <xs:documentation>The Config item ID of the configururation item to which the child 
+                    configuration's Configurable entity is assigned.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="parentConfigurationVersionNumber" type="string">
+                <xs:annotation>
+                    <xs:documentation>The Configuration Version Number of the parent.</xs:documentation>
+                </xs:annotation>
+            </xs:element>            
+            <xs:element name="configurationItemDifference"
+                        type="invconfig:ConfigurationItemDifferenceType"
+                        maxOccurs="unbounded" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>List of configuration item differences</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="targetConfiguration"
+                        type="invconfig:ConfigurationType" maxOccurs="1"
+                        minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>The target (future) configuration</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="sourceConfiguration"
+                        type="invconfig:ConfigurationType" maxOccurs="1"
+                        minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>The source (current) configuration</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="childConfigurations"
+                        type="invconfig:ConfigurationDifferenceType"
+                        maxOccurs="unbounded" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>The list of child configurations</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ServiceConfigurationDifferenceType">
+        <xs:annotation>
+            <xs:documentation>ServiceConfigurationDifferenceType extends
+                              ConfigurationDifferenceType and holds a
+                              ServiceType object.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invconfig:ConfigurationDifferenceType">
+                <xs:sequence>
+                    <xs:element name="service" type="invsvc:ServiceType"
+                                maxOccurs="1" minOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>The service referred by this
+                                              service configuration differences.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="PlaceConfigurationDifferenceType">
+        <xs:annotation>
+            <xs:documentation>PlaceConfigurationDifferenceType extends
+                              ConfigurationDifferenceType and holds a PlaceType
+                              object.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invconfig:ConfigurationDifferenceType">
+                <xs:sequence>
+                    <xs:element name="place" type="invplace:PlaceType"
+                                maxOccurs="1" minOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>The place referred by this place
+                                              configuration differences.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="ConnectivityConfigurationDifferenceType">
+        <xs:annotation>
+            <xs:documentation>ConnectivityConfigurationDifferenceType extends
+                              ConfigurationDifferenceType and holds a
+                              ConnectivityType object.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invconfig:ConfigurationDifferenceType">
+                <xs:sequence>
+                    <xs:element name="connectivity"
+                                type="invconnectivity:ConnectivityType"
+                                maxOccurs="1" minOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>The connectivity referred by this
+                                              connectivity configuration
+                                              differences.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="LogicalDeviceConfigurationDifferenceType">
+        <xs:annotation>
+            <xs:documentation>LogicalDeviceConfigurationDifferenceType extends
+                              ConfigurationDifferenceType and holds a
+                              LogicalDeviceType object.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invconfig:ConfigurationDifferenceType">
+                <xs:sequence>
+                    <xs:element name="logicalDevice"
+                                type="invld:LogicalDeviceType" maxOccurs="1"
+                                minOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>The logicalDevice referred by this
+                                              logicalDevice configuration
+                                              differences.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="NetworkConfigurationDifferenceType">
+        <xs:annotation>
+            <xs:documentation>NetworkConfigurationDifferenceType extends
+                              ConfigurationDifferenceType and holds a
+                              NetworkType object</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invconfig:ConfigurationDifferenceType">
+                <xs:sequence>
+                    <xs:element name="network" type="invnetwork:NetworkType"
+                                maxOccurs="1" minOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>The network referred by this
+                                              network configuration differences.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="LogicalDeviceAccountConfigurationDifferenceType">
+        <xs:annotation>
+            <xs:documentation>LogicalDeviceAccount extends
+                              ConfigurationDifferenceType and holds a
+                              LogicalDeviceAccountType object.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invconfig:ConfigurationDifferenceType">
+                <xs:sequence>
+                    <xs:element name="logicalDeviceAccount"
+                                type="invld:LogicalDeviceAccountType"
+                                maxOccurs="1" minOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>The Logical Device Account
+                                              referred by this LDA configuration
+                                              differences.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+	
+	<xs:complexType name="DeviceInterfaceConfigurationDifferenceType">
+        <xs:annotation>
+            <xs:documentation>DeviceInterfaceConfigurationDifferenceType extends
+                              ConfigurationDifferenceType and holds a
+                              DeviceInterfaceType object.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invconfig:ConfigurationDifferenceType">
+                <xs:sequence>
+                    <xs:element name="deviceInterface" type="invld:DeviceInterfaceType"
+                                maxOccurs="1" minOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>The device interface referred by this
+                                              DI configuration differences.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ==== Entity Criteria Types ==== -->
+    <complexType name="ConfigurationCriteriaType">
+        <xs:annotation>
+            <xs:documentation>Criteria to uniquely identify a Configuration
+                              version. This is typically used for searching for
+                              a configuration.</xs:documentation>
+        </xs:annotation>
+        <complexContent>
+            <extension base="invent:EntityType">
+                <sequence>
+                    <element name="configurationVersionNumber" type="xsd:string"
+                             nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>Used when trying to identify a
+                                              configuration by its version
+                                              number. Optional.</xs:documentation>
+                        </xs:annotation>
+                    </element>
+                    <element name="configurationId" type="xsd:string"
+                             nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>Used when trying to identify a
+                                              configuration by its id. Optional</xs:documentation>
+                        </xs:annotation>
+                    </element>
+                    <element name="configurationState"
+                             type="invconfig:ConfigurationStateEnum"
+                             nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>Used when trying to identify a
+                                              configuration by its current state
+                                              (ie: IN_PROGRESS, DESIGNED,
+                                              ISSUED, COMPLETED, PENDING_CANCEL
+                                              or CANCELLED). Optional.</xs:documentation>
+                        </xs:annotation>
+                    </element>
+                    <xs:element name="effectiveDate" type="xs:dateTime" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>Used when trying to identify a configuration by its effective date.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>                    
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    
+    <!-- Start  - Network Target eleements -->
+    
+    <xs:complexType name="NetworkTargetType">
+        <xs:annotation>
+            <xs:documentation>Network Target Information</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="roleSpecification" type="invspec:SpecificationType" nillable="false" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Role Specification associated with the Network Target.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="NetworkTargetLogicalDeviceType">
+        <xs:annotation>
+            <xs:documentation>Represents a Network Target of type Logical Device</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invconfig:NetworkTargetType">
+                <xs:sequence>
+                    <xs:element name="logicalDevice" type="invld:LogicalDeviceType" minOccurs="1"
+                                maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>Logical Device Information</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="NetworkTargetPartyType">
+        <xs:annotation>
+            <xs:documentation>Represents a Network Target of type Party</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invconfig:NetworkTargetType">
+                <xs:sequence>
+                    <xs:element name="party" type="invparty:PartyType" minOccurs="1" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>Party Information</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <!-- End  - Network Target eleements -->
+    <!-- ==== Enumerations ==== -->
+    <xs:simpleType name="ConfigurationActionEnum">
+        <xs:annotation>
+            <xs:documentation>Defines valid values for Configuration Action.</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="UPDATE"/>
+            <xs:enumeration value="APPROVE"/>
+            <xs:enumeration value="ISSUE"/>
+            <xs:enumeration value="CANCEL"/>
+            <xs:enumeration value="COMPLETE"/>
+            <xs:enumeration value="ADD"/>
+            <xs:enumeration value="CHANGE"/>
+            <xs:enumeration value="DISCONNECT"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="AssignmentActionEnum">
+        <xs:annotation>
+            <xs:documentation>Defines valid values for Assignment Action</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ASSIGN"/>
+            <xs:enumeration value="UNASSIGN"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ConfigurationStateEnum">
+        <xs:annotation>
+            <xs:documentation>Defines valid values for State of CofigurationState</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="IN_PROGRESS"/>
+            <xs:enumeration value="DESIGNED"/>
+            <xs:enumeration value="ISSUED"/>
+            <xs:enumeration value="COMPLETED"/>
+            <xs:enumeration value="PENDING_CANCEL"/>
+            <xs:enumeration value="CANCELLED"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ReservationTypeEnum">
+        <xs:annotation>
+            <xs:documentation>Defines valid values for ReservationType</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="SHORTTERM"/>
+            <xs:enumeration value="LONGTERM"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ReservedForTypeEnum">
+        <xs:annotation>
+            <xs:documentation>Defines valid values for ReservationType</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="AREA"/>
+            <xs:enumeration value="CSR"/>
+            <xs:enumeration value="CUSTOMER"/>
+            <xs:enumeration value="ORDER"/>
+            <xs:enumeration value="PROJECT"/>
+            <xs:enumeration value="SERVICE"/>
+            <xs:enumeration value="SERVICE_SPEC"/>
+            <xs:enumeration value="SUBSCRIBER"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="AssignmentStateEnum">
+        <xs:annotation>
+            <xs:documentation>Defines valid values for AssignmentState</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="PENDING_ASSIGN"/>
+            <xs:enumeration value="ASSIGNED"/>
+            <xs:enumeration value="PENDING_UNASSIGN"/>
+            <xs:enumeration value="UNASSIGNED"/>
+            <xs:enumeration value="DISCONNECTED"/>
+            <xs:enumeration value="PENDING_AVAILABLE"/>
+            <xs:enumeration value="PENDING_UNAVAILABLE"/>
+            <xs:enumeration value="PORTED"/>
+            <xs:enumeration value="UNAVAILABLE"/>
+            <xs:enumeration value="TRANSITIONAL"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ReferenceStateEnum">
+        <xs:annotation>
+            <xs:documentation>Defines valid values for AssignmentState</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="PENDING_REFERENCE"/>
+            <xs:enumeration value="REFERENCED"/>
+            <xs:enumeration value="PENDING_UNREFERENCE"/>
+            <xs:enumeration value="UNREFERENCED"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ConfigurationItemDifferenceActionEnum">
+        <xs:annotation>
+            <xs:documentation>ConfigurationItemDifferenceActionEnum enumerate a
+                              list of possible actions performed on
+                              configuration items between two configurations
+                              (source and target).</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ADDED"/>
+            <xs:enumeration value="CHANGED"/>
+            <xs:enumeration value="DELETED"/>
+            <xs:enumeration value="ASSIGNED"/>
+            <xs:enumeration value="UNASSIGNED"/>
+            <xs:enumeration value="REFERENCED"/>
+            <xs:enumeration value="UNREFERENCED"/>
+            <xs:enumeration value="DISCONNECTED"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ConfigurationItemDifferenceTypeEnum">
+        <xs:annotation>
+            <xs:documentation>ConfigurationItemDifferenceTypeEnum enumerate a
+                              list of possible type of changes that can occur on
+                              configuration items between two configurations
+                              (source and target).</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="PROPERTY"/>
+            <xs:enumeration value="RESOURCE"/>
+            <xs:enumeration value="CONFIG_ITEM"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ConfigurationDifferenceTypeEnum">
+        <xs:annotation>
+            <xs:documentation>ConfigurationDifferenceTypeEnum enumerate a list
+                              of possible type of changes that can occur on
+                              configuration between two configurations (source
+                              and target).</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ADDED"/>
+            <xs:enumeration value="CHANGED"/>
+            <xs:enumeration value="DISCONNECTED"/>
+            <xs:enumeration value="UNCHANGED"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
+

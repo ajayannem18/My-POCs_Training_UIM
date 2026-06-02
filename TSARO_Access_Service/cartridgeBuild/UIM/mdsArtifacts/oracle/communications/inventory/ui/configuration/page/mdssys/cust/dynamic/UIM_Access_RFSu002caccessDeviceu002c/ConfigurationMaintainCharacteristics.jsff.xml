@@ -1,0 +1,23 @@
+<?xml version = '1.0'?>
+<mds:customization version="11.1.1.59.23" xmlns:mds="http://xmlns.oracle.com/mds">
+   <mds:insert parent="conf" position="last">
+      <af:inputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" binding="#{pageFlowScope.ConfigurationMaintainCharacteristicsBean.characteristicsMap['mwType'].component}" readOnly="false" secret="false" label="#{bundle['ConfigurationMaintainCharacteristicsu002ejsffAccess__RFSu002caccessDeviceu002c_mwType_LABEL']}" id="conf-mwType" value="#{pageFlowScope.ConfigurationMaintainCharacteristicsBean.characteristicsMap['mwType'].characteristic.value}" required="false" styleClass="UIHintsEditINPUT_TEXT"/>
+   </mds:insert>
+   <mds:insert parent="conf" position="last">
+      <af:inputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" binding="#{pageFlowScope.ConfigurationMaintainCharacteristicsBean.characteristicsMap['mediaType'].component}" readOnly="false" secret="false" label="#{bundle['ConfigurationMaintainCharacteristicsu002ejsffAccess__RFSu002caccessDeviceu002c_mediaType_LABEL']}" id="conf-mediaType" value="#{pageFlowScope.ConfigurationMaintainCharacteristicsBean.characteristicsMap['mediaType'].characteristic.value}" required="false" styleClass="UIHintsEditINPUT_TEXT"/>
+   </mds:insert>
+   <mds:insert after="conf-mwType">
+      <af:inputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" binding="#{pageFlowScope.ConfigurationMaintainCharacteristicsBean.characteristicsMap['service_action'].component}" readOnly="false" secret="false" label="#{bundle['ConfigurationMaintainCharacteristicsu002ejsffAccess__RFSu002caccessDeviceu002c_service-5Faction_LABEL']}" id="conf-service-5Faction" value="#{pageFlowScope.ConfigurationMaintainCharacteristicsBean.characteristicsMap['service_action'].characteristic.value}" required="false" styleClass="UIHintsEditINPUT_TEXT"/>
+   </mds:insert>
+   <mds:insert parent="conf" position="last">
+      <af:panelLabelAndMessage xmlns:af="http://xmlns.oracle.com/adf/faces/rich" id="conf-dummy-1-1" label=" " styleClass="UIHintsEditPANEL_LABEL_AND_MESSAGE">
+         <af:outputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" id="x-conf-dummy-1-1" value=" "/>
+      </af:panelLabelAndMessage>
+   </mds:insert>
+   <mds:modify element="conf">
+      <mds:attribute name="rows" value="2"/>
+      <mds:attribute name="maxColumns" value="2"/>
+      <mds:attribute name="labelAlignment" value="start"/>
+      <mds:attribute name="styleClass" value="UIHintsEditPANEL_FORM_LAYOUT"/>
+   </mds:modify>
+</mds:customization>

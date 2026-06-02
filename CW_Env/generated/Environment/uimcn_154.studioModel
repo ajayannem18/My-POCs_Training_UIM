@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="model:Environment" id="env=uimcn_154" type="env" typeName="Environment" name="uimcn_154" resource="\CW_Env\model\uimcn_154.sceEnvironment">
+    <displayName lang="default">Environment</displayName>
+    <note lang="default"/>
+    <environmentProperty>
+      <value inherited="false">dev.tsaro.uimcn.com</value>
+      <cartridgeType>Inventory Project</cartridgeType>
+      <category>Cartridge Management</category>
+      <name>wladmin.host.name</name>
+      <sensitive>false</sensitive>
+    </environmentProperty>
+    <environmentProperty>
+      <value inherited="false">32424</value>
+      <cartridgeType>Inventory Project</cartridgeType>
+      <category>Cartridge Management</category>
+      <name>wladmin.host.port</name>
+      <sensitive>false</sensitive>
+    </environmentProperty>
+    <address>http://dev.tsaro.uimcn.com:32424/cartridge/wsapi</address>
+    <server>admin</server>
+    <keystore></keystore>
+  </entity>
+</model:Model>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="D:/Jars_For_CW 1/Jars_For_CW/characteristic_caps.jar"/>
+	<classpathentry kind="lib" path="D:/Jars_For_CW 1/Jars_For_CW/com.bea.core.xml.beaxmlbeans.jar"/>
+	<classpathentry kind="lib" path="D:/Jars_For_CW 1/Jars_For_CW/com.bea.core.xml.xmlbeans.jar"/>
+	<classpathentry kind="lib" path="D:/Jars_For_CW 1/Jars_For_CW/comms-platform-ui.jar"/>
+	<classpathentry kind="lib" path="D:/Jars_For_CW 1/Jars_For_CW/consumable_caps.jar"/>
+	<classpathentry kind="lib" path="D:/Jars_For_CW 1/Jars_For_CW/groupenabled_caps.jar"/>
+	<classpathentry kind="lib" path="D:/Jars_For_CW 1/Jars_For_CW/javax.transaction.javax.transaction-api.jar"/>
+	<classpathentry kind="lib" path="D:/Jars_For_CW 1/Jars_For_CW/platformWsFramework.jar"/>
+	<classpathentry kind="lib" path="D:/Jars_For_CW 1/Jars_For_CW/poms.jar"/>
+	<classpathentry kind="lib" path="D:/Jars_For_CW 1/Jars_For_CW/uim-api-framework.jar"/>
+	<classpathentry kind="lib" path="D:/Jars_For_CW 1/Jars_For_CW/uim-entities.jar"/>
+	<classpathentry kind="lib" path="D:/Jars_For_CW 1/Jars_For_CW/uim-entity-xmlbean.jar"/>
+	<classpathentry kind="lib" path="D:/Jars_For_CW 1/Jars_For_CW/uim-managers.jar"/>
+	<classpathentry kind="lib" path="D:/Jars_For_CW 1/Jars_For_CW/uim-webservices-adapter-rpc.jar"/>
+	<classpathentry kind="lib" path="D:/Jars_For_CW 1/Jars_For_CW/uim-webservices-base.jar"/>
+	<classpathentry kind="lib" path="D:/Jars_For_CW 1/Jars_For_CW/uim-webservices-framework.jar"/>
+	<classpathentry kind="output" path="out"/>
+</classpath>

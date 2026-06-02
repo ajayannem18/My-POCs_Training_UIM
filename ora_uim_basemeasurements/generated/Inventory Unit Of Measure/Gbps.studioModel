@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:inventory="http://xmlns.oracle.com/communications/studio/model/inventory" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="inventory:UnitOfMeasure" id="iuom=Gbps" type="iuom" typeName="Inventory Unit Of Measure" name="Gbps" resource="/ora_uim_basemeasurements/model/Gbps.uom">
+    <note lang="default"/>
+    <project>
+      <relation ref="ivprj=ora_uim_basemeasurements" type="Inventory Project" name="Dependency">
+        <target name="ora_uim_basemeasurements" typeName="Inventory Project"/>
+      </relation>
+    </project>
+    <typeOfMeasurement>
+      <relation ref="mt=Bit Rate" type="Measurement Type" name="Type" kind="Entity">
+        <target name="Bit Rate" typeName="Measurement Type"/>
+      </relation>
+    </typeOfMeasurement>
+  </entity>
+</model:Model>

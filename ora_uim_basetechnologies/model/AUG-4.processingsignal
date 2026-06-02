@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  $Header: SCEUIM/src/plugins/com.mslv.studio.inventory.core/src/com/mslv/studio/inventory/entities/templates/processingsignal.xml /cgbusce_inv/1 2012/06/20 16:32:34 rswamir Exp $ -->
+<!-- 
+ Copyright (c) 2012, Oracle and/or its affiliates. All rights reserved. 
+
+   NAME
+     processingsignal.xml - <one-line expansion of the name>
+
+   DESCRIPTION
+     <short description of component this file declares/defines>
+
+   NOTES
+     <other useful comments, qualifications, etc.>
+
+   MODIFIED   (MM/DD/YY)
+   rswamir     06/20/12 - Creation
+
+-->
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:data="http://www.oracle.com/communications/studio/core/model/common/data" xmlns:inv="http://www.mslv.com/studio/inventory/model/specification" xmlns="http://www.mslv.com/studio/inventory/model/specification" xsi:type="inv:ProcessingSignalSpecificationType" name="AUG-4">
+  <com:saveVersion>4</com:saveVersion>
+  <com:baseEntityRef>
+    <com:entity>ProcessingSignal</com:entity>
+    <com:entityType>inventoryEntity</com:entityType>
+    <com:relationship></com:relationship>
+  </com:baseEntityRef>
+  <com:id>w9owneX+SlurJMG-kX+lqQ</com:id>
+  <data:dataElementNode virtual="true">
+    <com:id>w9owneX+SlurJMG-kX+lqQ</com:id>
+    <com:elementType>oracle.communications.studio.model.data.StudioModelDataElement</com:elementType>
+    <data:name>AUG-4</data:name>
+    <data:displayName lang="[default]">AUG-4</data:displayName>
+    <data:primitiveType>none</data:primitiveType>
+  </data:dataElementNode>
+  <data:dataElementDetails xsi:type="data:dataElementCommonDetail">
+    <com:id>znVR88q+R6iScaIckRq8DA</com:id>
+    <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+    <data:dataElementId>w9owneX+SlurJMG-kX+lqQ</data:dataElementId>
+    <data:defaultValue></data:defaultValue>
+    <data:key></data:key>
+    <data:deprecated>false</data:deprecated>
+    <data:sensitive>false</data:sensitive>
+    <data:minLength>0</data:minLength>
+    <data:maxLength>40</data:maxLength>
+    <data:minMultiplicity>0</data:minMultiplicity>
+    <data:maxMultiplicity>-1</data:maxMultiplicity>
+  </data:dataElementDetails>
+  <inv:relatedSpecification>
+    <com:entity>AU-4-4c</com:entity>
+    <com:entityType>processingsignal</com:entityType>
+    <com:relationship>MULTIPLEXES</com:relationship>
+    <inv:data xsi:type="inv:TDMProcessingSignalRelationshipType">
+      <inv:TDMRelType>MULTIPLEXES</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>AUG-1</com:entity>
+    <com:entityType>processingsignal</com:entityType>
+    <com:relationship>MULTIPLEXES</com:relationship>
+    <inv:data xsi:type="inv:TDMProcessingSignalRelationshipType">
+      <inv:TDMRelType>MULTIPLEXES</inv:TDMRelType>
+      <inv:cardinality>4</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:systemProvided>true</inv:systemProvided>
+  <inv:rateCode>
+    <com:entity>VC4-4</com:entity>
+    <com:entityType>ratecode</com:entityType>
+    <com:relationship></com:relationship>
+  </inv:rateCode>
+  <inv:processingSignalType>ADMINISTRATIVE_UNIT_GROUP</inv:processingSignalType>
+  <inv:transmissionSignalType>ELECTRICAL</inv:transmissionSignalType>
+</com:modelEntity>

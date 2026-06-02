@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:inv="http://www.mslv.com/studio/inventory/model/specification" xmlns="http://www.mslv.com/studio/inventory/model/specification" xsi:type="inv:CapacityTypeType" name="Bandwidth">
+  <com:id>---5--+Z--+v7eRQ--+0qA</com:id>
+  <inv:measurementType>
+    <com:entity>Bit Rate</com:entity>
+    <com:entityType>meastype</com:entityType>
+    <com:relationship>com.mslv.studio.inventory.capacity.type.REL_MEASUREMENT_TYPE</com:relationship>
+  </inv:measurementType>
+  <inv:description>The form of capacity that is typically used to identify the amount of data transferred over a transmission medium, port or interface in a fixed amount of time.</inv:description>
+  <inv:name>Bandwidth</inv:name>
+</com:modelEntity>

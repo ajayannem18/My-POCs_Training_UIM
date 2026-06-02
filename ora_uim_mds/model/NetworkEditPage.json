@@ -1,0 +1,123 @@
+{
+    "attributes": {
+        "resourceSpecification": {
+            "isVisible": true,
+            "isRequired": false,
+            "displayName": "Specification",
+            "min": 0,
+            "max": 255
+        },
+        "topology": {
+            "isVisible": true,
+            "isRequired": false,
+            "displayName": "networkTopology",
+            "min": 0,
+            "max": 255
+        },
+        "id": {
+            "isVisible": true,
+            "isRequired": true,
+            "displayName": "id",
+            "min": 0,
+            "max": 255
+        },
+        "technology": {
+            "isVisible": true,
+            "isRequired": false,
+            "displayName": "Technology",
+            "min": 0,
+            "max": 255
+        },
+        "name": {
+            "isVisible": true,
+            "isRequired": true,
+            "displayName": "name",
+            "min": 0,
+            "max": 255
+        },
+        "lifecycleState": {
+            "isVisible": true,
+            "isRequired": false,
+            "displayName": "Inventory Status",
+            "min": 0,
+            "max": 255
+        },
+        "description": {
+            "isVisible": true,
+            "isRequired": false,
+            "displayName": "description",
+            "min": 0,
+            "max": 255
+        },
+        "lifecycleSubState": {
+            "isVisible": true,
+            "isRequired": false,
+            "displayName": "Assignment Status",
+            "min": 0,
+            "max": 255
+        },
+        "lastModifiedDate": {
+            "isVisible": false,
+            "isRequired": false,
+            "displayName": "Last Modified Date",
+            "min": 0,
+            "max": 40
+        },
+        "protectionType": {
+            "isVisible": false,
+            "isRequired": false,
+            "displayName": "protectionType",
+            "min": 0,
+            "max": 255
+        },
+        "serialNumber": {
+            "isVisible": false,
+            "isRequired": false,
+            "displayName": "Serial Number",
+            "min": 0,
+            "max": 255
+        },
+        "createdUser": {
+            "isVisible": false,
+            "isRequired": false,
+            "displayName": "Created User",
+            "min": 0,
+            "max": 255
+        },
+        "startOperatingDate": {
+            "isVisible": false,
+            "isRequired": false,
+            "displayName": "Created Date",
+            "min": 0,
+            "max": 40
+        },
+        "lastModifiedUser": {
+            "isVisible": false,
+            "isRequired": false,
+            "displayName": "Last Modified User",
+            "min": 0,
+            "max": 255
+        },
+        "enforceSameChannelAssignment": {
+            "isVisible": false,
+            "isRequired": false,
+            "displayName": "enforceSameChannelAssignment",
+            "min": 0,
+            "max": 255
+        },
+        "ringType": {
+            "isVisible": false,
+            "isRequired": false,
+            "displayName": "ringType",
+            "min": 0,
+            "max": 255
+        },
+        "function": {
+            "isVisible": false,
+            "isRequired": false,
+            "displayName": "Function",
+            "min": 0,
+            "max": 255
+        }
+    }
+}

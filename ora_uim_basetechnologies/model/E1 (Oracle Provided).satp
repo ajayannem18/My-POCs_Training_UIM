@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:data="http://www.oracle.com/communications/studio/core/model/common/data" xmlns:inv="http://www.mslv.com/studio/inventory/model/specification" xmlns="http://www.mslv.com/studio/inventory/model/specification" xsi:type="inv:SignalTerminationPointSpecificationType" name="E1 (Oracle Provided)">
+  <com:displayName lang="[default]">E1</com:displayName>
+  <com:saveVersion>5</com:saveVersion>
+  <com:baseEntityRef>
+    <com:entity>SignalTerminationPoint</com:entity>
+    <com:entityType>inventoryEntity</com:entityType>
+    <com:relationship></com:relationship>
+  </com:baseEntityRef>
+  <com:id>X9ONtMRfSMCby3u0unQ7Uw</com:id>
+  <data:dataElementNode virtual="true">
+    <com:id>X9ONtMRfSMCby3u0unQ7Uw</com:id>
+    <com:elementType>oracle.communications.studio.model.data.StudioModelDataElement</com:elementType>
+    <data:name>E1 (Oracle Provided)</data:name>
+    <data:displayName lang="[default]">E1 (Oracle Provided)</data:displayName>
+    <data:primitiveType>none</data:primitiveType>
+  </data:dataElementNode>
+  <data:dataElementDetails xsi:type="data:dataElementCommonDetail">
+    <com:id>xU5vP7-sRqO-WHuaaSi-Ow</com:id>
+    <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+    <data:dataElementId>X9ONtMRfSMCby3u0unQ7Uw</data:dataElementId>
+    <data:defaultValue></data:defaultValue>
+    <data:key></data:key>
+    <data:deprecated>false</data:deprecated>
+    <data:sensitive>false</data:sensitive>
+    <data:minLength>0</data:minLength>
+    <data:maxLength>40</data:maxLength>
+    <data:minMultiplicity>0</data:minMultiplicity>
+    <data:maxMultiplicity>-1</data:maxMultiplicity>
+  </data:dataElementDetails>
+  <inv:relatedSpecification>
+    <com:entity>10M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>5</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>E0 (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>MULTIPLEXES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>MULTIPLEXES</inv:TDMRelType>
+      <inv:cardinality>30</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>C-E1 (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>MAPS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>MAPS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:systemProvided>true</inv:systemProvided>
+  <inv:rateCode>
+    <com:entity>E1</com:entity>
+    <com:entityType>ratecode</com:entityType>
+    <com:relationship></com:relationship>
+  </inv:rateCode>
+  <inv:transmissionSignalType>ELECTRICAL</inv:transmissionSignalType>
+  <inv:terminationPointSignalType>PDH_SIGNAL</inv:terminationPointSignalType>
+  <inv:validForFacility>true</inv:validForFacility>
+</com:modelEntity>

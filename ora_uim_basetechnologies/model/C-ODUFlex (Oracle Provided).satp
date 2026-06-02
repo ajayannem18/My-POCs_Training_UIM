@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:data="http://www.oracle.com/communications/studio/core/model/common/data" xmlns:inv="http://www.mslv.com/studio/inventory/model/specification" xmlns="http://www.mslv.com/studio/inventory/model/specification" xsi:type="inv:SignalTerminationPointSpecificationType" name="C-ODUFlex (Oracle Provided)">
+  <com:displayName lang="[default]">C-ODUFlex</com:displayName>
+  <com:saveVersion>86</com:saveVersion>
+  <com:baseEntityRef>
+    <com:entity>SignalTerminationPoint</com:entity>
+    <com:entityType>inventoryEntity</com:entityType>
+    <com:relationship></com:relationship>
+  </com:baseEntityRef>
+  <com:id>5Y3JMDZSRVKkfgRur00LbA</com:id>
+  <data:dataElementNode virtual="true">
+    <com:id>5Y3JMDZSRVKkfgRur00LbA</com:id>
+    <com:elementType>oracle.communications.studio.model.data.StudioModelDataElement</com:elementType>
+    <data:name>C-ODUFlex (Oracle Provided)</data:name>
+    <data:displayName lang="[default]">C-ODUFlex (Oracle Provided)</data:displayName>
+    <data:primitiveType>none</data:primitiveType>
+  </data:dataElementNode>
+  <data:dataElementDetails xsi:type="data:dataElementCommonDetail">
+    <com:id>BkSdcYRuS4im3qlSGGcTKw</com:id>
+    <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+    <data:dataElementId>5Y3JMDZSRVKkfgRur00LbA</data:dataElementId>
+    <data:defaultValue></data:defaultValue>
+    <data:key></data:key>
+    <data:deprecated>false</data:deprecated>
+    <data:sensitive>false</data:sensitive>
+    <data:minLength>0</data:minLength>
+    <data:maxLength>40</data:maxLength>
+    <data:minMultiplicity>0</data:minMultiplicity>
+    <data:maxMultiplicity>-1</data:maxMultiplicity>
+  </data:dataElementDetails>
+  <inv:relatedSpecification>
+    <com:entity>160GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>150GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>140GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>120GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>98.75GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>97.5GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>96.25GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>95GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>93.75GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>92.5GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>91.25GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>90GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>88.75GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>87.5GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>86.25GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>85GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>83.75GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>82.5GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>81.25GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>80GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>78.75GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>77.5GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>76.25GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>75GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>73.75GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>72.5GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>71.25GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>70GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>68.75GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>67.5GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>66.25GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>65GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>63.75GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>62.5GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>61.25GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>60GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>58.75GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>57.5GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>56.25GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>55GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>53.75GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>52.5GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>51.25GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>48.75GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>47.5GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>46.25GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>45GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>43.75GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>42.5GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>41.25GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>38.75GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>37.5GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>36.25GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>35GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>33.75GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>32.5GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>31.25GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>30GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>28.75GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>27.5GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>26.25GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>23.75GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>22.5GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>21.25GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>20GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>18.75GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>17.5GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>16.25GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>15GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>13.75GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>12.5GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>11.25GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>8.75GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>7.5GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>6.25GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>3.75GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>1.25GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>100GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>40GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>10GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>50GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>25GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>5GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>2.5GigE (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:systemProvided>true</inv:systemProvided>
+  <inv:rateCode>
+    <com:entity>ODUFlex</com:entity>
+    <com:entityType>ratecode</com:entityType>
+    <com:relationship></com:relationship>
+  </inv:rateCode>
+  <inv:transmissionSignalType>OPTICAL</inv:transmissionSignalType>
+  <inv:terminationPointSignalType>CONTAINER</inv:terminationPointSignalType>
+  <inv:validForFacility>false</inv:validForFacility>
+</com:modelEntity>

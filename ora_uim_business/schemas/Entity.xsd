@@ -1,0 +1,376 @@
+<?xml version="1.0"?>
+<!--
+ Copyright (c) 2011, 2015, Oracle and/or its affiliates. All rights reserved.
+    Oracle Corporation and/or its affiliates. Other names may be trademarks of their respective owners. 
+
+    This sample file, which has been provided by Oracle Corporation as part of an Oracle(r) product for use
+    ONLY by licensed users of the product, includes CONFIDENTIAL and PROPRIETARY information of Oracle
+    Corporation.
+
+    This material is the confidential property of Oracle Corporation or its licensors and may be used,
+    reproduced, stored, or transmitted only in accordance with a valid Oracle license or sublicense
+    agreement.
+
+    USE OF THIS SOFTWARE IS GOVERNED BY THE TERMS AND CONDITIONS OF THE LICENSE
+    AGREEMENT AND LIMITED WARRANTY FURNISHED WITH THE PRODUCT.
+
+    IN PARTICULAR, YOU WILL INDEMNIFY AND HOLD ORACLE CORPORATION, ITS RELATED COMPANIES AND ITS SUPPLIERS,
+    HARMLESS FROM AND AGAINST ANY CLAIMS OR LIABILITIES ARISING OUT OF THE USE, REPRODUCTION, OR DISTRIBUTION
+    OF YOUR PROGRAMS, INCLUDING ANY CLAIMS OR LIABILITIES ARISING OUT OF OR RESULTING FROM THE USE,
+    MODIFICATION, OR DISTRIBUTION OF PROGRAMS OR FILES CREATED FROM, BASED ON, AND/OR DERIVED FROM THIS
+    SAMPLE SOURCE CODE FILE.
+-->
+<xs:schema 
+    targetNamespace="http://xmlns.oracle.com/communications/inventory/entity" 
+    xmlns:invent="http://xmlns.oracle.com/communications/inventory/entity" 
+    xmlns:invspec="http://xmlns.oracle.com/communications/inventory/specification"
+	xmlns:invprop="http://xmlns.oracle.com/communications/inventory/property"
+	xmlns:invconfig="http://xmlns.oracle.com/communications/inventory/configuration"
+	xmlns:invgroup="http://xmlns.oracle.com/communications/inventory/group"
+	xmlns:invplace="http://xmlns.oracle.com/communications/inventory/place"
+    xmlns="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified">
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/specification" schemaLocation="Specification.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/property" schemaLocation="Property.xsd"/>
+	<xs:import namespace="http://xmlns.oracle.com/communications/inventory/configuration" schemaLocation="Configuration.xsd" />
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/group" schemaLocation="InventoryGroup.xsd" />
+	<xs:import namespace="http://xmlns.oracle.com/communications/inventory/place" schemaLocation="Place.xsd" />
+    <xs:complexType name="EntityType">
+        <xs:annotation>
+            <xs:documentation>An inventory entity.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="entityNote" type="xsd:string" nillable="false" minOccurs="0"/>
+			<xs:element name="assignmentState" type="invconfig:AssignmentStateEnum"></xs:element>
+			<xs:element name="entityLink" type="invent:EntityType" nillable="false" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The referenced entity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ExternalIdentityType">
+        <xs:annotation>
+            <xs:documentation>Specifies the explicit identity of the business entity from the perspective of the external participant.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="externalObjectId" type="xs:string" nillable="true" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Communicates a public unique identity or key for a business entity within the context of the domain specified by externalManagementDomain.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="externalName" type="xs:string" nillable="true" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Provides a business meaningful name of the business entity (identified by externalObjectID) within context of the domain specified by externalManagementDomain.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="externalManagementDomain" type="xs:string" nillable="false" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Identifies an external system, name domain, party, or participant in a business entity exchange, cooperation, sharing or federation arrangement.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="externalArrangement" type="invent:ExternalArrangementTypeEnum" nillable="false" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Identifies the pre-established cooperation model between UIM and the external party for the given entity. The valid cooperation arrangements are LEASED_IN, LEASED_OUT, SHARED and FEDERATED.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name ="TagType">
+     <xs:annotation>
+            <xs:documentation>
+                The tag is entity-like label that can be set on entities in Studio. The tags are defined at the ConfigItemspec level.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invent:EntityType">
+                <xs:sequence>
+                    <xs:element name="name" type="xsd:string" nillable="false" minOccurs="1" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Name of the Tag.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="description" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Description of the Tag.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="otherInformation" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>                                OtherInformation of the Tag.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+	
+	<xs:complexType name="GenericActivityType">
+        <xs:complexContent>
+            <xs:extension base="invent:EntityType">
+                <xs:sequence>
+                    <xs:element name="name" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Name of the Activity Type
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+					<xs:element name="description" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Description of the Activity Type
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+				</xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+	
+    <xs:simpleType name="ResourceActionEnum">
+        <xs:annotation>
+            <xs:documentation>
+                Defines valid values for Resource Action
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="CANCEL"/>
+            <xs:enumeration value="COMPLETE"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="EntityActionEnum">
+        <xs:annotation>
+            <xs:documentation>Defines valid values for Entity Actions</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xsd:string">
+            <xs:enumeration value="ADD"/>
+            <xs:enumeration value="UPDATE"/>
+            <xs:enumeration value="DELETE"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ExternalArrangementTypeEnum">
+        <xs:annotation>
+            <xs:documentation>Defines valid values for Entity Actions</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xsd:string">
+            <xs:enumeration value="LEASED_IN"/>
+            <xs:enumeration value="FEDERATED"/>
+            <xs:enumeration value="LEASED_OUT"/>
+            <xs:enumeration value="SHARED"/>
+        </xs:restriction>
+    </xs:simpleType>
+	<xs:complexType name="LockPolicyType">
+        <xs:annotation>
+            <xs:documentation>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="lockAllOrNone" type="xsd:boolean"
+                default="true" nillable="false" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+			<xs:element name="filterExistingLocks" type="xsd:boolean"
+                default="false" nillable="false" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="quantity" type="xsd:int"
+                default="10" nillable="false" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:group name="entityQueryCriteria">
+        <xs:choice>
+            <xs:element name="entity" type="invent:EntityType"
+                nillable="false" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="criteria" type="invent:SearchCriteriaType"
+                nillable="false" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:choice>
+    </xs:group>
+
+    <xs:complexType name="SearchCriteriaType">
+        <xs:annotation>
+            <xs:documentation>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="entityType" type="invent:EntityType"
+                nillable="false" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="specification" type="invspec:SpecificationType"
+                nillable="false" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="adminState" type="invspec:InventoryStateEnum"
+                nillable="false" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="assignmentState" type="invconfig:AssignmentStateEnum"
+                nillable="false" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="inventoryGroup" type="invgroup:ExtendedInventoryGroupType"
+                nillable="false" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+			<xs:element name="geographicLocation" type="invplace:GeographicLocationType"
+                nillable="false" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>
+					  Geographic location Details,Used to Search an Inventory Group 
+                    
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+			<xs:element name="serviceSpec" type="xsd:string" 
+				nillable="false" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>
+					  Service Specification Details,Used to Search an Inventory Group 
+                    
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="quantity" type="xsd:int"
+                default="10" nillable="false" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="reservation"
+                type="invconfig:ResourceReservationType" nillable="false"
+                minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="lock" type="invent:LockPolicyType"
+                nillable="false" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="criteriaItem" type="invent:SearchCriteriaItemType"
+                nillable="false" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="property" type="invent:SearchCriteriaItemType"
+                nillable="false" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="SearchCriteriaItemType">
+        <xs:annotation>
+            <xs:documentation>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="name" type="xsd:string"
+                nillable="false" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="value" type="xsd:anyType"
+                nillable="false" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="operator" type="invent:CriteriaOperatorEnum"
+                nillable="false" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="CriteriaOperatorEnum">
+        <xs:annotation>
+            <xs:documentation>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xsd:string">
+            <xs:enumeration value="EQUALS" />
+            <xs:enumeration value="NOT_EQUALS" />
+            <xs:enumeration value="BEGINS_WITH" />
+            <xs:enumeration value="ENDS_WITH" />
+            <xs:enumeration value="CONTAINS" />
+			<xs:enumeration value="GREATER_THAN_EQUAL" />
+			<xs:enumeration value="LESS_THAN_EQUAL" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="AssociationTypeEnum">
+        <xs:annotation>
+            <xs:documentation>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xsd:string">
+            <xs:enumeration value="PAIR" />
+            <xs:enumeration value="ASSOCIATE" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

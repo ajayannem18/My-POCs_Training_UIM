@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:data="http://www.oracle.com/communications/studio/core/model/common/data" xmlns:inv="http://www.mslv.com/studio/inventory/model/specification" xmlns="http://www.mslv.com/studio/inventory/model/specification" xmlns:layout="http://xmlns.oracle.com/communications/sce/poms/model/layout" xsi:type="inv:EquipmentSpecificationType" name="H901XGHD-ServiceCard">
+  <com:saveVersion>3</com:saveVersion>
+  <com:baseEntityRef>
+    <com:entity>Equipment</com:entity>
+    <com:entityType>inventoryEntity</com:entityType>
+    <com:relationship>unknown</com:relationship>
+  </com:baseEntityRef>
+  <com:id>7vEG0NpbQ8ahmMd5uY3T4g</com:id>
+  <data:dataElementNode virtual="true">
+    <com:id>7vEG0NpbQ8ahmMd5uY3T4g</com:id>
+    <com:elementType>oracle.communications.studio.model.data.StudioModelDataElement</com:elementType>
+    <data:name>H901XGHD-ServiceCard</data:name>
+    <data:displayName lang="[default]">H901XGHD-ServiceCard</data:displayName>
+    <data:primitiveType>none</data:primitiveType>
+  </data:dataElementNode>
+  <data:dataElementDetails xsi:type="data:dataElementCommonDetail">
+    <com:id>VfAHLI72TD6gCBnqXaHR1Q</com:id>
+    <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+    <data:dataElementId>7vEG0NpbQ8ahmMd5uY3T4g</data:dataElementId>
+    <data:defaultValue></data:defaultValue>
+    <data:key></data:key>
+    <data:deprecated>false</data:deprecated>
+    <data:sensitive>false</data:sensitive>
+    <data:minLength>0</data:minLength>
+    <data:maxLength>40</data:maxLength>
+    <data:minMultiplicity>0</data:minMultiplicity>
+    <data:maxMultiplicity>-1</data:maxMultiplicity>
+  </data:dataElementDetails>
+  <data:dataElementDetails xsi:type="layout:uiConfigurationType">
+    <com:id>y+3sZSqzQuGD4v64XiTh2A</com:id>
+    <com:elementType>oracle.communications.sce.poms.model.data.LayoutDetailType</com:elementType>
+    <data:dataElementId>7vEG0NpbQ8ahmMd5uY3T4g</data:dataElementId>
+    <layout:layout>
+      <layout:page>Equipment Redwood Editor</layout:page>
+      <layout:panel>Equipment Edit Redwood Panel</layout:panel>
+    </layout:layout>
+    <layout:layout>
+      <layout:page>Equipment Editor</layout:page>
+      <layout:panel>Equipment Edit Panel</layout:panel>
+    </layout:layout>
+    <layout:layout>
+      <layout:page>Equipment Summary</layout:page>
+      <layout:panel>Equipment Summary Panel</layout:panel>
+    </layout:layout>
+    <layout:layout>
+      <layout:page>Equipment Range Editor</layout:page>
+      <layout:panel>Equipment Range Edit Panel</layout:panel>
+    </layout:layout>
+  </data:dataElementDetails>
+  <inv:relatedSpecification>
+    <com:entity>10G GPON</com:entity>
+    <com:entityType>port</com:entityType>
+    <com:relationship>H901XGHD-ServiceCard To 10G GPON</com:relationship>
+    <inv:data xsi:type="inv:SpecificationRelationshipReferenceDataType">
+      <inv:relationship>CHILD</inv:relationship>
+      <inv:description></inv:description>
+      <inv:status>ACTIVE</inv:status>
+      <inv:parentsToChildMin>1</inv:parentsToChildMin>
+      <inv:parentsToChildMax>8</inv:parentsToChildMax>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:allowsConsumption>true</inv:allowsConsumption>
+  <inv:numberOfHoldersRequired>1</inv:numberOfHoldersRequired>
+  <inv:category>CARD</inv:category>
+</com:modelEntity>

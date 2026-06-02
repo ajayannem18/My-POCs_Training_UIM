@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:inv="http://www.mslv.com/studio/inventory/model/specification" xmlns="http://www.mslv.com/studio/inventory/model/specification" xsi:type="inv:RuleTriggerPointType" name="EquipmentManager_deletePhysicalPorts">
+  <com:displayName lang="[default]">EquipmentManager_deletePhysicalPorts</com:displayName>
+  <com:saveVersion>2</com:saveVersion>
+  <com:id>Hdx+zwInShe1c3U9agUg7w</com:id>
+  <inv:signature>public abstract interface void oracle.communications.inventory.api.equipment.EquipmentManager.deletePhysicalPorts(oracle.communications.inventory.api.entity.PhysicalDevice, java.util.List)</inv:signature>
+  <inv:pointName>EquipmentManager.deletePhysicalPorts</inv:pointName>
+  <inv:description>Delete physical port</inv:description>
+</com:modelEntity>

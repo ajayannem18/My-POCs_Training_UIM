@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<!--
+ Copyright (c) 2011, 2013, Oracle and/or its affiliates. All rights reserved.
+    Oracle Corporation and/or its affiliates. Other names may be trademarks of their respective owners. 
+
+    This sample file, which has been provided by Oracle Corporation as part of an Oracle(r) product for use
+    ONLY by licensed users of the product, includes CONFIDENTIAL and PROPRIETARY information of Oracle
+    Corporation.
+
+    This material is the confidential property of Oracle Corporation or its licensors and may be used,
+    reproduced, stored, or transmitted only in accordance with a valid Oracle license or sublicense
+    agreement.
+
+    USE OF THIS SOFTWARE IS GOVERNED BY THE TERMS AND CONDITIONS OF THE LICENSE
+    AGREEMENT AND LIMITED WARRANTY FURNISHED WITH THE PRODUCT.
+
+    IN PARTICULAR, YOU WILL INDEMNIFY AND HOLD ORACLE CORPORATION, ITS RELATED COMPANIES AND ITS SUPPLIERS,
+    HARMLESS FROM AND AGAINST ANY CLAIMS OR LIABILITIES ARISING OUT OF THE USE, REPRODUCTION, OR DISTRIBUTION
+    OF YOUR PROGRAMS, INCLUDING ANY CLAIMS OR LIABILITIES ARISING OUT OF OR RESULTING FROM THE USE,
+    MODIFICATION, OR DISTRIBUTION OF PROGRAMS OR FILES CREATED FROM, BASED ON, AND/OR DERIVED FROM THIS
+    SAMPLE SOURCE CODE FILE.
+-->
+<xs:schema targetNamespace="http://xmlns.oracle.com/communications/inventory/service"
+           xmlns:invconfig="http://xmlns.oracle.com/communications/inventory/configuration"
+           xmlns:invparty="http://xmlns.oracle.com/communications/inventory/party"
+           xmlns:invplace="http://xmlns.oracle.com/communications/inventory/place"
+           xmlns:invprop="http://xmlns.oracle.com/communications/inventory/property"
+           xmlns:invspec="http://xmlns.oracle.com/communications/inventory/specification"
+           xmlns:invsvc="http://xmlns.oracle.com/communications/inventory/service"
+           xmlns:invbi="http://xmlns.oracle.com/communications/inventory/businessinteraction"
+           xmlns:invent="http://xmlns.oracle.com/communications/inventory/entity"
+           xmlns="http://www.w3.org/2001/XMLSchema"
+           xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <!--  ============= Imports Start ================= -->
+    <!-- Local Imports -->
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/entity"
+               schemaLocation="Entity.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/businessinteraction"
+               schemaLocation="BusinessInteraction.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/specification"
+               schemaLocation="Specification.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/property"
+               schemaLocation="Property.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/place"
+               schemaLocation="Place.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/party"
+               schemaLocation="Party.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/configuration"
+               schemaLocation="Configuration.xsd"/>
+    <!-- ==== Entity Value Types ==== -->
+    <xs:complexType name="ServiceType">
+        <xs:complexContent>
+            <xs:extension base="invent:EntityType">
+                <xs:sequence>
+                    <xs:element name="specification"
+                                type="invspec:SpecificationType"
+                                nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>Specification of the Service</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="id" type="xs:string" nillable="false"
+                                minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>Id of the Service</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="action" type="xs:string" nillable="false"
+                                minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>This is a specialized action on
+                                              the service (or Entity). This is a
+                                              free form value - based on
+                                              agreement between external system
+                                              and the Service Domain-specific
+                                              Logic. The default values are
+                                              'Create', 'Disconnect', Change',
+                                              'Suspend', or 'Resume'.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="name" type="xs:string" nillable="true"
+                                minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>Name of the Service</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="description" type="xs:string"
+                                nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>Description of the Service</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="externalIdentity"
+                                type="invent:ExternalIdentityType"
+                                nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>Specifies the explicit identity of
+                                              the business entity from the
+                                              perspective of the external
+                                              participant.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="state" type="invsvc:ServiceStateEnum"
+                                nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>Current State of the Service</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="startDate" type="xsd:dateTime"
+                                nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>Start Date of the Service</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="endDate" type="xsd:dateTime"
+                                nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>End Date of the Service</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="property" type="invprop:PropertyType"
+                                nillable="true" minOccurs="0"
+                                maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>Property holds the dynamic
+                                              properties of a Service.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="place" type="invplace:PlaceType"
+                                nillable="true" minOccurs="0"
+                                maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>Places that are associated with
+                                              the Service. TODO: change to
+                                              xs:string to return a list of
+                                              place ids instead of place
+                                              instances.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="party" type="invparty:PartyType"
+                                nillable="true" minOccurs="0"
+                                maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>Parties that are associated with
+                                              the Service. TODO: change to
+                                              xs:string to return a list of
+                                              party ids instead of party
+                                              instances.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="configuration"
+                                type="invconfig:ConfigurationType"
+                                nillable="true" minOccurs="0"
+                                maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>Configuration Verions of a Service.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+					<xs:element name="networkOrientedService" type="invsvc:NetworkOrientedServiceEnum" nillable="true" minOccurs="0" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>Represents the Network Oriented Service State.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ==== Data Types ==== -->
+    <!-- ==== Entity Criteria Types ==== -->
+    <xs:complexType name="ServiceCriteriaType">
+        <xs:annotation>
+            <xs:documentation>Criteria to uniquely identify a Service.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invent:EntityType">
+                <xs:sequence>
+                    <xs:element name="serviceId" type="xsd:string"
+                                nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>Service Id</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="serviceState"
+                                type="invsvc:ServiceStateEnum" nillable="false"
+                                minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>Current Service State</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="externalId" type="xsd:string"
+                                nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>Used when trying to identify a
+                                              service by its external id. If the
+                                              service id and the service
+                                              external id are given, then the
+                                              service id is used. If the service
+                                              external id is used and multiple
+                                              services are found, then an error
+                                              is logged. Optional</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ==== Enumerations ==== -->
+    <xs:simpleType name="ServiceActionEnum">
+        <xs:annotation>
+            <xs:documentation>Defines valid values for Service Action</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="UPDATE"/>
+            <xs:enumeration value="CANCEL"/>
+            <xs:enumeration value="COMPLETE"/>
+            <xs:enumeration value="DISCONNECT"/>
+            <xs:enumeration value="SUSPEND"/>
+            <xs:enumeration value="RESUME"/>
+            <xs:enumeration value="CANCEL_NOT_ISSUE"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ServiceStateEnum">
+        <xs:annotation>
+            <xs:documentation>Defines valid values for Service State</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="PENDING"/>
+            <xs:enumeration value="IN_SERVICE"/>
+            <xs:enumeration value="PENDING_CANCEL"/>
+            <xs:enumeration value="CANCELLED"/>
+            <xs:enumeration value="PENDING_DISCONNECT"/>
+            <xs:enumeration value="DISCONNECTED"/>
+            <xs:enumeration value="CANCEL_PENDING_DISCONNECT"/>
+            <xs:enumeration value="SUSPENDED"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="StateChangePolicyEnum">
+        <xs:annotation>
+            <xs:documentation>Defines valid values for StateChangePolicy</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xsd:string">
+            <xs:enumeration value="TransitionThisServiceOnly"/>
+        </xs:restriction>
+    </xs:simpleType>
+	
+	<xs:simpleType name="NetworkOrientedServiceEnum">
+        <xs:annotation>
+            <xs:documentation>Defines valid values for Network Oriented Service State</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="MEMBER"/>
+            <xs:enumeration value="NETWORK"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

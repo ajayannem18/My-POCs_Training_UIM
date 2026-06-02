@@ -1,0 +1,20 @@
+package oracle.communications.inventory.rules;
+
+import oracle.communications.inventory.api.framework.logging.Log;
+import oracle.communications.inventory.extensibility.extension.util.ExtensionPointRuleContext;
+import mapServiceActionsWithUim.MapServiceActionsWithUimActions;
+ 
+ 
+global Log log;
+ 
+rule "MAP SERVICE ACTIONS WITH UIM ACTIONS"
+	salience 0
+	when
+    	context : ExtensionPointRuleContext()      
+    then 
+    MapServiceActionsWithUimActions mapServiceActions= new MapServiceActionsWithUimActions();
+    System.out.println("Calling action mapping method");
+   String finalAction= mapServiceActions.mapServiceActions(context);
+   context.setReturnValue(finalAction);
+   System.out.println("Converted action is "+finalAction);
+    end

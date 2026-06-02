@@ -1,0 +1,311 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich" xmlns:f="http://java.sun.com/jsf/core" xmlns:cui="/CommsUI"
+          xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <c:set var="inventoryUIBundle" value="#{adfBundle['oracle.communications.inventory.ui.common.bundle.InventoryUIBundle']}"/>
+    <af:panelStretchLayout id="psl1" styleClass="AFStretchWidth" dimensionsFrom="auto" topHeight="35">
+        <f:facet name="center">
+            <af:panelGroupLayout layout="scroll" id="pgl1" styleClass="AFStretchWidth" binding="#{backingBeanScope.allSection}">
+                <af:panelStretchLayout id="psl2" styleClass="AFStretchWidth" dimensionsFrom="auto" topHeight="auto">
+                    <f:facet name="top">
+                        <af:panelGroupLayout id="pgl12" layout="scroll" valign="top" binding="#{backingBeanScope.topSection}">
+                            <af:outputText id="ot19" value="#{inventoryUIBundle.REHOME_CONNECTIVITIES_MESSAGE}" rendered="#{pageFlowScope.RehomeConnectivitiesBean.entityType == 'Logical Device'}"/>
+                            <af:outputText id="ot20" value="#{inventoryUIBundle.REHOME_PORTS_MESSAGE}" rendered="#{pageFlowScope.RehomeConnectivitiesBean.entityType == 'Physical Device'}"/>
+                            <af:outputText id="ot21" value="#{inventoryUIBundle.REHOME_EQ_PORTS_MESSAGE}" rendered="#{pageFlowScope.RehomeConnectivitiesBean.entityType == 'Equipment'}"/>
+                        </af:panelGroupLayout>
+                    </f:facet>
+                    <f:facet name="center">
+                        <af:panelGroupLayout id="pgl9" layout="scroll" valign="top" binding="#{backingBeanScope.treeSection}">
+                            <af:popup id="lds" binding="#{backingBeanScope.ldSearchPopup}" contentDelivery="lazyUncached">
+                                <af:dialog id="ldd" type="none" title="#{inventoryUIBundle.LOGICAL_DEVICE_SEARCH}">
+                                    <af:panelStretchLayout id="pslds" styleClass="invEntitySearchPopup" dimensionsFrom="parent">
+                                        <f:facet name="center">
+                                            <af:region value="#{bindings.LogicalDeviceSearchResultsFlow1.regionModel}" id="r1"/>
+                                        </f:facet>
+                                    </af:panelStretchLayout>
+                                </af:dialog>
+                                <af:clientListener method="goRefreshEntity" type="popupClosed"/>
+                                <af:serverListener type="refreshEntity" method="#{pageFlowScope.RehomeConnectivitiesBean.refreshTree}"/>
+                            </af:popup>
+                            <af:popup id="pds" binding="#{backingBeanScope.pdSearchPopup}" contentDelivery="lazyUncached">
+                                <af:dialog id="pdd" type="none" title="#{inventoryUIBundle.PHYSICAL_DEVICE_SEARCH}">
+                                    <af:panelStretchLayout id="pspds" styleClass="invEntitySearchPopup" dimensionsFrom="parent">
+                                        <f:facet name="center">
+                                            <af:region value="#{bindings.PhysicalDeviceSearchResultsFlow1.regionModel}" id="r2"/>
+                                        </f:facet>
+                                    </af:panelStretchLayout>
+                                </af:dialog>
+                                <af:clientListener method="goRefreshEntity" type="popupClosed"/>
+                                <af:serverListener type="refreshEntity" method="#{pageFlowScope.RehomeConnectivitiesBean.refreshTree}"/>
+                            </af:popup>
+                            <af:popup id="eqs" binding="#{backingBeanScope.eqSearchPopup}" contentDelivery="lazyUncached">
+                                <af:dialog id="eqd" type="none" title="#{inventoryUIBundle.EQUIPMENT_SEARCH}">
+                                    <af:panelStretchLayout id="pseqs" styleClass="invEntitySearchPopup" dimensionsFrom="parent">
+                                        <f:facet name="center">
+                                            <af:region value="#{bindings.EquipmentSearchResultsFlow1.regionModel}" id="r3"/>
+                                        </f:facet>
+                                    </af:panelStretchLayout>
+                                </af:dialog>
+                                <af:clientListener method="goRefreshEntity" type="popupClosed"/>
+                                <af:serverListener type="refreshEntity" method="#{pageFlowScope.RehomeConnectivitiesBean.refreshTree}"/>
+                            </af:popup>
+                            <af:panelSplitter id="ps1" orientation="horizontal" splitterPosition="600" styleClass="AFStretchWidth" positionedFromEnd="true" binding="#{backingBeanScope.ldps}">
+                                <f:facet name="first">
+                                    <af:panelGroupLayout id="pgl19" layout="scroll" valign="top" binding="#{backingBeanScope.sourceTreeSection}">
+                                        <af:panelCollection id="pcs1" styleClass="AFStretchWidth">
+                                            <f:facet name="toolbar">
+                                                <af:toolbar id="st1" binding="#{backingBeanScope.sourceTB}">
+                                                    <af:button id="stb1" icon="/images/logical-device_ena.png" shortDesc="#{inventoryUIBundle.LOGICALDEVICE}"
+                                                               actionListener="#{pageFlowScope.RehomeConnectivitiesBean.invokeSearchPopup}"
+                                                               disabled="#{!pageFlowScope.RehomeConnectivitiesBean.disableLDButton}"/>
+                                                    <af:spacer width="5" id="sp1"/>
+                                                    <af:button id="stb2" icon="/images/physical-device_ena.png" shortDesc="#{inventoryUIBundle.PHYSICALDEVICE}"
+                                                               actionListener="#{pageFlowScope.RehomeConnectivitiesBean.invokeSearchPopup}"
+                                                               disabled="#{!pageFlowScope.RehomeConnectivitiesBean.disablePDButton}"/>
+                                                    <af:spacer width="5" id="sp2"/>
+                                                    <af:button id="stb3" icon="/images/equipment_ena.png" shortDesc="#{inventoryUIBundle.EQUIPMENT}"
+                                                               actionListener="#{pageFlowScope.RehomeConnectivitiesBean.invokeSearchPopup}"
+                                                               disabled="#{!pageFlowScope.RehomeConnectivitiesBean.disableEQButton}"/>
+                                                    <af:spacer width="5" id="sp7"/>
+                                                    <af:button id="stb4" icon="/images/clear_ena.png" shortDesc="#{inventoryUIBundle.CLEAR}"
+                                                               actionListener="#{pageFlowScope.RehomeConnectivitiesBean.clear}" disabledIcon="/images/clear_dis.png"
+                                                               disabled="#{pageFlowScope.RehomeConnectivitiesBean.disableSourceClearButton}" binding="#{backingBeanScope.clearSourceButton}">
+                                                        <af:setPropertyListener type="action" from="source" to="#{pageFlowScope.treeType}"/>
+                                                    </af:button>
+                                                    <af:spacer width="5" id="sp3"/>
+                                                    <af:button id="stb5" icon="/images/delete_ena.png" shortDesc="#{inventoryUIBundle.DELETE}"
+                                                               actionListener="#{pageFlowScope.RehomeConnectivitiesBean.delete}"
+                                                               disabled="#{pageFlowScope.RehomeConnectivitiesBean.disableSourceDeleteButton}" binding="#{backingBeanScope.deleteSourceButton}"
+                                                               disabledIcon="/images/delete_dis.png">
+                                                        <af:setPropertyListener type="action" from="source" to="#{pageFlowScope.treeType}"/>
+                                                    </af:button>
+                                                </af:toolbar>
+                                            </f:facet>
+                                            <af:treeTable value="#{pageFlowScope.SourceDeviceTreeBean.treeModel}" var="sourceNode" rowSelection="multiple" id="sourceTree" rowBandingInterval="0"
+                                                          fetchSize="#{pageFlowScope.SourceDeviceTreeBean.fetchSize}" contextMenuSelect="true" styleClass="AFStretchWidth" contentDelivery="immediate"
+                                                          expandAllEnabled="#{pageFlowScope.SourceDeviceTreeBean.expandAllEnabled}"
+                                                          selectionListener="#{pageFlowScope.SourceDeviceTreeBean.nodeSelectedEvent}" binding="#{backingBeanScope.sourceDevice_TreeBinding}"
+                                                          disclosedRowKeys="#{pageFlowScope.SourceDeviceTreeBean.treeDisclosedRowKeys}" summary="#{inventoryUIBundle.SOURCE_DEVICE_TREE}"
+                                                          rendered="#{pageFlowScope.RehomeConnectivitiesBean.entityType == 'Logical Device'}" inlineStyle="height:55px;">
+                                                <f:facet name="nodeStamp">
+                                                    <af:column sortable="false" rowHeader="unstyled" headerText="#{inventoryUIBundle.SOURCE_DEVICES}" id="c2">
+                                                        <af:panelGroupLayout id="pgl5">
+                                                            <af:link id="l1" icon="#{sourceNode.data.icon}" text="#{sourceNode.data.label}" shortDesc="#{inventoryUIBundle.LINK_FOR_SUMMARY}"
+                                                                     action="#{pageFlowScope.SourceDeviceTreeBean.view}" actionListener="#{pageFlowScope.SourceDeviceTreeBean.registerRecentItem}">
+                                                                <f:param name="rehome" value="true" id="sld1"/>
+                                                            </af:link>
+                                                        </af:panelGroupLayout>
+                                                    </af:column>
+                                                </f:facet>
+                                                <af:column sortable="false" headerText="#{inventoryUIBundle.CONSUMERS}" id="c6" filterable="false">
+                                                    <af:iterator id="i3" value="#{sourceNode.data.consumers}" var="sourceConsumer">
+                                                        <af:link actionListener="#{pageFlowScope.SourceDeviceTreeBean.viewConsumer}" action="#{pageFlowScope.SourceDeviceTreeBean.getConsumerAction}"
+                                                                 id="l2" shortDesc="#{inventoryUIBundle.LINK_FOR_SUMMARY}">
+                                                            <af:outputText value="#{sourceConsumer.label}" id="onn312"/>
+                                                            <f:param name="consumerOid" value="#{sourceConsumer.object.oid}" id="par222"/>
+                                                        </af:link>
+                                                        <br></br>
+                                                    </af:iterator>
+                                                </af:column>
+                                            </af:treeTable>
+                                            <af:treeTable value="#{pageFlowScope.SourcePhysicalDeviceTreeBean.treeModel}" var="sourceNode" rowSelection="multiple" id="sourcePDTree"
+                                                          rowBandingInterval="0" fetchSize="#{pageFlowScope.SourcePhysicalDeviceTreeBean.fetchSize}" contextMenuSelect="true"
+                                                          styleClass="AFStretchWidth" contentDelivery="immediate" expandAllEnabled="#{pageFlowScope.SourcePhysicalDeviceTreeBean.expandAllEnabled}"
+                                                          selectionListener="#{pageFlowScope.SourcePhysicalDeviceTreeBean.nodeSelectedEvent}"
+                                                          binding="#{backingBeanScope.sourcePhysicalDevice_TreeBinding}"
+                                                          disclosedRowKeys="#{pageFlowScope.SourcePhysicalDeviceTreeBean.treeDisclosedRowKeys}" summary="#{inventoryUIBundle.SOURCE_DEVICE_TREE}"
+                                                          rendered="#{pageFlowScope.RehomeConnectivitiesBean.entityType == 'Physical Device'}">
+                                                <f:facet name="nodeStamp">
+                                                    <af:column sortable="false" rowHeader="unstyled" headerText="#{inventoryUIBundle.SOURCE_DEVICES}" id="c10">
+                                                        <af:panelGroupLayout id="pgl4">
+                                                            <af:link action="#{pageFlowScope.SourcePhysicalDeviceTreeBean.view}" id="l5"
+                                                                     actionListener="#{pageFlowScope.SourcePhysicalDeviceTreeBean.registerRecentItem}" text="#{sourceNode.data.label}"
+                                                                     icon="#{sourceNode.data.icon}" shortDesc="#{inventoryUIBundle.LINK_FOR_SUMMARY}">
+                                                                <f:param name="rehome" value="true" id="spd1"/>
+                                                            </af:link>
+                                                        </af:panelGroupLayout>
+                                                    </af:column>
+                                                </f:facet>
+                                                <af:column sortable="false" headerText="#{inventoryUIBundle.CONSUMERS}" id="c11" filterable="false">
+                                                    <af:iterator id="i12" value="#{sourceNode.data.consumers}" var="sourceConsumer">
+                                                        <af:link actionListener="#{pageFlowScope.SourcePhysicalDeviceTreeBean.viewConsumer}"
+                                                                 action="#{pageFlowScope.SourcePhysicalDeviceTreeBean.getConsumerAction}" id="l6" shortDesc="#{inventoryUIBundle.LINK_FOR_SUMMARY}">
+                                                            <af:outputText value="#{sourceConsumer.label}" id="opn32"/>
+                                                            <f:param name="consumerOid" value="#{sourceConsumer.object.oid}" id="spdc2"/>
+                                                        </af:link>
+                                                        <af:switcher id="s3" defaultFacet="false" facetName="#{sourceConsumer.invStatus != null}">
+                                                            <f:facet name="true">
+                                                                <af:outputText value="(#{sourceConsumer.invStatus})"/>
+                                                            </f:facet>
+                                                            <f:facet name="false">
+                                                                <af:outputText value=" "/>
+                                                            </f:facet>
+                                                        </af:switcher>
+                                                        <br></br>
+                                                    </af:iterator>
+                                                </af:column>
+                                            </af:treeTable>
+                                            <af:treeTable value="#{pageFlowScope.SourceEquipmentTreeBean.treeModel}" var="sourceEqNode" rowSelection="multiple" id="sourceEQTree"
+                                                          fetchSize="#{pageFlowScope.SourceEquipmentTreeBean.fetchSize}" styleClass="AFStretchWidth"
+                                                          selectionListener="#{pageFlowScope.SourceEquipmentTreeBean.nodeSelectedEvent}" binding="#{backingBeanScope.sourceEquipment_treeBinding}"
+                                                          disclosedRowKeys="#{pageFlowScope.SourceEquipmentTreeBean.treeDisclosedRowKeys}" rowBandingInterval="0"
+                                                          expandAllEnabled="#{pageFlowScope.SourceEquipmentTreeBean.expandAllEnabled}" contentDelivery="immediate"
+                                                          summary="#{inventoryUIBundle.EQUIPMENT_HIERARCHY_TREETABLE}" rendered="#{pageFlowScope.RehomeConnectivitiesBean.entityType == 'Equipment'}">
+                                                <f:facet name="nodeStamp">
+                                                    <af:column id="ce2" width="250" rowHeader="unstyled" headerText="#{inventoryUIBundle.EQUIPMENT}">
+                                                        <af:link action="#{pageFlowScope.EquipmentHierarchyViewBean.view}" id="el5"
+                                                                 actionListener="#{pageFlowScope.EquipmentHierarchyViewBean.registerRecentItem}" text="#{sourceEqNode.data.label}"
+                                                                 icon="#{sourceEqNode.data.icon}" shortDesc="#{inventoryUIBundle.LINK_FOR_SUMMARY}">
+                                                            <f:param name="source" value="true" id="tp1"/>
+                                                        </af:link>
+                                                    </af:column>
+                                                </f:facet>
+                                                <af:column sortable="false" headerText="#{inventoryUIBundle.CONSUMERS}" width="250" id="ce6" filterable="false">
+                                                    <af:iterator id="ie3" value="#{sourceEqNode.data.consumers}" var="sourceConsumer">
+                                                        <af:link action="#{pageFlowScope.EquipmentHierarchyViewBean.getConsumerAction}"
+                                                                 actionListener="#{pageFlowScope.EquipmentHierarchyViewBean.viewConsumer}" id="el6" shortDesc="#{inventoryUIBundle.LINK_FOR_SUMMARY}">
+                                                            <af:outputText value="#{sourceConsumer.label}" id="opn312"/>
+                                                            <f:param name="consumerOid" value="#{sourceConsumer.object.oid}" id="seqc2"/>
+                                                            <f:param name="source" value="true" id="tp3"/>
+                                                        </af:link>
+                                                        <br></br>
+                                                    </af:iterator>
+                                                </af:column>
+                                            </af:treeTable>
+                                        </af:panelCollection>
+                                    </af:panelGroupLayout>
+                                </f:facet>
+                                <f:facet name="second">
+                                    <af:panelGroupLayout id="pgl20" layout="scroll" valign="top" binding="#{backingBeanScope.targetTreeSection}">
+                                        <af:panelCollection id="pct1" styleClass="AFStretchWidth">
+                                            <f:facet name="toolbar">
+                                                <af:toolbar id="st2" binding="#{backingBeanScope.targetTB}">
+                                                    <af:button id="ttb1" icon="/images/logical-device_ena.png" shortDesc="#{inventoryUIBundle.LOGICALDEVICE}"
+                                                               actionListener="#{pageFlowScope.RehomeConnectivitiesBean.invokeSearchPopup}"
+                                                               disabled="#{!pageFlowScope.RehomeConnectivitiesBean.disableLDButton}"/>
+                                                    <af:spacer width="5" id="sp4"/>
+                                                    <af:button id="ttb2" icon="/images/physical-device_ena.png" shortDesc="#{inventoryUIBundle.PHYSICALDEVICE}"
+                                                               actionListener="#{pageFlowScope.RehomeConnectivitiesBean.invokeSearchPopup}"
+                                                               disabled="#{!pageFlowScope.RehomeConnectivitiesBean.disablePDButton}"/>
+                                                    <af:spacer width="5" id="sp5"/>
+                                                    <af:button id="ttb3" icon="/images/equipment_ena.png" shortDesc="#{inventoryUIBundle.EQUIPMENT}"
+                                                               actionListener="#{pageFlowScope.RehomeConnectivitiesBean.invokeSearchPopup}"
+                                                               disabled="#{!pageFlowScope.RehomeConnectivitiesBean.disableEQButton}"/>
+                                                    <af:spacer width="5" id="sp8"/>
+                                                    <af:button id="ttb4" icon="/images/clear_ena.png" shortDesc="#{inventoryUIBundle.CLEAR}"
+                                                               actionListener="#{pageFlowScope.RehomeConnectivitiesBean.clear}" disabledIcon="/images/clear_dis.png"
+                                                               disabled="#{pageFlowScope.RehomeConnectivitiesBean.disableTargetClearButton}" binding="#{backingBeanScope.clearTargetButton}">
+                                                        <af:setPropertyListener type="action" from="target" to="#{pageFlowScope.treeType}"/>
+                                                    </af:button>
+                                                    <af:spacer width="5" id="sp6"/>
+                                                    <af:button id="ttb5" icon="/images/delete_ena.png" shortDesc="#{inventoryUIBundle.DELETE}"
+                                                               actionListener="#{pageFlowScope.RehomeConnectivitiesBean.delete}"
+                                                               disabled="#{pageFlowScope.RehomeConnectivitiesBean.disableTargetDeleteButton}" binding="#{backingBeanScope.deleteTargetButton}"
+                                                               disabledIcon="/images/delete_dis.png">
+                                                        <af:setPropertyListener type="action" from="target" to="#{pageFlowScope.treeType}"/>
+                                                    </af:button>
+                                                </af:toolbar>
+                                            </f:facet>
+                                            <af:treeTable value="#{pageFlowScope.TargetDeviceTreeBean.treeModel}" var="targetNode" rowSelection="multiple" id="targetTree"
+                                                          fetchSize="#{pageFlowScope.TargetDeviceTreeBean.fetchSize}" contextMenuSelect="true" styleClass="AFStretchWidth" contentDelivery="immediate"
+                                                          expandAllEnabled="#{pageFlowScope.TargetDeviceTreeBean.expandAllEnabled}"
+                                                          selectionListener="#{pageFlowScope.TargetDeviceTreeBean.nodeSelectedEvent}" binding="#{backingBeanScope.targetDevice_TreeBinding}"
+                                                          disclosedRowKeys="#{pageFlowScope.TargetDeviceTreeBean.treeDisclosedRowKeys}" rowBandingInterval="0"
+                                                          summary="#{inventoryUIBundle.TARGET_DEVICE_TREE}" inlineStyle="height:55px;"
+                                                          rendered="#{pageFlowScope.RehomeConnectivitiesBean.entityType == 'Logical Device'}">
+                                                <f:facet name="nodeStamp">
+                                                    <af:column sortable="false" rowHeader="unstyled" headerText="#{inventoryUIBundle.TARGET_DEVICES}" id="c72">
+                                                        <af:panelGroupLayout id="pgl6">
+                                                            <af:link id="l3" icon="#{targetNode.data.icon}" text="#{targetNode.data.label}" shortDesc="#{inventoryUIBundle.LINK_FOR_SUMMARY}"
+                                                                     action="#{pageFlowScope.TargetDeviceTreeBean.view}" actionListener="#{pageFlowScope.TargetDeviceTreeBean.registerRecentItem}">
+                                                                <f:param name="rehome" value="true" id="tld1"/>
+                                                            </af:link>
+                                                        </af:panelGroupLayout>
+                                                    </af:column>
+                                                </f:facet>
+                                                <af:column sortable="false" headerText="#{inventoryUIBundle.CONSUMERS}" id="c1" filterable="false">
+                                                    <af:iterator id="i1" value="#{targetNode.data.consumers}" var="targetConsumer">
+                                                        <af:link actionListener="#{pageFlowScope.TargetDeviceTreeBean.viewConsumer}" action="#{pageFlowScope.TargetDeviceTreeBean.getConsumerAction}"
+                                                                 id="l4" shortDesc="#{inventoryUIBundle.LINK_FOR_SUMMARY}">
+                                                            <af:outputText value="#{targetConsumer.label}" id="td312"/>
+                                                            <f:param name="consumerOid" value="#{targetConsumer.object.oid}" id="td222"/>
+                                                        </af:link>
+                                                        <br></br>
+                                                    </af:iterator>
+                                                </af:column>
+                                            </af:treeTable>
+                                            <af:treeTable value="#{pageFlowScope.TargetPhysicalDeviceTreeBean.treeModel}" var="targetNode" rowSelection="multiple" id="targetPDTree"
+                                                          fetchSize="#{pageFlowScope.TargetPhysicalDeviceTreeBean.fetchSize}" contextMenuSelect="true" styleClass="AFStretchWidth"
+                                                          contentDelivery="immediate" expandAllEnabled="#{pageFlowScope.TargetPhysicalDeviceTreeBean.expandAllEnabled}"
+                                                          selectionListener="#{pageFlowScope.TargetPhysicalDeviceTreeBean.nodeSelectedEvent}"
+                                                          binding="#{backingBeanScope.targetPhysicalDevice_TreeBinding}"
+                                                          disclosedRowKeys="#{pageFlowScope.TargetPhysicalDeviceTreeBean.treeDisclosedRowKeys}" rowBandingInterval="0"
+                                                          summary="#{inventoryUIBundle.TARGET_DEVICE_TREE}" rendered="#{pageFlowScope.RehomeConnectivitiesBean.entityType == 'Physical Device'}">
+                                                <f:facet name="nodeStamp">
+                                                    <af:column sortable="false" rowHeader="unstyled" headerText="#{inventoryUIBundle.TARGET_DEVICES}" id="c73">
+                                                        <af:link action="#{pageFlowScope.TargetPhysicalDeviceTreeBean.view}" id="lp7"
+                                                                 actionListener="#{pageFlowScope.TargetPhysicalDeviceTreeBean.registerRecentItem}" text="#{targetNode.data.label}"
+                                                                 icon="#{targetNode.data.icon}" shortDesc="#{inventoryUIBundle.LINK_FOR_SUMMARY}">
+                                                            <f:param name="rehome" value="true" id="tpd1"/>
+                                                        </af:link>
+                                                    </af:column>
+                                                </f:facet>
+                                                <af:column sortable="false" headerText="#{inventoryUIBundle.CONSUMERS}" id="c9" filterable="false">
+                                                    <af:iterator id="i8" value="#{targetNode.data.consumers}" var="targetConsumer">
+                                                        <af:link actionListener="#{pageFlowScope.TargetDeviceTreeBean.viewConsumer}" action="#{pageFlowScope.TargetDeviceTreeBean.getConsumerAction}"
+                                                                 id="lp8" shortDesc="#{inventoryUIBundle.LINK_FOR_SUMMARY}">
+                                                            <af:outputText value="#{targetConsumer.label}" id="tpd12"/>
+                                                            <f:param name="consumerOid" value="#{targetConsumer.object.oid}" id="tpd22"/>
+                                                        </af:link>
+                                                        <br></br>
+                                                    </af:iterator>
+                                                </af:column>
+                                            </af:treeTable>
+                                            <af:treeTable value="#{pageFlowScope.TargetEquipmentTreeBean.treeModel}" var="targetEqNode" rowSelection="multiple" id="targetEQTree"
+                                                          fetchSize="#{pageFlowScope.TargetEquipmentTreeBean.fetchSize}" styleClass="AFStretchWidth"
+                                                          selectionListener="#{pageFlowScope.TargetEquipmentTreeBean.nodeSelectedEvent}" binding="#{backingBeanScope.targetEquipment_treeBinding}"
+                                                          disclosedRowKeys="#{pageFlowScope.TargetEquipmentTreeBean.treeDisclosedRowKeys}" rowBandingInterval="0"
+                                                          expandAllEnabled="#{pageFlowScope.TargetEquipmentTreeBean.expandAllEnabled}" contentDelivery="immediate"
+                                                          summary="#{inventoryUIBundle.EQUIPMENT_HIERARCHY_TREETABLE}" rendered="#{pageFlowScope.RehomeConnectivitiesBean.entityType == 'Equipment'}">
+                                                <f:facet name="nodeStamp">
+                                                    <af:column id="ce4" minimumWidth="100" width="40%" rowHeader="unstyled" headerText="#{inventoryUIBundle.EQUIPMENT}">
+                                                        <af:link action="#{pageFlowScope.EquipmentHierarchyViewBean.view}" id="tel5"
+                                                                 actionListener="#{pageFlowScope.EquipmentHierarchyViewBean.registerRecentItem}" text="#{targetEqNode.data.label}"
+                                                                 icon="#{targetEqNode.data.icon}" shortDesc="#{inventoryUIBundle.LINK_FOR_SUMMARY}">
+                                                            <f:param name="source" value="false" id="tp2"/>
+                                                        </af:link>
+                                                    </af:column>
+                                                </f:facet>
+                                                <af:column sortable="false" headerText="#{inventoryUIBundle.CONSUMERS}" minimumWidth="200" width="60%" id="ce8" filterable="false">
+                                                    <af:iterator id="ie4" value="#{targetEqNode.data.consumers}" var="targetConsumer">
+                                                        <af:link action="#{pageFlowScope.EquipmentHierarchyViewBean.getConsumerAction}"
+                                                                 actionListener="#{pageFlowScope.EquipmentHierarchyViewBean.viewConsumer}" id="tel6" shortDesc="#{inventoryUIBundle.LINK_FOR_SUMMARY}">
+                                                            <af:outputText value="#{targetConsumer.label}" id="on312"/>
+                                                            <f:param name="consumerOid" value="#{targetConsumer.object.oid}" id="teqc2"/>
+                                                            <f:param name="source" value="false" id="tp4"/>
+                                                        </af:link>
+                                                        <br></br>
+                                                    </af:iterator>
+                                                </af:column>
+                                            </af:treeTable>
+                                        </af:panelCollection>
+                                    </af:panelGroupLayout>
+                                </f:facet>
+                            </af:panelSplitter>
+                        </af:panelGroupLayout>
+                    </f:facet>
+                    <f:facet name="bottom">
+                        <af:panelGroupLayout id="pg39" halign="right" layout="scroll">
+                            <af:panelGroupLayout id="pg75" layout="horizontal">
+                                <af:toolbar id="t5">
+                                    <af:commandToolbarButton text="#{inventoryUIBundle.ADD_TO_REHOME}" id="ctb3" actionListener="#{pageFlowScope.RehomeConnectivitiesBean.addToReview}"
+                                                             disabled="#{pageFlowScope.RehomeConnectivitiesBean.disableAddToRehome}" binding="#{backingBeanScope.addToRehomeBinding}"
+                                                             partialTriggers="pcs1:sourceTree pcs1:sourcePDTree pcs1:sourceEQTree pct1:targetTree pct1:targetPDTree pct1:targetEQTree"/>
+                                </af:toolbar>
+                            </af:panelGroupLayout>
+                        </af:panelGroupLayout>
+                    </f:facet>
+                </af:panelStretchLayout>
+            </af:panelGroupLayout>
+        </f:facet>
+    </af:panelStretchLayout>
+</jsp:root>

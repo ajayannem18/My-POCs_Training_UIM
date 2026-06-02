@@ -1,0 +1,783 @@
+<?xml version="1.0"?>
+<!--
+ Copyright (c) 2011, 2014, Oracle and/or its affiliates. All rights reserved.
+    Oracle Corporation and/or its affiliates. Other names may be trademarks of their respective owners. 
+
+    This sample file, which has been provided by Oracle Corporation as part of an Oracle(r) product for use
+    ONLY by licensed users of the product, includes CONFIDENTIAL and PROPRIETARY information of Oracle
+    Corporation.
+
+    This material is the confidential property of Oracle Corporation or its licensors and may be used,
+    reproduced, stored, or transmitted only in accordance with a valid Oracle license or sublicense
+    agreement.
+
+    USE OF THIS SOFTWARE IS GOVERNED BY THE TERMS AND CONDITIONS OF THE LICENSE
+    AGREEMENT AND LIMITED WARRANTY FURNISHED WITH THE PRODUCT.
+
+    IN PARTICULAR, YOU WILL INDEMNIFY AND HOLD ORACLE CORPORATION, ITS RELATED COMPANIES AND ITS SUPPLIERS,
+    HARMLESS FROM AND AGAINST ANY CLAIMS OR LIABILITIES ARISING OUT OF THE USE, REPRODUCTION, OR DISTRIBUTION
+    OF YOUR PROGRAMS, INCLUDING ANY CLAIMS OR LIABILITIES ARISING OUT OF OR RESULTING FROM THE USE,
+    MODIFICATION, OR DISTRIBUTION OF PROGRAMS OR FILES CREATED FROM, BASED ON, AND/OR DERIVED FROM THIS
+    SAMPLE SOURCE CODE FILE.
+-->
+<xs:schema targetNamespace="http://xmlns.oracle.com/communications/inventory/connectivity"
+           xmlns:invconn="http://xmlns.oracle.com/communications/inventory/connectivity"
+           xmlns:invconfig="http://xmlns.oracle.com/communications/inventory/configuration"
+           xmlns:invplace="http://xmlns.oracle.com/communications/inventory/place"
+           xmlns:invld="http://xmlns.oracle.com/communications/inventory/logicaldevice"
+           xmlns:invspec="http://xmlns.oracle.com/communications/inventory/specification"
+           xmlns:invprop="http://xmlns.oracle.com/communications/inventory/property"
+           xmlns:invent="http://xmlns.oracle.com/communications/inventory/entity"
+           xmlns="http://www.w3.org/2001/XMLSchema"
+           xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <!--  =================== Imports Start ==================== -->
+    <!-- Local Imports -->
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/entity"
+               schemaLocation="Entity.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/place"
+               schemaLocation="Place.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/logicaldevice"
+               schemaLocation="LogicalDevice.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/specification"
+               schemaLocation="Specification.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/property"
+               schemaLocation="Property.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/configuration"
+               schemaLocation="Configuration.xsd"/>
+    <xs:complexType name="ConnectivityType">
+        <xs:annotation>
+            <xs:documentation>ConnectivityType represents a Connectivity entity.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invent:EntityType">
+                <xs:sequence>
+                    <xs:element name="identification" type="string"
+                                maxOccurs="1" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>The identification does not apply
+                                              to Pipe entities. The
+                                              identification is used when trying
+                                              to identify a connectivity by its
+                                              identifier. It maps to the
+                                              connectivityIdentifier. In the
+                                              case of a Channelized
+                                              connectivity, the identification
+                                              would be "FRSCTXUSXA /
+                                              PLANTXUSXA.K01 / DS3 / T3 / 101".</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="specification"
+                                type="invspec:SpecificationType"
+                                nillable="false" minOccurs="0" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>Specification holds the
+                                              Pipe/Connectivity Specification
+                                              information</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="id" type="xsd:string" nillable="false"
+                                minOccurs="0" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>ID of the connectivity</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="name" type="xsd:string" nillable="true"
+                                minOccurs="0" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>Name of the connectivity</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="description" type="xsd:string"
+                                nillable="true" minOccurs="0" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>Description of the connectivity</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="externalIdentity"
+                                type="invent:ExternalIdentityType"
+                                nillable="true" minOccurs="0" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>Specifies the explicit identity of
+                                              the business entity from the
+                                              perspective of the external
+                                              participant.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="action" type="xsd:string" nillable="false"
+                                minOccurs="0" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>This is a specialized action on
+                                              the Connectivity (or Entity). This
+                                              is a free form value - based on
+                                              agreement between external system
+                                              and the Connectivity
+                                              Domain-specific Logic. The default
+                                              values are 'LEASE' and 'TERMINATE'.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="state" type="invspec:InventoryStateEnum"
+                                nillable="true" minOccurs="0" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>Lifecycle State of the Connectivity</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="startDate" type="xsd:dateTime"
+                                nillable="true" minOccurs="0" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>Start Date of the Connectivity</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="endDate" type="xsd:dateTime"
+                                nillable="true" minOccurs="0" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>End Date of the Connectivity</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="property" type="invprop:PropertyType"
+                                nillable="true" minOccurs="0"
+                                maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>Property holds the dynamic
+                                              properties of a Connectivity.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="technology" type="xsd:string"
+                                nillable="true" minOccurs="0" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>Identifies the type of technology
+                                              that is intended to be supported
+                                              by the connectivity. Examples:
+                                              Optical, SONET, SDH, T-Carrier,
+                                              E-Carrier, ATM, Frame.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="function" type="xsd:string"
+                                nillable="true" minOccurs="0" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>Designation (an acronym or
+                                              mnemonic) that describes the use
+                                              or function performed by the
+                                              connectivity. For example, the
+                                              'T1' function describes a
+                                              T-Carrier transmission facility
+                                              operating at a DS1 rate</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="signal" type="invconn:SignalType"
+                                nillable="true" minOccurs="1" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>Identifies information about the
+                                              signal type and transmission speed
+                                              of the signal the connectivity
+                                              will be expected to transmit or
+                                              carry. Signal may be expressed in
+                                              terms of a transmissionSpeed
+                                              and/or an industry-recognized or
+                                              user-defined mnemonic or textual
+                                              code referred to as the
+                                              signalCode. For instance, a
+                                              T-Carrier technology connectivity
+                                              may support a fixed transmission
+                                              speed of 1544000 (1.544 Megabits
+                                              per second). For T-Carrier
+                                              technology this is known as a
+                                              signal code of DS1.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="node" type="invconn:ConnectivityNodeType"
+                                nillable="true" minOccurs="2"
+                                maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>Identifies nodes in the node/edge
+                                              graph of connectivity. Nodes
+                                              describe where connectivity
+                                              terminates, where is 'passes
+                                              through' how it is routed, and so
+                                              forth. Each connectivity must
+                                              specify at least two endpoint
+                                              nodes.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="type" type="invconn:ConnectivityTypeEnum">
+                        <xs:annotation>
+                            <xs:documentation>Identifies the type of
+                                              connectivity. Examples: JUMPER,
+                                              CHANNEL, CROSS CONNECT, GAP,
+                                              FACILITY or PIPE</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="configuration"
+                                type="invconfig:ConfigurationType"
+                                nillable="true" minOccurs="0"
+                                maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>Configuration Verions of a
+                                              Connectivity.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="lifeCycleBinding" type="xsd:string"
+                                nillable="true" minOccurs="0" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>Indicates to what the
+                                              InterConnection's life is bound
+                                              to. Values are: - INTERFACE_BOUND
+                                              The life of the InterConnection
+                                              is bound to the interfaces it is
+                                              interconnecting. If one of the
+                                              interfaces is removed, the
+                                              InterConnection is removed. 
+                                              TRAIL_BOUND  The life of the
+                                              InterConnection is bound to the
+                                              life of the trail it enables. If
+                                              the trail.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+					<xs:element name="AServiceLocationName" type="xs:string" minOccurs="1"
+                        maxOccurs="1">
+					</xs:element>
+					<xs:element name="ANetworkLocationName" type="xs:string" minOccurs="1"
+                        maxOccurs="1">
+					</xs:element>
+					<xs:element name="ANetworkLocationAddress" type="xs:string" minOccurs="1"
+                        maxOccurs="1">
+					</xs:element>
+					<xs:element name="ALocationOid" type="xs:string" minOccurs="1"
+                        maxOccurs="1">
+					</xs:element>
+					<xs:element name="ZServiceLocationName" type="xs:string" minOccurs="1"
+                        maxOccurs="1">
+					</xs:element>
+					<xs:element name="ZNetworkLocationName" type="xs:string" minOccurs="1"
+                        maxOccurs="1">
+					</xs:element>
+					<xs:element name="ZNetworkLocationAddress" type="xs:string" minOccurs="1"
+                        maxOccurs="1">
+					</xs:element>
+					<xs:element name="ZLocationOid" type="xs:string" minOccurs="1"
+                        maxOccurs="1">
+					</xs:element>
+				</xs:sequence>
+		    </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="SignalType">
+        <xs:annotation>
+            <xs:documentation>Identifies information about the signal type and
+                              transmission speed of the signal the connectivity
+                              will be expected to transmit or carry. Signal may
+                              be expressed in terms of a transmissionSpeed
+                              and/or an industry-recognized or user-defined
+                              mnemonic or textual code referred to as the
+                              signalCode. For instance, a T-Carrier technology
+                              connectivity may support a fixed transmission
+                              speed of 1544000 (1.544 Megabits per second). For
+                              T-Carrier technology this is known as a signal
+                              code of DS1.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="transmissionSpeed"
+                        type="invconn:TransmissionSpeedType" nillable="true"
+                        minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Specifies the speed or bandwidth supported
+                                      by an entity such as a transmission entity
+                                      or a device interface in bits per second.
+                                      The SignalType.transmissionSpeed
+                                      (TransmissionSpeedType) details are
+                                      populated from the bit rate information on
+                                      the Signal Termination Point associated to
+                                      the Pipe end points. In the case on
+                                      Non-Pipes, the nominal bit rate
+                                      information should come from the RateCode
+                                      object associated to the Connectivity.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="signalCode" type="xsd:string" nillable="true"
+                        minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>The signalCode identifies a mnemonic or
+                                      textual industry-recognized code for a
+                                      signal. For instance, a T-Carrier
+                                      technology connectivity that supports a
+                                      transmission speed of 1.544 megabits per
+                                      second may also be referred to with a
+                                      signal code of DS1. It should be noted
+                                      that for Pipe, SignalType.signalCode is
+                                      the Signal Termination Point Specification
+                                      name of the Trail Termination Point or
+                                      Connection Termination Point associated to
+                                      the end points of the pipe, and for
+                                      Connectivity (non-Pipe) it is the name of
+                                      the Rate Code associated to the
+                                      connectivity.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="rateCode" type="xsd:string" minOccurs="0"
+                        maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Transmission rate code of the
+                                      connectivity. The nominal bit rate on the
+                                      rate code determines the capacity provided
+                                      and required by the connectivity. The
+                                      rateCode is populate it with the name of
+                                      the RateCode associated to the Signal
+                                      Termination Point (which will be either a
+                                      TrailTerminationPoint or a
+                                      ConnectionTerminationPoint).</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="TransmissionSpeedType">
+        <xs:annotation>
+            <xs:documentation>Specifies the speed or bandwidth supported by an
+                              entity such as a transmission entity or a device
+                              interface in bits per second. transmissionSpeed is
+                              a 'complex' property that is expressed in terms of
+                              a minimum speed, a maximum speed, and a nominal
+                              speed transmissionSpeed has one of its origins in
+                              the MIB-2 standard as "An estimate of the
+                              interface's current bandwidth in bits per second."
+                              For interfaces which do not vary in bandwidth or
+                              for those where no accurate estimation can be
+                              made, this object should contain the nominal
+                              bandwidth.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="minSpeed" type="xsd:decimal" nillable="true"
+                        minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Specifies the minimum transmission speed
+                                      of a business entity such as a
+                                      transmission entity or device interface in
+                                      bits per second when the transmission
+                                      speed may vary.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="maxSpeed" type="xsd:decimal" nillable="true"
+                        minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Specifies the maximum transmission speed
+                                      of a business entity such as a
+                                      transmission entity or device interface in
+                                      bits per second when the transmission
+                                      speed may vary.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="nominalSpeed" type="xsd:decimal" nillable="true"
+                        minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Specifies the nominal transmission speed
+                                      of a business entity such as a
+                                      transmission entity or device interface in
+                                      bits per second when the transmission
+                                      speed may vary.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="unitOfMeasure" type="xsd:string" nillable="true"
+                        minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Specifies the unit of measure of the
+                                      transmission speeds of a business entity
+                                      such as a transmission entity or device
+                                      interface in bits per second when the
+                                      transmission speed may vary.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ConnectivityNodeType">
+        <xs:annotation>
+            <xs:documentation>Identifies nodes in the node/edge graph of
+                              connectivity. Nodes describe where connectivity
+                              terminates, where is 'passes through' how it is
+                              routed, and so forth. Each connectivity must
+                              specify at least two endpoint nodes.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="typeOfNode" type="xsd:string" nillable="false"
+                        minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Identifies how the node is designated in a
+                                      given connectivity . For example, a trail
+                                      connectivity has two endpoint nodes and
+                                      optionally intermediate nodes in the
+                                      connectivity. Therefore the valid types of
+                                      node can be TERM-A, TERM-Z, INTERMEDIATE.
+                                      Other type of nodes are also applicable
+                                      depending on the context.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="location" type="invplace:PlaceType"
+                        nillable="true" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Identifies the location where the node is
+                                      terminated at.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="device" type="invld:LogicalDeviceType"
+                        nillable="true" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Identifies the device where the node is
+                                      terminated at.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="interface" type="invld:DeviceInterfaceType"
+                        nillable="true" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Identifies the device where the node is
+                                      terminated at.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="resource" type="invent:EntityType" maxOccurs="1"
+                        minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>TDM connectivity can only terminate on
+                                      interfaces, but pipe traditionally can
+                                      terminate on any entity. The resource is a
+                                      termination points for pipe, if other than
+                                      interfaces.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="adjacentConnectivity"
+                        type="invconn:ConnectivityType" nillable="true"
+                        minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>This is the connectivity on the other side
+                                      of this node, if it is known. This data
+                                      will provide information on how the
+                                      requested connectivity will be connected
+                                      on the other side for the given node, in
+                                      addition to the context of the location
+                                      and device. The adjacentConnectivity for
+                                      this node is itself in-turn recursively
+                                      represented by another connectivity so
+                                      that the same and complete schema can be
+                                      reused to describe the connectivity on the
+                                      other side, and so forth. The levels of
+                                      detail for the adjacentConnectivity can
+                                      vary based on specific implementation
+                                      needs.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="networkLocationEntityCode" type="xsd:string"
+                        minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Holds the denormalized values of the
+                                      combined
+                                      PropertyLocation.NetworkLocationCode and
+                                      the
+                                      NetworkEntityCode.NetworkLocationEntityCode
+                                      field values for the logical device,
+                                      including the '.' delimiter if specified
+                                      based on the system preference. This
+                                      attribute will be set by the application
+                                      by the API call, and used internally in
+                                      the Logical Device search when the user
+                                      searches for a device by Network/Entity
+                                      Location. This field value if specified by
+                                      a caller will be ignored by the APIs.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+			<xs:element name="flowIdentifier" type="invld:VlanIDType"
+                        nillable="true" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Identifies the Flow Identifiers for this
+                                      design segment</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="TrailPathType">
+        <xs:annotation>
+            <xs:documentation>A Trail Path represents a path of end-to-end
+                              connectivity segments that enable a connectivity.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="trailPathIdentifier" type="string" minOccurs="1"
+                        maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Trail path to which the configuration item
+                                      is related to.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="connectivitySegmentConfigurationItemType"
+                        type="invconfig:ConnectivitySegmentConfigurationItemType"
+                        nillable="false" minOccurs="1" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+	
+	<!-- ==== SR3 CHANGES START ==== -->
+	 
+	 <!-- ************************************************************************************** -->
+	<xs:complexType name="NetworkConnectivityType" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Network Connectivity represents connectivity that is part of the infrastructure of the communication network. NetworkConnectivity is an abstract entity that extends from Connectivity. This entity allows for attributes and relationships that are common to all kinds of network connectivity to be modeled in one place.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="invconn:ConnectivityType">
+				<xs:sequence>
+					<xs:element name="unit">
+						<xs:annotation>
+							<xs:documentation>A unit within the context of a 'hosting' or 'parent' connectivity. For instance, unit identifies a channel (channel address) within a Facility or a Twisted Pair within a Cable.</xs:documentation>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="20"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ************************************************************************************** -->
+	 
+	 <!-- ************************************************************************************** -->
+	<xs:complexType name="ServiceConnectivityType">
+		<xs:annotation>
+			<xs:documentation>A Service Connectivity is a form of Service-Facing connectivity that describes and assigns connectivity resources use by a (Resource-Facing) Service. The Service Connectivity describes a specific connectivity requirement for a Service and is assigned to the Service (Configuration) for its use and enablement. It is used when the type of service is manifested in the form of connectivity.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="invconn:ConnectivityType">
+				<xs:sequence>
+                                <xs:element name="committedInformationRate" type="xs:decimal">
+                                        <xs:annotation>
+                                            <xs:documentation>The average bit rate up to which Service Frames are to be delivered per the performance objectives of the service. The committedInformationRate value will be used to generate a CapacityRequired instance for the connectivity.</xs:documentation>
+                                        </xs:annotation>
+                                </xs:element>
+                                <xs:element name="maxInformationRate" type="xs:decimal">
+                                        <xs:annotation>
+                                            <xs:documentation>The maximum average bit rate up to which excess Service Frames  (frames whose average rate is greater than or equal to the committedInformationRate) are admitted into the Provider’s network.</xs:documentation>
+                                        </xs:annotation>
+                                </xs:element>
+                                <xs:element name="segment">
+                                        <xs:annotation>
+                                            <xs:documentation>Identifies the segment within the context of the Connectivity Function and Serial number. A segment value is applied when a service is realized by multiple Service Connectivity instances that share the same Connectivity Function and Serial number. 
+                                                              UIM will generate the segment value in the process of designing a Service Network. 
+                                                              The value will be a number starting at 1 for a given Connectivity Function and Serial combination and will be padded with zeros, such as "0001".
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                         <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="4"/>
+                                            </xs:restriction>
+                                         </xs:simpleType>
+                                </xs:element>
+					
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+  <!-- ************************************************************************************** -->		
+	<xs:complexType name="PacketConnectivityType" abstract="true">
+	    <xs:annotation>
+		<xs:documentation>PacketConnectivity is an abstract entity that is used to model attributes and relationships common to different kinds of packet connectivity. Packet connectivity carries units of data based on packet-switching technologies, such as ATM, Frame Relay, MPLS or Ethernet.</xs:documentation>
+	    </xs:annotation>
+	    <xs:complexContent>
+		<xs:extension base="invconn:NetworkConnectivityType">
+		    <xs:sequence>
+				<xs:element name="flowIdentifier" type="invld:VlanIDType"
+                        nillable="true" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Identifies the Flow Identifiers for this
+                                      design segment</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+			</xs:sequence>
+		</xs:extension>
+	    </xs:complexContent>
+	</xs:complexType>	
+	<!-- ************************************************************************************** -->		
+	<xs:complexType name="PacketNetworkAccessConnectivityType">
+	    <xs:annotation>
+		<xs:documentation>A customer centric packet connectivity used to connect the service provider customer to the service providers network. Network Access Connectivity allows for the 'A' end point to be located at a Service Location.</xs:documentation>
+	    </xs:annotation>
+	    <xs:complexContent>
+		<xs:extension base="invconn:PacketConnectivityType">
+		    <xs:sequence>
+		    </xs:sequence>
+		</xs:extension>
+	    </xs:complexContent>
+	</xs:complexType>
+	<!-- ************************************************************************************** -->		
+	<xs:complexType name="PacketNetworkConnectivityType">
+	    <xs:annotation>
+		<xs:documentation>A form of packet connectivity used to connect two service provider networks or a service provider network and another service providers network sometimes referred to as an operator.</xs:documentation>
+	    </xs:annotation>
+	    <xs:complexContent>
+		<xs:extension base="invconn:PacketConnectivityType">
+		    <xs:sequence>
+        <xs:element name="isInternetwork" type="xs:boolean">
+			    <xs:annotation>
+				<xs:documentation>Indicates that the connectivity links two networks.</xs:documentation>
+			    </xs:annotation>			
+          </xs:element>
+          <xs:element name="isInternetworkExternal" type="xs:boolean">
+			    <xs:annotation>
+				<xs:documentation>Indicates that the connectivity links the service provider’s network and an external network owned by another provider.</xs:documentation>
+			    </xs:annotation>			
+          </xs:element>
+         <xs:element name="otherProviderDemarcationPoint" type="invconn:AZLocationType">
+			    <xs:annotation>
+          <xs:documentation>Determines whether the demarcation point for the other service provider's network is at the connectivity's A location or the Z Location. This attribute is required when isInternetworkExternal is true.</xs:documentation>
+			    </xs:annotation>			
+			</xs:element>
+		    </xs:sequence>
+		</xs:extension>
+	    </xs:complexContent>
+	</xs:complexType>
+	<!-- ************************************************************************************** -->		
+	<xs:complexType name="EthernetUNIConnectivityType">
+	    <xs:annotation>
+		<xs:documentation>A User Network Interface (UNI) is a packet connection between the service provider and the customer over an Ethernet network.</xs:documentation>
+	    </xs:annotation>
+	    <xs:complexContent>
+		<xs:extension base="invconn:PacketNetworkAccessConnectivityType">
+		    <xs:sequence>
+			<xs:element name="isServiceMultiplexing" type="xs:boolean">
+			    <xs:annotation>
+				<xs:documentation>When set to "true", indicates that the connectivity can terminate on a "UNI-N" device interface that provides multiple Flow Points associated to their respective Packet Virtual Network. 
+                          The isVLANBased attribute must be set to "true" to enable Service Multiplexing. When set to "false", the connectivity can terminate on a "UNI-N" device interface that provides only one Flow Point.  
+                          Defaults to "true".</xs:documentation>
+			    </xs:annotation>			
+			</xs:element>
+			<xs:element name="isAllToOneBundling" type="xs:boolean">
+			    <xs:annotation>
+				<xs:documentation>When set to "true", indicates that all Ethernet UNI connectivity that access a Packet Virtual Network (i.e., EVC) provide private service (i.e., a single service per "UNI-N" device interface). 
+                          The isVLANBased attribute must be set to "false" to enable All to One Bundling. Defaults to "false".</xs:documentation>
+			    </xs:annotation>			
+			</xs:element>
+			<xs:element name="isBundling" type="xs:boolean">
+			    <xs:annotation>
+				<xs:documentation>When set to "true", indicates that multiple non-managed Flow Point Parameters (e.g. CE-VLAN IDs) can be associated with the Flow Points in the Packet Virtual Networks (i.e., EVC) to which this UNI connectivity provides access. 
+                          When isBundling is set to "false", at most one non-managed Flow Point Parameter can map to an EVC. Defaults to "true".</xs:documentation>
+			    </xs:annotation>			
+			</xs:element>
+			<xs:element name="maxPacketVirtualNetworkCount" type="xs:int">
+			    <xs:annotation>
+				<xs:documentation>The maximum number of Packet Virtual Networks (i.e., EVCs) to which the Ethernet UNI Connection can provide access. Defaults to 1.</xs:documentation>
+			    </xs:annotation>			
+			</xs:element>
+      			<xs:element name="isVLANBased" type="xs:boolean">
+			    <xs:annotation>
+				<xs:documentation>When set to "true", indicates that the UNI-C (i.e., the element that the ‘A’ end point is terminated on) is VLAN-aware. 
+                          VLAN-aware services have the UNI-C configured with a map of non-managed Flow Point Parameters (e.g. CE-VLAN IDs) to EVCs. 
+                          Therefore, the UNI connectivity can provide access to multiple Packet Virtual Networks (i.e., EVCs). 
+                          In this way, it is possible to build several EVPLs, EVP-LANs and EVP-Trees over a single "UNI-N" device interface. 
+                          When set to "false", indicates the UNI-C is VLAN unaware and supports EPL, EP-LAN and EP-Tree Ethernet services.  Defaults to "true".
+        </xs:documentation>
+			    </xs:annotation>			
+			</xs:element>
+		    </xs:sequence>
+		</xs:extension>
+	    </xs:complexContent>
+	</xs:complexType>  
+  	<!-- ************************************************************************************** -->		
+	<xs:complexType name="EthernetINNIConnectivityType">
+	    <xs:annotation>
+		<xs:documentation>An Ethernet connection that links I-NNI elements within the Provider’s network (intra-network) or between two networks owned by the Provider (inter-network)</xs:documentation>
+	    </xs:annotation>
+	    <xs:complexContent>
+		<xs:extension base="invconn:PacketNetworkConnectivityType">
+		    <xs:sequence>
+		    </xs:sequence>
+		</xs:extension>
+	    </xs:complexContent>
+	</xs:complexType>
+	<!-- ************************************************************************************** -->		
+	<xs:complexType name="EthernetENNIConnectivityType">
+	    <xs:annotation>
+		<xs:documentation>An Ethernet connection that links an E-NNI element in the Provider’s network and an E-NNI element in an external network owned by another Provider.</xs:documentation>
+	    </xs:annotation>
+	    <xs:complexContent>
+		<xs:extension base="invconn:PacketNetworkConnectivityType">
+		    <xs:sequence>
+		    </xs:sequence>
+		</xs:extension>
+	    </xs:complexContent>
+	</xs:complexType>
+	 
+	  <!-- ==== SR3 CHANGES END==== -->
+    <!-- ==== Data Types ==== -->
+    <!-- ==== Entity Criteria Types ==== -->
+    <xs:complexType name="ConnectivityCriteriaType">
+        <xs:annotation>
+            <xs:documentation>Criteria to uniquely identify a Service.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invent:EntityType">
+                <xs:sequence>
+                    <xs:element name="connectivityId" type="xsd:string"
+                                nillable="false" minOccurs="0" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>Used when trying to identify a
+                                              connectivity by its id. Applies to
+                                              all connectivity, including pipe.
+                                              Optional</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="identification" type="string"
+                                maxOccurs="1" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>Used when trying to identify a
+                                              connectivity by its identifier.
+                                              Applies to all connectivity,
+                                              except pipe. Optional In the
+                                              search, the id takes precedence
+                                              over the identification. If the id
+                                              and the identification are given,
+                                              then the search will be done using
+                                              the id. If no connectivity is
+                                              found using the id, then an error
+                                              is returned.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ==== Enumerations ==== -->
+    <xs:simpleType name="ConnectivityTypeEnum">
+        <xs:annotation>
+            <xs:documentation>Defines valid values for types of connectivity.</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xsd:string">
+            <xs:enumeration value="JUMPER"/>
+            <xs:enumeration value="CHANNEL"/>
+            <xs:enumeration value="CROSS_CONNECT"/>
+            <xs:enumeration value="GAP"/>
+            <xs:enumeration value="FACILITY"/>
+            <xs:enumeration value="PIPE"/>
+			<xs:enumeration value="ENNI"/>
+            <xs:enumeration value="UNI"/>
+            <xs:enumeration value="INNI"/>
+			<xs:enumeration value="SERVICE"/>
+	    </xs:restriction>
+    </xs:simpleType>
+	
+	<xs:simpleType name="AZLocationType">
+		<xs:annotation>
+			<xs:documentation></xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="A_LOCATION">
+        <xs:annotation>
+          <xs:documentation>The 'A' location of a connectivity.</xs:documentation>
+		    </xs:annotation>
+        </xs:enumeration>
+			<xs:enumeration value="Z_LOCATION">
+          <xs:annotation>
+          <xs:documentation>The 'Z' location of a connectivity.</xs:documentation>
+		    </xs:annotation>
+        </xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:data="http://www.oracle.com/communications/studio/core/model/common/data" xmlns:inv="http://www.mslv.com/studio/inventory/model/specification" xmlns="http://www.mslv.com/studio/inventory/model/specification" xsi:type="inv:SignalTerminationPointSpecificationType" name="E4 (Oracle Provided)">
+  <com:displayName lang="[default]">E4</com:displayName>
+  <com:saveVersion>4</com:saveVersion>
+  <com:baseEntityRef>
+    <com:entity>SignalTerminationPoint</com:entity>
+    <com:entityType>inventoryEntity</com:entityType>
+    <com:relationship></com:relationship>
+  </com:baseEntityRef>
+  <com:id>R03erB9DSsu17kdOhJNWlA</com:id>
+  <data:dataElementNode virtual="true">
+    <com:id>R03erB9DSsu17kdOhJNWlA</com:id>
+    <com:elementType>oracle.communications.studio.model.data.StudioModelDataElement</com:elementType>
+    <data:name>E4 (Oracle Provided)</data:name>
+    <data:displayName lang="[default]">E4 (Oracle Provided)</data:displayName>
+    <data:primitiveType>none</data:primitiveType>
+  </data:dataElementNode>
+  <data:dataElementDetails xsi:type="data:dataElementCommonDetail">
+    <com:id>+Y6+wgNwQ8CWPUBI3fnBYA</com:id>
+    <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+    <data:dataElementId>R03erB9DSsu17kdOhJNWlA</data:dataElementId>
+    <data:defaultValue></data:defaultValue>
+    <data:key></data:key>
+    <data:deprecated>false</data:deprecated>
+    <data:sensitive>false</data:sensitive>
+    <data:minLength>0</data:minLength>
+    <data:maxLength>40</data:maxLength>
+    <data:minMultiplicity>0</data:minMultiplicity>
+    <data:maxMultiplicity>-1</data:maxMultiplicity>
+  </data:dataElementDetails>
+  <inv:relatedSpecification>
+    <com:entity>E3 (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>MULTIPLEXES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>MULTIPLEXES</inv:TDMRelType>
+      <inv:cardinality>4</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>C-E4 (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>MAPS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>MAPS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:systemProvided>true</inv:systemProvided>
+  <inv:rateCode>
+    <com:entity>E4</com:entity>
+    <com:entityType>ratecode</com:entityType>
+    <com:relationship></com:relationship>
+  </inv:rateCode>
+  <inv:transmissionSignalType>ELECTRICAL</inv:transmissionSignalType>
+  <inv:terminationPointSignalType>PDH_SIGNAL</inv:terminationPointSignalType>
+  <inv:validForFacility>true</inv:validForFacility>
+</com:modelEntity>

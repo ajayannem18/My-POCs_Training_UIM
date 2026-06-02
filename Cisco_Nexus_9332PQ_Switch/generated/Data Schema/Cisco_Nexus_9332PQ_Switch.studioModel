@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:data="http://xmlns.oracle.com/communications/studio/model/data" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="data:DataSchema" id="ds=Cisco_Nexus_9332PQ_Switch" type="ds" typeName="Data Schema" name="Cisco_Nexus_9332PQ_Switch" resource="\Cisco_Nexus_9332PQ_Switch\dataDictionary\Cisco_Nexus_9332PQ_Switch.xsd">
+    <displayName lang="default">Cisco_Nexus_9332PQ_Switch</displayName>
+    <note lang="default"/>
+    <project>
+      <relation ref="ivprj=Cisco_Nexus_9332PQ_Switch" type="Inventory Project" name="Dependency">
+        <target name="Cisco_Nexus_9332PQ_Switch" typeName="Inventory Project"/>
+      </relation>
+    </project>
+    <dataElements>
+      <element id="ds=Cisco_Nexus_9332PQ_Switch+dataElement=Vendor" type="dataElement" typeName="Schema Element" kind="Element" name="Vendor" path="/Vendor">
+        <displayName lang="default">Vendor</displayName>
+        <minOccurs inherited="false">0</minOccurs>
+        <maxOccurs inherited="false">1</maxOccurs>
+        <defaultValue inherited="false"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="false">false</sensitive>
+        <minLength inherited="false">1</minLength>
+        <maxLength inherited="false">-1</maxLength>
+        <dataElements/>
+        <tag>
+          <name>Characteristic</name>
+          <description></description>
+        </tag>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <characteristics>
+          <dataValues>
+            <dropDownOptions/>
+          </dataValues>
+        </characteristics>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="ds=Cisco_Nexus_9332PQ_Switch+dataElement=Model" type="dataElement" typeName="Schema Element" kind="Element" name="Model" path="/Model">
+        <displayName lang="default">Model</displayName>
+        <minOccurs inherited="false">0</minOccurs>
+        <maxOccurs inherited="false">1</maxOccurs>
+        <defaultValue inherited="false"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="false">false</sensitive>
+        <minLength inherited="false">1</minLength>
+        <maxLength inherited="false">-1</maxLength>
+        <dataElements/>
+        <tag>
+          <name>Characteristic</name>
+          <description></description>
+        </tag>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <characteristics>
+          <dataValues>
+            <dropDownOptions/>
+          </dataValues>
+        </characteristics>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="ds=Cisco_Nexus_9332PQ_Switch+dataElement=RU_Size" type="dataElement" typeName="Schema Element" kind="Element" name="RU_Size" path="/RU_Size">
+        <displayName lang="default">RU Size</displayName>
+        <minOccurs inherited="false">0</minOccurs>
+        <maxOccurs inherited="false">1</maxOccurs>
+        <defaultValue inherited="false"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="false">false</sensitive>
+        <minLength inherited="false">1</minLength>
+        <maxLength inherited="false">-1</maxLength>
+        <dataElements/>
+        <tag>
+          <name>Characteristic</name>
+          <description></description>
+        </tag>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <characteristics>
+          <dataValues>
+            <dropDownOptions/>
+          </dataValues>
+        </characteristics>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="ds=Cisco_Nexus_9332PQ_Switch+dataElement=BandWidth" type="dataElement" typeName="Schema Element" kind="Element" name="BandWidth" path="/BandWidth">
+        <displayName lang="default">Band Width</displayName>
+        <minOccurs inherited="false">0</minOccurs>
+        <maxOccurs inherited="false">1</maxOccurs>
+        <defaultValue inherited="false"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="false">false</sensitive>
+        <minLength inherited="false">1</minLength>
+        <maxLength inherited="false">-1</maxLength>
+        <dataElements/>
+        <tag>
+          <name>Characteristic</name>
+          <description></description>
+        </tag>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <characteristics>
+          <dataValues>
+            <dropDownOptions/>
+          </dataValues>
+        </characteristics>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="ds=Cisco_Nexus_9332PQ_Switch+dataElement=PPS" type="dataElement" typeName="Schema Element" kind="Element" name="PPS" path="/PPS">
+        <displayName lang="default">PPS</displayName>
+        <minOccurs inherited="false">0</minOccurs>
+        <maxOccurs inherited="false">1</maxOccurs>
+        <defaultValue inherited="false"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="false">false</sensitive>
+        <minLength inherited="false">1</minLength>
+        <maxLength inherited="false">-1</maxLength>
+        <dataElements/>
+        <tag>
+          <name>Characteristic</name>
+          <description></description>
+        </tag>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <characteristics>
+          <dataValues>
+            <dropDownOptions/>
+          </dataValues>
+        </characteristics>
+        <primitiveType>string</primitiveType>
+      </element>
+    </dataElements>
+  </entity>
+</model:Model>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:inv="http://www.mslv.com/studio/inventory/model/specification" xmlns="http://www.mslv.com/studio/inventory/model/specification" xsi:type="inv:UnitOfMeasureType" name="Kbps">
+  <com:id>--+bwiMc--+qqthudPlr4g</com:id>
+  <inv:unit>Kbps</inv:unit>
+  <inv:conversionFactor>1000.0</inv:conversionFactor>
+  <inv:conversionFactorDescription>Multiplication factor to convert kilobits per second (Kbps) to bits per second (bps)</inv:conversionFactorDescription>
+  <inv:measurementType>
+    <com:entity>Bit Rate</com:entity>
+    <com:entityType>meastype</com:entityType>
+    <com:relationship>com.mslv.studio.inventory.capacity.uom.REL_TYPE_OF_MEASUREMENT</com:relationship>
+  </inv:measurementType>
+  <inv:name>Kilobits Per Second</inv:name>
+  <inv:description>A unit of data transfer equal to one thousand bits per second</inv:description>
+</com:modelEntity>

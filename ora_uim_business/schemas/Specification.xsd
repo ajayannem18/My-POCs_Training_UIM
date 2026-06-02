@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<!--
+ Copyright (c) 2011, 2014, Oracle and/or its affiliates. All rights reserved.
+    Oracle Corporation and/or its affiliates. Other names may be trademarks of their respective owners. 
+
+    This sample file, which has been provided by Oracle Corporation as part of an Oracle(r) product for use
+    ONLY by licensed users of the product, includes CONFIDENTIAL and PROPRIETARY information of Oracle
+    Corporation.
+
+    This material is the confidential property of Oracle Corporation or its licensors and may be used,
+    reproduced, stored, or transmitted only in accordance with a valid Oracle license or sublicense
+    agreement.
+
+    USE OF THIS SOFTWARE IS GOVERNED BY THE TERMS AND CONDITIONS OF THE LICENSE
+    AGREEMENT AND LIMITED WARRANTY FURNISHED WITH THE PRODUCT.
+
+    IN PARTICULAR, YOU WILL INDEMNIFY AND HOLD ORACLE CORPORATION, ITS RELATED COMPANIES AND ITS SUPPLIERS,
+    HARMLESS FROM AND AGAINST ANY CLAIMS OR LIABILITIES ARISING OUT OF THE USE, REPRODUCTION, OR DISTRIBUTION
+    OF YOUR PROGRAMS, INCLUDING ANY CLAIMS OR LIABILITIES ARISING OUT OF OR RESULTING FROM THE USE,
+    MODIFICATION, OR DISTRIBUTION OF PROGRAMS OR FILES CREATED FROM, BASED ON, AND/OR DERIVED FROM THIS
+    SAMPLE SOURCE CODE FILE.
+-->
+<xs:schema 
+    targetNamespace="http://xmlns.oracle.com/communications/inventory/specification" 
+    xmlns:invspec="http://xmlns.oracle.com/communications/inventory/specification" 
+    xmlns:invent="http://xmlns.oracle.com/communications/inventory/entity" 
+    xmlns="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified">
+    <!--  =================== Imports Start ==================== -->
+    <!-- Local Imports -->
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/entity" schemaLocation="Entity.xsd"/>
+    <xs:complexType name="SpecificationType">
+        <xs:annotation>
+            <xs:documentation>
+                SpecificationType holds the Specification information.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invent:EntityType">
+                <xs:sequence>
+                    <xs:element name="name" type="xsd:string" nillable="false">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Name of the Specification
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="entityClass" type="invspec:EntityClassEnum" nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Entity Class of the Specification.
+                                Example, Equipment, Pipe
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="description" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Description of the Specification
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="startDate" type="xsd:dateTime" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Start Date of the Specification
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="endDate" type="xsd:dateTime" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                End Date of the Specification
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:simpleType name="EntityClassEnum">
+        <xs:restriction base="xsd:string">
+            <xs:enumeration value="BusinessInteraction"/>
+            <xs:enumeration value="CustomObject"/>
+			<xs:enumeration value="CustomNetworkAddress"/>
+            <xs:enumeration value="DeviceInterface"/>
+            <xs:enumeration value="Equipment"/>
+            <xs:enumeration value="EquipmentHolder"/>
+            <xs:enumeration value="GeographicAddress"/>
+            <xs:enumeration value="GeographicLocation"/>
+            <xs:enumeration value="GeographicPlace">
+                <xs:annotation>
+                    <xs:documentation>
+                        GeographicPlace is an abstract class. This enum
+                        value can be provided for polymorphic searches
+                        to indicate that the result set can include
+                        instances of any subclass. This class may not be
+                        used to create an instance. A specification will
+                        never be associated with this class.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="GeographicSite"/>
+            <xs:enumeration value="InventoryGroup"/>
+            <xs:enumeration value="LogicalDevice"/>
+            <xs:enumeration value="LogicalDeviceAccount"/>
+            <xs:enumeration value="MediaStream"/>
+            <xs:enumeration value="Network"/>
+            <xs:enumeration value="NetworkAddress"/>
+            <xs:enumeration value="Party"/>
+            <xs:enumeration value="PhysicalConnector"/>
+            <xs:enumeration value="PhysicalDevice"/>
+            <xs:enumeration value="PhysicalPort"/>
+            <xs:enumeration value="Pipe"/>
+            <xs:enumeration value="Product"/>
+            <xs:enumeration value="Role"/>
+            <xs:enumeration value="Service"/>
+            <xs:enumeration value="ServiceConfigurationVersion"/>
+            <xs:enumeration value="TelephoneNumber"/>
+			<xs:enumeration value="TDMFacility"/>
+			<xs:enumeration value="IPAddress"/>
+			<xs:enumeration value="IPSubnet"/>
+			<xs:enumeration value="Connectivity"/>
+			<xs:enumeration value="FlowInterface"/>
+			<xs:enumeration value="VirtualNetwork"/>
+			<xs:enumeration value="PacketVirtualNetwork"/>
+			<xs:enumeration value="ServiceNetwork"/>
+			<xs:enumeration value="FlowIdentifier"/>
+			<xs:enumeration value="Activity">
+                <xs:annotation>
+                    <xs:documentation>
+                        Activity class is defined for Project related activities.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+			<xs:enumeration value="PropertyLocation"/>
+	    </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="InventoryStateEnum">
+        <xs:restriction base="xsd:string">
+            <xs:enumeration value="END_OF_LIFE"/>
+            <xs:enumeration value="INSTALLED"/>
+            <xs:enumeration value="PENDING_INSTALL"/>
+            <xs:enumeration value="PENDING_REMOVE"/>
+            <xs:enumeration value="PENDING_UNAVAILABLE"/>
+            <xs:enumeration value="PENDING_AVAILABLE"/>
+            <xs:enumeration value="PLANNED"/>
+            <xs:enumeration value="UNAVAILABLE"/>
+            <xs:enumeration value="PENDING_DISCONNECT"/>
+            <xs:enumeration value="DISCONNECTED"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<extent>
+  <object class="oracle.communications.platform.entity.impl.DeviceInterfaceSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/10G EPON.deviceInterface#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-0" version="0">
+    <field name="name">"10G EPON"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.DeviceInterfaceDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">true</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="rateCode">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.LogicalDeviceSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/MA5800-X15.device#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-1" version="0">
+    <field name="name">"MA5800-X15"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.LogicalDeviceDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="consumerAllowSharedConsumption">false</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs">
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-0</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-1</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-2</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-3</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-4</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-5</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-6</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-7</element>
+    </field>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="vendorName">null</field>
+    <field name="modelNumber">null</field>
+    <field name="partNumber">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.DeviceInterfaceSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/GE.deviceInterface#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-2" version="0">
+    <field name="name">"GE"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.DeviceInterfaceDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">true</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="rateCode">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.DeviceInterfaceSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/10GE.deviceInterface#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-3" version="0">
+    <field name="name">"10GE"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.DeviceInterfaceDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">true</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="rateCode">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.DeviceInterfaceSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/GPON.deviceInterface#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-4" version="0">
+    <field name="name">"GPON"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.DeviceInterfaceDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">true</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="rateCode">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.DeviceInterfaceSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/10G GPON.deviceInterface#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-5" version="0">
+    <field name="name">"10G GPON"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.DeviceInterfaceDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">true</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="rateCode">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.DeviceInterfaceSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/EPON.deviceInterface#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-6" version="0">
+    <field name="name">"EPON"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.DeviceInterfaceDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">true</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="rateCode">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.DeviceInterfaceSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/E1.deviceInterface#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-7" version="0">
+    <field name="name">"E1"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.DeviceInterfaceDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">true</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="rateCode">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.DeviceInterfaceSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/FE.deviceInterface#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-8" version="0">
+    <field name="name">"FE"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.DeviceInterfaceDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">true</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="rateCode">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.PhysicalPortSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/10G EPON.port#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-9" version="0">
+    <field name="name">"10G EPON"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.PhysicalPortDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">true</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.PhysicalPortSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/10G GPON.port#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-10" version="0">
+    <field name="name">"10G GPON"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.PhysicalPortDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">true</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.PhysicalPortSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/10GE.port#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-11" version="0">
+    <field name="name">"10GE"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.PhysicalPortDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">true</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.PhysicalPortSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/E1.port#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-12" version="0">
+    <field name="name">"E1"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.PhysicalPortDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">true</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.PhysicalPortSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/EPON.port#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-13" version="0">
+    <field name="name">"EPON"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.PhysicalPortDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">true</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.PhysicalPortSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/FE.port#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-14" version="0">
+    <field name="name">"FE"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.PhysicalPortDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">true</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.PhysicalPortSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/GE.port#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-15" version="0">
+    <field name="name">"GE"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.PhysicalPortDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">true</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.PhysicalPortSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/GPON.port#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-16" version="0">
+    <field name="name">"GPON"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.PhysicalPortDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">true</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.EquipmentSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/H901CGCD-ServiceCard.equipment#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-17" version="0">
+    <field name="name">"H901CGCD-ServiceCard"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.EquipmentDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">true</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs">
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-8</element>
+    </field>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="modelNumber">null</field>
+    <field name="partNumber">null</field>
+    <field name="vendorName">null</field>
+    <field name="numberOfHoldersRequired">1</field>
+    <field format="enum_name" name="equipmentCategory">CARD</field>
+    <field name="specIlogData">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.EquipmentHolderSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/X15-ServiceBoard.equipmentHolder#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-18" version="0">
+    <field name="name">"X15-ServiceBoard"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.EquipmentHolderDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs">
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-9</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-10</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-11</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-12</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-13</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-14</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-15</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-16</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-17</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-18</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-19</element>
+    </field>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.EquipmentSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/H901CVEC-ServiceCard.equipment#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-19" version="0">
+    <field name="name">"H901CVEC-ServiceCard"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.EquipmentDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">true</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="modelNumber">null</field>
+    <field name="partNumber">null</field>
+    <field name="vendorName">null</field>
+    <field name="numberOfHoldersRequired">1</field>
+    <field format="enum_name" name="equipmentCategory">CARD</field>
+    <field name="specIlogData">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.EquipmentSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/H901EDSH-ServiceCard.equipment#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-20" version="0">
+    <field name="name">"H901EDSH-ServiceCard"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.EquipmentDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">true</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs">
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-21</element>
+    </field>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="modelNumber">null</field>
+    <field name="partNumber">null</field>
+    <field name="vendorName">null</field>
+    <field name="numberOfHoldersRequired">1</field>
+    <field format="enum_name" name="equipmentCategory">CARD</field>
+    <field name="specIlogData">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.EquipmentSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/H901EPHF-ServiceCard.equipment#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-21" version="0">
+    <field name="name">"H901EPHF-ServiceCard"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.EquipmentDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">true</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs">
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-22</element>
+    </field>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="modelNumber">null</field>
+    <field name="partNumber">null</field>
+    <field name="vendorName">null</field>
+    <field name="numberOfHoldersRequired">1</field>
+    <field format="enum_name" name="equipmentCategory">CARD</field>
+    <field name="specIlogData">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.EquipmentSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/H901GPHF-ServiceCard.equipment#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-22" version="0">
+    <field name="name">"H901GPHF-ServiceCard"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.EquipmentDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">true</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs">
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-24</element>
+    </field>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="modelNumber">null</field>
+    <field name="partNumber">null</field>
+    <field name="vendorName">null</field>
+    <field name="numberOfHoldersRequired">1</field>
+    <field format="enum_name" name="equipmentCategory">CARD</field>
+    <field name="specIlogData">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.EquipmentSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/H901OGHK-ServiceCard.equipment#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-23" version="0">
+    <field name="name">"H901OGHK-ServiceCard"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.EquipmentDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">true</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs">
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-35</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-36</element>
+    </field>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="modelNumber">null</field>
+    <field name="partNumber">null</field>
+    <field name="vendorName">null</field>
+    <field name="numberOfHoldersRequired">1</field>
+    <field format="enum_name" name="equipmentCategory">CARD</field>
+    <field name="specIlogData">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.EquipmentSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/H901GPSF-ServiceCard.equipment#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-24" version="0">
+    <field name="name">"H901GPSF-ServiceCard"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.EquipmentDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">true</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs">
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-25</element>
+    </field>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="modelNumber">null</field>
+    <field name="partNumber">null</field>
+    <field name="vendorName">null</field>
+    <field name="numberOfHoldersRequired">1</field>
+    <field format="enum_name" name="equipmentCategory">CARD</field>
+    <field name="specIlogData">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.EquipmentSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/H901OXHD-ServiceCard.equipment#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-25" version="0">
+    <field name="name">"H901OXHD-ServiceCard"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.EquipmentDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">true</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs">
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-37</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-38</element>
+    </field>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="modelNumber">null</field>
+    <field name="partNumber">null</field>
+    <field name="vendorName">null</field>
+    <field name="numberOfHoldersRequired">1</field>
+    <field format="enum_name" name="equipmentCategory">CARD</field>
+    <field name="specIlogData">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.EquipmentSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/H901XEHD-ServiceCard.equipment#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-26" version="0">
+    <field name="name">"H901XEHD-ServiceCard"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.EquipmentDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">true</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs">
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-40</element>
+    </field>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="modelNumber">null</field>
+    <field name="partNumber">null</field>
+    <field name="vendorName">null</field>
+    <field name="numberOfHoldersRequired">1</field>
+    <field format="enum_name" name="equipmentCategory">CARD</field>
+    <field name="specIlogData">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.EquipmentSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/H901XGHD-ServiceCard.equipment#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-27" version="0">
+    <field name="name">"H901XGHD-ServiceCard"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.EquipmentDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">true</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs">
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-41</element>
+    </field>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="modelNumber">null</field>
+    <field name="partNumber">null</field>
+    <field name="vendorName">null</field>
+    <field name="numberOfHoldersRequired">1</field>
+    <field format="enum_name" name="equipmentCategory">CARD</field>
+    <field name="specIlogData">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.EquipmentSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/H901XSED-ServiceCard.equipment#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-28" version="0">
+    <field name="name">"H901XSED-ServiceCard"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.EquipmentDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">true</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs">
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-42</element>
+    </field>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="modelNumber">null</field>
+    <field name="partNumber">null</field>
+    <field name="vendorName">null</field>
+    <field name="numberOfHoldersRequired">1</field>
+    <field format="enum_name" name="equipmentCategory">CARD</field>
+    <field name="specIlogData">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.EquipmentSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/H901CIUA-UniversalInterfaceCard.equipment#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-29" version="0">
+    <field name="name">"H901CIUA-UniversalInterfaceCard"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.EquipmentDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="modelNumber">null</field>
+    <field name="partNumber">null</field>
+    <field name="vendorName">null</field>
+    <field name="numberOfHoldersRequired">1</field>
+    <field format="enum_name" name="equipmentCategory">CARD</field>
+    <field name="specIlogData">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.EquipmentHolderSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/X15-UniversalinInterafceBoard.equipmentHolder#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-30" version="0">
+    <field name="name">"X15-UniversalinInterafceBoard"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.EquipmentHolderDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs">
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-20</element>
+    </field>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.EquipmentSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/H901FMLA-FanCard.equipment#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-31" version="0">
+    <field name="name">"H901FMLA-FanCard"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.EquipmentDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="modelNumber">null</field>
+    <field name="partNumber">null</field>
+    <field name="vendorName">null</field>
+    <field name="numberOfHoldersRequired">1</field>
+    <field format="enum_name" name="equipmentCategory">CARD</field>
+    <field name="specIlogData">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.EquipmentHolderSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/X15-FanBoard.equipmentHolder#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-32" version="0">
+    <field name="name">"X15-FanBoard"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.EquipmentHolderDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs">
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-23</element>
+    </field>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.EquipmentSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/H901MPLA-ControlCard.equipment#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-33" version="0">
+    <field name="name">"H901MPLA-ControlCard"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.EquipmentDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs">
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-26</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-27</element>
+    </field>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="modelNumber">null</field>
+    <field name="partNumber">null</field>
+    <field name="vendorName">null</field>
+    <field name="numberOfHoldersRequired">1</field>
+    <field format="enum_name" name="equipmentCategory">CARD</field>
+    <field name="specIlogData">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.EquipmentHolderSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/X15-ControlBoard.equipmentHolder#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-34" version="0">
+    <field name="name">"X15-ControlBoard"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.EquipmentHolderDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs">
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-28</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-29</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-30</element>
+    </field>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.EquipmentSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/H901MPLB-ControlCard.equipment#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-35" version="0">
+    <field name="name">"H901MPLB-ControlCard"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.EquipmentDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs">
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-31</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-32</element>
+    </field>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="modelNumber">null</field>
+    <field name="partNumber">null</field>
+    <field name="vendorName">null</field>
+    <field name="numberOfHoldersRequired">1</field>
+    <field format="enum_name" name="equipmentCategory">CARD</field>
+    <field name="specIlogData">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.EquipmentSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/H901MPLC-ControlCard.equipment#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-36" version="0">
+    <field name="name">"H901MPLC-ControlCard"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.EquipmentDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs">
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-33</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-34</element>
+    </field>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="modelNumber">null</field>
+    <field name="partNumber">null</field>
+    <field name="vendorName">null</field>
+    <field name="numberOfHoldersRequired">1</field>
+    <field format="enum_name" name="equipmentCategory">CARD</field>
+    <field name="specIlogData">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.EquipmentSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/H901PILA-PowerCard.equipment#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-37" version="0">
+    <field name="name">"H901PILA-PowerCard"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.EquipmentDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="modelNumber">null</field>
+    <field name="partNumber">null</field>
+    <field name="vendorName">null</field>
+    <field name="numberOfHoldersRequired">1</field>
+    <field format="enum_name" name="equipmentCategory">CARD</field>
+    <field name="specIlogData">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.EquipmentHolderSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/X15-PowerBoard.equipmentHolder#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-38" version="0">
+    <field name="name">"X15-PowerBoard"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.EquipmentHolderDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs">
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-39</element>
+    </field>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.PhysicalDeviceSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/Huawei_MA5800-X15_PD.physicalDevice#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-39" version="0">
+    <field name="name">"Huawei_MA5800-X15_PD"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.PhysicalDeviceDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.EquipmentSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Tsaro_Huawei_MA5800-X15/model/MA5800-X15-Shelf.equipment#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-40" version="0">
+    <field name="name">"MA5800-X15-Shelf"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.EquipmentDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="modelNumber">"MA5800"</field>
+    <field name="partNumber">"X15"</field>
+    <field name="vendorName">"Huawei"</field>
+    <field name="numberOfHoldersRequired">1</field>
+    <field format="enum_name" name="equipmentCategory">SHELF</field>
+    <field name="specIlogData">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.EquipmentSpecificationIlogDataDAO-0</field>
+  </object>
+</extent>

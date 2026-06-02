@@ -1,0 +1,16 @@
+package telephoneNumberUnassignWithoutTransition;
+
+public class TN_Unassign {
+public static void unassignTN(){
+	System.out.println("Executing TN unassign method");
+	
+	try {
+		
+	}
+	catch (Exception e) {
+		e.printStackTrace();
+		System.out.println("Error occured");
+	}
+	
+}
+}

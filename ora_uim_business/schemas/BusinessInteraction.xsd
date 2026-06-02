@@ -1,0 +1,326 @@
+<?xml version="1.0"?>
+<!--
+ Copyright (c) 2011, 2013, Oracle and/or its affiliates. All rights reserved. 
+    Oracle Corporation and/or its affiliates. Other names may be trademarks of their respective owners. 
+
+    This sample file, which has been provided by Oracle Corporation as part of an Oracle(r) product for use
+    ONLY by licensed users of the product, includes CONFIDENTIAL and PROPRIETARY information of Oracle
+    Corporation.
+
+    This material is the confidential property of Oracle Corporation or its licensors and may be used,
+    reproduced, stored, or transmitted only in accordance with a valid Oracle license or sublicense
+    agreement.
+
+    USE OF THIS SOFTWARE IS GOVERNED BY THE TERMS AND CONDITIONS OF THE LICENSE
+    AGREEMENT AND LIMITED WARRANTY FURNISHED WITH THE PRODUCT.
+
+    IN PARTICULAR, YOU WILL INDEMNIFY AND HOLD ORACLE CORPORATION, ITS RELATED COMPANIES AND ITS SUPPLIERS,
+    HARMLESS FROM AND AGAINST ANY CLAIMS OR LIABILITIES ARISING OUT OF THE USE, REPRODUCTION, OR DISTRIBUTION
+    OF YOUR PROGRAMS, INCLUDING ANY CLAIMS OR LIABILITIES ARISING OUT OF OR RESULTING FROM THE USE,
+    MODIFICATION, OR DISTRIBUTION OF PROGRAMS OR FILES CREATED FROM, BASED ON, AND/OR DERIVED FROM THIS
+    SAMPLE SOURCE CODE FILE.
+-->
+<xs:schema 
+    targetNamespace="http://xmlns.oracle.com/communications/inventory/businessinteraction" 
+    xmlns:invconfig="http://xmlns.oracle.com/communications/inventory/configuration" 
+    xmlns:invparty="http://xmlns.oracle.com/communications/inventory/party" 
+    xmlns:invrole="http://xmlns.oracle.com/communications/inventory/role" 
+    xmlns:invplace="http://xmlns.oracle.com/communications/inventory/place" 
+    xmlns:invprop="http://xmlns.oracle.com/communications/inventory/property" 
+    xmlns:invspec="http://xmlns.oracle.com/communications/inventory/specification" 
+    xmlns:invbi="http://xmlns.oracle.com/communications/inventory/businessinteraction" 
+    xmlns:invent="http://xmlns.oracle.com/communications/inventory/entity" 
+    xmlns:invconn="http://xmlns.oracle.com/communications/inventory/connectivity"
+    xmlns:invstruc="http://xmlns.oracle.com/communications/inventory/structure" 
+    xmlns:invsvc="http://xmlns.oracle.com/communications/inventory/service" 
+    xmlns="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified">
+    <!--  ============= Imports Start ================= -->
+    <!-- Local Imports -->
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/entity" schemaLocation="Entity.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/specification" schemaLocation="Specification.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/property" schemaLocation="Property.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/service" schemaLocation="Service.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/connectivity" schemaLocation="Connectivity.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/structure" schemaLocation="Structure.xsd"/>
+    <!-- ==== Entity Value Types ==== -->
+    <xs:complexType name="BusinessInteractionType">
+        <xs:complexContent>
+            <xs:extension base="invent:EntityType">
+                <xs:sequence>
+                    <xs:element name="header" type="invbi:BusinessInteractionHeaderType" nillable="false" minOccurs="1" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Business Interaction header information.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="body" type="invbi:BusinessInteractionBodyType" nillable="false" minOccurs="1" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Business Interaction body detail information.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ==== Data Types ==== -->
+    <xs:complexType name="BusinessInteractionHeaderType">
+        <xs:annotation>
+            <xs:documentation>
+                This is the header information of a Business Interaction.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="specification" type="invspec:SpecificationType" nillable="false">
+                <xs:annotation>
+                    <xs:documentation>
+                        Specification information of the
+                        Business Interaction
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="action" type="invbi:BusinessInteractionActionEnum" nillable="true" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        Action for the Business Interaction.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="id" type="xsd:string" nillable="false" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        ID of the Business Interaction
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="name" type="xsd:string" nillable="true" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        Name of the Business Interaction
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="description" type="xsd:string" nillable="true" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        Description of the Business Interaction.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="externalIdentity" type="invent:ExternalIdentityType" nillable="false" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        Specifies the explicit identity of the business entity from the perspective of the external participant.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="state" type="invbi:BusinessInteractionStateEnum" nillable="true" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        Current State of the Business Interaction.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="effectiveDate" type="xsd:dateTime" nillable="true" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        Effective Date (Due Date) of the Business Interaction.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="property" type="invprop:PropertyType" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>
+                        Property holds the dynamic properties
+                        of a Business Interaction.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+			<xs:element name="workflowTemplate" type="xs:string" nillable="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+                        The business interaction due date provides
+                        a perspective for the work being performed on the inventory
+                        entities.
+                    </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="BusinessInteractionBodyType">
+        <xs:annotation>
+            <xs:documentation>
+                This is the body detail information of a Business Interaction.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="item" type="invbi:BusinessInteractionItemType" nillable="false" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>
+                        Each item represents an inventory entity
+                        that is involved in this
+                        Business Interaction.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="interaction" type="invbi:BusinessInteractionType" nillable="false" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Child Business Interactions.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ParameterType">
+        <xs:annotation>
+            <xs:documentation>This is a named parameter to an action.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="name" type="xsd:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        Each parameter is identified by its name.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="value" type="xsd:anyType">
+                <xs:annotation>
+                    <xs:documentation>
+                        The parameter value can hold any valid XML
+                        Schema Type that corresponds to a class of
+                        entity in the inventory.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xsd:element name="unused" minOccurs="0"
+                type="invstruc:StructuredType">
+                <xs:annotation>
+                    <xs:documentation>
+                            This element exists only as a workaround to force
+                            the StructuredType to be referenced, so that its XML Binding
+                            object will be code-generated. The intent is to make an instance
+                            of StructuredType available for assigning to the parameter value.
+                    </xs:documentation>
+                </xs:annotation>
+        </xsd:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="BusinessInteractionItemType">
+        <xs:annotation>
+            <xs:documentation>
+                An item holds an entity that is involved in (acted upon
+                by) the Business Interaction.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="externalIdentity" type="invent:ExternalIdentityType" nillable="false" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        Specifies the explicit identity of the business entity from the perspective of the external participant.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="action" type="invbi:BusinessInteractionItemActionEnum">
+                <xs:annotation>
+                    <xs:documentation>
+                        Action for the item within interaction as part of the collection actions comprising 
+                        the business interaction. The action values for an item are Add, 
+                        Change, or Remove.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:choice>
+                <xs:element name="service" type="invsvc:ServiceType" nillable="true" minOccurs="0"/>
+                <xs:element name="connectivity" type="invconn:ConnectivityType" nillable="true" minOccurs="0"/>
+                <xs:element name="entity" type="xsd:anyType">
+                    <xs:annotation>
+                        <xs:documentation>
+                            This element can hold any valid XML Schema Type
+                            that corresponds to a class of entity in the
+                            inventory.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:choice>
+            <xs:element name="parameter" type="invbi:ParameterType" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>
+                        These are the input parameters to the Business Interaction Item for a given Item action.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <!-- the hierarchical relationship between bi items is not included in this definition -->
+        </xs:sequence>
+    </xs:complexType>
+    <!-- ==== Entity Criteria Types ==== -->
+    <!--
+    <xs:complexType name="BusinessInteractionCriteriaType">
+        <xs:annotation>
+            <xs:documentation>
+                Criteria to uniquely identify a Business Interaction.
+            </xs:documentation>
+        </xs:annotation>
+    </xs:complexType>
+    -->
+    <!-- ==== Enumerations ==== -->
+    <xs:simpleType name="BusinessInteractionStateEnum">
+        <xs:annotation>
+            <xs:documentation>
+                Defines valid values for Business Interaction State
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xsd:string">
+            <xs:enumeration value="CREATED"/>
+            <xs:enumeration value="IN_PROGRESS"/>
+            <xs:enumeration value="COMPLETED"/>
+            <xs:enumeration value="CANCELLED"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="BusinessInteractionItemActionEnum">
+        <xs:annotation>
+            <xs:documentation>
+                Defines valid values for Business InteractionItem Action
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xsd:string">
+            <xs:enumeration value="ADD"/>
+            <xs:enumeration value="CHANGE"/>
+            <xs:enumeration value="REMOVE"/>
+            <xs:enumeration value="NO_CHANGE"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <!--
+    <xs:simpleType name="StateChangePolicyEnum">
+        <xs:annotation>
+            <xs:documentation>
+                Defines valid values for StateChangePolicy
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xsd:string">
+            <xs:enumeration value="TRANSITION_ALL_RELATED"/>
+            <xs:enumeration value="TRANSITION_THIS_ONLY"/>
+        </xs:restriction>
+    </xs:simpleType>
+    -->
+    <xs:simpleType name="BusinessInteractionActionEnum">
+        <xs:annotation>
+            <xs:documentation>
+                Defines valid values for Business Interaction Action.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xsd:string">
+            <xs:enumeration value="CREATE"/>
+            <xs:enumeration value="CHANGE"/>
+            <xs:enumeration value="APPROVE"/>
+            <xs:enumeration value="ISSUE"/>
+            <xs:enumeration value="CANCEL"/>
+            <xs:enumeration value="COMPLETE"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <!-- ==== Elements ==== -->
+    <xs:element name="interaction" type="invbi:BusinessInteractionType" />
+</xs:schema>

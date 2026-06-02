@@ -1,0 +1,17 @@
+LAST_FOLDER_CW_Env=CW_Env/model
+LAST_FOLDER_Cisco_IOS_XE_CAT8000v=Cisco_IOS_XE_CAT8000v/model
+LAST_FOLDER_Cisco_IOS_XRv_9000=Cisco_IOS_XRv_9000/model
+LAST_FOLDER_Cisco_Nexus_9332PQ_Switch=Cisco_Nexus_9332PQ_Switch/model
+LAST_FOLDER_Cisco_Nexus_9372PX_E_Switch=Cisco_Nexus_9372PX_E_Switch/model
+LAST_FOLDER_Flow_Identifier_Project=Flow_Identifier_Project/model
+LAST_FOLDER_MA5800-X15_PE=MA5800-X15_PE/model
+LAST_FOLDER_MA5800-X17_PE=MA5800-X17_PE/model
+LAST_FOLDER_Mobile_Poc=Mobile_Poc/model
+LAST_FOLDER_SRV-UBUNTU-01=SRV-UBUNTU-01/model
+LAST_FOLDER_Sample_Testing=Sample_Testing/model
+LAST_FOLDER_TSARO_Access_Service=TSARO_Access_Service/model
+LAST_FOLDER_Tsaro_Huawei_MA5800-X15=Tsaro_Huawei_MA5800-X15/model
+LAST_FOLDER_findPorts=findPorts/model
+com.mslv.studio.action.DeployConnectionRecentList=FindServiceByDeviceId (CW_env);SRV-UBUNTU-01 (uimcn-176);Cisco_Nexus_9372PX_E_Switch (uimcn-176);Tsaro_Huawei_MA5800-X15 (uimcn-176);Cisco_IOS_XRv_9000 (uimcn-176);
+com.mslv.studio.action.EntityCreationRecentList=com.mslv.studio.inventory.logical.device.interfaceRef;com.mslv.studio.inventory.logical.device;com.mslv.studio.inventory.equipment.holder;com.mslv.studio.inventory.port;com.mslv.studio.inventory.equipment;com.mslv.studio.inventory.physical.device;com.mslv.studio.inventory.ruleset;com.mslv.studio.inventory.ruleset.trigger;com.mslv.studio.inventory.bi;com.mslv.studio.inventory.place;com.mslv.studio.inventory.party;com.mslv.studio.inventory.tn;com.mslv.studio.inventory.service;oracle.communications.studio.inventory.flow.identifier;com.mslv.studio.core.environment;
+eclipse.preferences.version=1

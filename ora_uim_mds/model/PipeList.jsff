@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich" xmlns:f="http://java.sun.com/jsf/core" xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <c:set var="inventoryUIBundle" value="#{adfBundle['oracle.communications.inventory.ui.common.bundle.InventoryUIBundle']}"/>
+    <af:showDetailHeader text="#{inventoryUIBundle.ASSOCIATED_PIPES}" disclosed="true" id="sdh3">
+        <af:panelCollection id="PipeList" styleClass="AFStretchWidth">
+			<f:facet name="toolbar">
+				<af:toolbar id="t3">
+					<af:commandToolbarButton text="#{inventoryUIBundle.EXPORT}" immediate="true" shortDesc="#{inventoryUIBundle.EXPORT_ALL_ROWS}" 
+											 icon="/images/exporttoexcel_ena.png" disabledIcon="/images/exporttoexcel_dis.png" partialTriggers="resultsTableId"
+                                             id="ctb1">
+                        <af:exportCollectionActionListener type="#{pageFlowScope.PipeListBean.exportType}" exportedId="resultsTableId"
+                                    filename="#{inventoryUIBundle.ASSOCIATED_PIPES} - #{pageFlowScope.networkDisplayInfo}.xls" title="Export" exportedRows="all"/>
+                    </af:commandToolbarButton>
+				</af:toolbar>
+			</f:facet>
+            <f:facet name="statusbar">
+                <af:toolbar id="hwzt1">
+                    <af:outputText value="#{inventoryUIBundle.ROW_COUNT} #{(bindings.searchResultsIterator.dataControl.dataProvider.collectionModel.rowCount lt 0) ? 0 : bindings.searchResultsIterator.dataControl.dataProvider.collectionModel.rowCount}"
+                                   styleClass="invSearchOutputLabel" binding="#{backingBeanScope.totalResultsLabel}" partialTriggers="resultsTableId"
+                                   id="hwzot1"/>
+                </af:toolbar>
+            </f:facet>
+            <af:table id="resultsTableId" value="#{bindings.searchResultsIterator.dataControl.dataProvider.collectionModel}" var="row"
+                      emptyText="#{bindings.searchResults.viewable ? inventoryUIBundle.TABLE_EMPTY_TEXT_NO_ROWS_YET : inventoryUIBundle.TABLE_EMPTY_TEXT_ACCESS_DENIED}"
+                      fetchSize="#{(bindings.searchResultsIterator.dataControl.dataProvider.collectionModel.rowCount &lt; 25) ? bindings.searchResultsIterator.dataControl.dataProvider.collectionModel.rowCount : 25}"
+                      filterModel="#{pageFlowScope.PipeQueryBean.filterModel}" selectionListener="#{pageFlowScope.PipeListBean.selectAction}"
+                      queryListener="#{InventoryHelperBean.processQuery}" filterVisible="false" varStatus="vs" autoHeightRows="#{pageFlowScope.PipeListBean.portletHeight}"
+                      contentDelivery="immediate" sortListener="#{bindings.searchResultsIterator.dataControl.dataProvider.processSort}"
+                      rowSelection="#{pageFlowScope.PipeListBean.rowSelection}" styleClass="AFStretchWidth"
+                      selectedRowKeys="#{bindings.searchResultsIterator.dataControl.dataProvider.collectionModel.selectedRow}" columnStretching="last"
+                      binding="#{pageFlowScope.PipeListBean.resultsTable}" summary="#{inventoryUIBundle.LOGICAL_DEVICE_LIST}">
+                <af:column headerText="#{inventoryUIBundle.ID}" id="c3" sortable="true" filterable="true" sortProperty="id">
+                    <af:link id="c200" action="#{pageFlowScope.PipeListBean.pipeAction}" actionListener="#{pageFlowScope.PipeListBean.navigate}">
+                        <af:outputText value="#{row.id}" id="ot17"/>
+                        <af:setActionListener from="#{row.oid}" to="#{pageFlowScope.objectId}"/>
+                    </af:link>
+                </af:column>
+                <af:column headerText="#{inventoryUIBundle.NAME}" id="c1" sortable="true" filterable="true" sortProperty="name">
+                    <af:outputText value="#{pageFlowScope.PipeListBean.name}" id="ot18"/>
+                </af:column>
+                <af:column headerText="#{inventoryUIBundle.SPECIFICATION}" id="c7" sortable="true" filterable="true" sortProperty="specification.name">
+                    <af:link action="SpecificationSummary" id="clSpec1" actionListener="#{pageFlowScope.PipeListBean.navigateToSpecSummary}">
+                        <af:outputText value="#{pageFlowScope.PipeListBean.specDisplayNameForCollectionModelLists}" id="ot14"/>
+                        <af:setActionListener from="#{row.specification.oid}" to="#{specObjectId}"/>
+                    </af:link>
+                </af:column>
+                <af:column headerText="#{inventoryUIBundle.INVENTORY_STATUS}" id="c21" sortable="true" filterable="true" sortProperty="adminState">
+                    <af:outputText value="#{pageFlowScope.PipeListBean.inventoryStatus}" id="ot71"/>
+                    <af:outputText value="#{pageFlowScope.PipeListBean.inventoryStatusBIDueDate}" id="pendingBIDueDate2"/>
+                    <af:switcher id="swisld618" defaultFacet="false" facetName="#{pageFlowScope.PipeListBean.popupMode}">
+                        <f:facet name="false">
+                            <af:commandImageLink action="#{pageFlowScope.PipeListBean.getInventoryStatusSummaryAction}" id="bidld3"
+                                                 actionListener="#{pageFlowScope.PipeListBean.registerRecentItem}" text="#{pageFlowScope.PipeListBean.inventoryStatusBILabel}"
+                                                 shortDesc="#{pageFlowScope.PipeListBean.installingBIShortDesc}" disabled="#{pageFlowScope.PipeListBean.installingBIDisabled}">
+                                <af:setActionListener from="#{pageFlowScope.PipeListBean.inventoryStatusReferencedBI.oid}" to="#{objectId}"/>
+                            </af:commandImageLink>
+                        </f:facet>
+                        <f:facet name="true">
+                            <af:outputText value="#{pageFlowScope.PipeListBean.inventoryStatusBILabel}" id="swftisld618"/>
+                        </f:facet>
+                    </af:switcher>
+                </af:column>
+                <af:column headerText="#{inventoryUIBundle.MENU_TOPOLOGY}" id="ct2">
+                    <af:link text="#{inventoryUIBundle.VIEW_TOPOLOGY}" id="to11" rendered="#{(pageFlowScope.PipeListBean.renderTopologyMS)}" targetFrame="_blank" destination="#{pageFlowScope.PipeListBean.topologyURL}"   disabled="#{pageFlowScope.PipeListBean.disableTopologyButton}"/>
+<af:link text="#{inventoryUIBundle.VIEW_TOPOLOGY}" id="to12" action="searchInTopologyADF" rendered="#{!(pageFlowScope.PipeListBean.renderTopologyMS)}" actionListener="#{pageFlowScope.PipeListBean.navigateToTopology}"/>
+                </af:column>
+            </af:table>
+        </af:panelCollection>
+    </af:showDetailHeader>
+</jsp:root>

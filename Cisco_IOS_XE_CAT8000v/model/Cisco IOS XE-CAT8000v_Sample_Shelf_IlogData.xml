@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<cplData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ilog/cpl/schema/data.xsd">
+  <addObject id="EMPTYSLOT-71c59fee:19e5e76c503:-7f0f" container="true">
+    <class>
+      MSLVSlot
+    </class>
+    <parent>
+      SHELF-71c59fee:19e5e76c503:-7f10
+    </parent>
+    <children/>
+    <attribute name="name">
+      vmxnet3_Mgmt_EQ
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        0
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="type">
+      EmptySlot
+    </attribute>
+    <attribute name="slotNumber">
+      1
+    </attribute>
+  </addObject>
+  <addObject id="EMPTYSLOT-71c59fee:19e5e76c503:-7f0e" container="true">
+    <class>
+      MSLVSlot
+    </class>
+    <parent>
+      SHELF-71c59fee:19e5e76c503:-7f10
+    </parent>
+    <children/>
+    <attribute name="name">
+      vmxnet3_Data_EQ
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        1
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="type">
+      EmptySlot
+    </attribute>
+    <attribute name="slotNumber">
+      2
+    </attribute>
+  </addObject>
+  <addObject id="SHELF-71c59fee:19e5e76c503:-7f10" container="true">
+    <class>
+      ilog.tgo.model.IltShelf
+    </class>
+    <children>
+      <child>
+        EMPTYSLOT-71c59fee:19e5e76c503:-7f0f
+      </child>
+      <child>
+        EMPTYSLOT-71c59fee:19e5e76c503:-7f0e
+      </child>
+    </children>
+    <attribute name="name">
+      Cisco IOS XE-CAT8000v_Sample_Shelf
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.IlpPoint">
+      <x>
+        192.0
+      </x>
+      <y>
+        48.0
+      </y>
+    </attribute>
+    <attribute name="type">
+      Standard
+    </attribute>
+    <attribute name="slotSizes" javaClass="ilog.tgo.model.internal.IltSlotSizes">
+      <height>
+        <value>
+          384
+        </value>
+      </height>
+      <width>
+        <value>
+          274
+        </value>
+        <value>
+          274
+        </value>
+      </width>
+    </attribute>
+    <attribute name="direction">
+      Right
+    </attribute>
+    <attribute name="xslotindex">
+      0
+    </attribute>
+  </addObject>
+</cplData>

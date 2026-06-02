@@ -1,0 +1,21 @@
+package oracle.communications.inventory.rules;
+import oracle.communications.inventory.api.framework.logging.Log;
+import com.uim.practice.TN_FindOrCreation;
+
+global Log log;
+
+rule "Create_Tn"
+
+salience 0
+
+   when 
+   
+   
+   then 
+      
+      System.out.println("Calling TN creation class");
+      TN_FindOrCreation tn=new TN_FindOrCreation();
+      System.out.println("Executing findOrcreateTN method");
+      tn.findOrCreateTn();
+      
+   end   

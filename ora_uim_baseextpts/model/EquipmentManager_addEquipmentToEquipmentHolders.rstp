@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:inv="http://www.mslv.com/studio/inventory/model/specification" xmlns="http://www.mslv.com/studio/inventory/model/specification" xsi:type="inv:RuleTriggerPointType" name="EquipmentManager_addEquipmentToEquipmentHolders">
+  <com:saveVersion>2</com:saveVersion>
+  <com:id>Dpeppc8XRrSlMi9BN3-EAw</com:id>
+  <inv:signature>public abstract interface oracle.communications.inventory.api.entity.Equipment oracle.communications.inventory.api.equipment.EquipmentManager.addEquipmentToEquipmentHolders(oracle.communications.inventory.api.entity.EquipmentHolder, oracle.communications.inventory.api.entity.Equipment, boolean)</inv:signature>
+  <inv:pointName>EquipmentManager.addEquipmentToEquipmentHolders</inv:pointName>
+  <inv:description>For a pre-existing shelf, run this extension point to do some operation when an equipment is added to the holder of shelf.</inv:description>
+  <inv:global>true</inv:global>
+</com:modelEntity>

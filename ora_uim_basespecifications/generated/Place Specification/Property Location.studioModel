@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:inventory="http://xmlns.oracle.com/communications/studio/model/inventory" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="inventory:PlaceSpecification" id="plas=Property Location" type="plas" typeName="Place Specification" name="Property Location" resource="\ora_uim_basespecifications\model\Property Location.place">
+    <note lang="default"/>
+    <extends>
+      <relation ref="ie=PropertyLocation" type="Inventory Entity" name="Dependency" kind="Entity">
+        <target name="PropertyLocation" typeName="Inventory Entity"/>
+      </relation>
+    </extends>
+    <project>
+      <relation ref="ivprj=ora_uim_basespecifications" type="Inventory Project" name="Dependency">
+        <target name="ora_uim_basespecifications" typeName="Inventory Project"/>
+      </relation>
+    </project>
+    <dataElements>
+      <element id="plas=Property Location+dataElement=1V8P--+q--+NqHdZO-gP+g~E:inventoryEntity--PropertyLocation~E:inventoryEntity--GeographicLocation~description" type="dataElement" typeName="Data Element" kind="Element" name="description" path="/description" inherited="true">
+        <displayName lang="default">description</displayName>
+        <displayName lang="default">description</displayName>
+        <note lang="default">The description of GeographicPlace.</note>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">255</maxLength>
+        <base>
+          <relation ref="ie=PropertyLocation+dataElement=E:inventoryEntity--PropertyLocation~E:inventoryEntity--GeographicLocation~description" type="Data Element" name="Type" kind="Element">
+            <target name="description" typeName="Data Element"/>
+            <inEntity name="PropertyLocation" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="plas=Property Location+dataElement=1V8P--+q--+NqHdZO-gP+g~E:inventoryEntity--PropertyLocation~E:inventoryEntity--GeographicLocation~formattedIdentifier" type="dataElement" typeName="Data Element" kind="Element" name="formattedIdentifier" path="/formattedIdentifier" inherited="true">
+        <displayName lang="default">formattedIdentifier</displayName>
+        <displayName lang="default">formattedIdentifier</displayName>
+        <note lang="default">The formattedIdentifier of GeographicPlace.</note>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">255</maxLength>
+        <base>
+          <relation ref="ie=PropertyLocation+dataElement=E:inventoryEntity--PropertyLocation~E:inventoryEntity--GeographicLocation~formattedIdentifier" type="Data Element" name="Type" kind="Element">
+            <target name="formattedIdentifier" typeName="Data Element"/>
+            <inEntity name="PropertyLocation" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="plas=Property Location+dataElement=1V8P--+q--+NqHdZO-gP+g~E:inventoryEntity--PropertyLocation~E:inventoryEntity--GeographicLocation~horizontal" type="dataElement" typeName="Data Element" kind="Element" name="horizontal" path="/horizontal" inherited="true">
+        <displayName lang="default">horizontal</displayName>
+        <displayName lang="default">horizontal</displayName>
+        <note lang="default">The Horizontal Coordinate of GeographicPlace.</note>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">255</maxLength>
+        <base>
+          <relation ref="ie=PropertyLocation+dataElement=E:inventoryEntity--PropertyLocation~E:inventoryEntity--GeographicLocation~horizontal" type="Data Element" name="Type" kind="Element">
+            <target name="horizontal" typeName="Data Element"/>
+            <inEntity name="PropertyLocation" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="plas=Property Location+dataElement=1V8P--+q--+NqHdZO-gP+g~E:inventoryEntity--PropertyLocation~E:inventoryEntity--GeographicLocation~id" type="dataElement" typeName="Data Element" kind="Element" name="id" path="/id" inherited="true">
+        <displayName lang="default">id</displayName>
+        <displayName lang="default">id</displayName>
+        <note lang="default">The id of GeographicPlace.</note>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">255</maxLength>
+        <base>
+          <relation ref="ie=PropertyLocation+dataElement=E:inventoryEntity--PropertyLocation~E:inventoryEntity--GeographicLocation~id" type="Data Element" name="Type" kind="Element">
+            <target name="id" typeName="Data Element"/>
+            <inEntity name="PropertyLocation" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="plas=Property Location+dataElement=1V8P--+q--+NqHdZO-gP+g~isServiceLocation" type="dataElement" typeName="Data Element" kind="Element" name="isServiceLocation" path="/isServiceLocation" inherited="true">
+        <displayName lang="default">Is Service Location</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ie=PropertyLocation+dataElement=isServiceLocation" type="Data Element" name="Type" kind="Element">
+            <target name="isServiceLocation" typeName="Data Element"/>
+            <inEntity name="PropertyLocation" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>boolean</primitiveType>
+      </element>
+      <element id="plas=Property Location+dataElement=1V8P--+q--+NqHdZO-gP+g~E:inventoryEntity--PropertyLocation~E:inventoryEntity--GeographicLocation~latitude" type="dataElement" typeName="Data Element" kind="Element" name="latitude" path="/latitude" inherited="true">
+        <displayName lang="default">latitude</displayName>
+        <displayName lang="default">latitude</displayName>
+        <note lang="default">The latitude of GeographicPlace.</note>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">255</maxLength>
+        <base>
+          <relation ref="ie=PropertyLocation+dataElement=E:inventoryEntity--PropertyLocation~E:inventoryEntity--GeographicLocation~latitude" type="Data Element" name="Type" kind="Element">
+            <target name="latitude" typeName="Data Element"/>
+            <inEntity name="PropertyLocation" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="plas=Property Location+dataElement=1V8P--+q--+NqHdZO-gP+g~E:inventoryEntity--PropertyLocation~E:inventoryEntity--GeographicLocation~longitude" type="dataElement" typeName="Data Element" kind="Element" name="longitude" path="/longitude" inherited="true">
+        <displayName lang="default">longitude</displayName>
+        <displayName lang="default">longitude</displayName>
+        <note lang="default">The longitude of GeographicPlace.</note>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">255</maxLength>
+        <base>
+          <relation ref="ie=PropertyLocation+dataElement=E:inventoryEntity--PropertyLocation~E:inventoryEntity--GeographicLocation~longitude" type="Data Element" name="Type" kind="Element">
+            <target name="longitude" typeName="Data Element"/>
+            <inEntity name="PropertyLocation" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="plas=Property Location+dataElement=1V8P--+q--+NqHdZO-gP+g~E:inventoryEntity--PropertyLocation~E:inventoryEntity--GeographicLocation~name" type="dataElement" typeName="Data Element" kind="Element" name="name" path="/name" inherited="true">
+        <displayName lang="default">name</displayName>
+        <displayName lang="default">name</displayName>
+        <note lang="default">The name of GeographicPlace.</note>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">255</maxLength>
+        <base>
+          <relation ref="ie=PropertyLocation+dataElement=E:inventoryEntity--PropertyLocation~E:inventoryEntity--GeographicLocation~name" type="Data Element" name="Type" kind="Element">
+            <target name="name" typeName="Data Element"/>
+            <inEntity name="PropertyLocation" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="plas=Property Location+dataElement=1V8P--+q--+NqHdZO-gP+g~networkLocationCode" type="dataElement" typeName="Data Element" kind="Element" name="networkLocationCode" path="/networkLocationCode" inherited="true">
+        <displayName lang="default">networkLocationCode</displayName>
+        <displayName lang="default">networkLocationCode</displayName>
+        <note lang="default">An alphanumeric code that identifies the property and declares that Property Location also serves as a 'Network Location' for the service provider's business and network infrastructure. It can be alphanumeric and all in UPPER case.</note>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">10</maxLength>
+        <base>
+          <relation ref="ie=PropertyLocation+dataElement=networkLocationCode" type="Data Element" name="Type" kind="Element">
+            <target name="networkLocationCode" typeName="Data Element"/>
+            <inEntity name="PropertyLocation" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="plas=Property Location+dataElement=1V8P--+q--+NqHdZO-gP+g~E:inventoryEntity--PropertyLocation~E:inventoryEntity--GeographicLocation~vertical" type="dataElement" typeName="Data Element" kind="Element" name="vertical" path="/vertical" inherited="true">
+        <displayName lang="default">vertical</displayName>
+        <displayName lang="default">vertical</displayName>
+        <note lang="default">The Vertical Coordinate of GeographicPlace.</note>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">255</maxLength>
+        <base>
+          <relation ref="ie=PropertyLocation+dataElement=E:inventoryEntity--PropertyLocation~E:inventoryEntity--GeographicLocation~vertical" type="Data Element" name="Type" kind="Element">
+            <target name="vertical" typeName="Data Element"/>
+            <inEntity name="PropertyLocation" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+    </dataElements>
+    <relatedSpecificationList/>
+  </entity>
+</model:Model>

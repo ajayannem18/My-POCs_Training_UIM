@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: Mobile_Poc
+Bundle-Name: Mobile_Poc
+Bundle-Version: 1.0.0.0.0
+Bundle-BuildTime: 2026-05-26 12:23:25
+Bundle-BuildNumber: 34
+Bundle-Category: Inventory
+Bundle-Vendor: InventoryCartridge
+Bundle-RequiredExecutionEnvironment: Oracle-Communications/Inventory-7.8.0,
+ JavaSE-1.8
+Bundle-RequiredTargetVersion: 7.8.0
+Require-Bundle: ora_uim_baserulesets;bundle-version="7.8.0.0.0";bundle-category=Inventory;dependency-type=runtime,
+ ora_uim_baseextpts;bundle-version="7.8.0.0.0";bundle-category=Inventory;dependency-type=runtime

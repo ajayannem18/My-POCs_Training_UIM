@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:inv="http://www.mslv.com/studio/inventory/model/specification" xmlns="http://www.mslv.com/studio/inventory/model/specification" xsi:type="inv:UnitOfMeasureType" name="Mbps">
+  <com:id>aPZowwBP--+Y4V41---7Qg</com:id>
+  <inv:unit>Mbps</inv:unit>
+  <inv:conversionFactor>1000000.0</inv:conversionFactor>
+  <inv:conversionFactorDescription>Multiplication factor to convert megabits per second (Mbps) to bits per second (bps)</inv:conversionFactorDescription>
+  <inv:isDisplayDefault>true</inv:isDisplayDefault>
+  <inv:measurementType>
+    <com:entity>Bit Rate</com:entity>
+    <com:entityType>meastype</com:entityType>
+    <com:relationship>com.mslv.studio.inventory.capacity.uom.REL_TYPE_OF_MEASUREMENT</com:relationship>
+  </inv:measurementType>
+  <inv:name>Megabits Per Second</inv:name>
+  <inv:description>A unit of data transfer equal to one million bits per second.</inv:description>
+</com:modelEntity>

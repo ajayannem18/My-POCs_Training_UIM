@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:inventory="http://xmlns.oracle.com/communications/studio/model/inventory" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="inventory:ManagedProjectExtension" id="mpe=BaseProject" type="mpe" typeName="Managed Project Extension" name="BaseProject" resource="\ora_uim_basespecifications\model\BaseProject.projectSpec">
+    <note lang="default"/>
+    <extends>
+      <relation ref="ie=Project" type="Inventory Entity" name="Dependency" kind="Entity">
+        <target name="Project" typeName="Inventory Entity"/>
+      </relation>
+    </extends>
+    <project>
+      <relation ref="ivprj=ora_uim_basespecifications" type="Inventory Project" name="Dependency">
+        <target name="ora_uim_basespecifications" typeName="Inventory Project"/>
+      </relation>
+    </project>
+    <dataElements>
+      <element id="mpe=BaseProject+dataElement=EgYRS7xZ--+F--+E---SSQ~completedActivityCount" type="dataElement" typeName="Data Element" kind="Element" name="completedActivityCount" path="/completedActivityCount" inherited="true">
+        <displayName lang="default">completedActivityCount</displayName>
+        <displayName lang="default">completedActivityCount</displayName>
+        <note lang="default">Number of activities that have been already completed</note>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ie=Project+dataElement=completedActivityCount" type="Data Element" name="Type" kind="Element">
+            <target name="completedActivityCount" typeName="Data Element"/>
+            <inEntity name="Project" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>integer</primitiveType>
+      </element>
+      <element id="mpe=BaseProject+dataElement=EgYRS7xZ--+F--+E---SSQ~description" type="dataElement" typeName="Data Element" kind="Element" name="description" path="/description" inherited="true">
+        <displayName lang="default">description</displayName>
+        <displayName lang="default">description</displayName>
+        <note lang="default">Descriptive text about the Project.  A longer description than name for the project element. Can be up to 255 characters long.</note>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">255</maxLength>
+        <base>
+          <relation ref="ie=Project+dataElement=description" type="Data Element" name="Type" kind="Element">
+            <target name="description" typeName="Data Element"/>
+            <inEntity name="Project" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="mpe=BaseProject+dataElement=EgYRS7xZ--+F--+E---SSQ~dueDate" type="dataElement" typeName="Data Element" kind="Element" name="dueDate" path="/dueDate" inherited="true">
+        <displayName lang="default">dueDate</displayName>
+        <displayName lang="default">dueDate</displayName>
+        <note lang="default">The date by which the project is due to complete</note>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ie=Project+dataElement=dueDate" type="Data Element" name="Type" kind="Element">
+            <target name="dueDate" typeName="Data Element"/>
+            <inEntity name="Project" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>dateTime</primitiveType>
+      </element>
+      <element id="mpe=BaseProject+dataElement=EgYRS7xZ--+F--+E---SSQ~name" type="dataElement" typeName="Data Element" kind="Element" name="name" path="/name" inherited="true">
+        <displayName lang="default">name</displayName>
+        <displayName lang="default">name</displayName>
+        <note lang="default">A short, unique, descriptive name of a project. Use this name to find and identify a project throughout UIM. A name is a required attribute and must be unique across projects.</note>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">50</maxLength>
+        <base>
+          <relation ref="ie=Project+dataElement=name" type="Data Element" name="Type" kind="Element">
+            <target name="name" typeName="Data Element"/>
+            <inEntity name="Project" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+    </dataElements>
+    <relatedSpecificationList/>
+  </entity>
+</model:Model>

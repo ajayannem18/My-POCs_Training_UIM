@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<!--
+                  /* Copyright (c) 2009, 2016, Oracle and/or its affiliates. 
+All rights reserved.
+-->
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core" xmlns:trh="http://myfaces.apache.org/trinidad/html">
+    <af:pageTemplate id="pt1" viewId="/oracle/communications/platform/templates/fragments/CommsUIShellMainArea.jspx">
+        <f:facet name="localArea">
+            <af:panelGroupLayout id="afpglcngf">
+                <trh:script id="userDetails"
+                          text='var userName = "#{pageFlowScope.CreateNetworkGuidedFlowBean.userName}"; var userRole = "#{pageFlowScope.CreateNetworkGuidedFlowBean.userRole}"; var iframeURL="#{pageFlowScope.CreateNetworkGuidedFlowBean.createNetworkURL}" '></trh:script>
+                <af:resource type="javascript">                    
+                    function handleMessage(evt){
+                        if (  evt.data.action === 'getUserDetails' ){
+                            let childDomain = getChildDomain();
+                            const iFrameNPD = document.querySelector('[id$="iFrameNPD"]');
+                            iFrameNPD.contentWindow.postMessage({
+                                                action: "setUserDetails",
+                                                userName: userName,
+                                                userRole: userRole
+                                                }, childDomain);
+                            return;
+                        }
+
+                        const customButton = document.querySelector('[id$="customButton"]');
+                        var source = AdfPage.PAGE.findComponent(customButton.id);
+                        AdfCustomEvent.queue(source, "jsHandle", 
+                              {
+                                  network_id : evt.data.network_id,
+                                  action: evt.data.action
+                              }, true);
+                    } 
+                    window.addEventListener("message", handleMessage);
+                    function getChildDomain() {
+                        let hostOrigin = location.origin;
+                        
+                        if (hostOrigin.split("/")[0] !== 'Inventory'){
+                            hostOrigin += "/Inventory";
+                        }
+                        try {
+                            return new URL(hostOrigin + iframeURL).origin;
+                        } catch (error) {
+                            console.error('Error getting parent domain:', error);
+                            return null;
+                        }
+                    }
+                </af:resource>
+                <af:panelStretchLayout id="createGuidedFlow" styleClass="AFStretchWidth AFStretchHeight"
+                                       dimensionsFrom="auto">
+                    <f:facet name="center">
+                        <af:inlineFrame shortDesc=" " id="iFrameNPD"
+                                        source="#{pageFlowScope.CreateNetworkGuidedFlowBean.createNetworkURL}"
+                                        inlineStyle="height:700px;" styleClass="AFStretchWidth">
+                            <!-- <af:clientListener type="inlineFrameLoad" method="loadHandler"/>                -->
+                        </af:inlineFrame>
+                    </f:facet>
+                </af:panelStretchLayout>
+                <af:commandButton id="customButton" partialSubmit="true" shortDesc=" " visible="false"
+                                  styleClass="invisibleComponent">
+                    <af:serverListener type="jsHandle"
+                                       method="#{pageFlowScope.CreateNetworkGuidedFlowBean.handleMessageEvent}"/>
+                </af:commandButton>
+                <af:commandButton id="invokeButton" action="#{pageFlowScope.CreateNetworkGuidedFlowBean.getAction}"
+                                  shortDesc=" " visible="false" styleClass="invisibleComponent"
+                                  binding="#{pageFlowScope.CreateNetworkGuidedFlowBean.invokeButtonBindings}"></af:commandButton>
+            </af:panelGroupLayout>
+        </f:facet>
+    </af:pageTemplate>
+</jsp:root> 

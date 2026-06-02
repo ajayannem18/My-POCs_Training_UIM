@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.mslv.com/studio/provisioning/model/workgroup" xmlns:com="http://www.mslv.com/studio/core/model/common" xsi:type="com:environmentType" name="uimcn_154">
+  <com:displayName>Environment</com:displayName>
+  <com:saveVersion>2</com:saveVersion>
+  <com:id>uaVSOTPeSGWfFEK671YfKg</com:id>
+  <com:endpoint>http://dev.tsaro.uimcn.com:32424/cartridge/wsapi</com:endpoint>
+  <com:target>admin</com:target>
+</com:modelEntity>

@@ -1,0 +1,17 @@
+package oracle.communications.inventory.rules;
+import oracle.communications.inventory.api.framework.logging.Log;
+import oracle.communications.inventory.extensibility.extension.util.ExtensionPointContext;
+import com.mobileService.designAndAssign.DesignAndAssign;
+global Log log;
+
+rule "Design and assign"
+  salience 0
+  
+  when
+    context:ExtensionPointContext();
+    
+  then
+    DesignAndAssign designClass=new DesignAndAssign();
+    System.out.println("Executing design method");
+    designClass.design(context);
+  end  

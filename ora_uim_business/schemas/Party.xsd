@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<!--
+ Copyright (c) 2011, 2013, Oracle and/or its affiliates. All rights reserved. 
+    Oracle Corporation and/or its affiliates. Other names may be trademarks of their respective owners. 
+
+    This sample file, which has been provided by Oracle Corporation as part of an Oracle(r) product for use
+    ONLY by licensed users of the product, includes CONFIDENTIAL and PROPRIETARY information of Oracle
+    Corporation.
+
+    This material is the confidential property of Oracle Corporation or its licensors and may be used,
+    reproduced, stored, or transmitted only in accordance with a valid Oracle license or sublicense
+    agreement.
+
+    USE OF THIS SOFTWARE IS GOVERNED BY THE TERMS AND CONDITIONS OF THE LICENSE
+    AGREEMENT AND LIMITED WARRANTY FURNISHED WITH THE PRODUCT.
+
+    IN PARTICULAR, YOU WILL INDEMNIFY AND HOLD ORACLE CORPORATION, ITS RELATED COMPANIES AND ITS SUPPLIERS,
+    HARMLESS FROM AND AGAINST ANY CLAIMS OR LIABILITIES ARISING OUT OF THE USE, REPRODUCTION, OR DISTRIBUTION
+    OF YOUR PROGRAMS, INCLUDING ANY CLAIMS OR LIABILITIES ARISING OUT OF OR RESULTING FROM THE USE,
+    MODIFICATION, OR DISTRIBUTION OF PROGRAMS OR FILES CREATED FROM, BASED ON, AND/OR DERIVED FROM THIS
+    SAMPLE SOURCE CODE FILE.
+-->
+<xs:schema 
+    targetNamespace="http://xmlns.oracle.com/communications/inventory/party" 
+    xmlns:invsvc="http://xmlns.oracle.com/communications/inventory/service" 
+    xmlns:invprop="http://xmlns.oracle.com/communications/inventory/property" 
+    xmlns:invrole="http://xmlns.oracle.com/communications/inventory/role" 
+    xmlns:invspec="http://xmlns.oracle.com/communications/inventory/specification" 
+    xmlns:invparty="http://xmlns.oracle.com/communications/inventory/party" 
+    xmlns:invent="http://xmlns.oracle.com/communications/inventory/entity" 
+    xmlns="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified">
+    <!--  =================== Imports Start ==================== -->
+    <!-- Local Imports -->
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/entity" schemaLocation="Entity.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/specification" schemaLocation="Specification.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/role" schemaLocation="Role.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/property" schemaLocation="Property.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/service" schemaLocation="Service.xsd"/>
+    <xs:complexType name="PartyType">
+        <xs:annotation>
+            <xs:documentation>
+                PlaceType holds the Party information, along with Roles
+                and Services that are associated with the Party
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invent:EntityType">
+                <xs:sequence>
+                    <xs:element name="action" type="invent:EntityActionEnum" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Action holds the party Action which indicates whether the party needs 
+                                to be added or deleted from an Entity. Valid values for this element 
+                                are defined by EntityActionEnum.
+                                NOTE:
+                                  Only ADD and DELETE party are supported when updating an entity,
+                                  the UPDATE is not supported. The party action is meant to add or
+                                  delete the party/entity relationship. It's not meant to update 
+                                  the role information.
+                           </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="specification" type="invspec:SpecificationType" nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Specification holds the Party
+                                Specification information.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="id" type="xsd:string" nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                id holds the unique id of the Party
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="name" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Name of the Party
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="description" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Description of the Party
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="role" type="invrole:RoleType" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>
+                                RoleType holds the Role information for
+                                Party
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="property" type="invprop:PropertyType" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Property holds the dynamic properties
+                                of a Party.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="service" type="invsvc:ServiceType" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Services holds the service that are
+                                associated for the Party.
+
+                                TODO: change to xs:string to return a
+                                list of service ids instead of service
+                                instances.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+</xs:schema>
+

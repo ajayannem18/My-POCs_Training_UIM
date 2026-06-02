@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:inventory="http://xmlns.oracle.com/communications/studio/model/inventory" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="inventory:IPAddressResourceExtension" id="ipre=IPv4NetworkBase" type="ipre" typeName="IP Address Resource Extension" name="IPv4NetworkBase" resource="\ora_uim_basespecifications\model\IPv4NetworkBase.ipresource">
+    <note lang="default"/>
+    <extends>
+      <relation ref="ie=IPSubnet" type="Inventory Entity" name="Dependency" kind="Entity">
+        <target name="IPSubnet" typeName="Inventory Entity"/>
+      </relation>
+    </extends>
+    <project>
+      <relation ref="ivprj=ora_uim_basespecifications" type="Inventory Project" name="Dependency">
+        <target name="ora_uim_basespecifications" typeName="Inventory Project"/>
+      </relation>
+    </project>
+    <dataElements>
+      <element id="ipre=IPv4NetworkBase+dataElement=df9dn6xZ--+O--+0---csg~addressVersion" type="dataElement" typeName="Data Element" kind="Element" name="addressVersion" path="/addressVersion" inherited="true">
+        <displayName lang="default">Address Version</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">50</maxLength>
+        <base>
+          <relation ref="ie=IPSubnet+dataElement=addressVersion" type="Data Element" name="Type" kind="Element">
+            <target name="addressVersion" typeName="Data Element"/>
+            <inEntity name="IPSubnet" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="ipre=IPv4NetworkBase+dataElement=df9dn6xZ--+O--+0---csg~allowHostAtSubnetBoundaries" type="dataElement" typeName="Data Element" kind="Element" name="allowHostAtSubnetBoundaries" path="/allowHostAtSubnetBoundaries" inherited="true">
+        <displayName lang="default">Allow Host At Subnet Boundaries</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true">false</defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ie=IPSubnet+dataElement=allowHostAtSubnetBoundaries" type="Data Element" name="Type" kind="Element">
+            <target name="allowHostAtSubnetBoundaries" typeName="Data Element"/>
+            <inEntity name="IPSubnet" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>boolean</primitiveType>
+      </element>
+      <element id="ipre=IPv4NetworkBase+dataElement=df9dn6xZ--+O--+0---csg~availableHostCount" type="dataElement" typeName="Data Element" kind="Element" name="availableHostCount" path="/availableHostCount" inherited="true">
+        <displayName lang="default">Available Host Count</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ie=IPSubnet+dataElement=availableHostCount" type="Data Element" name="Type" kind="Element">
+            <target name="availableHostCount" typeName="Data Element"/>
+            <inEntity name="IPSubnet" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>integer</primitiveType>
+      </element>
+      <element id="ipre=IPv4NetworkBase+dataElement=df9dn6xZ--+O--+0---csg~E:inventoryEntity--IPSubnet~description" type="dataElement" typeName="Data Element" kind="Element" name="description" path="/description" inherited="true">
+        <displayName lang="default">description</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">255</maxLength>
+        <base>
+          <relation ref="ie=IPSubnet+dataElement=E:inventoryEntity--IPSubnet~description" type="Data Element" name="Type" kind="Element">
+            <target name="description" typeName="Data Element"/>
+            <inEntity name="IPSubnet" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <tag>
+          <name>Characteristic</name>
+          <description></description>
+        </tag>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="ipre=IPv4NetworkBase+dataElement=df9dn6xZ--+O--+0---csg~ipv6AddressType" type="dataElement" typeName="Data Element" kind="Element" name="ipv6AddressType" path="/ipv6AddressType" inherited="true">
+        <displayName lang="default">IPv6 Address Type</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">50</maxLength>
+        <base>
+          <relation ref="ie=IPSubnet+dataElement=ipv6AddressType" type="Data Element" name="Type" kind="Element">
+            <target name="ipv6AddressType" typeName="Data Element"/>
+            <inEntity name="IPSubnet" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="ipre=IPv4NetworkBase+dataElement=df9dn6xZ--+O--+0---csg~isIPNetwork" type="dataElement" typeName="Data Element" kind="Element" name="isIPNetwork" path="/isIPNetwork" inherited="true">
+        <displayName lang="default">Is IPNetwork</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ie=IPSubnet+dataElement=isIPNetwork" type="Data Element" name="Type" kind="Element">
+            <target name="isIPNetwork" typeName="Data Element"/>
+            <inEntity name="IPSubnet" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>boolean</primitiveType>
+      </element>
+      <element id="ipre=IPv4NetworkBase+dataElement=df9dn6xZ--+O--+0---csg~E:inventoryEntity--IPSubnet~lowerValue" type="dataElement" typeName="Data Element" kind="Element" name="lowerValue" path="/lowerValue" inherited="true">
+        <displayName lang="default">Lower Value</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">50</maxLength>
+        <base>
+          <relation ref="ie=IPSubnet+dataElement=E:inventoryEntity--IPSubnet~lowerValue" type="Data Element" name="Type" kind="Element">
+            <target name="lowerValue" typeName="Data Element"/>
+            <inEntity name="IPSubnet" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="ipre=IPv4NetworkBase+dataElement=df9dn6xZ--+O--+0---csg~E:inventoryEntity--IPSubnet~name" type="dataElement" typeName="Data Element" kind="Element" name="name" path="/name" inherited="true">
+        <displayName lang="default">name</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">50</maxLength>
+        <base>
+          <relation ref="ie=IPSubnet+dataElement=E:inventoryEntity--IPSubnet~name" type="Data Element" name="Type" kind="Element">
+            <target name="name" typeName="Data Element"/>
+            <inEntity name="IPSubnet" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <tag>
+          <name>Characteristic</name>
+          <description></description>
+        </tag>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="ipre=IPv4NetworkBase+dataElement=df9dn6xZ--+O--+0---csg~numericLowerAddress" type="dataElement" typeName="Data Element" kind="Element" name="numericLowerAddress" path="/numericLowerAddress" inherited="true">
+        <displayName lang="default">Numeric Lower Address</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ie=IPSubnet+dataElement=numericLowerAddress" type="Data Element" name="Type" kind="Element">
+            <target name="numericLowerAddress" typeName="Data Element"/>
+            <inEntity name="IPSubnet" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>integer</primitiveType>
+      </element>
+      <element id="ipre=IPv4NetworkBase+dataElement=df9dn6xZ--+O--+0---csg~numericUpperAddress" type="dataElement" typeName="Data Element" kind="Element" name="numericUpperAddress" path="/numericUpperAddress" inherited="true">
+        <displayName lang="default">Numeric Upper Address</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ie=IPSubnet+dataElement=numericUpperAddress" type="Data Element" name="Type" kind="Element">
+            <target name="numericUpperAddress" typeName="Data Element"/>
+            <inEntity name="IPSubnet" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>integer</primitiveType>
+      </element>
+      <element id="ipre=IPv4NetworkBase+dataElement=df9dn6xZ--+O--+0---csg~E:inventoryEntity--IPSubnet~prefix" type="dataElement" typeName="Data Element" kind="Element" name="prefix" path="/prefix" inherited="true">
+        <displayName lang="default">Prefix</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">50</maxLength>
+        <base>
+          <relation ref="ie=IPSubnet+dataElement=E:inventoryEntity--IPSubnet~prefix" type="Data Element" name="Type" kind="Element">
+            <target name="prefix" typeName="Data Element"/>
+            <inEntity name="IPSubnet" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="ipre=IPv4NetworkBase+dataElement=df9dn6xZ--+O--+0---csg~E:inventoryEntity--IPSubnet~prefixLength" type="dataElement" typeName="Data Element" kind="Element" name="prefixLength" path="/prefixLength" inherited="true">
+        <displayName lang="default">Prefix Length</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ie=IPSubnet+dataElement=E:inventoryEntity--IPSubnet~prefixLength" type="Data Element" name="Type" kind="Element">
+            <target name="prefixLength" typeName="Data Element"/>
+            <inEntity name="IPSubnet" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>integer</primitiveType>
+      </element>
+      <element id="ipre=IPv4NetworkBase+dataElement=df9dn6xZ--+O--+0---csg~E:inventoryEntity--IPSubnet~upperValue" type="dataElement" typeName="Data Element" kind="Element" name="upperValue" path="/upperValue" inherited="true">
+        <displayName lang="default">Upper Value</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">50</maxLength>
+        <base>
+          <relation ref="ie=IPSubnet+dataElement=E:inventoryEntity--IPSubnet~upperValue" type="Data Element" name="Type" kind="Element">
+            <target name="upperValue" typeName="Data Element"/>
+            <inEntity name="IPSubnet" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+    </dataElements>
+    <relatedSpecificationList/>
+  </entity>
+</model:Model>

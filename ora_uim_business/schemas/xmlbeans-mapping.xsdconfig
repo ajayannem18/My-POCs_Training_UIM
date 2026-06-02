@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xb:config xmlns:xb="http://xml.apache.org/xmlbeans/2004/02/xbean/config" xmlns:pol="http://openuri.org/easypoLocal">
+  
+
+ <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/criteria">
+        <xb:package>oracle.communications.inventory.xmlbeans</xb:package>
+  </xb:namespace> 
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/entity">
+        <xb:package>oracle.communications.inventory.xmlbeans</xb:package>
+  </xb:namespace>
+  
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/businessinteraction">
+        <xb:package>oracle.communications.inventory.xmlbeans</xb:package>
+  </xb:namespace>
+  
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/property">
+        <xb:package>oracle.communications.inventory.xmlbeans</xb:package>
+  </xb:namespace>
+  
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/customobject">
+        <xb:package>oracle.communications.inventory.xmlbeans</xb:package>
+  </xb:namespace>
+  
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/group">
+        <xb:package>oracle.communications.inventory.xmlbeans</xb:package>
+  </xb:namespace>
+  
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/logicaldevice">
+        <xb:package>oracle.communications.inventory.xmlbeans</xb:package>
+  </xb:namespace>
+  
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/network">
+        <xb:package>oracle.communications.inventory.xmlbeans</xb:package>
+  </xb:namespace>
+  
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/networkaddress">
+        <xb:package>oracle.communications.inventory.xmlbeans</xb:package>
+  </xb:namespace>
+  
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/customnetworkaddress">
+        <xb:package>oracle.communications.inventory.xmlbeans</xb:package>
+  </xb:namespace>
+  
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/number">
+        <xb:package>oracle.communications.inventory.xmlbeans</xb:package>
+  </xb:namespace>
+  
+    <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/tnblockmodel">
+        <xb:package>oracle.communications.inventory.xmlbeans</xb:package>
+  </xb:namespace>
+  
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/party">
+        <xb:package>oracle.communications.inventory.xmlbeans</xb:package>
+  </xb:namespace>
+  
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/physicaldevice">
+        <xb:package>oracle.communications.inventory.xmlbeans</xb:package>
+  </xb:namespace>
+  
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/connectivity">
+        <xb:package>oracle.communications.inventory.xmlbeans</xb:package>
+  </xb:namespace>
+  
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/place">
+        <xb:package>oracle.communications.inventory.xmlbeans</xb:package>
+  </xb:namespace>
+  
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/role">
+        <xb:package>oracle.communications.inventory.xmlbeans</xb:package>
+  </xb:namespace>
+  
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/service">
+        <xb:package>oracle.communications.inventory.xmlbeans</xb:package>
+  </xb:namespace> 
+  
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/configuration">
+        <xb:package>oracle.communications.inventory.xmlbeans</xb:package>
+  </xb:namespace>
+  
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/specification">
+        <xb:package>oracle.communications.inventory.xmlbeans</xb:package>
+  </xb:namespace>
+  
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/mediastream">
+        <xb:package>oracle.communications.inventory.xmlbeans</xb:package>
+  </xb:namespace>
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/ipaddress">
+        <xb:package>oracle.communications.inventory.xmlbeans</xb:package>
+  </xb:namespace>
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/propertylocation">
+        <xb:package>oracle.communications.inventory.xmlbeans</xb:package>
+  </xb:namespace>
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/activity">
+        <xb:package>oracle.communications.inventory.xmlbeans</xb:package>
+  </xb:namespace>
+  
+  <xb:namespace uri="http://xmlns.oracle.com/communications/inventory/structure">
+        <xb:package>oracle.communications.inventory.xmlbeans</xb:package>
+  </xb:namespace>
+</xb:config>

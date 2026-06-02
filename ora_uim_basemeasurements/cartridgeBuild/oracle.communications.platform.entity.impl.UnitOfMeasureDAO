@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><extent>
+  <object class="oracle.communications.platform.entity.impl.UnitOfMeasureDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/ora_uim_basemeasurements/model/Gbps.uom#7.8.0.0.0_b0" oid="oracle.communications.platform.entity.impl.UnitOfMeasureDAO-0" version="0">
+    <field name="id">"Gbps"</field>
+    <field name="name">"Gigabits Per Second"</field>
+    <field name="description">"A unit of data transfer equal to 1,000 million bits per second"</field>
+    <field name="unit">"Gbps"</field>
+    <field name="conversionFactor">1.0E+9</field>
+    <field name="conversionFactorDescription">"Multiplication factor to convert Gigabits per second (Gbps) to bits per second (bps)"</field>
+    <field name="isDisplayDefault">false</field>
+    <field name="typeOfMeasurement">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.TypeOfMeasurementDAO-0</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.UnitOfMeasureDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/ora_uim_basemeasurements/model/Kbps.uom#7.8.0.0.0_b0" oid="oracle.communications.platform.entity.impl.UnitOfMeasureDAO-1" version="0">
+    <field name="id">"Kbps"</field>
+    <field name="name">"Kilobits Per Second"</field>
+    <field name="description">"A unit of data transfer equal to one thousand bits per second"</field>
+    <field name="unit">"Kbps"</field>
+    <field name="conversionFactor">1000.0</field>
+    <field name="conversionFactorDescription">"Multiplication factor to convert kilobits per second (Kbps) to bits per second (bps)"</field>
+    <field name="isDisplayDefault">false</field>
+    <field name="typeOfMeasurement">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.TypeOfMeasurementDAO-0</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.UnitOfMeasureDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/ora_uim_basemeasurements/model/Mbps.uom#7.8.0.0.0_b0" oid="oracle.communications.platform.entity.impl.UnitOfMeasureDAO-2" version="0">
+    <field name="id">"Mbps"</field>
+    <field name="name">"Megabits Per Second"</field>
+    <field name="description">"A unit of data transfer equal to one million bits per second."</field>
+    <field name="unit">"Mbps"</field>
+    <field name="conversionFactor">1000000.0</field>
+    <field name="conversionFactorDescription">"Multiplication factor to convert megabits per second (Mbps) to bits per second (bps)"</field>
+    <field name="isDisplayDefault">true</field>
+    <field name="typeOfMeasurement">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.TypeOfMeasurementDAO-0</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.UnitOfMeasureDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/ora_uim_basemeasurements/model/bps.uom#7.8.0.0.0_b0" oid="oracle.communications.platform.entity.impl.UnitOfMeasureDAO-3" version="0">
+    <field name="id">"bps"</field>
+    <field name="name">"Bits Per Second"</field>
+    <field name="description">"Base unit of data transmission speed for Bit Rate type of measurement.  All units of measure of type Bit Rate convert to bits per second via their conversion factor."</field>
+    <field name="unit">"bps"</field>
+    <field name="conversionFactor">1.0</field>
+    <field name="conversionFactorDescription">"Multiplication factor to convert bits per second (bps) to bits per second (bps)"</field>
+    <field name="isDisplayDefault">false</field>
+    <field name="typeOfMeasurement">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.TypeOfMeasurementDAO-0</field>
+  </object>
+</extent>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:inventory="http://xmlns.oracle.com/communications/studio/model/inventory" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="inventory:PhysicalPortSpecification" id="pps=SFP_PLUS_10G_PORT" type="pps" typeName="Physical Port Specification" name="SFP_PLUS_10G_PORT" resource="\Cisco_Nexus_9372PX_E_Switch\model\SFP_PLUS_10G_PORT.port">
+    <note lang="default"/>
+    <extends>
+      <relation ref="ie=PhysicalPort" type="Inventory Entity" name="Dependency" kind="Entity">
+        <target name="PhysicalPort" typeName="Inventory Entity"/>
+      </relation>
+    </extends>
+    <project>
+      <relation ref="ivprj=Cisco_Nexus_9372PX_E_Switch" type="Inventory Project" name="Dependency">
+        <target name="Cisco_Nexus_9372PX_E_Switch" typeName="Inventory Project"/>
+      </relation>
+    </project>
+    <dataElements>
+      <element id="pps=SFP_PLUS_10G_PORT+dataElement=ZKYao0-NTsq0O+2DRftijg~customerPortName" type="dataElement" typeName="Data Element" kind="Element" name="customerPortName" path="/customerPortName" inherited="true">
+        <displayName lang="default">customerPortName</displayName>
+        <displayName lang="default">customerPortName</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">255</maxLength>
+        <base>
+          <relation ref="ie=PhysicalPort+dataElement=customerPortName" type="Data Element" name="Type" kind="Element">
+            <target name="customerPortName" typeName="Data Element"/>
+            <inEntity name="PhysicalPort" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="pps=SFP_PLUS_10G_PORT+dataElement=ZKYao0-NTsq0O+2DRftijg~description" type="dataElement" typeName="Data Element" kind="Element" name="description" path="/description" inherited="true">
+        <displayName lang="default">description</displayName>
+        <displayName lang="default">description</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">255</maxLength>
+        <base>
+          <relation ref="ie=PhysicalPort+dataElement=description" type="Data Element" name="Type" kind="Element">
+            <target name="description" typeName="Data Element"/>
+            <inEntity name="PhysicalPort" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="pps=SFP_PLUS_10G_PORT+dataElement=ZKYao0-NTsq0O+2DRftijg~id" type="dataElement" typeName="Data Element" kind="Element" name="id" path="/id" inherited="true">
+        <displayName lang="default">id</displayName>
+        <displayName lang="default">id</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">255</maxLength>
+        <base>
+          <relation ref="ie=PhysicalPort+dataElement=id" type="Data Element" name="Type" kind="Element">
+            <target name="id" typeName="Data Element"/>
+            <inEntity name="PhysicalPort" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="pps=SFP_PLUS_10G_PORT+dataElement=ZKYao0-NTsq0O+2DRftijg~name" type="dataElement" typeName="Data Element" kind="Element" name="name" path="/name" inherited="true">
+        <displayName lang="default">name</displayName>
+        <displayName lang="default">name</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">50</maxLength>
+        <base>
+          <relation ref="ie=PhysicalPort+dataElement=name" type="Data Element" name="Type" kind="Element">
+            <target name="name" typeName="Data Element"/>
+            <inEntity name="PhysicalPort" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="pps=SFP_PLUS_10G_PORT+dataElement=ZKYao0-NTsq0O+2DRftijg~portNumber" type="dataElement" typeName="Data Element" kind="Element" name="portNumber" path="/portNumber" inherited="true">
+        <displayName lang="default">portNumber</displayName>
+        <displayName lang="default">portNumber</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ie=PhysicalPort+dataElement=portNumber" type="Data Element" name="Type" kind="Element">
+            <target name="portNumber" typeName="Data Element"/>
+            <inEntity name="PhysicalPort" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>integer</primitiveType>
+      </element>
+      <element id="pps=SFP_PLUS_10G_PORT+dataElement=ZKYao0-NTsq0O+2DRftijg~vendorPortName" type="dataElement" typeName="Data Element" kind="Element" name="vendorPortName" path="/vendorPortName" inherited="true">
+        <displayName lang="default">vendorPortName</displayName>
+        <displayName lang="default">vendorPortName</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">255</maxLength>
+        <base>
+          <relation ref="ie=PhysicalPort+dataElement=vendorPortName" type="Data Element" name="Type" kind="Element">
+            <target name="vendorPortName" typeName="Data Element"/>
+            <inEntity name="PhysicalPort" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="pps=SFP_PLUS_10G_PORT+dataElement=1lD9caMuQVCCAV+lMdd5ow" type="dataElement" typeName="Data Element" kind="Element" name="Connector" path="/SFP_PLUS_10G_PORT/Connector">
+        <displayName lang="default">Connector</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">1</minLength>
+        <maxLength inherited="true">-1</maxLength>
+        <base>
+          <relation ref="ds=Cisco_Nexus_9372PX_E_Switch+dataElement=Connector" type="Schema Element" name="Type" kind="Element">
+            <target name="Connector" typeName="Schema Element"/>
+            <inEntity name="Cisco_Nexus_9372PX_E_Switch" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <tag>
+          <name>Characteristic</name>
+          <description></description>
+        </tag>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <characteristics>
+          <dataValues>
+            <dropDownOptions/>
+          </dataValues>
+        </characteristics>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="pps=SFP_PLUS_10G_PORT+dataElement=99bddn-STROUESIEo6VGOQ" type="dataElement" typeName="Data Element" kind="Element" name="Speed" path="/SFP_PLUS_10G_PORT/Speed">
+        <displayName lang="default">Speed</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">1</minLength>
+        <maxLength inherited="true">-1</maxLength>
+        <base>
+          <relation ref="ds=Cisco_Nexus_9372PX_E_Switch+dataElement=Speed" type="Schema Element" name="Type" kind="Element">
+            <target name="Speed" typeName="Schema Element"/>
+            <inEntity name="Cisco_Nexus_9372PX_E_Switch" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <tag>
+          <name>Characteristic</name>
+          <description></description>
+        </tag>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <characteristics>
+          <dataValues>
+            <dropDownOptions/>
+          </dataValues>
+        </characteristics>
+        <primitiveType>string</primitiveType>
+      </element>
+    </dataElements>
+    <relatedSpecificationList/>
+  </entity>
+</model:Model>

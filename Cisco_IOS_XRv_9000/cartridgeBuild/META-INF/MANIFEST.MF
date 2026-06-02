@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: Cisco_IOS_XRv_9000
+Bundle-Name: Cisco_IOS_XRv_9000
+Bundle-Version: 1.0.0.0.0
+Bundle-BuildTime: 2026-05-28 10:52:46
+Bundle-BuildNumber: 7
+Bundle-Category: Inventory
+Bundle-Vendor: InventoryCartridge
+Bundle-RequiredExecutionEnvironment: Oracle-Communications/Inventory-7.8.0,
+ JavaSE-1.8
+Bundle-RequiredTargetVersion: 7.8.0

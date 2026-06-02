@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:inventory="http://xmlns.oracle.com/communications/studio/model/inventory" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="inventory:MeasurementType" id="mt=Bit Rate" type="mt" typeName="Measurement Type" name="Bit Rate" resource="/ora_uim_basemeasurements/model/Bit Rate.meastype">
+    <note lang="default"/>
+    <project>
+      <relation ref="ivprj=ora_uim_basemeasurements" type="Inventory Project" name="Dependency">
+        <target name="ora_uim_basemeasurements" typeName="Inventory Project"/>
+      </relation>
+    </project>
+  </entity>
+</model:Model>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:data="http://xmlns.oracle.com/communications/studio/model/data" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="data:DataSchema" id="ds=Flow_Identifier_Project" type="ds" typeName="Data Schema" name="Flow_Identifier_Project" resource="\Flow_Identifier_Project\dataDictionary\Flow_Identifier_Project.xsd">
+    <displayName lang="default">Flow_Identifier_Project</displayName>
+    <note lang="default"/>
+    <project>
+      <relation ref="ivprj=Flow_Identifier_Project" type="Inventory Project" name="Dependency">
+        <target name="Flow_Identifier_Project" typeName="Inventory Project"/>
+      </relation>
+    </project>
+    <dataElements/>
+  </entity>
+</model:Model>

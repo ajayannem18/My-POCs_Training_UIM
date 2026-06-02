@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:data="http://www.oracle.com/communications/studio/core/model/common/data" xmlns:inv="http://www.mslv.com/studio/inventory/model/specification" xmlns="http://www.mslv.com/studio/inventory/model/specification" xsi:type="inv:SignalTerminationPointSpecificationType" name="18M (Oracle Provided)">
+  <com:displayName lang="[default]">18M</com:displayName>
+  <com:saveVersion>2</com:saveVersion>
+  <com:baseEntityRef>
+    <com:entity>SignalTerminationPoint</com:entity>
+    <com:entityType>inventoryEntity</com:entityType>
+    <com:relationship></com:relationship>
+  </com:baseEntityRef>
+  <com:id>pl1Vl3mzTNCy6dBjNLzxsA</com:id>
+  <data:dataElementNode virtual="true">
+    <com:id>pl1Vl3mzTNCy6dBjNLzxsA</com:id>
+    <com:elementType>oracle.communications.studio.model.data.StudioModelDataElement</com:elementType>
+    <data:name>18M (Oracle Provided)</data:name>
+    <data:displayName lang="[default]">18M (Oracle Provided)</data:displayName>
+    <data:primitiveType>none</data:primitiveType>
+  </data:dataElementNode>
+  <data:dataElementDetails xsi:type="data:dataElementCommonDetail">
+    <com:id>6G5oi38tT66t3+s8X5b8PA</com:id>
+    <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+    <data:dataElementId>pl1Vl3mzTNCy6dBjNLzxsA</data:dataElementId>
+    <data:defaultValue></data:defaultValue>
+    <data:key></data:key>
+    <data:deprecated>false</data:deprecated>
+    <data:sensitive>false</data:sensitive>
+    <data:minLength>0</data:minLength>
+    <data:maxLength>40</data:maxLength>
+    <data:minMultiplicity>0</data:minMultiplicity>
+    <data:maxMultiplicity>-1</data:maxMultiplicity>
+  </data:dataElementDetails>
+  <inv:systemProvided>true</inv:systemProvided>
+  <inv:rateCode>
+    <com:entity>18M</com:entity>
+    <com:entityType>ratecode</com:entityType>
+  </inv:rateCode>
+  <inv:transmissionSignalType>ELECTRICAL</inv:transmissionSignalType>
+  <inv:terminationPointSignalType>PACKET</inv:terminationPointSignalType>
+  <inv:validForFacility>true</inv:validForFacility>
+</com:modelEntity>

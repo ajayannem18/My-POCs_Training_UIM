@@ -1,0 +1,67 @@
+<?xml version = '1.0'?>
+<mds:customization version="11.1.1.59.23" xmlns:mds="http://xmlns.oracle.com/mds">
+   <mds:insert after="phyprt-vendorPortName" parent="phyprt">
+      <af:inputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" readOnly="true" secret="false" label="#{bundle['PhysicalPortSummaryu002ejsffSFP__PLUS__10G__PORT_Speed_LABEL']}" id="phyprt-Speed" value="#{pageFlowScope.PhysicalPortSummaryBean.characteristicsMap['Speed'].characteristic.value}" required="false" styleClass="UIHintsSummaryINPUT_TEXT"/>
+   </mds:insert>
+   <mds:insert after="phyprt-eq" parent="phyprt">
+      <af:inputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" readOnly="true" secret="false" label="#{bundle['PhysicalPortSummaryu002ejsffSFP__PLUS__10G__PORT_Connector_LABEL']}" id="phyprt-Connector" value="#{pageFlowScope.PhysicalPortSummaryBean.characteristicsMap['Connector'].characteristic.value}" required="false" styleClass="UIHintsSummaryINPUT_TEXT"/>
+   </mds:insert>
+   <mds:modify element="phyprt">
+      <mds:attribute name="rows" value="7"/>
+      <mds:attribute name="maxColumns" value="2"/>
+      <mds:attribute name="labelAlignment" value="start"/>
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_FORM_LAYOUT"/>
+   </mds:modify>
+   <mds:modify element="phyprt-lmd">
+      <mds:attribute name="rendered" value="false"/>
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phyprt-inventoryStatus">
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phyprt-cru">
+      <mds:attribute name="rendered" value="false"/>
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phyprt-specification">
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phyprt-eq">
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phyprt-rea">
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phyprt-ct">
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phyprt-crd">
+      <mds:attribute name="rendered" value="false"/>
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phyprt-lmu">
+      <mds:attribute name="rendered" value="false"/>
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phyprt-resourceAssignmentStatus">
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phyprt-id">
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phyprt-name">
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phyprt-description">
+      <mds:attribute name="styleClass" value="invSummaryPanelLabelAndMessage UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phyprt-portNumber">
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phyprt-vendorPortName">
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phyprt-customerPortName">
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+</mds:customization>

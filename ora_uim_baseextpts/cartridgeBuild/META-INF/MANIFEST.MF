@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: ora_uim_baseextpts
+Bundle-Name: ora_uim_baseextpts
+Bundle-Version: 7.8.0.0.0
+Bundle-BuildTime: 2025-06-30 03:33:32
+Bundle-BuildNumber: 1
+Bundle-Category: Inventory
+Bundle-Copyright: bundled-copyright;link=copyright.txt
+Bundle-License: bundled-license;link=license.txt
+Bundle-Vendor: Oracle Communications
+Bundle-RequiredExecutionEnvironment: Oracle-Communications/Inventory-7.8.0
+Bundle-RequiredTargetVersion: 7.8.0

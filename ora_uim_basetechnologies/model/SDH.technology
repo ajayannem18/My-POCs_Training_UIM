@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  $Header: SCEUIM/src/plugins/com.mslv.studio.inventory.core/src/com/mslv/studio/inventory/entities/templates/technology.xml /cgbusce_inv/1 2012/06/12 15:03:10 rswamir Exp $ -->
+<!-- 
+ Copyright (c) 2012, Oracle and/or its affiliates. All rights reserved. 
+
+   NAME
+     technology.xml - <one-line expansion of the name>
+
+   DESCRIPTION
+     <short description of component this file declares/defines>
+
+   NOTES
+     <other useful comments, qualifications, etc.>
+
+   MODIFIED   (MM/DD/YY)
+   rswamir     06/12/12 - Creation
+
+-->
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:inv="http://www.mslv.com/studio/inventory/model/specification" xmlns="http://www.mslv.com/studio/inventory/model/specification" xsi:type="inv:TechnologyType" name="SDH">
+  <com:saveVersion>2</com:saveVersion>
+  <com:id>YRofjq-pR9OoJmDPR66bBA</com:id>
+  <inv:name>SDH</inv:name>
+  <inv:description>SDH</inv:description>
+</com:modelEntity>

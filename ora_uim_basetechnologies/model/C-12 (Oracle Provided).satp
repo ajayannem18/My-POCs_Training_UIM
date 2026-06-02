@@ -1,0 +1,1498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:data="http://www.oracle.com/communications/studio/core/model/common/data" xmlns:inv="http://www.mslv.com/studio/inventory/model/specification" xmlns="http://www.mslv.com/studio/inventory/model/specification" xsi:type="inv:SignalTerminationPointSpecificationType" name="C-12 (Oracle Provided)">
+  <com:displayName lang="[default]">C-12</com:displayName>
+  <com:saveVersion>164</com:saveVersion>
+  <com:baseEntityRef>
+    <com:entity>SignalTerminationPoint</com:entity>
+    <com:entityType>inventoryEntity</com:entityType>
+    <com:relationship></com:relationship>
+  </com:baseEntityRef>
+  <com:id>8iqX5f+lTk+MK5veSjmuDg</com:id>
+  <data:dataElementNode virtual="true">
+    <com:id>8iqX5f+lTk+MK5veSjmuDg</com:id>
+    <com:elementType>oracle.communications.studio.model.data.StudioModelDataElement</com:elementType>
+    <data:name>C-12 (Oracle Provided)</data:name>
+    <data:displayName lang="[default]">C-12 (Oracle Provided)</data:displayName>
+    <data:primitiveType>none</data:primitiveType>
+  </data:dataElementNode>
+  <data:dataElementDetails xsi:type="data:dataElementCommonDetail">
+    <com:id>6N-lr3eRS9mJgrX8dcR1KA</com:id>
+    <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+    <data:dataElementId>8iqX5f+lTk+MK5veSjmuDg</data:dataElementId>
+    <data:defaultValue></data:defaultValue>
+    <data:key></data:key>
+    <data:deprecated>false</data:deprecated>
+    <data:sensitive>false</data:sensitive>
+    <data:minLength>0</data:minLength>
+    <data:maxLength>40</data:maxLength>
+    <data:minMultiplicity>0</data:minMultiplicity>
+    <data:maxMultiplicity>-1</data:maxMultiplicity>
+  </data:dataElementDetails>
+  <inv:relatedSpecification>
+    <com:entity>4444M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>1928</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>4030M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>1749</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>2640M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>1145</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>2365M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>1026</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>1463M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>634</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>1452M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>630</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>1397M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>606</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>1005M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>436</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>980M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>425</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>825M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>358</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>770M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>334</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>512M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>222</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>484M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>210</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>462M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>200</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>456.5M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>198</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>445M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>193</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>396M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>171</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>385M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>167</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>310M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>134</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>270M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>117</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>216M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>93</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>203.5M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>88</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>202.4M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>87</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>198M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>85</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>182M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>78</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>176M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>76</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>160M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>69</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>156M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>67</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>155M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>67</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>149M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>64</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>145.2M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>63</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>140M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>60</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>135M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>58</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>130M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>56</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>126M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>54</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>120M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>52</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>116M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>50</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>107M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>46</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>97M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>42</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>96M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>41</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>95M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>41</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>81M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>35</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>80M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>34</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>78M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>33</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>76M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>32</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>75M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>32</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>70M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>30</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>68M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>29</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>65M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>28</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>62M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>26</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>60M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>26</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>57M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>24</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>56M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>24</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>54M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>23</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>51M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>22</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>48M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>20</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>46M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>19</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>45M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>19</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>42M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>18</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>41M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>17</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>40.7M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>17</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>40M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>17</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>39M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>16</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>36M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>15</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>35M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>15</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>34M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>14</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>30M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>13</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>28M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>12</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>27M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>11</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>26M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>11</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>25M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>10</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>21M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>9</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>20M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>8</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>19M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>8</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>18M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>7</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>16.5M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>7</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>16M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>6</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>15M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>6</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>14M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>6</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>13M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>5</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>12M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>5</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>9.9M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>4</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>9M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>3</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>8M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>3</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>7.7M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>3</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>6M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>2</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>5.85M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>2</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>5.4M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>2</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>5M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>2</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>4.3M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>4M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>3.4M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>3.3M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>3M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>2.5M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>10M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>5</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>138.6M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>63</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>136.4M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>62</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>134.2M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>61</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>132M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>60</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>129.8M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>59</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>127.6M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>58</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>125.4M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>57</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>123.2M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>56</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>121M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>55</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>118.8M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>54</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>116.6M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>53</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>114.4M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>52</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>112.2M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>51</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>110M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>50</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>107.8M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>49</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>105.6M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>48</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>103.4M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>47</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>101.2M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>46</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>99M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>45</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>96.8M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>44</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>94.6M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>43</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>92.4M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>42</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>90.2M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>41</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>88M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>40</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>85.8M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>39</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>83.6M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>38</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>81.4M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>37</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>79.2M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>36</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>77M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>35</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>74.8M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>34</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>72.6M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>33</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>70.4M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>32</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>68.2M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>31</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>66M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>30</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>63.8M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>29</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>61.6M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>28</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>59.4M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>27</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>57.2M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>26</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>55M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>25</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>52.8M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>24</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>50.6M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>23</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>50M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>23</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>48.4M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>22</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>46.2M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>21</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>44M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>20</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>41.8M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>19</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>39.6M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>18</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>37.4M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>17</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>35.2M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>16</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>33M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>15</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>30.8M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>14</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>28.6M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>13</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>26.4M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>12</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>24.2M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>11</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>22M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>10</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>19.8M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>9</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>17.6M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>8</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>15.4M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>7</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>13.2M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>6</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>11M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>5</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>8.8M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>4</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>6.6M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>3</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>4.4M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>CHILDREQUIRES</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>CHILDREQUIRES</inv:TDMRelType>
+      <inv:cardinality>2</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>2.2M (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>C-E1 (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>E1 (Oracle Provided)</com:entity>
+    <com:entityType>satp</com:entityType>
+    <com:relationship>SUPPORTS</com:relationship>
+    <inv:data xsi:type="inv:TDMSignalRelationshipType">
+      <inv:TDMRelType>SUPPORTS</inv:TDMRelType>
+      <inv:cardinality>1</inv:cardinality>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:systemProvided>true</inv:systemProvided>
+  <inv:rateCode>
+    <com:entity>VC12</com:entity>
+    <com:entityType>ratecode</com:entityType>
+    <com:relationship></com:relationship>
+  </inv:rateCode>
+  <inv:transmissionSignalType>ELECTRICAL</inv:transmissionSignalType>
+  <inv:terminationPointSignalType>CONTAINER</inv:terminationPointSignalType>
+  <inv:validForFacility>false</inv:validForFacility>
+</com:modelEntity>

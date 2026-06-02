@@ -1,0 +1,4 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.53.52" id="PhysicalDeviceSRVu002dUBUNTUu002d01u0020u00b7u00201Uu0020Server" Package="oracle.communications.inventory.ui.common.bundle" BeanClass="oracle.communications.inventory.ui.common.bundle.PhysicalDeviceSRVu002dUBUNTUu002d01u0020u00b7u00201Uu0020Server" isJavaBased="true">
+<ResourceBundle xmlns="http://xmlns.oracle.com/adfm/beanmodel"><XliffBundle xmlns="http://xmlns.oracle.com/adfm/resourcebundle" id="oracle.communications.inventory.ui.common.bundle.PhysicalDeviceSRVu002dUBUNTUu002d01u0020u00b7u00201Uu0020ServerMsgBundle"/></ResourceBundle>
+</JavaBean>

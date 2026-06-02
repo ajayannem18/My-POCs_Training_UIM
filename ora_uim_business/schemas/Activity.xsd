@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<!--
+ Copyright (c) 2011, 2013, Oracle and/or its affiliates. All rights reserved. 
+    Oracle Corporation and/or its affiliates. Other names may be trademarks of their respective owners.
+
+    This sample file, which has been provided by Oracle Corporation as part of an Oracle(r) product for use
+    ONLY by licensed users of the product, includes CONFIDENTIAL and PROPRIETARY information of Oracle
+    Corporation.
+
+    This material is the confidential property of Oracle Corporation or its licensors and may be used,
+    reproduced, stored, or transmitted only in accordance with a valid Oracle license or sublicense
+    agreement.
+
+    USE OF THIS SOFTWARE IS GOVERNED BY THE TERMS AND CONDITIONS OF THE LICENSE
+    AGREEMENT AND LIMITED WARRANTY FURNISHED WITH THE PRODUCT.
+
+    IN PARTICULAR, YOU WILL INDEMNIFY AND HOLD ORACLE CORPORATION, ITS RELATED COMPANIES AND ITS SUPPLIERS,
+    HARMLESS FROM AND AGAINST ANY CLAIMS OR LIABILITIES ARISING OUT OF THE USE, REPRODUCTION, OR DISTRIBUTION
+    OF YOUR PROGRAMS, INCLUDING ANY CLAIMS OR LIABILITIES ARISING OUT OF OR RESULTING FROM THE USE,
+    MODIFICATION, OR DISTRIBUTION OF PROGRAMS OR FILES CREATED FROM, BASED ON, AND/OR DERIVED FROM THIS
+    SAMPLE SOURCE CODE FILE.
+-->
+<xs:schema 
+    targetNamespace="http://xmlns.oracle.com/communications/inventory/activity" 
+	xmlns:invact="http://xmlns.oracle.com/communications/inventory/activity" 
+    xmlns:invprop="http://xmlns.oracle.com/communications/inventory/property" 
+    xmlns:invspec="http://xmlns.oracle.com/communications/inventory/specification" 
+    xmlns:invent="http://xmlns.oracle.com/communications/inventory/entity" 
+    xmlns="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified">
+    <!--  ============= Imports Start ================= -->
+    <!-- Local Imports -->
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/entity" schemaLocation="Entity.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/specification" schemaLocation="Specification.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/property" schemaLocation="Property.xsd"/>
+    <!-- ==== Entity Value Types ==== -->
+    <xs:complexType name="ActivityType">
+        <xs:complexContent>
+            <xs:extension base="invent:EntityType">
+                <xs:sequence>
+                    <xs:element name="specification" type="invspec:SpecificationType" nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Specification holds the Activity
+                                Specification information.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+					
+                    <xs:element name="name" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Name of the Activity
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    
+					<xs:element name="description" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Description of the Activity
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+					
+                    <xs:element name="businessInteractionId" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                ID of the Business Interaction
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+					
+					<xs:element name="action" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Action to be performed on the Activity.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    
+					<xs:element name="percentComplete" type="xs:int" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Indicates how much work has been completed for the activity. This value is Defaulted to 0.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					
+					<xs:element name="failedReason" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>A description of why the activity failed or is in error. Populated if state is FAILED.</xs:documentation>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="255"/>
+							</xs:restriction>
+						</xs:simpleType>	
+				   </xs:element>
+				   
+				   <xs:element name="activityStartDate" type="xs:dateTime" nillable="true" minOccurs="0">
+					   <xs:annotation>
+						   <xs:documentation>The activity start date. The current date is populated to this field when the activity is submitted or resubmitted.</xs:documentation>
+					</xs:annotation>
+				   </xs:element>
+				   
+				   <xs:element name="activityEndDate" type="xs:dateTime" nillable="true" minOccurs="0">
+					   <xs:annotation>
+						   <xs:documentation>The activity end date. The current date is populated to this field when the acitivity is in completed, failed, error or aborted states.  
+							When the activity is submitted the field is reset to null.</xs:documentation>
+					</xs:annotation>
+				   </xs:element>
+				   
+				   <xs:element name="actualStartDate" type="xs:dateTime" nillable="true" minOccurs="0">
+					   <xs:annotation>
+						   <xs:documentation>The activity actual start date. The current date is populated to this field when the activity is started.</xs:documentation>
+					</xs:annotation>
+				   </xs:element>
+				   
+				   <xs:element name="actualEndDate" type="xs:dateTime" nillable="true" minOccurs="0">
+					   <xs:annotation>
+						   <xs:documentation>The activity actual end date. The current date is populated to this field when the acitivity is in completed, failed, error or aborted states.</xs:documentation>
+					</xs:annotation>
+				   </xs:element>
+				   
+				   <xs:element name="assignedTo" type="xs:string" nillable="true" minOccurs="0">
+					   <xs:annotation>
+						   <xs:documentation>Indicates the user to which the activity is assigned</xs:documentation>
+					</xs:annotation>
+				   </xs:element>
+				   
+				   <xs:element name="assignedDate" type="xs:dateTime" nillable="true" minOccurs="0">
+					   <xs:annotation>
+						   <xs:documentation>The activity assigned date. Populates the current date when activity is assigned</xs:documentation>
+					</xs:annotation>
+				   </xs:element>
+				   
+				   <xs:element name="activityType" type="invent:GenericActivityType" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>
+								Holds the Activity Type.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				   
+					<xs:element name="property" type="invprop:PropertyType" nillable="true" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>
+								Property holds the dynamic properties of a Activity.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+                
+				</xs:sequence>
+			</xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+	
+	<xs:complexType name="ActivitySearchCriteriaType">
+        <xs:complexContent>
+            <xs:extension base="invent:SearchCriteriaType">
+              <xs:sequence>
+			    <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1" >
+                        <xs:annotation>
+                            <xs:documentation>
+                              Name of the Activity
+                            </xs:documentation>
+                        </xs:annotation>
+                </xs:element>
+				 <xs:element name="businessInteractionId" type="xs:string" minOccurs="0" maxOccurs="1">
+                        <xs:annotation>
+                            <xs:documentation>
+                             Associated Business Interaction ID 
+                            </xs:documentation>
+                        </xs:annotation>
+                </xs:element>
+               </xs:sequence> 
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+	
+</xs:schema>

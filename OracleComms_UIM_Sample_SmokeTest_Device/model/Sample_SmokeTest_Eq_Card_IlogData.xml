@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cplData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ilog/cpl/schema/data.xsd">
+  <addObject id="CARD6b8c7162:199bd53d4bc:-7ff9" container="true">
+    <class>
+      Card
+    </class>
+    <children/>
+    <attribute name="name">
+      Sample_SmokeTest_Eq_Card
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.IlpRect">
+      <x>
+        223.0
+      </x>
+      <y>
+        32.0
+      </y>
+      <width>
+        30.0
+      </width>
+      <height>
+        100.0
+      </height>
+    </attribute>
+    <attribute name="direction">
+      Right
+    </attribute>
+    <attribute name="type">
+      Standard
+    </attribute>
+  </addObject>
+</cplData>

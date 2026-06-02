@@ -1,0 +1,102 @@
+{
+    "attributes": {
+        "resourceSpecification": {
+            "isVisible": true,
+            "isRequired": true,
+            "displayName": "Specification",
+            "min": 0,
+            "max": 255
+        },
+        "physicalAddress": {
+            "isVisible": true,
+            "isRequired": false,
+            "displayName": "Physical Address",
+            "min": 0,
+            "max": 255
+        },
+        "id": {
+            "isVisible": true,
+            "isRequired": false,
+            "displayName": "id",
+            "min": 0,
+            "max": 255
+        },
+        "physicalLocation": {
+            "isVisible": true,
+            "isRequired": false,
+            "displayName": "Physical Location",
+            "min": 0,
+            "max": 255
+        },
+        "name": {
+            "isVisible": true,
+            "isRequired": true,
+            "displayName": "name",
+            "min": 0,
+            "max": 255
+        },
+        "lifecycleState": {
+            "isVisible": true,
+            "isRequired": false,
+            "displayName": "Inventory Status",
+            "min": 0,
+            "max": 255
+        },
+        "description": {
+            "isVisible": true,
+            "isRequired": false,
+            "displayName": "description",
+            "min": 0,
+            "max": 255
+        },
+        "lifecycleSubState": {
+            "isVisible": true,
+            "isRequired": false,
+            "displayName": "Assignment Status",
+            "min": 0,
+            "max": 255
+        },
+        "networkLocation": {
+            "isVisible": true,
+            "isRequired": false,
+            "displayName": "Network Location",
+            "min": 0,
+            "max": 10
+        },
+        "serialNumber": {
+            "isVisible": true,
+            "isRequired": false,
+            "displayName": "serialNumber",
+            "min": 0,
+            "max": 32
+        },
+        "startOperatingDate": {
+            "isVisible": false,
+            "isRequired": false,
+            "displayName": "Created Date",
+            "min": 0,
+            "max": 40
+        },
+        "lastModifiedDate": {
+            "isVisible": false,
+            "isRequired": false,
+            "displayName": "Last Modified Date",
+            "min": 0,
+            "max": 40
+        },
+        "lastModifiedUser": {
+            "isVisible": false,
+            "isRequired": false,
+            "displayName": "Last Modified User",
+            "min": 0,
+            "max": 255
+        },
+        "createdUser": {
+            "isVisible": false,
+            "isRequired": false,
+            "displayName": "Created User",
+            "min": 0,
+            "max": 255
+        }
+    }
+}

@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<mds:customization version="11.1.1.59.23" xmlns:mds="http://xmlns.oracle.com/mds">
+   <mds:move node="logdev-di" before="s53"/>
+   <mds:move node="logdev-name" after="logdev-di"/>
+   <mds:move node="logdev-adminState" after="logdev-name"/>
+   <mds:move node="logdev-ras" after="logdev-adminState"/>
+   <mds:move node="logdev-description" after="logdev-ras"/>
+   <mds:insert after="logdev-addressLabel1" parent="logdev">
+      <af:inputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" binding="#{pageFlowScope.LogicalDeviceEditBean.characteristicsMap['OS_Version'].component}" readOnly="false" secret="false" label="#{bundle['LogicalDeviceEditu002ejsffSRVu002dUBUNTUu002d01_OS-5FVersion_LABEL']}" id="logdev-OS-5FVersion" value="#{pageFlowScope.LogicalDeviceEditBean.characteristicsMap['OS_Version'].characteristic.value}" required="false" styleClass="UIHintsEditINPUT_TEXT"/>
+   </mds:insert>
+   <mds:insert before="logdev-di" parent="logdev">
+      <af:inputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" binding="#{pageFlowScope.LogicalDeviceEditBean.characteristicsMap['Management_IP'].component}" readOnly="false" secret="false" label="#{bundle['LogicalDeviceEditu002ejsffSRVu002dUBUNTUu002d01_Management-5FIP_LABEL']}" id="logdev-Management-5FIP" value="#{pageFlowScope.LogicalDeviceEditBean.characteristicsMap['Management_IP'].characteristic.value}" required="false" styleClass="UIHintsEditINPUT_TEXT"/>
+   </mds:insert>
+   <mds:move node="logdev-di" before="logdev-name"/>
+   <mds:move node="logdev-name" after="logdev-di"/>
+   <mds:move node="logdev-adminState" after="logdev-name"/>
+   <mds:move node="logdev-ras" after="logdev-adminState"/>
+   <mds:move node="logdev-description" after="logdev-ras"/>
+   <mds:insert after="logdev-description" parent="logdev">
+      <af:selectOneChoice xmlns:af="http://xmlns.oracle.com/adf/faces/rich" binding="#{pageFlowScope.LogicalDeviceEditBean.characteristicsMap['Server_Role'].component}" readOnly="false" label="#{bundle['LogicalDeviceEditu002ejsffSRVu002dUBUNTUu002d01_Server-5FRole_LABEL']}" id="logdev-Server-5FRole" value="#{pageFlowScope.LogicalDeviceEditBean.characteristicsMap['Server_Role'].characteristic.value}" required="false" styleClass="UIHintsEditSELECT_ONE_CHOICE">
+         <f:selectItems xmlns:f="http://java.sun.com/jsf/core" binding="#{pageFlowScope.LogicalDeviceEditBean.characteristicsMap['Server_Role'].lovItems}"/>
+      </af:selectOneChoice>
+   </mds:insert>
+   <mds:insert before="s53" parent="logdev">
+      <af:panelLabelAndMessage xmlns:af="http://xmlns.oracle.com/adf/faces/rich" id="logdev-dummy-6-1" label=" " styleClass="UIHintsEditPANEL_LABEL_AND_MESSAGE">
+         <af:outputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" id="x-logdev-dummy-6-1" value=" "/>
+      </af:panelLabelAndMessage>
+   </mds:insert>
+   <mds:modify element="logdev">
+      <mds:attribute name="rows" value="7"/>
+      <mds:attribute name="maxColumns" value="2"/>
+      <mds:attribute name="labelAlignment" value="start"/>
+      <mds:attribute name="styleClass" value="UIHintsEditPANEL_FORM_LAYOUT"/>
+   </mds:modify>
+   <mds:modify element="logdev-mn">
+      <mds:attribute name="rendered" value="false"/>
+      <mds:attribute name="styleClass" value="UIHintsEditPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="logdev-di">
+      <mds:attribute name="styleClass" value="UIHintsEditINPUT_TEXT"/>
+   </mds:modify>
+   <mds:modify element="logdev-ras">
+      <mds:attribute name="styleClass" value="UIHintsEditPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="logdev-specification">
+      <mds:attribute name="styleClass" value="UIHintsEditSELECT_ONE_CHOICE"/>
+   </mds:modify>
+   <mds:modify element="logdev-addressLabel1">
+      <mds:attribute name="styleClass" value="UIHintsEditPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="logdev-nel">
+      <mds:attribute name="styleClass" value="UIHintsEditINPUT_TEXT"/>
+   </mds:modify>
+   <mds:modify element="logdev-adminState">
+      <mds:attribute name="styleClass" value="UIHintsEditPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="logdev-vn">
+      <mds:attribute name="rendered" value="false"/>
+      <mds:attribute name="styleClass" value="UIHintsEditPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="logdev-pn">
+      <mds:attribute name="rendered" value="false"/>
+      <mds:attribute name="styleClass" value="UIHintsEditPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="logdev-svclctn">
+      <mds:attribute name="styleClass" value="UIHintsEditPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="logdev-id">
+      <mds:attribute name="styleClass" value="UIHintsEditINPUT_TEXT"/>
+   </mds:modify>
+   <mds:modify element="logdev-name">
+      <mds:attribute name="styleClass" value="UIHintsEditINPUT_TEXT"/>
+   </mds:modify>
+   <mds:modify element="logdev-description">
+      <mds:attribute name="styleClass" value="UIHintsEditINPUT_TEXT"/>
+   </mds:modify>
+</mds:customization>

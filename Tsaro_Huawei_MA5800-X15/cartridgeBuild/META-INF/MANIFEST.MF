@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: Tsaro_Huawei_MA5800-X15
+Bundle-Name: Tsaro_Huawei_MA5800-X15
+Bundle-Version: 1.0.0.0.0
+Bundle-BuildTime: 2026-05-27 03:10:48
+Bundle-BuildNumber: 154
+Bundle-Category: Inventory
+Bundle-Vendor: InventoryCartridge
+Bundle-RequiredExecutionEnvironment: Oracle-Communications/Inventory-7.8.0,
+ JavaSE-1.8
+Bundle-RequiredTargetVersion: 7.8.0

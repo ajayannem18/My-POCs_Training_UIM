@@ -1,0 +1,357 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+/* Copyright (c) 2020, Oracle and/or its affiliates. 
+All rights reserved.*/
+    DESCRIPTION
+
+    NOTES
+     <other useful comments, qualifications, etc.>
+-->
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:h="http://java.sun.com/jsf/html" xmlns:af="http://xmlns.oracle.com/adf/faces/rich" xmlns:jvf="http://www.ilog.com/jviews/tlds/jviews-framework-faces.tld"
+          xmlns:trh="http://myfaces.apache.org/trinidad/html" xmlns:jvdf="http://www.ilog.com/jviews/tlds/jviews-diagrammer-faces.tld" xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+    <c:set var="inventoryUIBundle" value="#{adfBundle['oracle.communications.inventory.ui.common.bundle.InventoryUIBundle']}"/>
+    <af:panelSplitter orientation="vertical" splitterPosition="125" id="HV_ps5" dimensionsFrom="auto">
+        <f:facet name="first">
+            
+        </f:facet>
+        <f:facet name="second">
+            <af:panelStretchLayout id="HV_psl3" dimensionsFrom="auto" topHeight="55" styleClass="AFStretchWidth">
+                <f:facet name="top">
+                    <af:panelGroupLayout layout="scroll" id="HV_pgl923">
+                        <af:toolbox id="HV_tb12">
+                            <af:group id="HV_g11">
+                                <af:toolbar id="HV_td1" inlineStyle="padding-top: 5px;">
+                                    <af:spacer width="5"/>
+                                    <af:button id="HV_b11" actionListener="#{pageFlowScope.HierarchyVisualBean.expandOrCollapseNodes}" shortDesc="#{inventoryUIBundle.EXPAND_ALL_CTX}" icon="/images/diagram/func_arrowdownlines_24.svg" binding="#{backingBeanScope.expand}"/>
+                                    <af:spacer width="5"/>
+                                    <af:button id="HV_b13" actionListener="#{pageFlowScope.HierarchyVisualBean.expandOrCollapseNodes}" shortDesc="#{inventoryUIBundle.COLLAPSE_ALL_CTX}" icon="/images/diagram/func_arrowuplines_24.svg" binding="#{backingBeanScope.collapse}"/>
+                                </af:toolbar>
+                                <af:toolbar id="HV_td6" inlineStyle="padding-top: 5px;">
+                                    <af:spacer width="5"/>
+                                    <af:button id="HV_b14" shortDesc="#{inventoryUIBundle.PREFERENCES}" icon="/images/diagram/navi_gear_24_ena.png" actionListener="#{pageFlowScope.HierarchyVisualBean.launchPreferencesDialog}"/>
+                                    <af:spacer width="5"/>
+                                </af:toolbar>
+                                <af:toolbar id="HV_td2" inlineStyle="padding-top: 10px;">
+                                    <af:spacer width="5"/>
+                                    <af:selectOneChoice id="HV_pathType" label="#{inventoryUIBundle.PATHS}" valueChangeListener="#{pageFlowScope.HierarchyVisualBean.pathChanged}" autoSubmit="true" value="#{pageFlowScope.HierarchyVisualBean.path}">
+                                        <f:selectItems binding="#{pageFlowScope.HierarchyVisualBean.paths}"/>
+                                    </af:selectOneChoice>
+                                </af:toolbar>
+                            </af:group>
+                        </af:toolbox>
+                    </af:panelGroupLayout>
+                </f:facet>
+                <f:facet name="center">
+					<af:panelGroupLayout layout="scroll" id="HVpgl80">
+                        <af:panelSplitter orientation="horizontal"
+										  splitterPosition="250"
+										  dimensionsFrom="auto"
+										  positionedFromEnd="true"
+										  collapsed="true">
+							<f:facet name="first">
+								<af:panelStretchLayout dimensionsFrom="auto"
+													   styleClass="AFStretchWidth">
+									<f:facet name="center">	
+										<af:panelGroupLayout id="HV_pgl6">										
+											<dvt:diagram id="HV_d2" summary="Hierarchy Diagram" styleClass="AFStretchWidth" minZoom="0.5" maxZoom="3"  rolloverBehavior="dim" inlineStyle="height: 750px;" 
+															controlPanelBehavior="initExpanded" layout="tierLayout" selection="single" binding="#{backingBeanScope.hierarchyBinding}" >
+												<af:transition transition="auto" triggerType="dataChange"/>
+												<dvt:overviewWindow id="HV_ow1" disclosed="true"/>										
+												<dvt:clientLayout name="tierLayout" method="DemoTierLayout.tierLayout" featureName="DemoTierLayout">
+												
+													<dvt:nodeAttributes node="HV_n2">
+														<f:attribute name="tier" value="tier"/>
+														<f:attribute name="xPos" value="xPos"/>
+														<f:attribute name="transformX" value="transformX"/>
+													</dvt:nodeAttributes>
+													<dvt:nodeAttributes node="HV_n1">
+														<f:attribute name="xPos" value="xPos"/>
+													</dvt:nodeAttributes>
+												</dvt:clientLayout>
+												<dvt:diagramNodes value="#{pageFlowScope.HierarchyVisualBean.nodes}" var="node" id="HV_dn1" disclosedRowKeys="#{pageFlowScope.HierarchyVisualBean.disclosedNodes}"
+																  selectionListener="#{pageFlowScope.HierarchyVisualBean.nodeSelectionListener}" binding="#{backingBeanScope.nodesComponent}" highlightBehavior="nodeAndLinks">
+													<dvt:diagramNode id="HV_n1" nodeId="#{node.id}" containerId="#{node.container}" shortDesc="#{node.desc}" label="#{node.label}" rendered="#{node.type=='PipeTerminationPoint'}" layout="tierLayout">
+														<f:facet name="zoom100">															
+															<af:panelGroupLayout inlineStyle="#{node.style}" id="HV_pgl12" layout="horizontal">
+																<dvt:marker id="HV_marker1" source="#{node.image}" borderWidth="2" width="#{node.size}" height="#{node.size}"/>
+															</af:panelGroupLayout>
+														</f:facet>
+													</dvt:diagramNode>
+													<dvt:diagramNode id="HV_n2" nodeId="#{node.id}" containerId="#{node.container}" shortDesc="#{node.desc}" rendered="#{!(node.type=='PipeTerminationPoint')}" label="#{node.label}" containerStyle="#{node.style}"
+																	 layout="tierLayout" showDrill="false">
+														<f:facet name="zoom100">
+															<af:panelGroupLayout inlineStyle="#{node.style}" id="HV_pgl13" layout="horizontal">
+																<dvt:marker id="HV_marker2" source="#{node.image}" borderWidth="2" width="#{node.size}" height="#{node.size}"/>
+															</af:panelGroupLayout>
+														</f:facet>
+													</dvt:diagramNode>
+												</dvt:diagramNodes>
+												<dvt:diagramLinks value="#{pageFlowScope.HierarchyVisualBean.links}" var="link" id="HV_dl1" selectionListener="#{pageFlowScope.HierarchyVisualBean.linkSelectionListener}" binding="#{backingBeanScope.dynamicLinks}" >
+													<dvt:diagramLink startNode="#{link.start}" endNode="#{link.end}" linkColor="#{link.color}" rendered="#{link.type=='Trail'}" shortDesc="#{link.desc}" label="#{link.id}" id="HV_l1"/>
+													<dvt:diagramLink startNode="#{link.start}" endNode="#{link.end}" linkColor="#{link.color}" rendered="#{!(link.type=='Trail' || link.type=='Gap')}" shortDesc="#{link.desc}" linkStyle="#{link.style}" id="HV_l2"
+																	 label="#{link.label}"/>
+													<dvt:diagramLink startNode="#{link.start}" endNode="#{link.end}" linkColor="#{link.color}" rendered="#{link.type=='Gap' &amp;&amp; pageFlowScope.HierarchyVisualBean.displayGaps}" shortDesc="#{link.desc}" id="HV_l3"/>				 
+												</dvt:diagramLinks>
+												
+												<f:facet name="contextMenu">
+													<af:popup contentDelivery="lazyUncached" id="HV_nodeMenu">
+														<af:menu id="HV_m1i">
+															<af:commandMenuItem text="#{inventoryUIBundle.VIEW_SUMMARY}" id="HV_cmi1"  rendered=
+															"#{pageFlowScope.HierarchyVisualBean.dispNodeViewSumm}" actionListener="#{pageFlowScope.HierarchyVisualBean.navigateToNodeSummary}"
+																		action="#{pageFlowScope.HierarchyVisualBean.nodeSummaryAction}"/>
+														</af:menu>
+													</af:popup>
+												</f:facet>
+												<f:facet name="linkContextMenu">
+													<af:popup contentDelivery="lazyUncached" id="HV_linkMenu">
+														<af:menu id="HV_m2i">
+															<af:commandMenuItem text="#{inventoryUIBundle.VIEW_SUMMARY}" id="HV_cmi4"  rendered=
+															"#{pageFlowScope.HierarchyVisualBean.dispLinkViewSumm}" actionListener="#{pageFlowScope.HierarchyVisualBean.navigateToLinkSummary}"
+																		action="#{pageFlowScope.HierarchyVisualBean.linkSummaryAction}"/>
+														</af:menu>
+													</af:popup>
+												</f:facet>
+											</dvt:diagram>
+											<af:popup id="HV_pp8" binding="#{backingBeanScope.cvPrefPopup}" contentDelivery="lazyUncached">
+												<af:dialog id="HV_cv_pref_d1" type="okCancel" title="#{inventoryUIBundle.PREFERENCES}" binding="#{backingBeanScope.cvPrefDialog}" dialogListener="#{pageFlowScope.HierarchyVisualBean.savePreferences}"
+														   cancelTextAndAccessKey="&amp;#{inventoryUIBundle.CANCEL}" affirmativeTextAndAccessKey="O&amp;K" contentHeight="100" contentWidth="300" stretchChildren="first">
+													<af:panelStretchLayout id="HV_psl_7" styleClass="AFStretchWidth" dimensionsFrom="parent">
+														<f:facet name="center">
+															<af:panelGroupLayout id="HV_pgl234" layout="scroll" styleClass="AFStretchWidth">
+																<af:panelFormLayout id="HV_pfl1" maxColumns="1" labelWidth="65%" fieldWidth="35%">
+																	<af:selectBooleanCheckbox value="#{pageFlowScope.HierarchyVisualBean.displayNodeLabel}" label="#{inventoryUIBundle.DISPLAY_NODE_LABEL}" id="HV_dl2" inlineStyle="padding-top: 0px;"/>
+																	<af:selectBooleanCheckbox value="#{pageFlowScope.HierarchyVisualBean.displayConnectivityLabel}" label="#{inventoryUIBundle.DISPLAY_CONNECTIVITY_LABEL}" id="HV_dl3"
+																							  inlineStyle="padding-top: 0px;"/>
+																	<af:selectBooleanCheckbox value="#{pageFlowScope.HierarchyVisualBean.displayGaps}" label="#{inventoryUIBundle.DISPLAY_GAPS}" id="HV_dl4"
+																							  inlineStyle="padding-top: 0px;"/>
+																</af:panelFormLayout>
+															</af:panelGroupLayout>
+														</f:facet>
+													</af:panelStretchLayout>
+												</af:dialog>
+												<af:clientListener method="goRefreshEntity" type="popupClosed"/>
+												<af:serverListener type="refreshEntity" method="#{pageFlowScope.HierarchyVisualBean.refresh}"/>
+											</af:popup>
+										
+										</af:panelGroupLayout>
+									</f:facet>
+								</af:panelStretchLayout>
+							</f:facet>
+							<f:facet name="second">
+							
+							<af:panelGroupLayout id="HVpgl200a"
+													 layout="scroll">
+								<af:panelAccordion id="HVpa00"
+												   discloseMany="true"
+												   discloseNone="true"
+												   dimensionsFrom="auto">
+									<af:showDetailItem disclosed="true"
+														   id="HVsdiEditor"
+														   text="Editor"
+														   flex="1"
+														   stretchChildren="first">
+											<af:panelGroupLayout id="HVpgl30"
+																 layout="scroll">
+												<af:panelFormLayout id="HVpfl10"
+																	maxColumns="1"
+																	labelWidth="33%"
+																	fieldWidth="67%"
+																	binding="#{backingBeanScope.HVviewPanel}">
+													<af:panelLabelAndMessage label="#{inventoryUIBundle.ID}"
+																			 id="HVntwk-id">
+														<af:link id="HVln2"
+																 action="#{pageFlowScope.HierarchyVisualBean.nodeSummaryAction}"  rendered=
+															"#{pageFlowScope.HierarchyVisualBean.dispNodeViewSumm}" 
+																 actionListener="#{pageFlowScope.HierarchyVisualBean.navigateToNodeSummary}">
+															<af:outputText value="#{pageFlowScope.HierarchyVisualBean.id}"
+																		   id="HVot30"/>
+														</af:link>
+														<af:link id="HVln200"
+																 action="#{pageFlowScope.HierarchyVisualBean.linkSummaryAction}"  rendered=
+															"#{pageFlowScope.HierarchyVisualBean.dispLinkViewSumm}" 
+																 actionListener="#{pageFlowScope.HierarchyVisualBean.navigateToLinkSummary}">
+															<af:outputText value="#{pageFlowScope.HierarchyVisualBean.id}"
+																		   id="HVot300"/>
+														</af:link>
+													</af:panelLabelAndMessage>
+													<af:panelLabelAndMessage label="#{inventoryUIBundle.NAME}"
+																			 id="HVntwk-name">
+														<af:outputText value="#{pageFlowScope.HierarchyVisualBean.name}"
+																	   id="HVot20"/>
+													</af:panelLabelAndMessage>
+													<af:panelLabelAndMessage label="#{inventoryUIBundle.NETWORK_ENTITY_LOCATION}"
+																			 id="HVlogdev-nel"
+																			 rendered="#{pageFlowScope.HierarchyVisualBean.renderLocation}">
+														<af:link id="HVln1"
+																 action="LocationDetails"
+																 actionListener="#{pageFlowScope.HierarchyVisualBean.navigateToNodeSummary}">
+															<af:outputText value="#{pageFlowScope.HierarchyVisualBean.location}"
+																		   id="HVot50"/>
+														</af:link>
+													</af:panelLabelAndMessage>
+													<af:panelLabelAndMessage label="#{inventoryUIBundle.BIT_RATE}"
+																			 id="HVbit-rate" 
+																			 rendered="#{pageFlowScope.HierarchyVisualBean.renderBitRate}">
+														<af:outputText value="#{pageFlowScope.HierarchyVisualBean.bitRate}"   inlineStyle="#{pageFlowScope.HierarchyVisualBean.bitRateTextColor}"
+																	   id="HVot200"/>
+													</af:panelLabelAndMessage>
+													
+													<af:panelLabelAndMessage label="#{inventoryUIBundle.TOTAL_CAPACITY}" id="HVlogdev-totalCapacity" 
+																			 rendered="#{pageFlowScope.HierarchyVisualBean.renderLDCapacity}">
+													  <af:outputText value="#{pageFlowScope.HierarchyVisualBean.totalCapacity}" id="HVot21"/>
+													</af:panelLabelAndMessage>
+													<af:panelLabelAndMessage label="#{inventoryUIBundle.CAPACITY_CONSUMED}" id="HVlogdev-capacityConsumed" 
+																						 rendered="#{pageFlowScope.HierarchyVisualBean.renderLDCapacity}">
+													  <af:outputText value="#{pageFlowScope.HierarchyVisualBean.capacityConsumed}" id="HVot22"/>
+													</af:panelLabelAndMessage>
+													<af:panelLabelAndMessage label="#{inventoryUIBundle.PERCENTAGE_CONSUMED}" id="HVlogdev-percentageConsumed" 
+																						 rendered="#{pageFlowScope.HierarchyVisualBean.renderLDCapacity}">
+													  <af:outputText value="#{pageFlowScope.HierarchyVisualBean.percentageConsumed}%" id="HVot23" inlineStyle="#{pageFlowScope.HierarchyVisualBean.colorCode}"/>
+													</af:panelLabelAndMessage>
+										
+													<af:spacer height="10"/>
+													<af:iterator id="HVit123"
+																 binding="#{backingBeanScope.HVcharacteristicsBinding}"
+																 value="#{pageFlowScope.HierarchyVisualBean.characteristics}"
+																 var="characteristicDetails">
+														<af:panelLabelAndMessage label="#{characteristicDetails.label}"
+																				 id="HVonn312"
+																				 rendered="#{(characteristicDetails.characteristic.characteristicSpecification.valueType == 'ALPHANUMERIC' || characteristicDetails.characteristic.characteristicSpecification.controlType == 'CALENDAR' || characteristicDetails.characteristic.characteristicSpecification.controlType == 'DROPDOWN_LIST' || characteristicDetails.characteristic.characteristicSpecification.valueType == 'NUMERIC') and !(characteristicDetails.characteristic.characteristicSpecification.isEntityReference == 'true')}">
+															<af:outputText id="HVote3"
+																		   value="#{characteristicDetails.lovItemLabelsByValue[characteristicDetails.characteristic.value]}"/>
+														</af:panelLabelAndMessage>
+														<af:panelLabelAndMessage label="#{characteristicDetails.label}"
+																				 id="HVonn317"
+																				 rendered="#{characteristicDetails.characteristic.characteristicSpecification.valueType == 'URL'}">
+															<af:link id="HVoth3"
+																	 targetFrame="_blank"
+																	 destination="#{characteristicDetails.lovItemLabelsByValue[characteristicDetails.characteristic.value]}"
+																	 inlineStyle="padding-left:6px;">
+																<af:outputText id="HVot180"
+																			   truncateAt="50"
+																			   value="#{characteristicDetails.lovItemLabelsByValue[characteristicDetails.characteristic.value]}"/>
+															</af:link>
+														</af:panelLabelAndMessage>
+														<af:panelLabelAndMessage label=""
+																				 id="HVonn318"
+																				 rendered="#{characteristicDetails.characteristic.characteristicSpecification.controlType == 'CHECKBOX'}">
+															<af:selectBooleanCheckbox id="HVsbc10"
+																					  readOnly="true"
+																					  value="#{characteristicDetails.lovItemLabelsByValue[characteristicDetails.characteristic.value]}"
+																					  text="#{characteristicDetails.label}"
+																					  simple="true"/>
+														</af:panelLabelAndMessage>
+														<af:panelLabelAndMessage id="HVonn319"
+																				 label="#{characteristicDetails.label}"
+																				 rendered="#{characteristicDetails.characteristic.characteristicSpecification.controlType == 'DROPDOWN_LIST' and characteristicDetails.characteristic.characteristicSpecification.isEntityReference == 'true'}">
+															<af:commandLink action="#{pageFlowScope.HierarchyVisualBean.charSummaryAction}"
+																			actionListener="#{pageFlowScope.HierarchyVisualBean.navigateToCharSummary}"
+																			text="#{characteristicDetails.lovItemLabelsByValue[characteristicDetails.characteristic.value]}">
+																<af:setActionListener from="#{characteristicDetails.characteristic.referencedEntity}"
+																					  to="#{requestScope.entityLink}"/>
+															</af:commandLink>
+														</af:panelLabelAndMessage>
+														<af:spacer height="10"/>
+													</af:iterator>
+												</af:panelFormLayout>
+											</af:panelGroupLayout>
+										</af:showDetailItem>
+									
+									
+									
+									<af:showDetailItem disclosed="false"
+														   id="HVPalette0"
+														   text="#{inventoryUIBundle.LEGEND}"
+														   flex="1"
+														   stretchChildren="first">
+										<af:panelAccordion id="HVpaPalette001"
+														   discloseMany="false"
+														   discloseNone="true"
+														   dimensionsFrom="auto">
+											<af:showDetailItem disclosed="false"
+																   id="HVPalette"
+																   text="#{inventoryUIBundle.NODES}"
+																   flex="1"
+																   stretchChildren="first">
+												<af:panelGroupLayout id="HVpgl3000"
+																	 layout="scroll">
+													<af:panelFormLayout id="HVpfl1000"
+																		maxColumns="1"
+																		labelWidth="0%"
+																		fieldWidth="100%"
+																		binding="#{backingBeanScope.HVnodesPalette}">
+														<af:iterator id="HVNPItr"
+																 binding="#{backingBeanScope.HVNodesItrBinding}"
+																 value="#{pageFlowScope.HierarchyVisualBean.nodeIconsMapEntries}"
+																 var="nodeIcon">
+															 <af:iterator id="HVNPItr1"
+															 binding="#{backingBeanScope.HVNodesItr1Binding}"
+															 value="#{nodeIcon.value}"
+															 var="val">
+																<af:commandImageLink styleClass="AFStdCommandImageSize"  icon="#{val}" text="#{nodeIcon.key}"/>
+																 <af:spacer height="10"/>
+															</af:iterator>	
+														</af:iterator>
+													 </af:panelFormLayout>
+												</af:panelGroupLayout>
+											</af:showDetailItem>
+										</af:panelAccordion>
+										<af:panelAccordion id="HVpaPalette002"
+													   discloseMany="false"
+													   discloseNone="true"
+													   dimensionsFrom="auto">
+											<af:showDetailItem disclosed="false"
+															   id="HVPalette1"
+															   text="#{inventoryUIBundle.LINKS}"
+															   flex="1"
+															   stretchChildren="first">
+												<af:panelGroupLayout id="HVpgl30000"
+																	 layout="scroll">
+													<af:panelFormLayout id="HVpfl10000"
+																		maxColumns="1"
+																		labelWidth="0%"
+																		fieldWidth="100%"
+																		binding="#{backingBeanScope.HVviewPalette1}">
+														<af:iterator id="HVLPItr"
+																 binding="#{backingBeanScope.HVLinksItrBinding}"
+																 value="#{pageFlowScope.HierarchyVisualBean.linkIconsMapEntries}"
+																 var="linkIcon">
+																 <af:panelLabelAndMessage label="#{linkIcon.key}">
+														<af:outputText value="#{fn:trim(fn:substring(linkIcon.value,0,fn:indexOf(linkIcon.value,'$')))}"   inlineStyle="#{fn:trim(fn:substring(linkIcon.value,fn:indexOf(linkIcon.value,'$')+1,fn:length(linkIcon.value)-1))};"
+																	   id="HVotlnk1"/>
+													</af:panelLabelAndMessage>
+														</af:iterator>	
+													</af:panelFormLayout>
+												 </af:panelGroupLayout>
+											</af:showDetailItem>
+										</af:panelAccordion>
+									</af:showDetailItem>
+									</af:panelAccordion>
+									<af:resource type="javascript">
+									  function queueEvent(event) {
+										  event.cancel();// cancel action event
+										  var source = event.getSource();
+										  var params = {
+										  };
+										  var type = "customListener";
+										  var immediate = true;
+										  var isPartial = true;
+										  var customEvent = new AdfCustomEvent(source, type, params, immediate);
+										  customEvent.preventUserInput();
+										  customEvent.queue(isPartial);
+									  }
+
+									  function handleClick(event) {
+										  event.cancel();
+									  }
+									</af:resource>
+								</af:panelGroupLayout>
+							</f:facet>
+						</af:panelSplitter>
+					</af:panelGroupLayout>
+                </f:facet>
+            </af:panelStretchLayout>
+        </f:facet>
+    </af:panelSplitter>
+</jsp:root>

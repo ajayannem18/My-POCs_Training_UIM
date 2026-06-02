@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="model:Environment" id="env=CW_env" type="env" typeName="Environment" name="CW_env" resource="\CW_Env\model\CW_env.sceEnvironment">
+    <displayName lang="default">Environment</displayName>
+    <note lang="default"/>
+    <environmentProperty>
+      <value inherited="false">192.168.156.144</value>
+      <cartridgeType>Inventory Project</cartridgeType>
+      <category>Cartridge Management</category>
+      <name>wladmin.host.name</name>
+      <sensitive>false</sensitive>
+    </environmentProperty>
+    <environmentProperty>
+      <value inherited="false">1818</value>
+      <cartridgeType>Inventory Project</cartridgeType>
+      <category>Cartridge Management</category>
+      <name>wladmin.host.port</name>
+      <sensitive>false</sensitive>
+    </environmentProperty>
+    <address>http://192.168.156.144:1818/cartridge/wsapi</address>
+    <server>AdminServer</server>
+    <keystore></keystore>
+  </entity>
+</model:Model>

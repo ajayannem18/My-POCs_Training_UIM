@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<extent>
+  <object class="oracle.communications.platform.entity.impl.LocalizationInfoDAO" oid="oracle.communications.platform.entity.impl.LocalizationInfoDAO-0" version="0">
+    <field name="label">"SDH Network (Oracle Provided)"</field>
+    <field name="displayLabel">"SDH Network (Oracle Provided)"</field>
+    <field name="language">"[default]"</field>
+    <field name="specification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationDAO-1</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.LocalizationInfoDAO" oid="oracle.communications.platform.entity.impl.LocalizationInfoDAO-1" version="0">
+    <field name="label">"SONET Network (Oracle Provided)"</field>
+    <field name="displayLabel">"SONET Network (Oracle Provided)"</field>
+    <field name="language">"[default]"</field>
+    <field name="specification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationDAO-2</field>
+  </object>
+</extent>

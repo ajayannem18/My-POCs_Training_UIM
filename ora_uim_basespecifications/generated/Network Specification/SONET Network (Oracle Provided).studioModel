@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:inventory="http://xmlns.oracle.com/communications/studio/model/inventory" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="inventory:NetworkSpecification" id="ns=SONET Network (Oracle Provided)" type="ns" typeName="Network Specification" name="SONET Network (Oracle Provided)" resource="\ora_uim_basespecifications\model\SONET Network (Oracle Provided).network">
+    <displayName lang="default">SONET Network (Oracle Provided)</displayName>
+    <note lang="default"/>
+    <extends>
+      <relation ref="ie=Network" type="Inventory Entity" name="Dependency" kind="Entity">
+        <target name="Network" typeName="Inventory Entity"/>
+      </relation>
+    </extends>
+    <project>
+      <relation ref="ivprj=ora_uim_basespecifications" type="Inventory Project" name="Dependency">
+        <target name="ora_uim_basespecifications" typeName="Inventory Project"/>
+      </relation>
+    </project>
+    <dataElements>
+      <element id="ns=SONET Network (Oracle Provided)+dataElement=5dXeCH5XSamSq667yFoptA~description" type="dataElement" typeName="Data Element" kind="Element" name="description" path="/description" inherited="true">
+        <displayName lang="default">description</displayName>
+        <displayName lang="default">description</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">255</maxLength>
+        <base>
+          <relation ref="ie=Network+dataElement=description" type="Data Element" name="Type" kind="Element">
+            <target name="description" typeName="Data Element"/>
+            <inEntity name="Network" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="ns=SONET Network (Oracle Provided)+dataElement=5dXeCH5XSamSq667yFoptA~enforceSameChannelAssignment" type="dataElement" typeName="Data Element" kind="Element" name="enforceSameChannelAssignment" path="/enforceSameChannelAssignment" inherited="true">
+        <displayName lang="default">enforceSameChannelAssignment</displayName>
+        <displayName lang="default">enforceSameChannelAssignment</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ie=Network+dataElement=enforceSameChannelAssignment" type="Data Element" name="Type" kind="Element">
+            <target name="enforceSameChannelAssignment" typeName="Data Element"/>
+            <inEntity name="Network" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>boolean</primitiveType>
+      </element>
+      <element id="ns=SONET Network (Oracle Provided)+dataElement=5dXeCH5XSamSq667yFoptA~id" type="dataElement" typeName="Data Element" kind="Element" name="id" path="/id" inherited="true">
+        <displayName lang="default">id</displayName>
+        <displayName lang="default">id</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">255</maxLength>
+        <base>
+          <relation ref="ie=Network+dataElement=id" type="Data Element" name="Type" kind="Element">
+            <target name="id" typeName="Data Element"/>
+            <inEntity name="Network" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="ns=SONET Network (Oracle Provided)+dataElement=5dXeCH5XSamSq667yFoptA~name" type="dataElement" typeName="Data Element" kind="Element" name="name" path="/name" inherited="true">
+        <displayName lang="default">name</displayName>
+        <displayName lang="default">name</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">50</maxLength>
+        <base>
+          <relation ref="ie=Network+dataElement=name" type="Data Element" name="Type" kind="Element">
+            <target name="name" typeName="Data Element"/>
+            <inEntity name="Network" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="ns=SONET Network (Oracle Provided)+dataElement=5dXeCH5XSamSq667yFoptA~networkTopology" type="dataElement" typeName="Data Element" kind="Element" name="networkTopology" path="/networkTopology" inherited="true">
+        <displayName lang="default">networkTopology</displayName>
+        <displayName lang="default">networkTopology</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">50</maxLength>
+        <base>
+          <relation ref="ie=Network+dataElement=networkTopology" type="Data Element" name="Type" kind="Element">
+            <target name="networkTopology" typeName="Data Element"/>
+            <inEntity name="Network" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="ns=SONET Network (Oracle Provided)+dataElement=5dXeCH5XSamSq667yFoptA~protectionType" type="dataElement" typeName="Data Element" kind="Element" name="protectionType" path="/protectionType" inherited="true">
+        <displayName lang="default">protectionType</displayName>
+        <displayName lang="default">protectionType</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">50</maxLength>
+        <base>
+          <relation ref="ie=Network+dataElement=protectionType" type="Data Element" name="Type" kind="Element">
+            <target name="protectionType" typeName="Data Element"/>
+            <inEntity name="Network" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="ns=SONET Network (Oracle Provided)+dataElement=5dXeCH5XSamSq667yFoptA~ringType" type="dataElement" typeName="Data Element" kind="Element" name="ringType" path="/ringType" inherited="true">
+        <displayName lang="default">ringType</displayName>
+        <displayName lang="default">ringType</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">50</maxLength>
+        <base>
+          <relation ref="ie=Network+dataElement=ringType" type="Data Element" name="Type" kind="Element">
+            <target name="ringType" typeName="Data Element"/>
+            <inEntity name="Network" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+    </dataElements>
+    <relatedSpecificationList/>
+    <technology>
+      <relation ref="tec=SONET" type="Technology" name="oracle.communications.studio.inventory.REL_TECH" kind="Entity">
+        <target name="SONET" typeName="Technology"/>
+      </relation>
+    </technology>
+  </entity>
+</model:Model>

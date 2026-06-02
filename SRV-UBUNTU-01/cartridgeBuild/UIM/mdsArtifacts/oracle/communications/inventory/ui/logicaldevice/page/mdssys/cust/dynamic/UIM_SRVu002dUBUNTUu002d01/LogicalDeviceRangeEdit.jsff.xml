@@ -1,0 +1,41 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<mds:customization version="11.1.1.59.23" xmlns:mds="http://xmlns.oracle.com/mds">
+   <mds:insert parent="logdev" position="last">
+      <af:inputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" binding="#{pageFlowScope.LogicalDeviceRangeEditBean.characteristicsMap['OS_Version'].component}" readOnly="false" secret="false" label="#{bundle['LogicalDeviceRangeEditu002ejsffSRVu002dUBUNTUu002d01_OS-5FVersion_LABEL']}" id="logdev-OS-5FVersion" value="#{pageFlowScope.LogicalDeviceRangeEditBean.characteristicsMap['OS_Version'].characteristic.value}" required="false" styleClass="UIHintsEditINPUT_TEXT"/>
+   </mds:insert>
+   <mds:insert parent="logdev" position="last">
+      <af:inputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" binding="#{pageFlowScope.LogicalDeviceRangeEditBean.characteristicsMap['Management_IP'].component}" readOnly="false" secret="false" label="#{bundle['LogicalDeviceRangeEditu002ejsffSRVu002dUBUNTUu002d01_Management-5FIP_LABEL']}" id="logdev-Management-5FIP" value="#{pageFlowScope.LogicalDeviceRangeEditBean.characteristicsMap['Management_IP'].characteristic.value}" required="false" styleClass="UIHintsEditINPUT_TEXT"/>
+   </mds:insert>
+   <mds:insert after="logdev-al1" parent="logdev">
+      <af:selectOneChoice xmlns:af="http://xmlns.oracle.com/adf/faces/rich" binding="#{pageFlowScope.LogicalDeviceRangeEditBean.characteristicsMap['Server_Role'].component}" readOnly="false" label="#{bundle['LogicalDeviceRangeEditu002ejsffSRVu002dUBUNTUu002d01_Server-5FRole_LABEL']}" id="logdev-Server-5FRole" value="#{pageFlowScope.LogicalDeviceRangeEditBean.characteristicsMap['Server_Role'].characteristic.value}" required="false" styleClass="UIHintsEditSELECT_ONE_CHOICE">
+         <f:selectItems xmlns:f="http://java.sun.com/jsf/core" binding="#{pageFlowScope.LogicalDeviceRangeEditBean.characteristicsMap['Server_Role'].lovItems}"/>
+      </af:selectOneChoice>
+   </mds:insert>
+   <mds:modify element="logdev">
+      <mds:attribute name="rows" value="5"/>
+      <mds:attribute name="maxColumns" value="2"/>
+      <mds:attribute name="labelAlignment" value="start"/>
+      <mds:attribute name="styleClass" value="UIHintsEditPANEL_FORM_LAYOUT"/>
+   </mds:modify>
+   <mds:modify element="logdev-quantity">
+      <mds:attribute name="styleClass" value="UIHintsEditINPUT_TEXT"/>
+   </mds:modify>
+   <mds:modify element="logdev-nel">
+      <mds:attribute name="styleClass" value="UIHintsEditINPUT_TEXT"/>
+   </mds:modify>
+   <mds:modify element="logdev-startID">
+      <mds:attribute name="styleClass" value="UIHintsEditINPUT_TEXT"/>
+   </mds:modify>
+   <mds:modify element="logdev-al1">
+      <mds:attribute name="styleClass" value="UIHintsEditPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="logdev-specification">
+      <mds:attribute name="styleClass" value="UIHintsEditSELECT_ONE_CHOICE"/>
+   </mds:modify>
+   <mds:modify element="logdev-name">
+      <mds:attribute name="styleClass" value="UIHintsEditINPUT_TEXT"/>
+   </mds:modify>
+   <mds:modify element="logdev-description">
+      <mds:attribute name="styleClass" value="UIHintsEditINPUT_TEXT"/>
+   </mds:modify>
+</mds:customization>

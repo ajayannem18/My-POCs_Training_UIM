@@ -1,0 +1,67 @@
+<?xml version = '1.0'?>
+<mds:customization version="11.1.1.59.23" xmlns:mds="http://xmlns.oracle.com/mds">
+   <mds:insert parent="eqp" position="last">
+      <af:inputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" binding="#{pageFlowScope.EquipmentRangeEditBean.characteristicsMap['Vendor'].component}" readOnly="false" secret="false" label="#{bundle['EquipmentRangeEditu002ejsffCisco__Nexus__9372PX__E_Vendor_LABEL']}" id="eqp-Vendor" value="#{pageFlowScope.EquipmentRangeEditBean.characteristicsMap['Vendor'].characteristic.value}" required="false" styleClass="UIHintsEditINPUT_TEXT"/>
+   </mds:insert>
+   <mds:insert parent="eqp" position="last">
+      <af:inputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" binding="#{pageFlowScope.EquipmentRangeEditBean.characteristicsMap['DeviceType'].component}" readOnly="false" secret="false" label="#{bundle['EquipmentRangeEditu002ejsffCisco__Nexus__9372PX__E_DeviceType_LABEL']}" id="eqp-DeviceType" value="#{pageFlowScope.EquipmentRangeEditBean.characteristicsMap['DeviceType'].characteristic.value}" required="false" styleClass="UIHintsEditINPUT_TEXT"/>
+   </mds:insert>
+   <mds:insert parent="eqp" position="last">
+      <af:inputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" binding="#{pageFlowScope.EquipmentRangeEditBean.characteristicsMap['PacketRate'].component}" readOnly="false" secret="false" label="#{bundle['EquipmentRangeEditu002ejsffCisco__Nexus__9372PX__E_PacketRate_LABEL']}" id="eqp-PacketRate" value="#{pageFlowScope.EquipmentRangeEditBean.characteristicsMap['PacketRate'].characteristic.value}" required="false" styleClass="UIHintsEditINPUT_TEXT"/>
+   </mds:insert>
+   <mds:insert after="eqp-quantity" parent="eqp">
+      <af:inputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" binding="#{pageFlowScope.EquipmentRangeEditBean.characteristicsMap['Model'].component}" readOnly="false" secret="false" label="#{bundle['EquipmentRangeEditu002ejsffCisco__Nexus__9372PX__E_Model_LABEL']}" id="eqp-Model" value="#{pageFlowScope.EquipmentRangeEditBean.characteristicsMap['Model'].characteristic.value}" required="false" styleClass="UIHintsEditINPUT_TEXT"/>
+   </mds:insert>
+   <mds:insert after="eqp-Model">
+      <af:inputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" binding="#{pageFlowScope.EquipmentRangeEditBean.characteristicsMap['RU_Size'].component}" readOnly="false" secret="false" label="#{bundle['EquipmentRangeEditu002ejsffCisco__Nexus__9372PX__E_RU-5FSize_LABEL']}" id="eqp-RU-5FSize" value="#{pageFlowScope.EquipmentRangeEditBean.characteristicsMap['RU_Size'].characteristic.value}" required="false" styleClass="UIHintsEditINPUT_TEXT"/>
+   </mds:insert>
+   <mds:insert after="eqp-RU-5FSize">
+      <af:inputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" binding="#{pageFlowScope.EquipmentRangeEditBean.characteristicsMap['BandWidth'].component}" readOnly="false" secret="false" label="#{bundle['EquipmentRangeEditu002ejsffCisco__Nexus__9372PX__E_BandWidth_LABEL']}" id="eqp-BandWidth" value="#{pageFlowScope.EquipmentRangeEditBean.characteristicsMap['BandWidth'].characteristic.value}" required="false" styleClass="UIHintsEditINPUT_TEXT"/>
+   </mds:insert>
+   <mds:insert after="eqp-BandWidth">
+      <af:panelLabelAndMessage xmlns:af="http://xmlns.oracle.com/adf/faces/rich" id="eqp-dummy-0-1" label=" " styleClass="UIHintsEditPANEL_LABEL_AND_MESSAGE">
+         <af:outputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" id="x-eqp-dummy-0-1" value=" "/>
+      </af:panelLabelAndMessage>
+   </mds:insert>
+   <mds:insert after="eqp-dummy-0-1">
+      <af:panelLabelAndMessage xmlns:af="http://xmlns.oracle.com/adf/faces/rich" id="eqp-dummy-1-1" label=" " styleClass="UIHintsEditPANEL_LABEL_AND_MESSAGE">
+         <af:outputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" id="x-eqp-dummy-1-1" value=" "/>
+      </af:panelLabelAndMessage>
+   </mds:insert>
+   <mds:insert after="eqp-dummy-1-1">
+      <af:panelLabelAndMessage xmlns:af="http://xmlns.oracle.com/adf/faces/rich" id="eqp-dummy-2-1" label=" " styleClass="UIHintsEditPANEL_LABEL_AND_MESSAGE">
+         <af:outputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" id="x-eqp-dummy-2-1" value=" "/>
+      </af:panelLabelAndMessage>
+   </mds:insert>
+   <mds:insert after="eqp-dummy-2-1">
+      <af:panelLabelAndMessage xmlns:af="http://xmlns.oracle.com/adf/faces/rich" id="eqp-dummy-3-1" label=" " styleClass="UIHintsEditPANEL_LABEL_AND_MESSAGE">
+         <af:outputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" id="x-eqp-dummy-3-1" value=" "/>
+      </af:panelLabelAndMessage>
+   </mds:insert>
+   <mds:insert parent="eqp" position="last">
+      <af:panelLabelAndMessage xmlns:af="http://xmlns.oracle.com/adf/faces/rich" id="eqp-dummy-7-1" label=" " styleClass="UIHintsEditPANEL_LABEL_AND_MESSAGE">
+         <af:outputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" id="x-eqp-dummy-7-1" value=" "/>
+      </af:panelLabelAndMessage>
+   </mds:insert>
+   <mds:modify element="eqp">
+      <mds:attribute name="rows" value="8"/>
+      <mds:attribute name="maxColumns" value="2"/>
+      <mds:attribute name="labelAlignment" value="start"/>
+      <mds:attribute name="styleClass" value="UIHintsEditPANEL_FORM_LAYOUT"/>
+   </mds:modify>
+   <mds:modify element="eqp-quantity">
+      <mds:attribute name="styleClass" value="UIHintsEditINPUT_TEXT"/>
+   </mds:modify>
+   <mds:modify element="eqp-nel">
+      <mds:attribute name="styleClass" value="UIHintsEditINPUT_TEXT"/>
+   </mds:modify>
+   <mds:modify element="eqp-startID">
+      <mds:attribute name="styleClass" value="UIHintsEditINPUT_TEXT"/>
+   </mds:modify>
+   <mds:modify element="eqp-al1">
+      <mds:attribute name="styleClass" value="UIHintsEditPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="eqp-specification">
+      <mds:attribute name="styleClass" value="UIHintsEditSELECT_ONE_CHOICE"/>
+   </mds:modify>
+</mds:customization>

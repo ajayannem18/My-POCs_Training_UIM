@@ -1,0 +1,9 @@
+package oracle.communications.inventory.rules;
+import com.findServiceById.FindServiceByDeviceId;
+
+
+System.out.println("Calling find service method");
+
+FindServiceByDeviceId.findServiceById();
+System.out.println("find service method executed successfully");
+s

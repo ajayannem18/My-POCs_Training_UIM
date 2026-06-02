@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<extent>
+  <object class="oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO" guid="http://xmlns.oracle.com/communications/sce/dictionary/Cisco_Nexus_9332PQ_Switch/Cisco_Nexus_9332PQ_Switch/Vendor.characteristic#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO-0" version="0">
+    <field name="name">"Vendor"</field>
+    <field name="id">null</field>
+    <field name="description">""</field>
+    <field name="startDate">1779778427045</field>
+    <field name="minQty">0</field>
+    <field name="maxQty">1</field>
+    <field name="derivationFormula">null</field>
+    <field name="restrictedAssociationToSpec">false</field>
+    <field name="multiValued">false</field>
+    <field mode="skip" name="characteristicSpecUsages"/>
+    <field mode="skip" name="childCharSpecRels"/>
+    <field name="passwordType">false</field>
+    <field format="enum_name" name="primitiveType">STRING</field>
+    <field format="enum_name" name="controlType">TEXT_FIELD</field>
+    <field format="enum_name" name="valueType">ALPHANUMERIC</field>
+    <field format="enum_name" name="textCase">MIXED</field>
+    <field name="persisted">false</field>
+    <field name="displayLabel">"Vendor"</field>
+    <field name="minLength">1</field>
+    <field name="maxLength">0</field>
+    <field name="values"/>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO" guid="http://xmlns.oracle.com/communications/sce/dictionary/Cisco_Nexus_9332PQ_Switch/Cisco_Nexus_9332PQ_Switch/Model.characteristic#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO-1" version="0">
+    <field name="name">"Model"</field>
+    <field name="id">null</field>
+    <field name="description">""</field>
+    <field name="startDate">1779778427045</field>
+    <field name="minQty">0</field>
+    <field name="maxQty">1</field>
+    <field name="derivationFormula">null</field>
+    <field name="restrictedAssociationToSpec">false</field>
+    <field name="multiValued">false</field>
+    <field mode="skip" name="characteristicSpecUsages"/>
+    <field mode="skip" name="childCharSpecRels"/>
+    <field name="passwordType">false</field>
+    <field format="enum_name" name="primitiveType">STRING</field>
+    <field format="enum_name" name="controlType">TEXT_FIELD</field>
+    <field format="enum_name" name="valueType">ALPHANUMERIC</field>
+    <field format="enum_name" name="textCase">MIXED</field>
+    <field name="persisted">false</field>
+    <field name="displayLabel">"Model"</field>
+    <field name="minLength">1</field>
+    <field name="maxLength">0</field>
+    <field name="values"/>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO" guid="http://xmlns.oracle.com/communications/sce/dictionary/Cisco_Nexus_9332PQ_Switch/Cisco_Nexus_9332PQ_Switch/RU_Size.characteristic#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO-2" version="0">
+    <field name="name">"RU_Size"</field>
+    <field name="id">null</field>
+    <field name="description">""</field>
+    <field name="startDate">1779778427045</field>
+    <field name="minQty">0</field>
+    <field name="maxQty">1</field>
+    <field name="derivationFormula">null</field>
+    <field name="restrictedAssociationToSpec">false</field>
+    <field name="multiValued">false</field>
+    <field mode="skip" name="characteristicSpecUsages"/>
+    <field mode="skip" name="childCharSpecRels"/>
+    <field name="passwordType">false</field>
+    <field format="enum_name" name="primitiveType">STRING</field>
+    <field format="enum_name" name="controlType">TEXT_FIELD</field>
+    <field format="enum_name" name="valueType">ALPHANUMERIC</field>
+    <field format="enum_name" name="textCase">MIXED</field>
+    <field name="persisted">false</field>
+    <field name="displayLabel">"RU Size"</field>
+    <field name="minLength">1</field>
+    <field name="maxLength">0</field>
+    <field name="values"/>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO" guid="http://xmlns.oracle.com/communications/sce/dictionary/Cisco_Nexus_9332PQ_Switch/Cisco_Nexus_9332PQ_Switch/BandWidth.characteristic#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO-3" version="0">
+    <field name="name">"BandWidth"</field>
+    <field name="id">null</field>
+    <field name="description">""</field>
+    <field name="startDate">1779778427045</field>
+    <field name="minQty">0</field>
+    <field name="maxQty">1</field>
+    <field name="derivationFormula">null</field>
+    <field name="restrictedAssociationToSpec">false</field>
+    <field name="multiValued">false</field>
+    <field mode="skip" name="characteristicSpecUsages"/>
+    <field mode="skip" name="childCharSpecRels"/>
+    <field name="passwordType">false</field>
+    <field format="enum_name" name="primitiveType">STRING</field>
+    <field format="enum_name" name="controlType">TEXT_FIELD</field>
+    <field format="enum_name" name="valueType">ALPHANUMERIC</field>
+    <field format="enum_name" name="textCase">MIXED</field>
+    <field name="persisted">false</field>
+    <field name="displayLabel">"Band Width"</field>
+    <field name="minLength">1</field>
+    <field name="maxLength">0</field>
+    <field name="values"/>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO" guid="http://xmlns.oracle.com/communications/sce/dictionary/Cisco_Nexus_9332PQ_Switch/Cisco_Nexus_9332PQ_Switch/PPS.characteristic#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO-4" version="0">
+    <field name="name">"PPS"</field>
+    <field name="id">null</field>
+    <field name="description">""</field>
+    <field name="startDate">1779778427046</field>
+    <field name="minQty">0</field>
+    <field name="maxQty">1</field>
+    <field name="derivationFormula">null</field>
+    <field name="restrictedAssociationToSpec">false</field>
+    <field name="multiValued">false</field>
+    <field mode="skip" name="characteristicSpecUsages"/>
+    <field mode="skip" name="childCharSpecRels"/>
+    <field name="passwordType">false</field>
+    <field format="enum_name" name="primitiveType">STRING</field>
+    <field format="enum_name" name="controlType">TEXT_FIELD</field>
+    <field format="enum_name" name="valueType">ALPHANUMERIC</field>
+    <field format="enum_name" name="textCase">MIXED</field>
+    <field name="persisted">false</field>
+    <field name="displayLabel">"PPS"</field>
+    <field name="minLength">1</field>
+    <field name="maxLength">0</field>
+    <field name="values"/>
+  </object>
+</extent>

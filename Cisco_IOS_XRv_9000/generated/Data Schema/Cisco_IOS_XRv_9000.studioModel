@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:data="http://xmlns.oracle.com/communications/studio/model/data" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="data:DataSchema" id="ds=Cisco_IOS_XRv_9000" type="ds" typeName="Data Schema" name="Cisco_IOS_XRv_9000" resource="\Cisco_IOS_XRv_9000\dataDictionary\Cisco_IOS_XRv_9000.xsd">
+    <displayName lang="default">Cisco_IOS_XRv_9000</displayName>
+    <note lang="default"/>
+    <project>
+      <relation ref="ivprj=Cisco_IOS_XRv_9000" type="Inventory Project" name="Dependency">
+        <target name="Cisco_IOS_XRv_9000" typeName="Inventory Project"/>
+      </relation>
+    </project>
+    <dataElements>
+      <element id="ds=Cisco_IOS_XRv_9000+dataElement=RAM" type="dataElement" typeName="Schema Element" kind="Element" name="RAM" path="/RAM">
+        <displayName lang="default">RAM</displayName>
+        <minOccurs inherited="false">0</minOccurs>
+        <maxOccurs inherited="false">1</maxOccurs>
+        <defaultValue inherited="false"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="false">false</sensitive>
+        <minLength inherited="false">1</minLength>
+        <maxLength inherited="false">-1</maxLength>
+        <dataElements/>
+        <tag>
+          <name>Characteristic</name>
+          <description></description>
+        </tag>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <characteristics>
+          <dataValues>
+            <dropDownOptions/>
+          </dataValues>
+        </characteristics>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="ds=Cisco_IOS_XRv_9000+dataElement=vCPU" type="dataElement" typeName="Schema Element" kind="Element" name="vCPU" path="/vCPU">
+        <displayName lang="default">V CPU</displayName>
+        <minOccurs inherited="false">0</minOccurs>
+        <maxOccurs inherited="false">1</maxOccurs>
+        <defaultValue inherited="false"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="false">false</sensitive>
+        <minLength inherited="false">1</minLength>
+        <maxLength inherited="false">-1</maxLength>
+        <dataElements/>
+        <tag>
+          <name>Characteristic</name>
+          <description></description>
+        </tag>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <characteristics>
+          <dataValues>
+            <dropDownOptions/>
+          </dataValues>
+        </characteristics>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="ds=Cisco_IOS_XRv_9000+dataElement=Hypervisor" type="dataElement" typeName="Schema Element" kind="Element" name="Hypervisor" path="/Hypervisor">
+        <displayName lang="default">Hypervisor</displayName>
+        <minOccurs inherited="false">0</minOccurs>
+        <maxOccurs inherited="false">1</maxOccurs>
+        <defaultValue inherited="false"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="false">false</sensitive>
+        <minLength inherited="false">1</minLength>
+        <maxLength inherited="false">-1</maxLength>
+        <dataElements/>
+        <tag>
+          <name>Characteristic</name>
+          <description></description>
+        </tag>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <characteristics>
+          <dataValues>
+            <dropDownOptions/>
+          </dataValues>
+        </characteristics>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="ds=Cisco_IOS_XRv_9000+dataElement=Disk" type="dataElement" typeName="Schema Element" kind="Element" name="Disk" path="/Disk">
+        <displayName lang="default">Disk</displayName>
+        <minOccurs inherited="false">0</minOccurs>
+        <maxOccurs inherited="false">1</maxOccurs>
+        <defaultValue inherited="false"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="false">false</sensitive>
+        <minLength inherited="false">1</minLength>
+        <maxLength inherited="false">-1</maxLength>
+        <dataElements/>
+        <tag>
+          <name>Characteristic</name>
+          <description></description>
+        </tag>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <characteristics>
+          <dataValues>
+            <dropDownOptions/>
+          </dataValues>
+        </characteristics>
+        <primitiveType>string</primitiveType>
+      </element>
+    </dataElements>
+  </entity>
+</model:Model>

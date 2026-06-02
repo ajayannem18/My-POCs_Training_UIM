@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:inventory="http://xmlns.oracle.com/communications/studio/model/inventory" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="inventory:FlowIdentifierSpecification" id="fids=Flow_Identifier1" type="fids" typeName="Flow Identifier Specification" name="Flow_Identifier1" resource="\Flow_Identifier_Project\model\Flow_Identifier1.flowIdentifier">
+    <note lang="default"/>
+    <extends>
+      <relation ref="ie=FlowIdentifier" type="Inventory Entity" name="Dependency" kind="Entity">
+        <target name="FlowIdentifier" typeName="Inventory Entity"/>
+      </relation>
+    </extends>
+    <project>
+      <relation ref="ivprj=Flow_Identifier_Project" type="Inventory Project" name="Dependency">
+        <target name="Flow_Identifier_Project" typeName="Inventory Project"/>
+      </relation>
+    </project>
+    <dataElements>
+      <element id="fids=Flow_Identifier1+dataElement=r8OKNeMERLSDZtbDUBPcHQ~identifier" type="dataElement" typeName="Data Element" kind="Element" name="identifier" path="/identifier" inherited="true">
+        <displayName lang="default">Identifier</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">30</maxLength>
+        <base>
+          <relation ref="ie=FlowIdentifier+dataElement=identifier" type="Data Element" name="Type" kind="Element">
+            <target name="identifier" typeName="Data Element"/>
+            <inEntity name="FlowIdentifier" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="fids=Flow_Identifier1+dataElement=r8OKNeMERLSDZtbDUBPcHQ~name" type="dataElement" typeName="Data Element" kind="Element" name="name" path="/name" inherited="true">
+        <displayName lang="default">name</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">255</maxLength>
+        <base>
+          <relation ref="ie=FlowIdentifier+dataElement=name" type="Data Element" name="Type" kind="Element">
+            <target name="name" typeName="Data Element"/>
+            <inEntity name="FlowIdentifier" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <tag>
+          <name>Characteristic</name>
+          <description></description>
+        </tag>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+    </dataElements>
+    <relatedSpecificationList/>
+    <technology>
+      <relation ref="tec=MPLS" type="Technology" name="oracle.communcations.studio.inventory.REL_TECHNOLOGY_TYPE" kind="Entity">
+        <target name="MPLS" typeName="Technology"/>
+      </relation>
+    </technology>
+  </entity>
+</model:Model>

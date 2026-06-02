@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:inv="http://www.mslv.com/studio/inventory/model/specification" xmlns="http://www.mslv.com/studio/inventory/model/specification" xsi:type="inv:RuleTriggerPointType" name="EquipmentManager_deletePhysicalDevices">
+  <com:displayName lang="[default]">EquipmentManager_deletePhysicalDevices</com:displayName>
+  <com:saveVersion>2</com:saveVersion>
+  <com:id>iQzT-qb5Q6yOeRqKIbL1WQ</com:id>
+  <inv:signature>public abstract interface void oracle.communications.inventory.api.equipment.EquipmentManager.deletePhysicalDevices(java.util.Collection)</inv:signature>
+  <inv:pointName>EquipmentManager.deletePhysicalDevices</inv:pointName>
+  <inv:description>Delete phyical devices</inv:description>
+</com:modelEntity>

@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<mds:customization version="11.1.1.59.23" xmlns:mds="http://xmlns.oracle.com/mds">
+   <mds:move node="phydev-physicalDeviceAddress" before="phydev-physicalDeviceLocation"/>
+   <mds:move node="phydev-physicalDeviceLocation" after="phydev-physicalDeviceAddress"/>
+   <mds:move node="phydev-inventoryStatus" after="phydev-physicalDeviceLocation"/>
+   <mds:move node="phydev-resourceAssignmentStatus" after="phydev-inventoryStatus"/>
+   <mds:move node="phydev-serialNumber" after="phydev-resourceAssignmentStatus"/>
+   <mds:insert after="phydev-addr" parent="phydev">
+      <af:inputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" readOnly="true" secret="false" label="#{bundle['PhysicalDeviceSummaryu002ejsffCISCOu0020IOSu0020XRvu00209000__sample_vCPU_LABEL']}" id="phydev-vCPU" value="#{pageFlowScope.PhysicalDeviceSummaryBean.characteristicsMap['vCPU'].characteristic.value}" required="false" styleClass="UIHintsSummaryINPUT_TEXT"/>
+   </mds:insert>
+   <mds:insert before="phydev-physicalDeviceAddress" parent="phydev">
+      <af:inputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" readOnly="true" secret="false" label="#{bundle['PhysicalDeviceSummaryu002ejsffCISCOu0020IOSu0020XRvu00209000__sample_Disk_LABEL']}" id="phydev-Disk" value="#{pageFlowScope.PhysicalDeviceSummaryBean.characteristicsMap['Disk'].characteristic.value}" required="false" styleClass="UIHintsSummaryINPUT_TEXT"/>
+   </mds:insert>
+   <mds:move node="phydev-physicalDeviceAddress" before="phydev-physicalDeviceLocation"/>
+   <mds:move node="phydev-physicalDeviceLocation" after="phydev-physicalDeviceAddress"/>
+   <mds:move node="phydev-inventoryStatus" after="phydev-physicalDeviceLocation"/>
+   <mds:move node="phydev-resourceAssignmentStatus" after="phydev-inventoryStatus"/>
+   <mds:move node="phydev-serialNumber" after="phydev-resourceAssignmentStatus"/>
+   <mds:insert after="phydev-serialNumber" parent="phydev">
+      <af:inputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" readOnly="true" secret="false" label="#{bundle['PhysicalDeviceSummaryu002ejsffCISCOu0020IOSu0020XRvu00209000__sample_RAM_LABEL']}" id="phydev-RAM" value="#{pageFlowScope.PhysicalDeviceSummaryBean.characteristicsMap['RAM'].characteristic.value}" required="false" styleClass="UIHintsSummaryINPUT_TEXT"/>
+   </mds:insert>
+   <mds:insert before="phydev-lmd" parent="phydev">
+      <af:inputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" readOnly="true" secret="false" label="#{bundle['PhysicalDeviceSummaryu002ejsffCISCOu0020IOSu0020XRvu00209000__sample_Hypervisor_LABEL']}" id="phydev-Hypervisor" value="#{pageFlowScope.PhysicalDeviceSummaryBean.characteristicsMap['Hypervisor'].characteristic.value}" required="false" styleClass="UIHintsSummaryINPUT_TEXT"/>
+   </mds:insert>
+   <mds:insert before="phydev-lmd" parent="phydev">
+      <af:panelLabelAndMessage xmlns:af="http://xmlns.oracle.com/adf/faces/rich" id="phydev-dummy-7-1" label=" " styleClass="UIHintsSummaryPANEL_LABEL_AND_MESSAGE">
+         <af:outputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" id="x-phydev-dummy-7-1" value=" "/>
+      </af:panelLabelAndMessage>
+   </mds:insert>
+   <mds:modify element="phydev">
+      <mds:attribute name="rows" value="8"/>
+      <mds:attribute name="maxColumns" value="2"/>
+      <mds:attribute name="labelAlignment" value="start"/>
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_FORM_LAYOUT"/>
+   </mds:modify>
+   <mds:modify element="phydev-lmd">
+      <mds:attribute name="rendered" value="false"/>
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phydev-physicalDeviceLocation">
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phydev-inventoryStatus">
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phydev-cru">
+      <mds:attribute name="rendered" value="false"/>
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phydev-specification">
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phydev-crd">
+      <mds:attribute name="rendered" value="false"/>
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phydev-lmu">
+      <mds:attribute name="rendered" value="false"/>
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phydev-physicalDeviceAddress">
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phydev-addr">
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phydev-resourceAssignmentStatus">
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phydev-nl">
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phydev-id">
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phydev-name">
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phydev-description">
+      <mds:attribute name="styleClass" value="invSummaryPanelLabelAndMessage UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phydev-serialNumber">
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+</mds:customization>

@@ -1,0 +1,579 @@
+<?xml version="1.0"?>
+<!--
+ Copyright (c) 2011, 2014, Oracle and/or its affiliates. All rights reserved.
+    Oracle Corporation and/or its affiliates. Other names may be trademarks of their respective owners. 
+
+    This sample file, which has been provided by Oracle Corporation as part of an Oracle(r) product for use
+    ONLY by licensed users of the product, includes CONFIDENTIAL and PROPRIETARY information of Oracle
+    Corporation.
+
+    This material is the confidential property of Oracle Corporation or its licensors and may be used,
+    reproduced, stored, or transmitted only in accordance with a valid Oracle license or sublicense
+    agreement.
+
+    USE OF THIS SOFTWARE IS GOVERNED BY THE TERMS AND CONDITIONS OF THE LICENSE
+    AGREEMENT AND LIMITED WARRANTY FURNISHED WITH THE PRODUCT.
+
+    IN PARTICULAR, YOU WILL INDEMNIFY AND HOLD ORACLE CORPORATION, ITS RELATED COMPANIES AND ITS SUPPLIERS,
+    HARMLESS FROM AND AGAINST ANY CLAIMS OR LIABILITIES ARISING OUT OF THE USE, REPRODUCTION, OR DISTRIBUTION
+    OF YOUR PROGRAMS, INCLUDING ANY CLAIMS OR LIABILITIES ARISING OUT OF OR RESULTING FROM THE USE,
+    MODIFICATION, OR DISTRIBUTION OF PROGRAMS OR FILES CREATED FROM, BASED ON, AND/OR DERIVED FROM THIS
+    SAMPLE SOURCE CODE FILE.
+-->
+<xs:schema 
+    targetNamespace="http://xmlns.oracle.com/communications/inventory/logicaldevice" 
+    xmlns:invld="http://xmlns.oracle.com/communications/inventory/logicaldevice"
+    xmlns:invconfig="http://xmlns.oracle.com/communications/inventory/configuration"
+    xmlns:invrole="http://xmlns.oracle.com/communications/inventory/role" 
+    xmlns:invparty="http://xmlns.oracle.com/communications/inventory/party" 
+    xmlns:invplace="http://xmlns.oracle.com/communications/inventory/place" 
+    xmlns:invprop="http://xmlns.oracle.com/communications/inventory/property" 
+    xmlns:invspec="http://xmlns.oracle.com/communications/inventory/specification" 
+    xmlns:invsvc="http://xmlns.oracle.com/communications/inventory/service" 
+    xmlns:invbi="http://xmlns.oracle.com/communications/inventory/businessinteraction" 
+    xmlns:invent="http://xmlns.oracle.com/communications/inventory/entity" 
+    xmlns="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified">
+    <!--  ============= Imports Start ================= -->
+    <!-- Local Imports -->
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/entity" schemaLocation="Entity.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/service" schemaLocation="Service.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/specification" schemaLocation="Specification.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/property" schemaLocation="Property.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/place" schemaLocation="Place.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/party" schemaLocation="Party.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/role" schemaLocation="Role.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/configuration" schemaLocation="Configuration.xsd"/>
+    <!-- ==== Entity Value Types ==== -->
+    <xs:complexType name="LogicalDeviceType">
+        <xs:complexContent>
+            <xs:extension base="invent:EntityType">
+                <xs:sequence>
+                    <xs:element name="specification" type="invspec:SpecificationType" nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Specification holds the Logical Device
+                                Specification information.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="id" type="xsd:string" nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                id holds the unique id of the Logical
+                                Device
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="name" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Name of the Logical Device
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="description" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Description of the Logical Device
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="networkLocationEntityCode" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Holds the denormalized values of the combined PropertyLocation.NetworkLocationCode and the NetworkEntityCode.NetworkLocationEntityCode field values for the logical device, including the '.' delimiter if specified based on the system preference. This attribute will be set by the application by the API call, and used internally in the Logical Device search when the user searches for a device by Network/Entity Location. This field value if specified by a caller will be ignored by the APIs.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="deviceIdentifier" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Represents a business meaningful identifier for the Logical Device. This field can be populated if the Logical Device has a propertyLocation value. The API will default this field value if the propertyLocation is given and the caller hasn't specified a value. This field must be unique within all logical devices.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="state" type="invspec:InventoryStateEnum" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Lifecycle State of the Logical Device
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="startDate" type="xsd:dateTime" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Start Date of the Logical Device
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="endDate" type="xsd:dateTime" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                End Date of the Logical Device
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="property" type="invprop:PropertyType" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Property holds the dynamic properties
+                                of a Logical Device.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+		    <xs:element name="configuration" type="invconfig:ConfigurationType" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Configuration Verions of a Device Interface.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <!-- TODO: LogicalDeviceType schema definition -->
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="DeviceInterfaceType">
+        <xs:complexContent>
+            <xs:extension base="invent:EntityType">
+                <xs:sequence>
+                    <xs:element name="specification" type="invspec:SpecificationType" nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Specification holds the Device Interface
+                                Specification information.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="id" type="xsd:string" nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                id holds the unique id of the Device
+                                Interface
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="name" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Name of the Device Interface
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="description" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Description of the Device Interface
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="state" type="invspec:InventoryStateEnum" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Lifecycle State of the Device Interface
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="startDate" type="xsd:dateTime" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Start Date of the Device Interface
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="endDate" type="xsd:dateTime" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                End Date of the Device Interface
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="property" type="invprop:PropertyType" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Property holds the dynamic properties
+                                of a Device Interface.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="logicalDevice" type="xs:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                The id of the Logical Device, where this
+                                Device Interface is hosted.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+					<xs:element name="parentLogicalDevice" type="invent:EntityType" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                The Logical Device, where this
+                                Device Interface is hosted.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+					<xs:element name="parentInterface" type="invent:EntityType" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                The Parent Device Interface, where this
+                                Device Interface is hosted.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+		    <xs:element name="configuration" type="invconfig:ConfigurationType" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Configuration Verions of a Device Interface.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+					 <xs:element name="vendorInterfaceNumber" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Vendor Interface Number 
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+					 <xs:element name="customerInterfaceNumber" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Customer Interface Number
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <!-- TODO: DeviceInterfaceType schema definition -->
+				</xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="LogicalDeviceAccountType">
+        <xs:complexContent>
+            <xs:extension base="invent:EntityType">
+                <xs:sequence>
+                    <xs:element name="specification" type="invspec:SpecificationType" nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Specification holds the Logical Device
+                                Account Specification information.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="id" type="xsd:string" nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                id holds the unique id of the Logical
+                                Device Account
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="name" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Name of the Logical Device Account
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="description" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Description of the Logical Device
+                                Account
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="state" type="invspec:InventoryStateEnum" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Lifecycle State of the Logical Device
+                                Account
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="startDate" type="xsd:dateTime" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Start Date of the Logical Device Account
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="endDate" type="xsd:dateTime" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                End Date of the Logical Device Account
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="property" type="invprop:PropertyType" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Property holds the dynamic properties
+                                of a Logical Device Account.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="logicalDevice" type="xs:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                The id of the Logical Device, where this
+                                Logical Device Account is hosted.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="configuration" type="invconfig:ConfigurationType" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Configuration Verions of a LogicalDeviceAccount.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <!-- TODO: LogicalDeviceAccountType schema definition -->
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ==== Data Types ==== -->
+    <!-- ==== Entity Criteria Types ==== -->
+    <xs:complexType name="LogicalDeviceCriteriaType">
+        <xs:annotation>
+            <xs:documentation>Criteria to uniquely identify a Logical Device.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invent:EntityType">
+                <xs:sequence>
+                    <xs:element name="logicalDeviceId" type="xsd:string"
+                                nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>Logical Device Id</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="deviceIdentifier" type="xsd:string"
+                                nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>This is the identifier of the
+                                              logical device when it serves as a
+                                              network device – meaning it has a
+                                              network location code. In the
+                                              search, the logicalDeviceId takes
+                                              precedence over the
+                                              deviceIdentifier. If the
+                                              logicalDeviceId and the
+                                              deviceIdentifier are given, then
+                                              the search will be done using the
+                                              logicalDeviceId. If no Logical
+                                              Device is found using the
+                                              logicalDeviceId, then an error is
+                                              returned.</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+	<xs:complexType name="LogicalDeviceAccountCriteriaType">
+        <xs:annotation>
+            <xs:documentation>Criteria to uniquely identify a Logical Device.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invent:EntityType">
+                <xs:sequence>
+                    <xs:element name="logicalDeviceAccountId" type="xsd:string" nillable="false" minOccurs="0" >
+                        <xs:annotation>
+                            <xs:documentation>Logical Device Account Id</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+	
+	 	<!-- **************************** Flow Interface ****************************************** -->
+	<xs:complexType name="FlowInterfaceType">
+            <xs:annotation>
+		<xs:documentation>
+                FlowInterface is a specialization of DeviceInterface that represents a kind of sub-interface that supports Packet connectivity 
+                and Packet connectivity-based services. The collection of flow interfaces and their related flow identifiers (e.g. VLAN IDs) 
+                allow services to be traced through the device interfaces and connectivity’s in multipoint and point to point arrangements.  
+                </xs:documentation>
+	    </xs:annotation>
+                <xs:complexContent>
+		<xs:extension base="invld:DeviceInterfaceType">
+		    <xs:sequence>
+                        <xs:element name="flowInterfaceBitRate" type="xs:decimal">
+                            <xs:annotation>
+				<xs:documentation>The bit rate of the bandwidth partitioned from the parent media interface or parent flow interface.</xs:documentation>
+			    </xs:annotation>
+			</xs:element>
+			<xs:element name="terminatesPacketRider" type="xs:string">
+                <xs:annotation>
+					<xs:documentation>Packet Rider termination.</xs:documentation>
+			    </xs:annotation>
+			</xs:element>
+			<xs:element name="terminationType" type="invld:TerminationTypeEnum">
+                <xs:annotation>
+					<xs:documentation>Describes the termination type.</xs:documentation>
+			    </xs:annotation>
+			</xs:element>
+		    </xs:sequence>
+		</xs:extension>
+	    </xs:complexContent>
+	</xs:complexType>
+	
+	   	<!-- **************************** Flow Identifier ****************************************** -->
+	<xs:complexType name="FlowIdentifierType">
+            <xs:annotation>
+		<xs:documentation>
+                	FlowIdentifier is a type of Network Address entity that is used to identify connectivity-based services 
+                        that traverse through device interfaces and connectivity’s in multipoint and point to point service 
+                        arrangements.   
+                </xs:documentation>
+	    </xs:annotation>
+		<xs:complexContent>
+		<xs:extension base="invld:VlanIDType">
+            <xs:sequence>
+				<xs:element name="id" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="name">
+				<xs:annotation>
+					<xs:documentation>The name of the flow identifier.  The name contains the domain, a delimiter and the identifier value. </xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="30"/>
+					</xs:restriction>
+				</xs:simpleType>
+				</xs:element>
+				 <xs:element name="identifier" type="xs:int" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>            
+                 <xs:element name="description">
+                        <xs:annotation>
+                                <xs:documentation>The description of the Flow Identifier.</xs:documentation>
+                        </xs:annotation>
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="255"/>
+                            </xs:restriction>
+                        </xs:simpleType>                        
+                </xs:element>
+				<xs:element name="partition" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="owner" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="permissions" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="specification" type="invspec:SpecificationType" nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Specification information of the Place.
+                            </xs:documentation>
+                        </xs:annotation>
+                </xs:element>
+				<xs:element name="domain" type="invspec:SpecificationType" nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Specification information of the Place.
+                            </xs:documentation>
+                        </xs:annotation>
+                </xs:element>
+				<xs:element name="property" type="invprop:PropertyType" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Property holds the dynamic properties
+                                of a Network Address.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+				
+				<xs:element name="NetworkEntityCode" type="invld:NetworkAddressDomainType"/>
+            </xs:sequence>
+			</xs:extension>
+	    </xs:complexContent>
+	</xs:complexType>
+	
+	<!-- **********************************NETWORK ADDRESS DOMAIN**************************************************** -->
+	<xs:complexType name="NetworkAddressDomainType">
+        <xs:annotation>
+            <xs:documentation>
+                The sphere of concern in which the Network Address exists or is governed. Network Addresses and Network Address Blocks are always unique within a given Network Address Domain. A network address domain is created from a Network Address Specification that defines the type of network address entity the domain can be applied to, such as IP Subnet or Flow Identifier.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="name">
+			<xs:annotation>
+                <xs:documentation>
+                        The name of the network address domain. The name must be unique across all network address domains defined by specifications with the same network address type, such as IP Subnet or Flow Identifier.
+                    </xs:documentation>
+			</xs:annotation>		
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+				<xs:maxLength value="50"/>
+				</xs:restriction>
+			</xs:simpleType>
+					
+            </xs:element>
+            <xs:element name="description" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        A textual description of the network address domain.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>	
+			<xs:element name="domain" type="invspec:SpecificationType" nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Specification information of the Place.
+                            </xs:documentation>
+                        </xs:annotation>
+            </xs:element>
+                
+        </xs:sequence>
+    </xs:complexType>
+	<xs:complexType name="VlanIDType">
+        <xs:annotation>
+            <xs:documentation>
+                VLANID Type holds FlowIdentifier Information.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invent:EntityType">
+                <xs:sequence/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+	
+	<!-- ==== Enumerations ==== -->
+	<xs:simpleType name="TerminationTypeEnum">
+        <xs:annotation>
+            <xs:documentation>Defines valid values for Termination Type</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ACCESS"/>
+            <xs:enumeration value="INTERNETWORK"/>
+            <xs:enumeration value="TRUNK"/>
+            <xs:enumeration value="UNKNOWN"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <!-- ==== Elements ==== -->
+</xs:schema>

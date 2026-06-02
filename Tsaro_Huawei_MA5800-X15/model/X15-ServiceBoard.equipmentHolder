@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:data="http://www.oracle.com/communications/studio/core/model/common/data" xmlns:inv="http://www.mslv.com/studio/inventory/model/specification" xmlns="http://www.mslv.com/studio/inventory/model/specification" xmlns:layout="http://xmlns.oracle.com/communications/sce/poms/model/layout" xsi:type="inv:EquipmentHolderSpecificationType" name="X15-ServiceBoard">
+  <com:saveVersion>2</com:saveVersion>
+  <com:baseEntityRef>
+    <com:entity>EquipmentHolder</com:entity>
+    <com:entityType>inventoryEntity</com:entityType>
+    <com:relationship>unknown</com:relationship>
+  </com:baseEntityRef>
+  <com:id>TJUv+9aiTB+3XHDoz+vDkw</com:id>
+  <data:dataElementNode virtual="true">
+    <com:id>TJUv+9aiTB+3XHDoz+vDkw</com:id>
+    <com:elementType>oracle.communications.studio.model.data.StudioModelDataElement</com:elementType>
+    <data:name>X15-ServiceBoard</data:name>
+    <data:displayName lang="[default]">X15-ServiceBoard</data:displayName>
+    <data:primitiveType>none</data:primitiveType>
+  </data:dataElementNode>
+  <data:dataElementDetails xsi:type="data:dataElementCommonDetail">
+    <com:id>epnNJeYRQQqw04jm-hyyIA</com:id>
+    <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+    <data:dataElementId>TJUv+9aiTB+3XHDoz+vDkw</data:dataElementId>
+    <data:defaultValue></data:defaultValue>
+    <data:key></data:key>
+    <data:deprecated>false</data:deprecated>
+    <data:sensitive>false</data:sensitive>
+    <data:minLength>0</data:minLength>
+    <data:maxLength>40</data:maxLength>
+    <data:minMultiplicity>0</data:minMultiplicity>
+    <data:maxMultiplicity>-1</data:maxMultiplicity>
+  </data:dataElementDetails>
+  <data:dataElementDetails xsi:type="layout:uiConfigurationType">
+    <com:id>MpqWpHB3QgCyhfsfqejt2Q</com:id>
+    <com:elementType>oracle.communications.sce.poms.model.data.LayoutDetailType</com:elementType>
+    <data:dataElementId>TJUv+9aiTB+3XHDoz+vDkw</data:dataElementId>
+    <layout:layout>
+      <layout:page>Equipment Holder Editor</layout:page>
+      <layout:panel>Equipment Holder Edit Panel</layout:panel>
+    </layout:layout>
+    <layout:layout>
+      <layout:page>Equipment Holder Summary</layout:page>
+      <layout:panel>Equipment Holder Summary Panel</layout:panel>
+    </layout:layout>
+  </data:dataElementDetails>
+  <inv:relatedSpecification>
+    <com:entity>H901CGCD-ServiceCard</com:entity>
+    <com:entityType>equipment</com:entityType>
+    <com:relationship>X15-ServiceBoard To H901CGCD-ServiceCard</com:relationship>
+    <inv:data xsi:type="inv:SpecificationRelationshipReferenceDataType">
+      <inv:relationship>CHILD</inv:relationship>
+      <inv:status>ACTIVE</inv:status>
+      <inv:parentsToChildMin>1</inv:parentsToChildMin>
+      <inv:parentsToChildMax>1</inv:parentsToChildMax>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>H901CVEC-ServiceCard</com:entity>
+    <com:entityType>equipment</com:entityType>
+    <com:relationship>X15-ServiceBoard To H901CVEC-ServiceCard</com:relationship>
+    <inv:data xsi:type="inv:SpecificationRelationshipReferenceDataType">
+      <inv:relationship>CHILD</inv:relationship>
+      <inv:status>ACTIVE</inv:status>
+      <inv:parentsToChildMin>1</inv:parentsToChildMin>
+      <inv:parentsToChildMax>1</inv:parentsToChildMax>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>H901EDSH-ServiceCard</com:entity>
+    <com:entityType>equipment</com:entityType>
+    <com:relationship>X15-ServiceBoard To H901EDSH-ServiceCard</com:relationship>
+    <inv:data xsi:type="inv:SpecificationRelationshipReferenceDataType">
+      <inv:relationship>CHILD</inv:relationship>
+      <inv:status>ACTIVE</inv:status>
+      <inv:parentsToChildMin>1</inv:parentsToChildMin>
+      <inv:parentsToChildMax>1</inv:parentsToChildMax>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>H901EPHF-ServiceCard</com:entity>
+    <com:entityType>equipment</com:entityType>
+    <com:relationship>X15-ServiceBoard To H901EPHF-ServiceCard</com:relationship>
+    <inv:data xsi:type="inv:SpecificationRelationshipReferenceDataType">
+      <inv:relationship>CHILD</inv:relationship>
+      <inv:status>ACTIVE</inv:status>
+      <inv:parentsToChildMin>1</inv:parentsToChildMin>
+      <inv:parentsToChildMax>1</inv:parentsToChildMax>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>H901GPHF-ServiceCard</com:entity>
+    <com:entityType>equipment</com:entityType>
+    <com:relationship>X15-ServiceBoard To H901GPHF-ServiceCard</com:relationship>
+    <inv:data xsi:type="inv:SpecificationRelationshipReferenceDataType">
+      <inv:relationship>CHILD</inv:relationship>
+      <inv:status>ACTIVE</inv:status>
+      <inv:parentsToChildMin>1</inv:parentsToChildMin>
+      <inv:parentsToChildMax>1</inv:parentsToChildMax>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>H901OGHK-ServiceCard</com:entity>
+    <com:entityType>equipment</com:entityType>
+    <com:relationship>X15-ServiceBoard To H901OGHK-ServiceCard</com:relationship>
+    <inv:data xsi:type="inv:SpecificationRelationshipReferenceDataType">
+      <inv:relationship>CHILD</inv:relationship>
+      <inv:status>ACTIVE</inv:status>
+      <inv:parentsToChildMin>1</inv:parentsToChildMin>
+      <inv:parentsToChildMax>1</inv:parentsToChildMax>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>H901GPSF-ServiceCard</com:entity>
+    <com:entityType>equipment</com:entityType>
+    <com:relationship>X15-ServiceBoard To H901GPSF-ServiceCard</com:relationship>
+    <inv:data xsi:type="inv:SpecificationRelationshipReferenceDataType">
+      <inv:relationship>CHILD</inv:relationship>
+      <inv:status>ACTIVE</inv:status>
+      <inv:parentsToChildMin>1</inv:parentsToChildMin>
+      <inv:parentsToChildMax>1</inv:parentsToChildMax>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>H901OXHD-ServiceCard</com:entity>
+    <com:entityType>equipment</com:entityType>
+    <com:relationship>X15-ServiceBoard To H901OXHD-ServiceCard</com:relationship>
+    <inv:data xsi:type="inv:SpecificationRelationshipReferenceDataType">
+      <inv:relationship>CHILD</inv:relationship>
+      <inv:status>ACTIVE</inv:status>
+      <inv:parentsToChildMin>1</inv:parentsToChildMin>
+      <inv:parentsToChildMax>1</inv:parentsToChildMax>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>H901XEHD-ServiceCard</com:entity>
+    <com:entityType>equipment</com:entityType>
+    <com:relationship>X15-ServiceBoard To H901XEHD-ServiceCard</com:relationship>
+    <inv:data xsi:type="inv:SpecificationRelationshipReferenceDataType">
+      <inv:relationship>CHILD</inv:relationship>
+      <inv:status>ACTIVE</inv:status>
+      <inv:parentsToChildMin>1</inv:parentsToChildMin>
+      <inv:parentsToChildMax>1</inv:parentsToChildMax>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>H901XGHD-ServiceCard</com:entity>
+    <com:entityType>equipment</com:entityType>
+    <com:relationship>X15-ServiceBoard To H901XGHD-ServiceCard</com:relationship>
+    <inv:data xsi:type="inv:SpecificationRelationshipReferenceDataType">
+      <inv:relationship>CHILD</inv:relationship>
+      <inv:status>ACTIVE</inv:status>
+      <inv:parentsToChildMin>1</inv:parentsToChildMin>
+      <inv:parentsToChildMax>1</inv:parentsToChildMax>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>H901XSED-ServiceCard</com:entity>
+    <com:entityType>equipment</com:entityType>
+    <com:relationship>X15-ServiceBoard To H901XSED-ServiceCard</com:relationship>
+    <inv:data xsi:type="inv:SpecificationRelationshipReferenceDataType">
+      <inv:relationship>CHILD</inv:relationship>
+      <inv:status>ACTIVE</inv:status>
+      <inv:parentsToChildMin>1</inv:parentsToChildMin>
+      <inv:parentsToChildMax>1</inv:parentsToChildMax>
+    </inv:data>
+  </inv:relatedSpecification>
+</com:modelEntity>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<extent>
+  <object class="oracle.communications.platform.entity.impl.LocalizationInfoDAO" oid="oracle.communications.platform.entity.impl.LocalizationInfoDAO-0" version="0">
+    <field name="label">"Cisco_Nexus_9372PX_E_Vendor_displayname"</field>
+    <field name="displayLabel">"Vendor"</field>
+    <field name="language">"[default]"</field>
+    <field name="specification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationDAO-0</field>
+    <field name="characteristicSpecification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO-0</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.LocalizationInfoDAO" oid="oracle.communications.platform.entity.impl.LocalizationInfoDAO-1" version="0">
+    <field name="label">"Cisco_Nexus_9372PX_E_Vendor_displayname"</field>
+    <field name="displayLabel">""</field>
+    <field name="language">"en"</field>
+    <field name="specification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationDAO-0</field>
+    <field name="characteristicSpecification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO-0</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.LocalizationInfoDAO" oid="oracle.communications.platform.entity.impl.LocalizationInfoDAO-2" version="0">
+    <field name="label">"Cisco_Nexus_9372PX_E_Model_displayname"</field>
+    <field name="displayLabel">"Model"</field>
+    <field name="language">"[default]"</field>
+    <field name="specification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationDAO-0</field>
+    <field name="characteristicSpecification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO-1</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.LocalizationInfoDAO" oid="oracle.communications.platform.entity.impl.LocalizationInfoDAO-3" version="0">
+    <field name="label">"Cisco_Nexus_9372PX_E_Model_displayname"</field>
+    <field name="displayLabel">""</field>
+    <field name="language">"en"</field>
+    <field name="specification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationDAO-0</field>
+    <field name="characteristicSpecification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO-1</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.LocalizationInfoDAO" oid="oracle.communications.platform.entity.impl.LocalizationInfoDAO-4" version="0">
+    <field name="label">"Cisco_Nexus_9372PX_E_DeviceType_displayname"</field>
+    <field name="displayLabel">"Device Type"</field>
+    <field name="language">"[default]"</field>
+    <field name="specification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationDAO-0</field>
+    <field name="characteristicSpecification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO-2</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.LocalizationInfoDAO" oid="oracle.communications.platform.entity.impl.LocalizationInfoDAO-5" version="0">
+    <field name="label">"Cisco_Nexus_9372PX_E_DeviceType_displayname"</field>
+    <field name="displayLabel">""</field>
+    <field name="language">"en"</field>
+    <field name="specification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationDAO-0</field>
+    <field name="characteristicSpecification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO-2</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.LocalizationInfoDAO" oid="oracle.communications.platform.entity.impl.LocalizationInfoDAO-6" version="0">
+    <field name="label">"Cisco_Nexus_9372PX_E_RU_Size_displayname"</field>
+    <field name="displayLabel">"RU Size"</field>
+    <field name="language">"[default]"</field>
+    <field name="specification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationDAO-0</field>
+    <field name="characteristicSpecification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO-3</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.LocalizationInfoDAO" oid="oracle.communications.platform.entity.impl.LocalizationInfoDAO-7" version="0">
+    <field name="label">"Cisco_Nexus_9372PX_E_RU_Size_displayname"</field>
+    <field name="displayLabel">""</field>
+    <field name="language">"en"</field>
+    <field name="specification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationDAO-0</field>
+    <field name="characteristicSpecification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO-3</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.LocalizationInfoDAO" oid="oracle.communications.platform.entity.impl.LocalizationInfoDAO-8" version="0">
+    <field name="label">"Cisco_Nexus_9372PX_E_PacketRate_displayname"</field>
+    <field name="displayLabel">"Packet Rate"</field>
+    <field name="language">"[default]"</field>
+    <field name="specification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationDAO-0</field>
+    <field name="characteristicSpecification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO-4</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.LocalizationInfoDAO" oid="oracle.communications.platform.entity.impl.LocalizationInfoDAO-9" version="0">
+    <field name="label">"Cisco_Nexus_9372PX_E_PacketRate_displayname"</field>
+    <field name="displayLabel">""</field>
+    <field name="language">"en"</field>
+    <field name="specification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationDAO-0</field>
+    <field name="characteristicSpecification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO-4</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.LocalizationInfoDAO" oid="oracle.communications.platform.entity.impl.LocalizationInfoDAO-10" version="0">
+    <field name="label">"Cisco_Nexus_9372PX_E_BandWidth_displayname"</field>
+    <field name="displayLabel">"Band Width"</field>
+    <field name="language">"[default]"</field>
+    <field name="specification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationDAO-0</field>
+    <field name="characteristicSpecification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO-5</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.LocalizationInfoDAO" oid="oracle.communications.platform.entity.impl.LocalizationInfoDAO-11" version="0">
+    <field name="label">"Cisco_Nexus_9372PX_E_BandWidth_displayname"</field>
+    <field name="displayLabel">""</field>
+    <field name="language">"en"</field>
+    <field name="specification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationDAO-0</field>
+    <field name="characteristicSpecification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO-5</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.LocalizationInfoDAO" oid="oracle.communications.platform.entity.impl.LocalizationInfoDAO-12" version="0">
+    <field name="label">"SFP_PLUS_10G_PORT_Speed_displayname"</field>
+    <field name="displayLabel">"Speed"</field>
+    <field name="language">"[default]"</field>
+    <field name="specification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationDAO-1</field>
+    <field name="characteristicSpecification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO-6</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.LocalizationInfoDAO" oid="oracle.communications.platform.entity.impl.LocalizationInfoDAO-13" version="0">
+    <field name="label">"SFP_PLUS_10G_PORT_Speed_displayname"</field>
+    <field name="displayLabel">""</field>
+    <field name="language">"en"</field>
+    <field name="specification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationDAO-1</field>
+    <field name="characteristicSpecification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO-6</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.LocalizationInfoDAO" oid="oracle.communications.platform.entity.impl.LocalizationInfoDAO-14" version="0">
+    <field name="label">"SFP_PLUS_10G_PORT_Connector_displayname"</field>
+    <field name="displayLabel">"Connector"</field>
+    <field name="language">"[default]"</field>
+    <field name="specification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationDAO-1</field>
+    <field name="characteristicSpecification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO-7</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.LocalizationInfoDAO" oid="oracle.communications.platform.entity.impl.LocalizationInfoDAO-15" version="0">
+    <field name="label">"SFP_PLUS_10G_PORT_Connector_displayname"</field>
+    <field name="displayLabel">""</field>
+    <field name="language">"en"</field>
+    <field name="specification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationDAO-1</field>
+    <field name="characteristicSpecification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO-7</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.LocalizationInfoDAO" oid="oracle.communications.platform.entity.impl.LocalizationInfoDAO-16" version="0">
+    <field name="label">"QSFP_PLUS_40G_PORT_Speed_displayname"</field>
+    <field name="displayLabel">"Speed"</field>
+    <field name="language">"[default]"</field>
+    <field name="specification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationDAO-2</field>
+    <field name="characteristicSpecification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO-6</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.LocalizationInfoDAO" oid="oracle.communications.platform.entity.impl.LocalizationInfoDAO-17" version="0">
+    <field name="label">"QSFP_PLUS_40G_PORT_Speed_displayname"</field>
+    <field name="displayLabel">""</field>
+    <field name="language">"en"</field>
+    <field name="specification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationDAO-2</field>
+    <field name="characteristicSpecification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO-6</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.LocalizationInfoDAO" oid="oracle.communications.platform.entity.impl.LocalizationInfoDAO-18" version="0">
+    <field name="label">"QSFP_PLUS_40G_PORT_Connector_displayname"</field>
+    <field name="displayLabel">"Connector"</field>
+    <field name="language">"[default]"</field>
+    <field name="specification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationDAO-2</field>
+    <field name="characteristicSpecification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO-7</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.LocalizationInfoDAO" oid="oracle.communications.platform.entity.impl.LocalizationInfoDAO-19" version="0">
+    <field name="label">"QSFP_PLUS_40G_PORT_Connector_displayname"</field>
+    <field name="displayLabel">""</field>
+    <field name="language">"en"</field>
+    <field name="specification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationDAO-2</field>
+    <field name="characteristicSpecification">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.CharacteristicSpecificationDAO-7</field>
+  </object>
+</extent>

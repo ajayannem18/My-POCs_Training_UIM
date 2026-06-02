@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:inventory="http://xmlns.oracle.com/communications/studio/model/inventory" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="inventory:ProcessingSignalSpecification" id="pss=AU-4-1024c" type="pss" typeName="Processing Signal Specification" name="AU-4-1024c" resource="/ora_uim_basetechnologies/model/AU-4-1024c.processingsignal">
+    <note lang="default"/>
+    <extends>
+      <relation ref="ie=ProcessingSignal" type="Inventory Entity" name="Dependency" kind="Entity">
+        <target name="ProcessingSignal" typeName="Inventory Entity"/>
+      </relation>
+    </extends>
+    <project>
+      <relation ref="ivprj=ora_uim_basetechnologies" type="Inventory Project" name="Dependency">
+        <target name="ora_uim_basetechnologies" typeName="Inventory Project"/>
+      </relation>
+    </project>
+    <dataElements>
+      <element id="pss=AU-4-1024c+dataElement=GnWP6R19TN6R57lV6gz+CA~childSignalRelType" type="dataElement" typeName="Data Element" kind="Element" name="childSignalRelType" path="/childSignalRelType" inherited="true">
+        <displayName lang="default">childSignalRelType</displayName>
+        <displayName lang="default">childSignalRelType</displayName>
+        <note lang="default">The relationship type that applies to signal's relationship to the parentProcessingSignal or parentSignalTP. These relationships are mutually exclusive.</note>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">50</maxLength>
+        <base>
+          <relation ref="ie=ProcessingSignal+dataElement=childSignalRelType" type="Data Element" name="Type" kind="Element">
+            <target name="childSignalRelType" typeName="Data Element"/>
+            <inEntity name="ProcessingSignal" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="pss=AU-4-1024c+dataElement=GnWP6R19TN6R57lV6gz+CA~id" type="dataElement" typeName="Data Element" kind="Element" name="id" path="/id" inherited="true">
+        <displayName lang="default">id</displayName>
+        <displayName lang="default">id</displayName>
+        <note lang="default">The id of the processing signal. This is generated from an Oracle sequence.</note>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">255</maxLength>
+        <base>
+          <relation ref="ie=ProcessingSignal+dataElement=id" type="Data Element" name="Type" kind="Element">
+            <target name="id" typeName="Data Element"/>
+            <inEntity name="ProcessingSignal" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="pss=AU-4-1024c+dataElement=GnWP6R19TN6R57lV6gz+CA~name" type="dataElement" typeName="Data Element" kind="Element" name="name" path="/name" inherited="true">
+        <displayName lang="default">name</displayName>
+        <displayName lang="default">name</displayName>
+        <note lang="default">The name of the processing signal. This is derived from the name of the Processing Signal Specification.</note>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">50</maxLength>
+        <base>
+          <relation ref="ie=ProcessingSignal+dataElement=name" type="Data Element" name="Type" kind="Element">
+            <target name="name" typeName="Data Element"/>
+            <inEntity name="ProcessingSignal" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="pss=AU-4-1024c+dataElement=GnWP6R19TN6R57lV6gz+CA~processingSignalType" type="dataElement" typeName="Data Element" kind="Element" name="processingSignalType" path="/processingSignalType" inherited="true">
+        <displayName lang="default">processingSignalType</displayName>
+        <displayName lang="default">processingSignalType</displayName>
+        <note lang="default">The type of processing signal</note>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">50</maxLength>
+        <base>
+          <relation ref="ie=ProcessingSignal+dataElement=processingSignalType" type="Data Element" name="Type" kind="Element">
+            <target name="processingSignalType" typeName="Data Element"/>
+            <inEntity name="ProcessingSignal" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="pss=AU-4-1024c+dataElement=GnWP6R19TN6R57lV6gz+CA~signalAddress" type="dataElement" typeName="Data Element" kind="Element" name="signalAddress" path="/signalAddress" inherited="true">
+        <displayName lang="default">signalAddress</displayName>
+        <displayName lang="default">signalAddress</displayName>
+        <note lang="default">Refers to the unique and well defined identification of a transmission channel within a transmission facility. Based on the technology, the channel address is determined by a specific signal's position within multiplexing scheme or signal architecture. For instance, for SONET technology, the channel address &quot;1-5-4&quot; on a VT1.5 signal identifies that the signal is from the first STS1 signal, the fifth VT Group under the STS1 signal, and is the 4th VT1.5 signal in the VT Group.</note>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">20</maxLength>
+        <base>
+          <relation ref="ie=ProcessingSignal+dataElement=signalAddress" type="Data Element" name="Type" kind="Element">
+            <target name="signalAddress" typeName="Data Element"/>
+            <inEntity name="ProcessingSignal" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="pss=AU-4-1024c+dataElement=GnWP6R19TN6R57lV6gz+CA~transmissionSignalType" type="dataElement" typeName="Data Element" kind="Element" name="transmissionSignalType" path="/transmissionSignalType" inherited="true">
+        <displayName lang="default">transmissionSignalType</displayName>
+        <displayName lang="default">transmissionSignalType</displayName>
+        <note lang="default">The physical nature of the transmission signal, such as Optical or Electrical.</note>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">50</maxLength>
+        <base>
+          <relation ref="ie=ProcessingSignal+dataElement=transmissionSignalType" type="Data Element" name="Type" kind="Element">
+            <target name="transmissionSignalType" typeName="Data Element"/>
+            <inEntity name="ProcessingSignal" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+    </dataElements>
+    <relatedSpecificationList/>
+  </entity>
+</model:Model>

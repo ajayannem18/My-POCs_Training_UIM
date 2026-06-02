@@ -1,0 +1,116 @@
+{
+    "attributes": {
+        "resourceSpecification": {
+            "isVisible": true,
+            "isRequired": true,
+            "displayName": "Specification",
+            "min": 0,
+            "max": 255
+        },
+        "lifecycleState": {
+            "isVisible": true,
+            "isRequired": false,
+            "displayName": "Inventory Status",
+            "min": 0,
+            "max": 255
+        },
+        "id": {
+            "isVisible": true,
+            "isRequired": false,
+            "displayName": "ID",
+            "min": 0,
+            "max": 255
+        },
+        "lifecycleSubState": {
+            "isVisible": true,
+            "isRequired": false,
+            "displayName": "Assignment Status",
+            "min": 0,
+            "max": 255
+        },
+        "name": {
+            "isVisible": true,
+            "isRequired": true,
+            "displayName": "name",
+            "min": 0,
+            "max": 255
+        },
+        "serialNumber": {
+            "isVisible": true,
+            "isRequired": false,
+            "displayName": "serialNumber",
+            "min": 0,
+            "max": 32
+        },
+        "description": {
+            "isVisible": true,
+            "isRequired": false,
+            "displayName": "description",
+            "min": 0,
+            "max": 255
+        },
+        "networkLocation": {
+            "isVisible": true,
+            "isRequired": false,
+            "displayName": "Network Location",
+            "min": 0,
+            "max": 10
+        },
+        "startOperatingDate": {
+            "isVisible": false,
+            "isRequired": false,
+            "displayName": "Created Date",
+            "min": 0,
+            "max": 40
+        },
+        "lastModifiedDate": {
+            "isVisible": false,
+            "isRequired": false,
+            "displayName": "Last Modified Date",
+            "min": 0,
+            "max": 40
+        },
+        "lastModifiedUser": {
+            "isVisible": false,
+            "isRequired": false,
+            "displayName": "Last Modified User",
+            "min": 0,
+            "max": 255
+        },
+        "createdUser": {
+            "isVisible": false,
+            "isRequired": false,
+            "displayName": "Created User",
+            "min": 0,
+            "max": 255
+        },
+        "modelNumber": {
+            "isVisible": false,
+            "isRequired": false,
+            "displayName": "Model Number",
+            "min": 0,
+            "max": 255
+        },
+        "partNumber": {
+            "isVisible": false,
+            "isRequired": false,
+            "displayName": "Part Number",
+            "min": 0,
+            "max": 255
+        },
+        "noOfHoldersRequired": {
+            "isVisible": false,
+            "isRequired": false,
+            "displayName": "Number Of Holders Required",
+            "min": 0,
+            "max": 255
+        },
+        "vendorName": {
+            "isVisible": false,
+            "isRequired": false,
+            "displayName": "Vendor Name",
+            "min": 0,
+            "max": 255
+        }
+    }
+}

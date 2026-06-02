@@ -1,0 +1,39 @@
+<?xml version = '1.0'?>
+<mds:customization version="11.1.1.59.23" xmlns:mds="http://xmlns.oracle.com/mds">
+   <mds:insert parent="bi" position="last">
+      <af:inputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" binding="#{pageFlowScope.OrchestrationRequestEditBean.characteristicsMap['PeDeviceName'].component}" readOnly="false" secret="false" label="#{bundle['OrchestrationRequestEditu002ejsffAccessService__BI_PeDeviceName_LABEL']}" id="bi-PeDeviceName" value="#{pageFlowScope.OrchestrationRequestEditBean.characteristicsMap['PeDeviceName'].characteristic.value}" required="false" styleClass="UIHintsEditINPUT_TEXT"/>
+   </mds:insert>
+   <mds:insert parent="bi" position="last">
+      <af:inputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" binding="#{pageFlowScope.OrchestrationRequestEditBean.characteristicsMap['OltDevceName'].component}" readOnly="false" secret="false" label="#{bundle['OrchestrationRequestEditu002ejsffAccessService__BI_OltDevceName_LABEL']}" id="bi-OltDevceName" value="#{pageFlowScope.OrchestrationRequestEditBean.characteristicsMap['OltDevceName'].characteristic.value}" required="false" styleClass="UIHintsEditINPUT_TEXT"/>
+   </mds:insert>
+   <mds:insert after="bi-name" parent="bi">
+      <af:inputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" binding="#{pageFlowScope.OrchestrationRequestEditBean.characteristicsMap['MediaType'].component}" readOnly="false" secret="false" label="#{bundle['OrchestrationRequestEditu002ejsffAccessService__BI_MediaType_LABEL']}" id="bi-MediaType" value="#{pageFlowScope.OrchestrationRequestEditBean.characteristicsMap['MediaType'].characteristic.value}" required="false" styleClass="UIHintsEditINPUT_TEXT"/>
+   </mds:insert>
+   <mds:insert before="bi-effdate" parent="bi">
+      <af:inputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" binding="#{pageFlowScope.OrchestrationRequestEditBean.characteristicsMap['SwitchHostName'].component}" readOnly="false" secret="false" label="#{bundle['OrchestrationRequestEditu002ejsffAccessService__BI_SwitchHostName_LABEL']}" id="bi-SwitchHostName" value="#{pageFlowScope.OrchestrationRequestEditBean.characteristicsMap['SwitchHostName'].characteristic.value}" required="false" styleClass="UIHintsEditINPUT_TEXT"/>
+   </mds:insert>
+   <mds:modify element="bi">
+      <mds:attribute name="rows" value="5"/>
+      <mds:attribute name="maxColumns" value="2"/>
+      <mds:attribute name="labelAlignment" value="start"/>
+      <mds:attribute name="styleClass" value="UIHintsEditPANEL_FORM_LAYOUT"/>
+   </mds:modify>
+   <mds:modify element="bi-specification">
+      <mds:attribute name="styleClass" value="UIHintsEditSELECT_ONE_CHOICE"/>
+   </mds:modify>
+   <mds:modify element="bi-effdate">
+      <mds:attribute name="styleClass" value="UIHintsEditINPUT_DATE"/>
+   </mds:modify>
+   <mds:modify element="bi-adminstate">
+      <mds:attribute name="styleClass" value="UIHintsEditPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="bi-id">
+      <mds:attribute name="styleClass" value="UIHintsEditINPUT_TEXT"/>
+   </mds:modify>
+   <mds:modify element="bi-name">
+      <mds:attribute name="styleClass" value="UIHintsEditINPUT_TEXT"/>
+   </mds:modify>
+   <mds:modify element="bi-description">
+      <mds:attribute name="styleClass" value="UIHintsEditINPUT_TEXT"/>
+   </mds:modify>
+</mds:customization>

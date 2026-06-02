@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:data="http://www.oracle.com/communications/studio/core/model/common/data" xmlns:inv="http://www.mslv.com/studio/inventory/model/specification" xmlns="http://www.mslv.com/studio/inventory/model/specification" xmlns:layout="http://xmlns.oracle.com/communications/sce/poms/model/layout" xsi:type="inv:PhysicalPortSpecificationType" name="GE">
+  <com:saveVersion>2</com:saveVersion>
+  <com:baseEntityRef>
+    <com:entity>PhysicalPort</com:entity>
+    <com:entityType>inventoryEntity</com:entityType>
+    <com:relationship>unknown</com:relationship>
+  </com:baseEntityRef>
+  <com:id>cjurhL36QXiMokrk7j4AEA</com:id>
+  <data:dataElementNode virtual="true">
+    <com:id>cjurhL36QXiMokrk7j4AEA</com:id>
+    <com:elementType>oracle.communications.studio.model.data.StudioModelDataElement</com:elementType>
+    <data:name>GE</data:name>
+    <data:displayName lang="[default]">GE</data:displayName>
+    <data:primitiveType>none</data:primitiveType>
+  </data:dataElementNode>
+  <data:dataElementDetails xsi:type="data:dataElementCommonDetail">
+    <com:id>pu7U2PZgROOd9rrOTQrbdw</com:id>
+    <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+    <data:dataElementId>cjurhL36QXiMokrk7j4AEA</data:dataElementId>
+    <data:defaultValue></data:defaultValue>
+    <data:key></data:key>
+    <data:deprecated>false</data:deprecated>
+    <data:sensitive>false</data:sensitive>
+    <data:minLength>0</data:minLength>
+    <data:maxLength>40</data:maxLength>
+    <data:minMultiplicity>0</data:minMultiplicity>
+    <data:maxMultiplicity>-1</data:maxMultiplicity>
+  </data:dataElementDetails>
+  <data:dataElementDetails xsi:type="layout:uiConfigurationType">
+    <com:id>xJZxO47kQPOIIAglsvW1fA</com:id>
+    <com:elementType>oracle.communications.sce.poms.model.data.LayoutDetailType</com:elementType>
+    <data:dataElementId>cjurhL36QXiMokrk7j4AEA</data:dataElementId>
+    <layout:layout>
+      <layout:page>Physical Port Editor</layout:page>
+      <layout:panel>Physical Port Edit Panel</layout:panel>
+    </layout:layout>
+    <layout:layout>
+      <layout:page>Physical Port Summary</layout:page>
+      <layout:panel>Physical Port Summary Panel</layout:panel>
+    </layout:layout>
+  </data:dataElementDetails>
+  <inv:allowsConsumption>true</inv:allowsConsumption>
+</com:modelEntity>

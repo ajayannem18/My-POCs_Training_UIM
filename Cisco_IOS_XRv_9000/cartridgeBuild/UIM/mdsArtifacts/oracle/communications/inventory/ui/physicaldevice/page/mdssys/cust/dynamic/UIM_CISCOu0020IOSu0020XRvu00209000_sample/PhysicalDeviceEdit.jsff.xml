@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<mds:customization version="11.1.1.59.23" xmlns:mds="http://xmlns.oracle.com/mds">
+   <mds:insert after="phydev-al1" parent="phydev">
+      <af:inputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" binding="#{pageFlowScope.PhysicalDeviceEditBean.characteristicsMap['vCPU'].component}" readOnly="false" secret="false" label="#{bundle['PhysicalDeviceEditu002ejsffCISCOu0020IOSu0020XRvu00209000__sample_vCPU_LABEL']}" id="phydev-vCPU" value="#{pageFlowScope.PhysicalDeviceEditBean.characteristicsMap['vCPU'].characteristic.value}" required="false" styleClass="UIHintsEditINPUT_TEXT"/>
+   </mds:insert>
+   <mds:insert before="phydev-physicalDeviceAddress" parent="phydev">
+      <af:inputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" binding="#{pageFlowScope.PhysicalDeviceEditBean.characteristicsMap['Disk'].component}" readOnly="false" secret="false" label="#{bundle['PhysicalDeviceEditu002ejsffCISCOu0020IOSu0020XRvu00209000__sample_Disk_LABEL']}" id="phydev-Disk" value="#{pageFlowScope.PhysicalDeviceEditBean.characteristicsMap['Disk'].characteristic.value}" required="false" styleClass="UIHintsEditINPUT_TEXT"/>
+   </mds:insert>
+   <mds:insert after="phydev-serialNumber" parent="phydev">
+      <af:inputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" binding="#{pageFlowScope.PhysicalDeviceEditBean.characteristicsMap['RAM'].component}" readOnly="false" secret="false" label="#{bundle['PhysicalDeviceEditu002ejsffCISCOu0020IOSu0020XRvu00209000__sample_RAM_LABEL']}" id="phydev-RAM" value="#{pageFlowScope.PhysicalDeviceEditBean.characteristicsMap['RAM'].characteristic.value}" required="false" styleClass="UIHintsEditINPUT_TEXT"/>
+   </mds:insert>
+   <mds:insert before="phydev-lmd" parent="phydev">
+      <af:inputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" binding="#{pageFlowScope.PhysicalDeviceEditBean.characteristicsMap['Hypervisor'].component}" readOnly="false" secret="false" label="#{bundle['PhysicalDeviceEditu002ejsffCISCOu0020IOSu0020XRvu00209000__sample_Hypervisor_LABEL']}" id="phydev-Hypervisor" value="#{pageFlowScope.PhysicalDeviceEditBean.characteristicsMap['Hypervisor'].characteristic.value}" required="false" styleClass="UIHintsEditINPUT_TEXT"/>
+   </mds:insert>
+   <mds:insert before="phydev-lmd" parent="phydev">
+      <af:panelLabelAndMessage xmlns:af="http://xmlns.oracle.com/adf/faces/rich" id="phydev-dummy-7-1" label=" " styleClass="UIHintsEditPANEL_LABEL_AND_MESSAGE">
+         <af:outputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" id="x-phydev-dummy-7-1" value=" "/>
+      </af:panelLabelAndMessage>
+   </mds:insert>
+   <mds:modify element="phydev">
+      <mds:attribute name="rows" value="8"/>
+      <mds:attribute name="maxColumns" value="2"/>
+      <mds:attribute name="labelAlignment" value="start"/>
+      <mds:attribute name="styleClass" value="UIHintsEditPANEL_FORM_LAYOUT"/>
+   </mds:modify>
+   <mds:modify element="phydev-nel">
+      <mds:attribute name="styleClass" value="UIHintsEditINPUT_TEXT"/>
+   </mds:modify>
+   <mds:modify element="phydev-al1">
+      <mds:attribute name="styleClass" value="UIHintsEditPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phydev-physicalDeviceLocation">
+      <mds:attribute name="styleClass" value="UIHintsEditINPUT_TEXT"/>
+   </mds:modify>
+   <mds:modify element="phydev-inventoryStatus">
+      <mds:attribute name="styleClass" value="UIHintsEditPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phydev-physicalDeviceAddress">
+      <mds:attribute name="styleClass" value="UIHintsEditINPUT_TEXT"/>
+   </mds:modify>
+   <mds:modify element="phydev-specification">
+      <mds:attribute name="styleClass" value="UIHintsEditSELECT_ONE_CHOICE"/>
+   </mds:modify>
+   <mds:modify element="phydev-resourceAssignmentStatus">
+      <mds:attribute name="styleClass" value="UIHintsEditPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="phydev-id">
+      <mds:attribute name="styleClass" value="UIHintsEditINPUT_TEXT"/>
+   </mds:modify>
+   <mds:modify element="phydev-name">
+      <mds:attribute name="styleClass" value="UIHintsEditINPUT_TEXT"/>
+   </mds:modify>
+   <mds:modify element="phydev-description">
+      <mds:attribute name="styleClass" value="UIHintsEditINPUT_TEXT"/>
+   </mds:modify>
+   <mds:modify element="phydev-serialNumber">
+      <mds:attribute name="styleClass" value="UIHintsEditINPUT_TEXT"/>
+   </mds:modify>
+</mds:customization>

@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<!--
+/* Copyright (c) 2009, 2013, Oracle and/or its affiliates. 
+All rights reserved. */
+
+/*
+    DESCRIPTION
+
+    NOTES
+     <other useful comments, qualifications, etc.>
+
+    MODIFIED    (MM/DD/YY)
+    raattulu    4/04/13 - Accessibility changes completed
+-->
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core"
+		  xmlns:c="http://java.sun.com/jsp/jstl/core"> 
+<c:set var="inventoryUIBundle" value="#{adfBundle['oracle.communications.inventory.ui.common.bundle.InventoryUIBundle']}"/>
+  <af:showDetailHeader text="#{inventoryUIBundle.ASSOCIATED_MAPPINGS}"
+                       disclosed="true" id="sdh1">
+    <af:panelCollection id="MapList" styleClass="AFStretchWidth">
+      <f:facet name="toolbar">
+      </f:facet>
+      <f:facet name="statusbar">
+        <af:toolbar id="t2">                  
+                  <af:commandToolbarButton text="#{inventoryUIBundle.REMOVE}" id="ctb1"
+                                           actionListener="#{pageFlowScope.DeviceMappingListBean.removeMappings}"
+                                           rendered="#{pageFlowScope.DeviceMappingListBean.popupMode &amp;&amp; securityContext.userGrantedResource['resourceType=PAGE_ACTION;resourceName=DeviceMapping.DELETE;action=view'] &amp;&amp; pageFlowScope.DeviceMappingListBean.removeMappingSelected}"
+                                           disabled="#{pageFlowScope.DeviceMappingListBean.selectedRowCount lt 1}"
+                                           partialTriggers="resultsTableId"/>
+                 <af:spacer width="10" height="10" id="s2"/>
+                 <af:commandToolbarButton text="#{inventoryUIBundle.CANCEL}" id="ctb3"
+                                          rendered="#{pageFlowScope.DeviceMappingListBean.popupMode}"
+                                          actionListener="#{pageFlowScope.DeviceMappingListBean.cancel}"
+                                          accessKey="#{inventoryUIBundle.CANCEL_ACCESS_KEY}"/>
+                  <af:spacer width="10" height="10" id="s3"/>                
+                  <af:outputText value="#{inventoryUIBundle.ROW_COUNT} #{(pageFlowScope.DeviceMappingListBean.mappingsListSize lt 0) ? 0 :  pageFlowScope.DeviceMappingListBean.mappingsListSize}"
+                                  id="ol1" styleClass="invSearchOutputLabel" partialTriggers="resultsTableId"
+                                  binding="#{backingBeanScope.totalResultsLabel}"/>
+        </af:toolbar>
+      </f:facet>
+      <af:table id="resultsTableId"
+                value="#{pageFlowScope.DeviceMappingListBean.mappingsListCollectionModel}"
+                var="row"
+                emptyText="#{inventoryUIBundle.TABLE_EMPTY_TEXT_NO_ROWS_YET}"
+				rowBandingInterval="0"
+                selectionListener="#{pageFlowScope.DeviceMappingListBean.selectAction}"
+                styleClass="AFStretchWidth" contentDelivery="immediate"               
+                filterVisible="false" varStatus="vs"
+                rowSelection="#{pageFlowScope.DeviceMappingListBean.rowSelection}"
+                autoHeightRows="#{pageFlowScope.DeviceMappingListBean.portletHeight}"
+                binding="#{pageFlowScope.DeviceMappingListBean.resultsTable}"
+                summary="#{inventoryUIBundle.ASSOCIATED_MAPPINGS_LIST}">       
+        <af:column headerText="#{inventoryUIBundle.DEVICE_INTERFACE_ID}"
+                   rowHeader="unstyled">
+          <af:outputText value="#{pageFlowScope.DeviceMappingListBean.deviceInterfaceId}"/>
+        </af:column>
+        <af:column headerText="#{inventoryUIBundle.PHYSICAL_PORT_ID}">
+          <af:outputText value="#{pageFlowScope.DeviceMappingListBean.physicalPortId}"/>
+        </af:column>
+        <af:column headerText="#{inventoryUIBundle.PHYSICAL_CONNECTOR_ID}">
+        <af:outputText value="#{pageFlowScope.DeviceMappingListBean.physicalConnectorId}"/>
+        </af:column>
+      </af:table>
+    </af:panelCollection>
+  </af:showDetailHeader>
+</jsp:root>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><extent>
+  <object class="oracle.communications.platform.entity.impl.TypeOfMeasurementDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/ora_uim_basemeasurements/model/Bit Rate.meastype#7.8.0.0.0_b0" oid="oracle.communications.platform.entity.impl.TypeOfMeasurementDAO-0" version="0">
+    <field name="id">"Bit Rate"</field>
+    <field name="name">"Bit Rate"</field>
+    <field name="description">"Measurement for the amount of information or data transferred over a transmission medium in a fixed amount of time.  Used for measuring bandwidth capacity."</field>
+    <field mode="skip" name="unitOfMeasure"/>
+    <field mode="skip" name="capacityType"/>
+  </object>
+</extent>

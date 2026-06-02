@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:inventory="http://xmlns.oracle.com/communications/studio/model/inventory" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="inventory:RulesetExtensionPoint" id="rep=TN_Unassign_Without_Transition" type="rep" typeName="Ruleset Extension Point" name="TN_Unassign_Without_Transition" resource="\Mobile_Poc\model\TN_Unassign_Without_Transition.rst">
+    <note lang="default"/>
+    <project>
+      <relation ref="ivprj=Mobile_Poc" type="Inventory Project" name="Dependency">
+        <target name="Mobile_Poc" typeName="Inventory Project"/>
+      </relation>
+    </project>
+    <point>
+      <relation ref="ep=TransitionManager_validateObjectStateTransition" type="Extension Point" name="Point" kind="Entity">
+        <target name="TransitionManager_validateObjectStateTransition" typeName="Extension Point"/>
+      </relation>
+    </point>
+    <ruleset>
+      <relation ref="rul=UNASSIGN_TN" type="Ruleset" name="Rules" kind="Entity">
+        <target name="UNASSIGN_TN" typeName="Ruleset"/>
+      </relation>
+    </ruleset>
+  </entity>
+</model:Model>

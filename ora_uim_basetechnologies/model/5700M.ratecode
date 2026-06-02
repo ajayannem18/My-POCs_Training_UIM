@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  $Header: SCEUIM/src/plugins/com.mslv.studio.inventory.core/src/com/mslv/studio/inventory/entities/templates/ratecode.xml /cgbusce_inv/1 2012/06/12 15:02:59 rswamir Exp $ -->
+<!-- 
+ Copyright (c) 2012, Oracle and/or its affiliates. All rights reserved. 
+
+   NAME
+     ratecode.xml - <one-line expansion of the name>
+
+   DESCRIPTION
+     <short description of component this file declares/defines>
+
+   NOTES
+     <other useful comments, qualifications, etc.>
+
+   MODIFIED   (MM/DD/YY)
+   rswamir     06/12/12 - Creation
+
+-->
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:inv="http://www.mslv.com/studio/inventory/model/specification" xmlns="http://www.mslv.com/studio/inventory/model/specification" xsi:type="inv:RateCodeType" name="5700M">
+  <com:saveVersion>2</com:saveVersion>
+  <com:id>SB-mOMWwQiCaKHvaez0hVA</com:id>
+  <inv:name>5700M</inv:name>
+  <inv:technology>
+    <com:entity>Ethernet</com:entity>
+    <com:entityType>technology</com:entityType>
+  </inv:technology>
+  <inv:connectivityFunctions>
+    <com:entity>E5700</com:entity>
+    <com:entityType>connfunction</com:entityType>
+  </inv:connectivityFunctions>
+  <inv:nominalBitRate>5700</inv:nominalBitRate>
+  <inv:nominalBitRateUOM>
+    <com:entity>Mbps</com:entity>
+    <com:entityType>uom</com:entityType>
+  </inv:nominalBitRateUOM>
+</com:modelEntity>

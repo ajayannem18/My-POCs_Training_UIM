@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<cplData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ilog/cpl/schema/data.xsd">
+  <addObject id="EMPTYSLOT-71c59fee:19e5e76c503:-7f84" container="true">
+    <class>
+      Slot
+    </class>
+    <parent>
+      CARDCARRIER-71c59fee:19e5e76c503:-7f86
+    </parent>
+    <children/>
+    <attribute name="name">
+      USB_EH
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        0
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Right
+    </attribute>
+    <attribute name="type">
+      EmptySlot
+    </attribute>
+    <attribute name="slotNumber">
+      3
+    </attribute>
+  </addObject>
+  <addObject id="EMPTYSLOT-71c59fee:19e5e76c503:-7f82" container="true">
+    <class>
+      Slot
+    </class>
+    <parent>
+      CARDCARRIER-71c59fee:19e5e76c503:-7f8a
+    </parent>
+    <children/>
+    <attribute name="name">
+      NIC_SLOT_1
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        0
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="type">
+      EmptySlot
+    </attribute>
+    <attribute name="slotNumber">
+      1
+    </attribute>
+  </addObject>
+  <addObject id="CARDCARRIER-71c59fee:19e5e76c503:-7f8a" container="true">
+    <class>
+      ilog.tgo.model.IltCardCarrier
+    </class>
+    <parent>
+      SHELF-71c59fee:19e5e76c503:-7f8c
+    </parent>
+    <children>
+      <child>
+        EMPTYSLOT-71c59fee:19e5e76c503:-7f82
+      </child>
+    </children>
+    <attribute name="name">
+      CardCarrier
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        0
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="type">
+      Standard
+    </attribute>
+    <attribute name="slotCount">
+      1
+    </attribute>
+    <attribute name="bottomSpacing">
+      0
+    </attribute>
+  </addObject>
+  <addObject id="EMPTYSLOT-71c59fee:19e5e76c503:-7f85" container="true">
+    <class>
+      Slot
+    </class>
+    <parent>
+      CARDCARRIER-71c59fee:19e5e76c503:-7f86
+    </parent>
+    <children/>
+    <attribute name="name">
+      PSU_SLOT_1
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        1
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Right
+    </attribute>
+    <attribute name="type">
+      EmptySlot
+    </attribute>
+    <attribute name="slotNumber">
+      4
+    </attribute>
+  </addObject>
+  <addObject id="CARDCARRIER-71c59fee:19e5e76c503:-7f86" container="true">
+    <class>
+      ilog.tgo.model.IltCardCarrier
+    </class>
+    <parent>
+      CARDCARRIER-71c59fee:19e5e76c503:-7f87
+    </parent>
+    <children>
+      <child>
+        EMPTYSLOT-71c59fee:19e5e76c503:-7f85
+      </child>
+      <child>
+        EMPTYSLOT-71c59fee:19e5e76c503:-7f84
+      </child>
+    </children>
+    <attribute name="name">
+      CardCarrier
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        1
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="type">
+      Standard
+    </attribute>
+    <attribute name="slotCount">
+      2
+    </attribute>
+    <attribute name="bottomSpacing">
+      0
+    </attribute>
+  </addObject>
+  <addObject id="EMPTYSLOT-71c59fee:19e5e76c503:-7f83" container="true">
+    <class>
+      Slot
+    </class>
+    <parent>
+      CARDCARRIER-71c59fee:19e5e76c503:-7f87
+    </parent>
+    <children/>
+    <attribute name="name">
+      DISK_SLOT_1
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        0
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Right
+    </attribute>
+    <attribute name="type">
+      EmptySlot
+    </attribute>
+    <attribute name="slotNumber">
+      2
+    </attribute>
+  </addObject>
+  <addObject id="CARDCARRIER-71c59fee:19e5e76c503:-7f87" container="true">
+    <class>
+      ilog.tgo.model.IltCardCarrier
+    </class>
+    <parent>
+      SHELF-71c59fee:19e5e76c503:-7f8c
+    </parent>
+    <children>
+      <child>
+        CARDCARRIER-71c59fee:19e5e76c503:-7f86
+      </child>
+      <child>
+        EMPTYSLOT-71c59fee:19e5e76c503:-7f83
+      </child>
+    </children>
+    <attribute name="name">
+      CardCarrier
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        1
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="type">
+      Standard
+    </attribute>
+    <attribute name="slotCount">
+      2
+    </attribute>
+    <attribute name="bottomSpacing">
+      0
+    </attribute>
+  </addObject>
+  <addObject id="SHELF-71c59fee:19e5e76c503:-7f8c" container="true">
+    <class>
+      ilog.tgo.model.IltShelf
+    </class>
+    <children>
+      <child>
+        CARDCARRIER-71c59fee:19e5e76c503:-7f8a
+      </child>
+      <child>
+        CARDCARRIER-71c59fee:19e5e76c503:-7f87
+      </child>
+    </children>
+    <attribute name="name">
+      SRV-UBUNTU-01_Shelf
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.IlpPoint">
+      <x>
+        250.0
+      </x>
+      <y>
+        123.0
+      </y>
+    </attribute>
+    <attribute name="type">
+      Standard
+    </attribute>
+    <attribute name="slotSizes" javaClass="ilog.tgo.model.internal.IltSlotSizes">
+      <height>
+        <value>
+          264
+        </value>
+      </height>
+      <width>
+        <value>
+          138
+        </value>
+        <value>
+          138
+        </value>
+      </width>
+    </attribute>
+    <attribute name="direction">
+      Right
+    </attribute>
+    <attribute name="xslotindex">
+      0
+    </attribute>
+  </addObject>
+</cplData>

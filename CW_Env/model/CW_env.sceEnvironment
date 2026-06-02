@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.mslv.com/studio/provisioning/model/workgroup" xmlns:com="http://www.mslv.com/studio/core/model/common" xsi:type="com:environmentType" name="CW_env">
+  <com:displayName>Environment</com:displayName>
+  <com:saveVersion>5</com:saveVersion>
+  <com:id>jyh0p3poQnWnUOqT9JIIfA</com:id>
+  <com:endpoint>http://192.168.156.144:1818/cartridge/wsapi</com:endpoint>
+  <com:target>AdminServer</com:target>
+  <com:environmentProperty>
+    <com:cartridgeType>Inventory Project</com:cartridgeType>
+    <com:category>Cartridge Management</com:category>
+    <com:name>wladmin.host.name</com:name>
+    <com:value>192.168.156.144</com:value>
+  </com:environmentProperty>
+  <com:environmentProperty>
+    <com:cartridgeType>Inventory Project</com:cartridgeType>
+    <com:category>Cartridge Management</com:category>
+    <com:name>wladmin.host.port</com:name>
+    <com:value>1818</com:value>
+  </com:environmentProperty>
+</com:modelEntity>

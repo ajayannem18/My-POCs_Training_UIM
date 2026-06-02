@@ -1,0 +1,63 @@
+<?xml version = '1.0'?>
+<mds:customization version="11.1.1.59.23" xmlns:mds="http://xmlns.oracle.com/mds">
+   <mds:insert after="bi-effdate" parent="bi">
+      <af:inputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" readOnly="true" secret="false" label="#{bundle['BusinessInteractionSummaryu002ejsffAccessService__BI_PeDeviceName_LABEL']}" id="bi-PeDeviceName" value="#{pageFlowScope.BusinessInteractionSummaryBean.characteristicsMap['PeDeviceName'].characteristic.value}" required="false" styleClass="UIHintsSummaryINPUT_TEXT"/>
+   </mds:insert>
+   <mds:insert before="bi-workflowTemplate" parent="bi">
+      <af:inputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" readOnly="true" secret="false" label="#{bundle['BusinessInteractionSummaryu002ejsffAccessService__BI_OltDevceName_LABEL']}" id="bi-OltDevceName" value="#{pageFlowScope.BusinessInteractionSummaryBean.characteristicsMap['OltDevceName'].characteristic.value}" required="false" styleClass="UIHintsSummaryINPUT_TEXT"/>
+   </mds:insert>
+   <mds:insert after="bi-description" parent="bi">
+      <af:inputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" readOnly="true" secret="false" label="#{bundle['BusinessInteractionSummaryu002ejsffAccessService__BI_MediaType_LABEL']}" id="bi-MediaType" value="#{pageFlowScope.BusinessInteractionSummaryBean.characteristicsMap['MediaType'].characteristic.value}" required="false" styleClass="UIHintsSummaryINPUT_TEXT"/>
+   </mds:insert>
+   <mds:insert before="bi-lmd" parent="bi">
+      <af:inputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" readOnly="true" secret="false" label="#{bundle['BusinessInteractionSummaryu002ejsffAccessService__BI_SwitchHostName_LABEL']}" id="bi-SwitchHostName" value="#{pageFlowScope.BusinessInteractionSummaryBean.characteristicsMap['SwitchHostName'].characteristic.value}" required="false" styleClass="UIHintsSummaryINPUT_TEXT"/>
+   </mds:insert>
+   <mds:insert before="bi-lmd" parent="bi">
+      <af:panelLabelAndMessage xmlns:af="http://xmlns.oracle.com/adf/faces/rich" id="bi-dummy-5-1" label=" " styleClass="UIHintsSummaryPANEL_LABEL_AND_MESSAGE">
+         <af:outputText xmlns:af="http://xmlns.oracle.com/adf/faces/rich" id="x-bi-dummy-5-1" value=" "/>
+      </af:panelLabelAndMessage>
+   </mds:insert>
+   <mds:modify element="bi">
+      <mds:attribute name="rows" value="6"/>
+      <mds:attribute name="maxColumns" value="2"/>
+      <mds:attribute name="labelAlignment" value="start"/>
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_FORM_LAYOUT"/>
+   </mds:modify>
+   <mds:modify element="bi-lmd">
+      <mds:attribute name="rendered" value="false"/>
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="bi-crd">
+      <mds:attribute name="rendered" value="false"/>
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="bi-lmu">
+      <mds:attribute name="rendered" value="false"/>
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="bi-cru">
+      <mds:attribute name="rendered" value="false"/>
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="bi-specification">
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="bi-effdate">
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="bi-adminstate">
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="bi-id">
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="bi-name">
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="bi-workflowTemplate">
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+   <mds:modify element="bi-description">
+      <mds:attribute name="styleClass" value="UIHintsSummaryPANEL_LABEL_AND_MESSAGE"/>
+   </mds:modify>
+</mds:customization>

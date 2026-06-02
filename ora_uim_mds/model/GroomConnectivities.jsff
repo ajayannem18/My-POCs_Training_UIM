@@ -1,0 +1,242 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich" xmlns:f="http://java.sun.com/jsf/core" xmlns:cui="/CommsUI"
+          xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <c:set var="inventoryUIBundle" value="#{adfBundle['oracle.communications.inventory.ui.common.bundle.InventoryUIBundle']}"/>
+    <af:panelStretchLayout id="psl1" styleClass="AFStretchWidth" dimensionsFrom="auto" bottomHeight="auto">
+        <f:facet name="center">
+            <af:panelGroupLayout layout="scroll" id="pgl1">
+                <af:popup id="connectivitySearchPopup" contentDelivery="lazyUncached" binding="#{backingBeanScope.connectivitySearchPopup}">
+                    <af:dialog title="#{inventoryUIBundle.SEARCH_CONNECTIVITY}" id="associateConnectivityDialog" type="none">
+                        <af:panelStretchLayout id="pt_ps231" styleClass="invConfigResourceStretchLayout">
+                            <f:facet name="center">
+                                <af:region value="#{bindings.TDMConnectivitySearchResultsFlow1.regionModel}" id="r1"/>
+                            </f:facet>
+                        </af:panelStretchLayout>
+                    </af:dialog>
+                    <af:clientListener method="goRefreshEntity" type="popupClosed"/>
+                    <af:serverListener type="refreshEntity" method="#{pageFlowScope.GroomConnectivitiesBean.refreshTree}"/>
+                </af:popup>
+                <af:popup id="pipeSearchPopup" contentDelivery="lazyUncached" binding="#{backingBeanScope.pipeSearchPopup}">
+                    <af:dialog title="#{inventoryUIBundle.SEARCH_PIPE}" id="associatePipeDialog" type="none">
+                        <af:panelStretchLayout id="pt_ps232" styleClass="invConfigResourceStretchLayout">
+                            <f:facet name="center">
+                                <af:region value="#{bindings.PipeSearchResultsFlow1.regionModel}" id="r4"/>
+                            </f:facet>
+                        </af:panelStretchLayout>
+                    </af:dialog>
+                    <af:clientListener method="goRefreshEntity" type="popupClosed"/>
+                    <af:serverListener type="refreshEntity" method="#{pageFlowScope.GroomConnectivitiesBean.refreshTree}"/>
+                </af:popup>
+                <af:panelSplitter id="ps2" orientation="vertical" styleClass="AFStretchWidth" dimensionsFrom="auto" positionedFromEnd="true">
+                    <f:facet name="first">
+                        <af:panelStretchLayout id="psl2" styleClass="AFStretchWidth" dimensionsFrom="auto" bottomHeight="auto" topHeight="auto">
+                            <f:facet name="top">
+                                <af:outputText id="ot19" value="#{inventoryUIBundle.GROOM_CONNECTIVITIES_MESSAGE}" binding="#{backingBeanScope.groomMessageBinding}"/>
+                            </f:facet>
+                            <f:facet name="center">
+                                <af:panelSplitter id="ps1" orientation="horizontal" splitterPosition="700" styleClass="AFStretchWidth" positionedFromEnd="true">
+                                    <f:facet name="first">
+                                        <af:panelGroupLayout id="pgl9" valign="top">
+                                            <af:panelCollection id="pc1" styleClass="AFStretchWidth">
+                                                <f:facet name="toolbar">
+                                                    <af:toolbar id="st1" rendered="#{pageFlowScope.GroomConnectivitiesBean.renderToolbar}">
+                                                        <af:button id="sb1" icon="/images/connectivity_ovr.png" shortDesc="#{inventoryUIBundle.MENU_CONNECTIVITY}"
+                                                                   actionListener="#{pageFlowScope.GroomConnectivitiesBean.launchConnectivityPopup}"
+                                                                   disabled="#{pageFlowScope.GroomConnectivitiesBean.disableConnectivityButton}"/>
+                                                        <af:button id="sb2" icon="/images/pipe_ena.png" shortDesc="#{inventoryUIBundle.PIPE}"
+                                                                   actionListener="#{pageFlowScope.GroomConnectivitiesBean.launchPipePopup}"
+                                                                   disabled="#{pageFlowScope.GroomConnectivitiesBean.disablePipeButton}"/>
+                                                        <af:button id="sb3" icon="/images/clear_ena.png" shortDesc="#{inventoryUIBundle.CLEAR}"
+                                                                   actionListener="#{pageFlowScope.GroomConnectivitiesBean.clear}" disabledIcon="/images/clear_dis.png"
+                                                                   disabled="#{pageFlowScope.GroomConnectivitiesBean.disableSourceClearButton}" binding="#{backingBeanScope.clearSourceButton}">
+                                                            <af:setPropertyListener type="action" from="source" to="#{pageFlowScope.treeType}"/>
+                                                        </af:button>
+                                                        <af:button id="sb4" icon="/images/delete_ena.png" shortDesc="#{inventoryUIBundle.DELETE}"
+                                                                   actionListener="#{pageFlowScope.GroomConnectivitiesBean.delete}" disabledIcon="/images/delete_dis.png"
+                                                                   disabled="#{pageFlowScope.GroomConnectivitiesBean.disableSourceDeleteButton}" binding="#{backingBeanScope.deleteSourceButton}">
+                                                            <af:setPropertyListener type="action" from="source" to="#{pageFlowScope.treeType}"/>
+                                                        </af:button>
+                                                    </af:toolbar>
+                                                </f:facet>
+                                                <af:treeTable value="#{pageFlowScope.SourceTreeBean.treeModel}" var="source" rowSelection="multiple" id="st"
+                                                              rendered="#{pageFlowScope.GroomConnectivitiesBean.renderConnectivityTree}" fetchSize="#{pageFlowScope.SourceTreeBean.fetchSize}"
+                                                              contextMenuSelect="true" styleClass="AFStretchWidth" contentDelivery="immediate"
+                                                              expandAllEnabled="#{pageFlowScope.SourceTreeBean.expandAllEnabled}" selectionListener="#{pageFlowScope.SourceTreeBean.nodeSelectedEvent}"
+                                                              binding="#{backingBeanScope.sourceTreeBinding}" disclosedRowKeys="#{pageFlowScope.SourceTreeBean.treeDisclosedRowKeys}"
+                                                              rowBandingInterval="0" summary="#{inventoryUIBundle.SOURCE_TREE_SUMMARY}">
+                                                    <f:facet name="nodeStamp">
+                                                        <af:column sortable="false" headerText="#{inventoryUIBundle.SOURCE_CONNECTIVITY}" id="c2" width="650" rowHeader="unstyled">
+                                                            <af:panelGroupLayout id="pgl5">
+                                                                <af:image source="#{source.data.icon}" id="nodeIcon" styleClass="invSummaryImage"
+                                                                          shortDesc="#{inventoryUIBundle.SOURCE_CONNECTIVITY_SHORT_DESC}"
+                                                                          rendered="#{!pageFlowScope.GroomConnectivitiesBean.disableSourceClearButton}"/>
+                                                                <af:outputText value="#{source.data.label}" id="ot9"/>
+                                                            </af:panelGroupLayout>
+                                                        </af:column>
+                                                    </f:facet>
+                                                    <f:facet name="contextMenu">
+                                                        <af:popup contentDelivery="lazy" id="stp1" partialTriggers="::st">
+                                                            <!--Physical Device menu Starts -->
+                                                            <af:menu id="cMenu" binding="#{backingBeanScope.sourceMenuBinding}" contentDelivery="lazy">
+                                                                <af:commandMenuItem text="#{inventoryUIBundle.VIEW_CONNECTIVITY_DETAILS}" id="tdmcmi1" action="TDMConnectivityDetails"
+                                                                                    rendered="#{(pageFlowScope.SourceTreeBean.rootNodePopupMenu)}"
+                                                                                    actionListener="#{pageFlowScope.SourceTreeBean.viewConnectivity}"></af:commandMenuItem>
+                                                                <af:commandMenuItem text="#{inventoryUIBundle.VIEW_ASSIGNED_CONNECTIVITY_DETAILS}" id="tdmcmi2" action="TDMConnectivityDetails"
+                                                                                    rendered="#{(pageFlowScope.SourceTreeBean.viewConnectivityPopupMenu)}"
+                                                                                    actionListener="#{pageFlowScope.SourceTreeBean.viewConsumer}"></af:commandMenuItem>
+                                                                <af:commandMenuItem text="#{inventoryUIBundle.VIEW_ASSIGNED_PIPE_SUMMARY}" id="tdmcmi3"
+                                                                                    rendered="#{(pageFlowScope.SourceTreeBean.viewPipePopupMenu)}" action="PipeSummary"
+                                                                                    actionListener="#{pageFlowScope.SourceTreeBean.viewConsumer}"></af:commandMenuItem>
+                                                            </af:menu>
+                                                        </af:popup>
+                                                    </f:facet>
+                                                </af:treeTable>
+                                                <af:treeTable value="#{pageFlowScope.SourcePipeTreeBean.treeModel}" var="node" rowSelection="multiple" id="spt"
+                                                              rendered="#{pageFlowScope.GroomConnectivitiesBean.renderPipeTree}" fetchSize="#{pageFlowScope.SourcePipeTreeBean.fetchSize}"
+                                                              contextMenuSelect="true" styleClass="AFStretchWidth" contentDelivery="immediate"
+                                                              expandAllEnabled="#{pageFlowScope.SourcePipeTreeBean.expandAllEnabled}"
+                                                              selectionListener="#{pageFlowScope.SourcePipeTreeBean.nodeSelectedEvent}" binding="#{backingBeanScope.sourcePipeTreeBinding}"
+                                                              rowDisclosureListener="#{pageFlowScope.SourcePipeTreeBean.rowDisclosureListener}"
+                                                              disclosedRowKeys="#{pageFlowScope.SourcePipeTreeBean.treeDisclosedRowKeys}" rowBandingInterval="0" horizontalGridVisible="false"
+                                                              summary="#{inventoryUIBundle.PIPE_HIERARCHY_TREETABLE}">
+                                                    <f:facet name="nodeStamp">
+                                                        <af:column sortable="false" id="column2" width="650" headerText="#{inventoryUIBundle.SOURCE_PIPE}" rowHeader="unstyled">
+                                                            <af:link action="PipeSummary" icon="#{node.data.icon}" actionListener="#{pageFlowScope.SourcePipeTreeBean.registerRecentItem}"
+                                                                     rendered="#{!pageFlowScope.GroomConnectivitiesBean.disableSourceClearButton}" text="#{node.data.label}"
+                                                                     shortDesc="#{inventoryUIBundle.LINK_FOR_NAVIGATION}" id="sl4">
+                                                                <af:setActionListener from="#{node.data.object.oid}" to="#{requestScope.oid}"/>
+                                                            </af:link>
+                                                        </af:column>
+                                                    </f:facet>
+                                                    <af:column sortable="false" headerText="#{inventoryUIBundle.CONSUMERS}" id="colun3" filterable="false">
+                                                        <af:iterator id="it123" value="#{node.data.consumers}" var="consumer">
+                                                            <af:link actionListener="#{pageFlowScope.SourcePipeTreeBean.viewConsumer}" action="#{pageFlowScope.SourcePipeTreeBean.getConsumerAction}"
+                                                                     id="cn16">
+                                                                <af:panelGroupLayout id="pglp5">
+                                                                    <af:outputText value="#{consumer.label}" id="onn312" binding="#{pageFlowScope.sourceConsumer}"/>
+                                                                    <af:outputText value=" (#{consumer.invStatus})" id="ot14"/>
+                                                                    <f:param name="consumerOid" value="#{consumer.object.oid}" id="par222"/>
+                                                                </af:panelGroupLayout>
+																<af:setPropertyListener type="action" from="true" to="#{pageFlowScope.groom}"/>
+                                                            </af:link>
+                                                            <br></br>
+                                                        </af:iterator>
+                                                    </af:column>
+                                                </af:treeTable>
+                                            </af:panelCollection>
+                                        </af:panelGroupLayout>
+                                    </f:facet>
+                                    <f:facet name="second">
+                                        <af:panelGroupLayout id="pgl19" valign="top">
+                                            <af:panelCollection id="pc2" styleClass="AFStretchWidth">
+                                                <f:facet name="toolbar">
+                                                    <af:toolbar id="tt2" rendered="#{pageFlowScope.GroomConnectivitiesBean.renderToolbar}">
+                                                        <af:button id="tb1" icon="/images/connectivity_ovr.png" shortDesc="#{inventoryUIBundle.MENU_CONNECTIVITY}"
+                                                                   actionListener="#{pageFlowScope.GroomConnectivitiesBean.launchConnectivityPopup}"
+                                                                   disabled="#{pageFlowScope.GroomConnectivitiesBean.disableConnectivityButton}"/>
+                                                        <af:button id="tb2" icon="/images/pipe_ena.png" shortDesc="#{inventoryUIBundle.PIPE}"
+                                                                   actionListener="#{pageFlowScope.GroomConnectivitiesBean.launchPipePopup}"
+                                                                   disabled="#{pageFlowScope.GroomConnectivitiesBean.disablePipeButton}"/>
+                                                        <af:button id="tb3" icon="/images/clear_ena.png" shortDesc="#{inventoryUIBundle.CLEAR}"
+                                                                   actionListener="#{pageFlowScope.GroomConnectivitiesBean.clear}" disabledIcon="/images/clear_dis.png"
+                                                                   disabled="#{pageFlowScope.GroomConnectivitiesBean.disableTargetClearButton}" binding="#{backingBeanScope.clearTargetButton}">
+                                                            <af:setPropertyListener type="action" from="target" to="#{pageFlowScope.treeType}"/>
+                                                        </af:button>
+                                                        <af:button id="tb4" icon="/images/delete_ena.png" shortDesc="#{inventoryUIBundle.DELETE}"
+                                                                   actionListener="#{pageFlowScope.GroomConnectivitiesBean.delete}" disabledIcon="/images/delete_dis.png"
+                                                                   disabled="#{pageFlowScope.GroomConnectivitiesBean.disableTargetDeleteButton}" binding="#{backingBeanScope.deleteTargetButton}">
+                                                            <af:setPropertyListener type="action" from="target" to="#{pageFlowScope.treeType}"/>
+                                                        </af:button>
+                                                    </af:toolbar>
+                                                </f:facet>
+                                                <af:treeTable value="#{pageFlowScope.TargetTreeBean.treeModel}" var="target" rowSelection="multiple" id="tt"
+                                                              rendered="#{pageFlowScope.GroomConnectivitiesBean.renderConnectivityTree}" fetchSize="#{pageFlowScope.TargetTreeBean.fetchSize}"
+                                                              contextMenuSelect="true" styleClass="AFStretchWidth" contentDelivery="immediate"
+                                                              expandAllEnabled="#{pageFlowScope.TargetTreeBean.expandAllEnabled}" selectionListener="#{pageFlowScope.TargetTreeBean.nodeSelectedEvent}"
+                                                              binding="#{backingBeanScope.targetTreeBinding}" disclosedRowKeys="#{pageFlowScope.TargetTreeBean.treeDisclosedRowKeys}"
+                                                              rowBandingInterval="0" summary="#{inventoryUIBundle.TARGET_TREE_SUMMARY}">
+                                                    <f:facet name="nodeStamp">
+                                                        <af:column sortable="false" headerText="#{inventoryUIBundle.TARGET_CONNECTIVITY}" id="c72" width="650" rowHeader="unstyled">
+                                                            <af:panelGroupLayout id="pgl7">
+                                                                <af:image source="#{target.data.icon}" id="tnodeIcon" styleClass="invSummaryImage"
+                                                                          shortDesc="#{inventoryUIBundle.TARGET_CONNECTIVITY_SHORT_DESC}"
+                                                                          rendered="#{!pageFlowScope.GroomConnectivitiesBean.disableTargetClearButton}"/>
+                                                                <af:outputText value="#{target.data.label}" id="ott9"/>
+                                                            </af:panelGroupLayout>
+                                                        </af:column>
+                                                    </f:facet>
+                                                    <f:facet name="contextMenu">
+                                                        <af:popup contentDelivery="lazy" id="ttp1" partialTriggers="::tt">
+                                                            <!--Physical Device menu Starts -->
+                                                            <af:menu id="cMenu1" binding="#{backingBeanScope.targetMenuBinding}" contentDelivery="lazy">
+                                                                <af:commandMenuItem text="#{inventoryUIBundle.VIEW_CONNECTIVITY_DETAILS}" id="tdmmi2" action="TDMConnectivityDetails"
+                                                                                    rendered="#{(pageFlowScope.TargetTreeBean.rootNodePopupMenu)}"
+                                                                                    actionListener="#{pageFlowScope.TargetTreeBean.viewConnectivity}"></af:commandMenuItem>
+                                                                <af:commandMenuItem text="#{inventoryUIBundle.VIEW_ASSIGNED_CONNECTIVITY_DETAILS}" id="cmi2" action="TDMConnectivityDetails"
+                                                                                    rendered="#{(pageFlowScope.TargetTreeBean.viewConnectivityPopupMenu)}"
+                                                                                    actionListener="#{pageFlowScope.TargetTreeBean.viewConsumer}"></af:commandMenuItem>
+                                                                <af:commandMenuItem text="#{inventoryUIBundle.VIEW_ASSIGNED_PIPE_SUMMARY}" id="cmi3"
+                                                                                    rendered="#{(pageFlowScope.TargetTreeBean.viewPipePopupMenu)}" action="PipeSummary"
+                                                                                    actionListener="#{pageFlowScope.TargetTreeBean.viewConsumer}"></af:commandMenuItem>
+                                                            </af:menu>
+                                                        </af:popup>
+                                                    </f:facet>
+                                                </af:treeTable>
+                                                <af:treeTable value="#{pageFlowScope.TargetPipeTreeBean.treeModel}" var="node" rowSelection="multiple" id="tpt"
+                                                              rendered="#{pageFlowScope.GroomConnectivitiesBean.renderPipeTree}" fetchSize="#{pageFlowScope.TargetPipeTreeBean.fetchSize}"
+                                                              contextMenuSelect="true" styleClass="AFStretchWidth" contentDelivery="immediate"
+                                                              expandAllEnabled="#{pageFlowScope.TargetPipeTreeBean.expandAllEnabled}"
+                                                              selectionListener="#{pageFlowScope.TargetPipeTreeBean.nodeSelectedEvent}" binding="#{backingBeanScope.targetPipeTreeBinding}"
+                                                              rowDisclosureListener="#{pageFlowScope.TargetPipeTreeBean.rowDisclosureListener}"
+                                                              disclosedRowKeys="#{pageFlowScope.TargetPipeTreeBean.treeDisclosedRowKeys}" rowBandingInterval="0" horizontalGridVisible="false"
+                                                              summary="#{inventoryUIBundle.PIPE_HIERARCHY_TREETABLE}">
+                                                    <f:facet name="nodeStamp">
+                                                        <af:column sortable="false" id="coln2" width="650" headerText="#{inventoryUIBundle.TARGET_PIPE}" rowHeader="unstyled">
+                                                            <af:link action="PipeSummary" icon="#{node.data.icon}" actionListener="#{pageFlowScope.TargetPipeTreeBean.registerRecentItem}"
+                                                                     rendered="#{!pageFlowScope.GroomConnectivitiesBean.disableTargetClearButton}" text="#{node.data.label}"
+                                                                     shortDesc="#{inventoryUIBundle.LINK_FOR_NAVIGATION}" id="tl4">
+                                                                <af:setActionListener from="#{node.data.object.oid}" to="#{requestScope.oid}"/>
+                                                            </af:link>
+                                                        </af:column>
+                                                    </f:facet>
+                                                    <af:column sortable="false" headerText="#{inventoryUIBundle.CONSUMERS}" id="col4" filterable="false">
+                                                        <af:iterator id="it24" value="#{node.data.consumers}" var="consumer">
+                                                            <af:link actionListener="#{pageFlowScope.TargetPipeTreeBean.viewConsumer}" action="#{pageFlowScope.TargetPipeTreeBean.getConsumerAction}"
+                                                                     id="cn17">
+                                                                <af:panelGroupLayout id="pglp6">
+                                                                    <af:outputText value="#{consumer.label}" id="on12" binding="#{pageFlowScope.targetConsumer}"/>
+                                                                    <af:outputText value=" (#{consumer.invStatus})" id="ot16"/>
+                                                                    <f:param name="consumerOid" value="#{consumer.object.oid}" id="p2"/>
+                                                                </af:panelGroupLayout>
+																<af:setPropertyListener type="action" from="true" to="#{pageFlowScope.groom}"/>
+                                                            </af:link>
+                                                            <br></br>
+                                                        </af:iterator>
+                                                    </af:column>
+                                                </af:treeTable>
+                                            </af:panelCollection>
+                                            <af:spacer width="10" id="s141"/>
+                                        </af:panelGroupLayout>
+                                    </f:facet>
+                                </af:panelSplitter>
+                            </f:facet>
+                            <f:facet name="bottom">
+                                <af:panelGroupLayout id="pg39" halign="right" layout="scroll">
+                                    <af:spacer id="sp23" height="10"/>
+                                    <af:panelGroupLayout id="pg75" layout="horizontal">
+                                        <af:toolbar id="t5">
+                                            <af:commandToolbarButton text="#{inventoryUIBundle.ADD_TO_GROOM}" id="ctb3" disabled="#{pageFlowScope.GroomConnectivitiesBean.disableAddToGroom}"
+                                                                     actionListener="#{pageFlowScope.GroomConnectivitiesBean.addToPreview}" binding="#{backingBeanScope.addToGroomBinding}"
+                                                                     partialTriggers="pc1:st pc1:spt pc2:tt pc2:tpt"/>
+                                        </af:toolbar>
+                                    </af:panelGroupLayout>
+                                    <af:spacer id="sp24" height="10"/>
+                                </af:panelGroupLayout>
+                            </f:facet>
+                        </af:panelStretchLayout>
+                    </f:facet>
+                </af:panelSplitter>
+            </af:panelGroupLayout>
+        </f:facet>
+    </af:panelStretchLayout>
+</jsp:root>

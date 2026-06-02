@@ -1,0 +1,18 @@
+package oracle.communications.inventory.rules;
+
+import oracle.communications.inventory.api.framework.logging.Log;
+import oracle.communications.inventory.extensibility.extension.util.ExtensionPointRuleContext;
+import mapperClass.DesignServiceSuspend;
+ 
+ 
+global Log log;
+ 
+rule "Design and assign"
+	salience 0
+	when
+    	context : ExtensionPointRuleContext()      
+    then 
+   DesignServiceSuspend suspendServ= new DesignServiceSuspend();
+    System.out.println("Calling suspend Designer method");
+   suspendServ.suspendService(context);
+    end

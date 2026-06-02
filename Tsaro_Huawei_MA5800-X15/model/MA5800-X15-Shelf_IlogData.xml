@@ -1,0 +1,1186 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<cplData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ilog/cpl/schema/data.xsd">
+  <addObject id="EMPTYSLOT-36a00975:19d675de981:-7fe8" container="true">
+    <class>
+      Slot
+    </class>
+    <parent>
+      CARDCARRIER-6b734b5e:19d63a9fc32:-7fec
+    </parent>
+    <children/>
+    <attribute name="name">
+      X15-PowerBoard
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        1
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="type">
+      EmptySlot
+    </attribute>
+    <attribute name="slotNumber">
+      2
+    </attribute>
+    <attribute name="nativeEMSName">
+      PowerBoard
+    </attribute>
+  </addObject>
+  <addObject id="EMPTYSLOT-36a00975:19d675de981:-7fe7" container="true">
+    <class>
+      Slot
+    </class>
+    <parent>
+      CARDCARRIER-6b734b5e:19d63a9fc32:-7fec
+    </parent>
+    <children/>
+    <attribute name="name">
+      X15-PowerBoard
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        0
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="type">
+      EmptySlot
+    </attribute>
+    <attribute name="slotNumber">
+      3
+    </attribute>
+    <attribute name="nativeEMSName">
+      PowerBoard
+    </attribute>
+  </addObject>
+  <addObject id="CARDCARRIER-6b734b5e:19d63a9fc32:-7fec" container="true">
+    <class>
+      ilog.tgo.model.IltCardCarrier
+    </class>
+    <parent>
+      CARDCARRIER-6b734b5e:19d63a9fc32:-7fed
+    </parent>
+    <children>
+      <child>
+        EMPTYSLOT-36a00975:19d675de981:-7fe8
+      </child>
+      <child>
+        EMPTYSLOT-36a00975:19d675de981:-7fe7
+      </child>
+    </children>
+    <attribute name="name">
+      CardCarrier
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        0
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="type">
+      Standard
+    </attribute>
+    <attribute name="slotCount">
+      2
+    </attribute>
+    <attribute name="bottomSpacing">
+      0
+    </attribute>
+  </addObject>
+  <addObject id="EMPTYSLOT-36a00975:19d675de981:-7fe9" container="true">
+    <class>
+      Slot
+    </class>
+    <parent>
+      CARDCARRIER-6b734b5e:19d63a9fc32:-7fed
+    </parent>
+    <children/>
+    <attribute name="name">
+      X15-UniversalinInterafceBoard
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        1
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="type">
+      EmptySlot
+    </attribute>
+    <attribute name="slotNumber">
+      1
+    </attribute>
+    <attribute name="nativeEMSName">
+      UIB
+    </attribute>
+  </addObject>
+  <addObject id="CARDCARRIER-6b734b5e:19d63a9fc32:-7fed" container="true">
+    <class>
+      ilog.tgo.model.IltCardCarrier
+    </class>
+    <parent>
+      CARDCARRIER-6b734b5e:19d63a9fc32:-7fef
+    </parent>
+    <children>
+      <child>
+        CARDCARRIER-6b734b5e:19d63a9fc32:-7fec
+      </child>
+      <child>
+        EMPTYSLOT-36a00975:19d675de981:-7fe9
+      </child>
+    </children>
+    <attribute name="name">
+      CardCarrier
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        0
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="type">
+      Standard
+    </attribute>
+    <attribute name="slotCount">
+      2
+    </attribute>
+    <attribute name="bottomSpacing">
+      0
+    </attribute>
+  </addObject>
+  <addObject id="EMPTYSLOT-36a00975:19d675de981:-7ff1" container="true">
+    <class>
+      Slot
+    </class>
+    <parent>
+      CARDCARRIER-6b734b5e:19d63a9fc32:-7fee
+    </parent>
+    <children/>
+    <attribute name="name">
+      X15-ServiceBoard
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        2
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="type">
+      EmptySlot
+    </attribute>
+    <attribute name="slotNumber">
+      13
+    </attribute>
+    <attribute name="nativeEMSName">
+      ServiceBoard
+    </attribute>
+  </addObject>
+  <addObject id="EMPTYSLOT-36a00975:19d675de981:-7ff0" container="true">
+    <class>
+      Slot
+    </class>
+    <parent>
+      CARDCARRIER-6b734b5e:19d63a9fc32:-7fee
+    </parent>
+    <children/>
+    <attribute name="name">
+      X15-ServiceBoard
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        3
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="type">
+      EmptySlot
+    </attribute>
+    <attribute name="slotNumber">
+      14
+    </attribute>
+    <attribute name="nativeEMSName">
+      ServiceBoard
+    </attribute>
+  </addObject>
+  <addObject id="EMPTYSLOT-36a00975:19d675de981:-7ff5" container="true">
+    <class>
+      Slot
+    </class>
+    <parent>
+      CARDCARRIER-6b734b5e:19d63a9fc32:-7fef
+    </parent>
+    <children/>
+    <attribute name="name">
+      X15-ServiceBoard
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        7
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="type">
+      EmptySlot
+    </attribute>
+    <attribute name="slotNumber">
+      10
+    </attribute>
+    <attribute name="nativeEMSName">
+      ServiceBoard
+    </attribute>
+  </addObject>
+  <addObject id="EMPTYSLOT-36a00975:19d675de981:-7ff4" container="true">
+    <class>
+      Slot
+    </class>
+    <parent>
+      CARDCARRIER-6b734b5e:19d63a9fc32:-7fee
+    </parent>
+    <children/>
+    <attribute name="name">
+      X15-ServiceBoard
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        0
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="type">
+      EmptySlot
+    </attribute>
+    <attribute name="slotNumber">
+      11
+    </attribute>
+    <attribute name="nativeEMSName">
+      ServiceBoard
+    </attribute>
+  </addObject>
+  <addObject id="EMPTYSLOT-36a00975:19d675de981:-7ff3" container="true">
+    <class>
+      Slot
+    </class>
+    <parent>
+      SHELF-6b734b5e:19d63a9fc32:-7ff8
+    </parent>
+    <children/>
+    <attribute name="name">
+      X15-FanBoard
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        1
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Right
+    </attribute>
+    <attribute name="type">
+      EmptySlot
+    </attribute>
+    <attribute name="slotNumber">
+      21
+    </attribute>
+    <attribute name="nativeEMSName">
+      FanBoard
+    </attribute>
+  </addObject>
+  <addObject id="EMPTYSLOT-36a00975:19d675de981:-7ff2" container="true">
+    <class>
+      Slot
+    </class>
+    <parent>
+      CARDCARRIER-6b734b5e:19d63a9fc32:-7fee
+    </parent>
+    <children/>
+    <attribute name="name">
+      X15-ServiceBoard
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        1
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="type">
+      EmptySlot
+    </attribute>
+    <attribute name="slotNumber">
+      12
+    </attribute>
+    <attribute name="nativeEMSName">
+      ServiceBoard
+    </attribute>
+  </addObject>
+  <addObject id="EMPTYSLOT-36a00975:19d675de981:-7ff9" container="true">
+    <class>
+      Slot
+    </class>
+    <parent>
+      CARDCARRIER-6b734b5e:19d63a9fc32:-7fef
+    </parent>
+    <children/>
+    <attribute name="name">
+      X15-ServiceBoard
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        3
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="type">
+      EmptySlot
+    </attribute>
+    <attribute name="slotNumber">
+      6
+    </attribute>
+    <attribute name="nativeEMSName">
+      ServiceBoard
+    </attribute>
+  </addObject>
+  <addObject id="EMPTYSLOT-36a00975:19d675de981:-7ff8" container="true">
+    <class>
+      Slot
+    </class>
+    <parent>
+      CARDCARRIER-6b734b5e:19d63a9fc32:-7fef
+    </parent>
+    <children/>
+    <attribute name="name">
+      X15-ServiceBoard
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        4
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="type">
+      EmptySlot
+    </attribute>
+    <attribute name="slotNumber">
+      7
+    </attribute>
+    <attribute name="nativeEMSName">
+      ServiceBoard
+    </attribute>
+  </addObject>
+  <addObject id="EMPTYSLOT-36a00975:19d675de981:-7ff7" container="true">
+    <class>
+      Slot
+    </class>
+    <parent>
+      CARDCARRIER-6b734b5e:19d63a9fc32:-7fef
+    </parent>
+    <children/>
+    <attribute name="name">
+      X15-ServiceBoard
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        5
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="type">
+      EmptySlot
+    </attribute>
+    <attribute name="slotNumber">
+      8
+    </attribute>
+    <attribute name="nativeEMSName">
+      ServiceBoard
+    </attribute>
+  </addObject>
+  <addObject id="EMPTYSLOT-36a00975:19d675de981:-7ff6" container="true">
+    <class>
+      Slot
+    </class>
+    <parent>
+      CARDCARRIER-6b734b5e:19d63a9fc32:-7fef
+    </parent>
+    <children/>
+    <attribute name="name">
+      X15-ServiceBoard
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        6
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="type">
+      EmptySlot
+    </attribute>
+    <attribute name="slotNumber">
+      9
+    </attribute>
+    <attribute name="nativeEMSName">
+      ServiceBoard
+    </attribute>
+  </addObject>
+  <addObject id="EMPTYSLOT-36a00975:19d675de981:-7feb" container="true">
+    <class>
+      Slot
+    </class>
+    <parent>
+      CARDCARRIER-6b734b5e:19d63a9fc32:-7ff0
+    </parent>
+    <children/>
+    <attribute name="name">
+      X15-ControlBoard
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        0
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="type">
+      EmptySlot
+    </attribute>
+    <attribute name="slotNumber">
+      19
+    </attribute>
+    <attribute name="nativeEMSName">
+      ControlBoard
+    </attribute>
+  </addObject>
+  <addObject id="EMPTYSLOT-36a00975:19d675de981:-7fea" container="true">
+    <class>
+      Slot
+    </class>
+    <parent>
+      CARDCARRIER-6b734b5e:19d63a9fc32:-7ff0
+    </parent>
+    <children/>
+    <attribute name="name">
+      X15-ControlBoard
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        1
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="type">
+      EmptySlot
+    </attribute>
+    <attribute name="slotNumber">
+      20
+    </attribute>
+    <attribute name="nativeEMSName">
+      controlBoard
+    </attribute>
+  </addObject>
+  <addObject id="CARDCARRIER-6b734b5e:19d63a9fc32:-7ff0" container="true">
+    <class>
+      ilog.tgo.model.IltCardCarrier
+    </class>
+    <parent>
+      CARDCARRIER-6b734b5e:19d63a9fc32:-7ff1
+    </parent>
+    <children>
+      <child>
+        EMPTYSLOT-36a00975:19d675de981:-7feb
+      </child>
+      <child>
+        EMPTYSLOT-36a00975:19d675de981:-7fea
+      </child>
+    </children>
+    <attribute name="name">
+      CardCarrier
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        1
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Left
+    </attribute>
+    <attribute name="type">
+      Standard
+    </attribute>
+    <attribute name="slotCount">
+      2
+    </attribute>
+    <attribute name="bottomSpacing">
+      0
+    </attribute>
+  </addObject>
+  <addObject id="EMPTYSLOT-36a00975:19d675de981:-7ffb" container="true">
+    <class>
+      Slot
+    </class>
+    <parent>
+      CARDCARRIER-6b734b5e:19d63a9fc32:-7fef
+    </parent>
+    <children/>
+    <attribute name="name">
+      X15-ServiceBoard
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        1
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="type">
+      EmptySlot
+    </attribute>
+    <attribute name="slotNumber">
+      4
+    </attribute>
+    <attribute name="nativeEMSName">
+      ServiceBoard
+    </attribute>
+  </addObject>
+  <addObject id="EMPTYSLOT-36a00975:19d675de981:-7ffa" container="true">
+    <class>
+      Slot
+    </class>
+    <parent>
+      CARDCARRIER-6b734b5e:19d63a9fc32:-7fef
+    </parent>
+    <children/>
+    <attribute name="name">
+      X15-ServiceBoard
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        2
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="type">
+      EmptySlot
+    </attribute>
+    <attribute name="slotNumber">
+      5
+    </attribute>
+    <attribute name="nativeEMSName">
+      ServiceBoard
+    </attribute>
+  </addObject>
+  <addObject id="CARDCARRIER-6b734b5e:19d63a9fc32:-7fef" container="true">
+    <class>
+      ilog.tgo.model.IltCardCarrier
+    </class>
+    <parent>
+      CARDCARRIER-6b734b5e:19d63a9fc32:-7ff1
+    </parent>
+    <children>
+      <child>
+        CARDCARRIER-6b734b5e:19d63a9fc32:-7fed
+      </child>
+      <child>
+        EMPTYSLOT-36a00975:19d675de981:-7ffb
+      </child>
+      <child>
+        EMPTYSLOT-36a00975:19d675de981:-7ffa
+      </child>
+      <child>
+        EMPTYSLOT-36a00975:19d675de981:-7ff9
+      </child>
+      <child>
+        EMPTYSLOT-36a00975:19d675de981:-7ff8
+      </child>
+      <child>
+        EMPTYSLOT-36a00975:19d675de981:-7ff7
+      </child>
+      <child>
+        EMPTYSLOT-36a00975:19d675de981:-7ff6
+      </child>
+      <child>
+        EMPTYSLOT-36a00975:19d675de981:-7ff5
+      </child>
+    </children>
+    <attribute name="name">
+      CardCarrier
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        0
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Left
+    </attribute>
+    <attribute name="type">
+      Standard
+    </attribute>
+    <attribute name="slotCount">
+      8
+    </attribute>
+    <attribute name="bottomSpacing">
+      0
+    </attribute>
+  </addObject>
+  <addObject id="EMPTYSLOT-36a00975:19d675de981:-7fef" container="true">
+    <class>
+      Slot
+    </class>
+    <parent>
+      CARDCARRIER-6b734b5e:19d63a9fc32:-7fee
+    </parent>
+    <children/>
+    <attribute name="name">
+      X15-ServiceBoard
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        4
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="type">
+      EmptySlot
+    </attribute>
+    <attribute name="slotNumber">
+      15
+    </attribute>
+    <attribute name="nativeEMSName">
+      ServiceBoard
+    </attribute>
+  </addObject>
+  <addObject id="EMPTYSLOT-36a00975:19d675de981:-7fee" container="true">
+    <class>
+      Slot
+    </class>
+    <parent>
+      CARDCARRIER-6b734b5e:19d63a9fc32:-7fee
+    </parent>
+    <children/>
+    <attribute name="name">
+      X15-ServiceBoard
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        5
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="type">
+      EmptySlot
+    </attribute>
+    <attribute name="slotNumber">
+      16
+    </attribute>
+    <attribute name="nativeEMSName">
+      ServiceBoard
+    </attribute>
+  </addObject>
+  <addObject id="EMPTYSLOT-36a00975:19d675de981:-7fed" container="true">
+    <class>
+      Slot
+    </class>
+    <parent>
+      CARDCARRIER-6b734b5e:19d63a9fc32:-7fee
+    </parent>
+    <children/>
+    <attribute name="name">
+      X15-ServiceBoard
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        6
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="type">
+      EmptySlot
+    </attribute>
+    <attribute name="slotNumber">
+      17
+    </attribute>
+    <attribute name="nativeEMSName">
+      ServiceBoard
+    </attribute>
+  </addObject>
+  <addObject id="EMPTYSLOT-36a00975:19d675de981:-7fec" container="true">
+    <class>
+      Slot
+    </class>
+    <parent>
+      CARDCARRIER-6b734b5e:19d63a9fc32:-7fee
+    </parent>
+    <children/>
+    <attribute name="name">
+      X15-ServiceBoard
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        7
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="type">
+      EmptySlot
+    </attribute>
+    <attribute name="slotNumber">
+      18
+    </attribute>
+    <attribute name="nativeEMSName">
+      ServiceBoard
+    </attribute>
+  </addObject>
+  <addObject id="CARDCARRIER-6b734b5e:19d63a9fc32:-7fee" container="true">
+    <class>
+      ilog.tgo.model.IltCardCarrier
+    </class>
+    <parent>
+      CARDCARRIER-6b734b5e:19d63a9fc32:-7ff1
+    </parent>
+    <children>
+      <child>
+        EMPTYSLOT-36a00975:19d675de981:-7ff4
+      </child>
+      <child>
+        EMPTYSLOT-36a00975:19d675de981:-7ff2
+      </child>
+      <child>
+        EMPTYSLOT-36a00975:19d675de981:-7ff1
+      </child>
+      <child>
+        EMPTYSLOT-36a00975:19d675de981:-7ff0
+      </child>
+      <child>
+        EMPTYSLOT-36a00975:19d675de981:-7fef
+      </child>
+      <child>
+        EMPTYSLOT-36a00975:19d675de981:-7fee
+      </child>
+      <child>
+        EMPTYSLOT-36a00975:19d675de981:-7fed
+      </child>
+      <child>
+        EMPTYSLOT-36a00975:19d675de981:-7fec
+      </child>
+    </children>
+    <attribute name="name">
+      CardCarrier
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        2
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Left
+    </attribute>
+    <attribute name="type">
+      Standard
+    </attribute>
+    <attribute name="slotCount">
+      8
+    </attribute>
+    <attribute name="bottomSpacing">
+      0
+    </attribute>
+  </addObject>
+  <addObject id="CARDCARRIER-6b734b5e:19d63a9fc32:-7ff1" container="true">
+    <class>
+      ilog.tgo.model.IltCardCarrier
+    </class>
+    <parent>
+      SHELF-6b734b5e:19d63a9fc32:-7ff8
+    </parent>
+    <children>
+      <child>
+        CARDCARRIER-6b734b5e:19d63a9fc32:-7ff0
+      </child>
+      <child>
+        CARDCARRIER-6b734b5e:19d63a9fc32:-7fef
+      </child>
+      <child>
+        CARDCARRIER-6b734b5e:19d63a9fc32:-7fee
+      </child>
+    </children>
+    <attribute name="name">
+      CardCarrier
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition">
+      <xIndex>
+        0
+      </xIndex>
+      <yIndex>
+        0
+      </yIndex>
+      <xSpan>
+        1.0
+      </xSpan>
+      <ySpan>
+        1.0
+      </ySpan>
+    </attribute>
+    <attribute name="direction">
+      Left
+    </attribute>
+    <attribute name="type">
+      Standard
+    </attribute>
+    <attribute name="slotCount">
+      3
+    </attribute>
+    <attribute name="bottomSpacing">
+      0
+    </attribute>
+  </addObject>
+  <addObject id="SHELF-6b734b5e:19d63a9fc32:-7ff8" container="true">
+    <class>
+      ilog.tgo.model.IltShelf
+    </class>
+    <children>
+      <child>
+        CARDCARRIER-6b734b5e:19d63a9fc32:-7ff1
+      </child>
+      <child>
+        EMPTYSLOT-36a00975:19d675de981:-7ff3
+      </child>
+    </children>
+    <attribute name="name">
+      MA5800-X15-Shelf
+    </attribute>
+    <attribute name="objectState" null="true"/>
+    <attribute name="position" javaClass="ilog.cpl.graphic.IlpPoint">
+      <x>
+        45.000008
+      </x>
+      <y>
+        162.5791
+      </y>
+    </attribute>
+    <attribute name="type">
+      Standard
+    </attribute>
+    <attribute name="slotSizes" javaClass="ilog.tgo.model.internal.IltSlotSizes">
+      <height>
+        <value>
+          960
+        </value>
+      </height>
+      <width>
+        <value>
+          346
+        </value>
+        <value>
+          58
+        </value>
+      </width>
+    </attribute>
+    <attribute name="direction">
+      Top
+    </attribute>
+    <attribute name="xslotindex">
+      0
+    </attribute>
+  </addObject>
+</cplData>

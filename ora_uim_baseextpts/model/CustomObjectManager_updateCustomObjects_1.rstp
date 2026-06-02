@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:inv="http://www.mslv.com/studio/inventory/model/specification" xmlns="http://www.mslv.com/studio/inventory/model/specification" xsi:type="inv:RuleTriggerPointType" name="CustomObjectManager_updateCustomObjects_1">
+  <com:displayName lang="[default]">CustomObjectManager_updateCustomObjects</com:displayName>
+  <com:saveVersion>4</com:saveVersion>
+  <com:id>pdc6DD0TQ6qyXehohN82rw</com:id>
+  <inv:signature>public abstract interface java.util.Collection  oracle.communications.inventory.api.custom.CustomObjectManager.updateCustomObjects(java.util.Collection)</inv:signature>
+  <inv:pointName>CustomObjectManager.updateCustomObjects</inv:pointName>
+  <inv:description>Update CustomObjects</inv:description>
+</com:modelEntity>

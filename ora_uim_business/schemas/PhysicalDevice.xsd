@@ -1,0 +1,503 @@
+<?xml version="1.0"?>
+<!--
+ Copyright (c) 2011, 2014, Oracle and/or its affiliates. All rights reserved.
+    Oracle Corporation and/or its affiliates. Other names may be trademarks of their respective owners. 
+
+    This sample file, which has been provided by Oracle Corporation as part of an Oracle(r) product for use
+    ONLY by licensed users of the product, includes CONFIDENTIAL and PROPRIETARY information of Oracle
+    Corporation.
+
+    This material is the confidential property of Oracle Corporation or its licensors and may be used,
+    reproduced, stored, or transmitted only in accordance with a valid Oracle license or sublicense
+    agreement.
+
+    USE OF THIS SOFTWARE IS GOVERNED BY THE TERMS AND CONDITIONS OF THE LICENSE
+    AGREEMENT AND LIMITED WARRANTY FURNISHED WITH THE PRODUCT.
+
+    IN PARTICULAR, YOU WILL INDEMNIFY AND HOLD ORACLE CORPORATION, ITS RELATED COMPANIES AND ITS SUPPLIERS,
+    HARMLESS FROM AND AGAINST ANY CLAIMS OR LIABILITIES ARISING OUT OF THE USE, REPRODUCTION, OR DISTRIBUTION
+    OF YOUR PROGRAMS, INCLUDING ANY CLAIMS OR LIABILITIES ARISING OUT OF OR RESULTING FROM THE USE,
+    MODIFICATION, OR DISTRIBUTION OF PROGRAMS OR FILES CREATED FROM, BASED ON, AND/OR DERIVED FROM THIS
+    SAMPLE SOURCE CODE FILE.
+-->
+<xs:schema 
+    targetNamespace="http://xmlns.oracle.com/communications/inventory/physicaldevice" 
+    xmlns:invcob="http://xmlns.oracle.com/communications/inventory/customobject" 
+    xmlns:invpd="http://xmlns.oracle.com/communications/inventory/physicaldevice" 
+    xmlns:invld="http://xmlns.oracle.com/communications/inventory/logicaldevice" 
+    xmlns:invrole="http://xmlns.oracle.com/communications/inventory/role" 
+    xmlns:invparty="http://xmlns.oracle.com/communications/inventory/party" 
+    xmlns:invplace="http://xmlns.oracle.com/communications/inventory/place" 
+    xmlns:invprop="http://xmlns.oracle.com/communications/inventory/property" 
+    xmlns:invspec="http://xmlns.oracle.com/communications/inventory/specification" 
+    xmlns:invsvc="http://xmlns.oracle.com/communications/inventory/service" 
+    xmlns:invbi="http://xmlns.oracle.com/communications/inventory/businessinteraction" 
+    xmlns:invent="http://xmlns.oracle.com/communications/inventory/entity" 
+    xmlns="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified">
+    <!--  ============= Imports Start ================= -->
+    <!-- Local Imports -->
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/entity" schemaLocation="Entity.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/service" schemaLocation="Service.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/specification" schemaLocation="Specification.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/property" schemaLocation="Property.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/place" schemaLocation="Place.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/party" schemaLocation="Party.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/role" schemaLocation="Role.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/logicaldevice" schemaLocation="LogicalDevice.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/communications/inventory/customobject" schemaLocation="CustomObject.xsd"/>
+    <!-- ==== Message Types ==== -->
+    <!-- ==== Entity Value Types ==== -->
+    <xs:complexType name="PhysicalDeviceType">
+        <xs:complexContent>
+            <xs:extension base="invent:EntityType">
+                <xs:sequence>
+                    <xs:element name="specification" type="invspec:SpecificationType" nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Specification holds the Physical Device
+                                Specification information.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="id" type="xsd:string" nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                id holds the unique id of the Physical
+                                Device
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="name" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Name of the Physical Device
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="description" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Description of the Physical Device
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+					<xs:element name="networkLocation" type="xsd:string" nillable="true" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>PropertyLocation of the Physical Device
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+                    <xs:element name="serialNumber" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Serial Number of the Physical Device
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="physicalAddress" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Physical Address of the Physical Device
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="physicalLocation" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Physical Location of the Physical Device
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="state" type="invspec:InventoryStateEnum" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Lifecycle State of the Physical Device
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="startDate" type="xsd:dateTime" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Start Date of the Physical Device
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="endDate" type="xsd:dateTime" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                End Date of the Physical Device
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="property" type="invprop:PropertyType" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Property holds the dynamic properties
+                                of a Physical Device.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <!-- TODO: PhysicalDeviceType schema definition -->
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="EquipmentType">
+        <xs:complexContent>
+            <xs:extension base="invent:EntityType">
+                <xs:sequence>
+                    <xs:element name="specification" type="invspec:SpecificationType" nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Specification holds the Equipment
+                                Specification information.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="id" type="xsd:string" nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                id holds the unique id of the Equipment
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="name" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Name of the Equipment
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="description" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Description of the Equipment
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="serialNumber" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Serial Number of the Equipment
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="physicalDevice" type="xs:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Id of the Physical Device in which this
+                                Equipment is a part.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="state" type="invspec:InventoryStateEnum" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Lifecycle State of the Equipment
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="startDate" type="xsd:dateTime" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Start Date of the Equipment
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="endDate" type="xsd:dateTime" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                End Date of the Equipment
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="property" type="invprop:PropertyType" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Property holds the dynamic properties
+                                of a Equipment.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <!-- TODO: EquipmentType schema definition -->
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="EquipmentHolderType">
+        <xs:complexContent>
+            <xs:extension base="invent:EntityType">
+                <xs:sequence>
+                    <xs:element name="specification" type="invspec:SpecificationType" nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Specification holds the Equipment Holder
+                                Specification information.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="id" type="xsd:string" nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                id holds the unique id of the Equipment
+                                Holder
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="name" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Name of the Equipment Holder
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="description" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Description of the Equipment Holder
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="state" type="invspec:InventoryStateEnum" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Lifecycle State of the Equipment Holder
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="startDate" type="xsd:dateTime" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Start Date of the Equipment Holder
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="endDate" type="xsd:dateTime" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                End Date of the Equipment Holder
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="property" type="invprop:PropertyType" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Property holds the dynamic properties
+                                of a Equipment Holder.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="equipment" type="xs:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                The id of the Equipment, where this
+                                EquipmentHolder is hosted.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="childEquipment" type="xs:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                The id of the Equipment that is
+                                installed in this EquipmentHolder.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <!-- TODO: EquipmentHolderType schema definition -->
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="PhysicalPortType">
+        <xs:complexContent>
+            <xs:extension base="invent:EntityType">
+                <xs:sequence>
+                    <xs:element name="specification" type="invspec:SpecificationType" nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Specification holds the Physical Port
+                                Specification information.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="id" type="xsd:string" nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                id holds the unique id of the Physical
+                                Port
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="name" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Name of the Physical Port
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="description" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Description of the Physical Port
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="physicalDevice" type="xs:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Id of the Physical Device in which this
+                                Physical Port is a part.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="equipment" type="xs:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Id of the Equipment in which this
+                                Physical Port is a part.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="state" type="invspec:InventoryStateEnum" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Lifecycle State of the Physical Port
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="startDate" type="xsd:dateTime" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Start Date of the Physical Port
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="endDate" type="xsd:dateTime" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                End Date of the Physical Port
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="property" type="invprop:PropertyType" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Property holds the dynamic properties
+                                of a Physical Port.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <!-- TODO: PhysicalPortType schema definition -->
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="PhysicalConnectorType">
+        <xs:complexContent>
+            <xs:extension base="invent:EntityType">
+                <xs:sequence>
+                    <xs:element name="specification" type="invspec:SpecificationType" nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Specification holds the Physical
+                                Connector Specification information.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="id" type="xsd:string" nillable="false" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                id holds the unique id of the Physical
+                                Connector
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="name" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Name of the Physical Connector
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="description" type="xsd:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Description of the Physical Connector
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="physicalDevice" type="xs:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Id of the Physical Device in which this
+                                Physical Port is a part.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="equipment" type="xs:string" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Id of the Equipment in which this
+                                Physical Port is a part.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="state" type="invspec:InventoryStateEnum" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Lifecycle State of the Physical
+                                Connector
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="startDate" type="xsd:dateTime" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Start Date of the Physical Connector
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="endDate" type="xsd:dateTime" nillable="true" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>
+                                End Date of the Physical Connector
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="property" type="invprop:PropertyType" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>
+                                Property holds the dynamic properties
+                                of a Physical Connector.
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <!-- TODO: PhysicalConnectorType schema definition -->
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ==== Data Types ==== -->
+    <!-- ==== Entity Criteria Types ==== -->
+	<xs:complexType name="EquipmentCriteriaType">
+        <xs:annotation>
+            <xs:documentation>Criteria to uniquely identify Equipment.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="invent:EntityType">
+                <xs:sequence>
+                    <xs:element name="equipmentId" type="xsd:string" nillable="false" minOccurs="0" >
+                        <xs:annotation>
+                            <xs:documentation>Equipment Id</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- ==== Enumerations ==== -->
+    <!-- ==== Elements ==== -->
+</xs:schema>

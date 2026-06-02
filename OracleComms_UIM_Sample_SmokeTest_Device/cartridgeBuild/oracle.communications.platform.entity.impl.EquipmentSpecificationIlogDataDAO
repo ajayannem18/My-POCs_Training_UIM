@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<extent>
+  <object class="oracle.communications.platform.entity.impl.EquipmentSpecificationIlogDataDAO" oid="oracle.communications.platform.entity.impl.EquipmentSpecificationIlogDataDAO-0" version="0">
+    <field name="xml">"&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;cplData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ilog/cpl/schema/data.xsd"&gt;
+  &lt;addObject id="CARD6b8c7162:199bd53d4bc:-7ff9" container="true"&gt;
+    &lt;class&gt;
+      Card
+    &lt;/class&gt;
+    &lt;children/&gt;
+    &lt;attribute name="name"&gt;
+      Sample_SmokeTest_Eq_Card
+    &lt;/attribute&gt;
+    &lt;attribute name="objectState" null="true"/&gt;
+    &lt;attribute name="position" javaClass="ilog.cpl.graphic.IlpRect"&gt;
+      &lt;x&gt;
+        223.0
+      &lt;/x&gt;
+      &lt;y&gt;
+        32.0
+      &lt;/y&gt;
+      &lt;width&gt;
+        30.0
+      &lt;/width&gt;
+      &lt;height&gt;
+        100.0
+      &lt;/height&gt;
+    &lt;/attribute&gt;
+    &lt;attribute name="direction"&gt;
+      Right
+    &lt;/attribute&gt;
+    &lt;attribute name="type"&gt;
+      Standard
+    &lt;/attribute&gt;
+  &lt;/addObject&gt;
+&lt;/cplData&gt;"</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.EquipmentSpecificationIlogDataDAO" oid="oracle.communications.platform.entity.impl.EquipmentSpecificationIlogDataDAO-1" version="0">
+    <field name="xml">"&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;cplData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ilog/cpl/schema/data.xsd"&gt;
+  &lt;addObject id="EMPTYSLOT-71427abf:198a1e950f8:-7fe2" container="true"&gt;
+    &lt;class&gt;
+      MSLVSlot
+    &lt;/class&gt;
+    &lt;parent&gt;
+      SHELF-71427abf:198a1e950f8:-7fe3
+    &lt;/parent&gt;
+    &lt;children/&gt;
+    &lt;attribute name="name"&gt;
+      Sample_SmokeTest_Eq_Holder
+    &lt;/attribute&gt;
+    &lt;attribute name="objectState" null="true"/&gt;
+    &lt;attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition"&gt;
+      &lt;xIndex&gt;
+        1
+      &lt;/xIndex&gt;
+      &lt;yIndex&gt;
+        0
+      &lt;/yIndex&gt;
+      &lt;xSpan&gt;
+        1.0
+      &lt;/xSpan&gt;
+      &lt;ySpan&gt;
+        1.0
+      &lt;/ySpan&gt;
+    &lt;/attribute&gt;
+    &lt;attribute name="direction"&gt;
+      Right
+    &lt;/attribute&gt;
+    &lt;attribute name="type"&gt;
+      EmptySlot
+    &lt;/attribute&gt;
+    &lt;attribute name="nativeEMSName"&gt;
+      1
+    &lt;/attribute&gt;
+    &lt;attribute name="slotNumber"&gt;
+      1
+    &lt;/attribute&gt;
+  &lt;/addObject&gt;
+  &lt;addObject id="EMPTYSLOT-71427abf:198a1e950f8:-7fe1" container="true"&gt;
+    &lt;class&gt;
+      MSLVSlot
+    &lt;/class&gt;
+    &lt;parent&gt;
+      SHELF-71427abf:198a1e950f8:-7fe3
+    &lt;/parent&gt;
+    &lt;children/&gt;
+    &lt;attribute name="name"&gt;
+      Sample_SmokeTest_Eq_Holder
+    &lt;/attribute&gt;
+    &lt;attribute name="objectState" null="true"/&gt;
+    &lt;attribute name="position" javaClass="ilog.cpl.graphic.views.IlpShelfItemPosition"&gt;
+      &lt;xIndex&gt;
+        0
+      &lt;/xIndex&gt;
+      &lt;yIndex&gt;
+        0
+      &lt;/yIndex&gt;
+      &lt;xSpan&gt;
+        1.0
+      &lt;/xSpan&gt;
+      &lt;ySpan&gt;
+        1.0
+      &lt;/ySpan&gt;
+    &lt;/attribute&gt;
+    &lt;attribute name="direction"&gt;
+      Right
+    &lt;/attribute&gt;
+    &lt;attribute name="type"&gt;
+      EmptySlot
+    &lt;/attribute&gt;
+    &lt;attribute name="nativeEMSName"&gt;
+      2
+    &lt;/attribute&gt;
+    &lt;attribute name="slotNumber"&gt;
+      2
+    &lt;/attribute&gt;
+  &lt;/addObject&gt;
+  &lt;addObject id="SHELF-71427abf:198a1e950f8:-7fe3" container="true"&gt;
+    &lt;class&gt;
+      ilog.tgo.model.IltShelf
+    &lt;/class&gt;
+    &lt;children&gt;
+      &lt;child&gt;
+        EMPTYSLOT-71427abf:198a1e950f8:-7fe2
+      &lt;/child&gt;
+      &lt;child&gt;
+        EMPTYSLOT-71427abf:198a1e950f8:-7fe1
+      &lt;/child&gt;
+    &lt;/children&gt;
+    &lt;attribute name="name"&gt;
+      Sample_SmokeTest_Eq_Shelf
+    &lt;/attribute&gt;
+    &lt;attribute name="objectState" null="true"/&gt;
+    &lt;attribute name="position" javaClass="ilog.cpl.graphic.IlpPoint"&gt;
+      &lt;x&gt;
+        159.0
+      &lt;/x&gt;
+      &lt;y&gt;
+        68.5
+      &lt;/y&gt;
+    &lt;/attribute&gt;
+    &lt;attribute name="type"&gt;
+      Standard
+    &lt;/attribute&gt;
+    &lt;attribute name="slotSizes" javaClass="ilog.tgo.model.internal.IltSlotSizes"&gt;
+      &lt;height&gt;
+        &lt;value&gt;
+          170
+        &lt;/value&gt;
+      &lt;/height&gt;
+      &lt;width&gt;
+        &lt;value&gt;
+          31
+        &lt;/value&gt;
+        &lt;value&gt;
+          31
+        &lt;/value&gt;
+      &lt;/width&gt;
+    &lt;/attribute&gt;
+    &lt;attribute name="direction"&gt;
+      Top
+    &lt;/attribute&gt;
+    &lt;attribute name="xslotindex"&gt;
+      0
+    &lt;/attribute&gt;
+  &lt;/addObject&gt;
+&lt;/cplData&gt;"</field>
+  </object>
+</extent>

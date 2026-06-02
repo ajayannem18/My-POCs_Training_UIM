@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:inventory="http://xmlns.oracle.com/communications/studio/model/inventory" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="inventory:ConnectivitySpecification" id="cs=Channelized Facility(Oracle Provided)" type="cs" typeName="Connectivity Specification" name="Channelized Facility(Oracle Provided)" resource="\ora_uim_basespecifications\model\Channelized Facility(Oracle Provided).connectivity">
+    <note lang="default"/>
+    <extends>
+      <relation ref="ie=TDMFacility" type="Inventory Entity" name="Dependency" kind="Entity">
+        <target name="TDMFacility" typeName="Inventory Entity"/>
+      </relation>
+    </extends>
+    <project>
+      <relation ref="ivprj=ora_uim_basespecifications" type="Inventory Project" name="Dependency">
+        <target name="ora_uim_basespecifications" typeName="Inventory Project"/>
+      </relation>
+    </project>
+    <dataElements>
+      <element id="cs=Channelized Facility(Oracle Provided)+dataElement=0QLFJj-KQCSxnGxJOkgwhA~E:inventoryEntity--TDMFacility~E:inventoryEntity--MultiplexedConnectivity~E:inventoryEntity--NetworkConnectivity~aNetworkLocationEntityCode" type="dataElement" typeName="Data Element" kind="Element" name="aNetworkLocationEntityCode" path="/aNetworkLocationEntityCode" inherited="true">
+        <displayName lang="default">aNetworkLocationEntityCode</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">15</maxLength>
+        <base>
+          <relation ref="ie=TDMFacility+dataElement=E:inventoryEntity--TDMFacility~E:inventoryEntity--MultiplexedConnectivity~E:inventoryEntity--NetworkConnectivity~aNetworkLocationEntityCode" type="Data Element" name="Type" kind="Element">
+            <target name="aNetworkLocationEntityCode" typeName="Data Element"/>
+            <inEntity name="TDMFacility" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <tag>
+          <name>Characteristic</name>
+          <description></description>
+        </tag>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="cs=Channelized Facility(Oracle Provided)+dataElement=0QLFJj-KQCSxnGxJOkgwhA~E:inventoryEntity--TDMFacility~E:inventoryEntity--MultiplexedConnectivity~E:inventoryEntity--NetworkConnectivity~connectivityIdentifier" type="dataElement" typeName="Data Element" kind="Element" name="connectivityIdentifier" path="/connectivityIdentifier" inherited="true">
+        <displayName lang="default">connectivityIdentifier</displayName>
+        <displayName lang="default">connectivityIdentifier</displayName>
+        <note lang="default">The business identifier for the connectivity. This is a business meaningful identify that is unique across all network connectivity. The connectivity identifier is derived and set by the application based on a format that is specific to the kind of connectivity.</note>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">255</maxLength>
+        <base>
+          <relation ref="ie=TDMFacility+dataElement=E:inventoryEntity--TDMFacility~E:inventoryEntity--MultiplexedConnectivity~E:inventoryEntity--NetworkConnectivity~connectivityIdentifier" type="Data Element" name="Type" kind="Element">
+            <target name="connectivityIdentifier" typeName="Data Element"/>
+            <inEntity name="TDMFacility" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="cs=Channelized Facility(Oracle Provided)+dataElement=0QLFJj-KQCSxnGxJOkgwhA~E:inventoryEntity--TDMFacility~E:inventoryEntity--MultiplexedConnectivity~E:inventoryEntity--NetworkConnectivity~E:inventoryEntity--Connectivity~description" type="dataElement" typeName="Data Element" kind="Element" name="description" path="/description" inherited="true">
+        <displayName lang="default">description</displayName>
+        <displayName lang="default">description</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">255</maxLength>
+        <base>
+          <relation ref="ie=TDMFacility+dataElement=E:inventoryEntity--TDMFacility~E:inventoryEntity--MultiplexedConnectivity~E:inventoryEntity--NetworkConnectivity~E:inventoryEntity--Connectivity~description" type="Data Element" name="Type" kind="Element">
+            <target name="description" typeName="Data Element"/>
+            <inEntity name="TDMFacility" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="cs=Channelized Facility(Oracle Provided)+dataElement=0QLFJj-KQCSxnGxJOkgwhA~E:inventoryEntity--TDMFacility~E:inventoryEntity--MultiplexedConnectivity~E:inventoryEntity--NetworkConnectivity~E:inventoryEntity--Connectivity~gapPipe" type="dataElement" typeName="Data Element" kind="Element" name="gapPipe" path="/gapPipe" inherited="true">
+        <displayName lang="default">gapPipe</displayName>
+        <displayName lang="default">gapPipe</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ie=TDMFacility+dataElement=E:inventoryEntity--TDMFacility~E:inventoryEntity--MultiplexedConnectivity~E:inventoryEntity--NetworkConnectivity~E:inventoryEntity--Connectivity~gapPipe" type="Data Element" name="Type" kind="Element">
+            <target name="gapPipe" typeName="Data Element"/>
+            <inEntity name="TDMFacility" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>boolean</primitiveType>
+      </element>
+      <element id="cs=Channelized Facility(Oracle Provided)+dataElement=0QLFJj-KQCSxnGxJOkgwhA~E:inventoryEntity--TDMFacility~E:inventoryEntity--MultiplexedConnectivity~E:inventoryEntity--NetworkConnectivity~E:inventoryEntity--Connectivity~id" type="dataElement" typeName="Data Element" kind="Element" name="id" path="/id" inherited="true">
+        <displayName lang="default">id</displayName>
+        <displayName lang="default">id</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">255</maxLength>
+        <base>
+          <relation ref="ie=TDMFacility+dataElement=E:inventoryEntity--TDMFacility~E:inventoryEntity--MultiplexedConnectivity~E:inventoryEntity--NetworkConnectivity~E:inventoryEntity--Connectivity~id" type="Data Element" name="Type" kind="Element">
+            <target name="id" typeName="Data Element"/>
+            <inEntity name="TDMFacility" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="cs=Channelized Facility(Oracle Provided)+dataElement=0QLFJj-KQCSxnGxJOkgwhA~E:inventoryEntity--TDMFacility~E:inventoryEntity--MultiplexedConnectivity~E:inventoryEntity--NetworkConnectivity~identifierFormat" type="dataElement" typeName="Data Element" kind="Element" name="identifierFormat" path="/identifierFormat" inherited="true">
+        <displayName lang="default">Identifier Format</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">50</maxLength>
+        <base>
+          <relation ref="ie=TDMFacility+dataElement=E:inventoryEntity--TDMFacility~E:inventoryEntity--MultiplexedConnectivity~E:inventoryEntity--NetworkConnectivity~identifierFormat" type="Data Element" name="Type" kind="Element">
+            <target name="identifierFormat" typeName="Data Element"/>
+            <inEntity name="TDMFacility" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="cs=Channelized Facility(Oracle Provided)+dataElement=0QLFJj-KQCSxnGxJOkgwhA~E:inventoryEntity--TDMFacility~E:inventoryEntity--MultiplexedConnectivity~E:inventoryEntity--NetworkConnectivity~E:inventoryEntity--Connectivity~medium" type="dataElement" typeName="Data Element" kind="Element" name="medium" path="/medium" inherited="true">
+        <displayName lang="default">medium</displayName>
+        <displayName lang="default">medium</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">50</maxLength>
+        <base>
+          <relation ref="ie=TDMFacility+dataElement=E:inventoryEntity--TDMFacility~E:inventoryEntity--MultiplexedConnectivity~E:inventoryEntity--NetworkConnectivity~E:inventoryEntity--Connectivity~medium" type="Data Element" name="Type" kind="Element">
+            <target name="medium" typeName="Data Element"/>
+            <inEntity name="TDMFacility" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="cs=Channelized Facility(Oracle Provided)+dataElement=0QLFJj-KQCSxnGxJOkgwhA~E:inventoryEntity--TDMFacility~E:inventoryEntity--MultiplexedConnectivity~E:inventoryEntity--NetworkConnectivity~E:inventoryEntity--Connectivity~name" type="dataElement" typeName="Data Element" kind="Element" name="name" path="/name" inherited="true">
+        <displayName lang="default">name</displayName>
+        <displayName lang="default">name</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">50</maxLength>
+        <base>
+          <relation ref="ie=TDMFacility+dataElement=E:inventoryEntity--TDMFacility~E:inventoryEntity--MultiplexedConnectivity~E:inventoryEntity--NetworkConnectivity~E:inventoryEntity--Connectivity~name" type="Data Element" name="Type" kind="Element">
+            <target name="name" typeName="Data Element"/>
+            <inEntity name="TDMFacility" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="cs=Channelized Facility(Oracle Provided)+dataElement=0QLFJj-KQCSxnGxJOkgwhA~E:inventoryEntity--TDMFacility~E:inventoryEntity--MultiplexedConnectivity~E:inventoryEntity--NetworkConnectivity~serial" type="dataElement" typeName="Data Element" kind="Element" name="serial" path="/serial" inherited="true">
+        <displayName lang="default">serial</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ie=TDMFacility+dataElement=E:inventoryEntity--TDMFacility~E:inventoryEntity--MultiplexedConnectivity~E:inventoryEntity--NetworkConnectivity~serial" type="Data Element" name="Type" kind="Element">
+            <target name="serial" typeName="Data Element"/>
+            <inEntity name="TDMFacility" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <tag>
+          <name>Characteristic</name>
+          <description></description>
+        </tag>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>integer</primitiveType>
+      </element>
+      <element id="cs=Channelized Facility(Oracle Provided)+dataElement=0QLFJj-KQCSxnGxJOkgwhA~E:inventoryEntity--TDMFacility~E:inventoryEntity--MultiplexedConnectivity~E:inventoryEntity--NetworkConnectivity~E:inventoryEntity--Connectivity~transmissionSignalType" type="dataElement" typeName="Data Element" kind="Element" name="transmissionSignalType" path="/transmissionSignalType" inherited="true">
+        <displayName lang="default">transmissionSignalType</displayName>
+        <displayName lang="default">transmissionSignalType</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">50</maxLength>
+        <base>
+          <relation ref="ie=TDMFacility+dataElement=E:inventoryEntity--TDMFacility~E:inventoryEntity--MultiplexedConnectivity~E:inventoryEntity--NetworkConnectivity~E:inventoryEntity--Connectivity~transmissionSignalType" type="Data Element" name="Type" kind="Element">
+            <target name="transmissionSignalType" typeName="Data Element"/>
+            <inEntity name="TDMFacility" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="cs=Channelized Facility(Oracle Provided)+dataElement=0QLFJj-KQCSxnGxJOkgwhA~E:inventoryEntity--TDMFacility~E:inventoryEntity--MultiplexedConnectivity~E:inventoryEntity--NetworkConnectivity~E:inventoryEntity--Connectivity~versioned" type="dataElement" typeName="Data Element" kind="Element" name="versioned" path="/versioned" inherited="true">
+        <displayName lang="default">versioned</displayName>
+        <displayName lang="default">versioned</displayName>
+        <note lang="default">Indicates whether or not pipe configuration can be versioned.</note>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ie=TDMFacility+dataElement=E:inventoryEntity--TDMFacility~E:inventoryEntity--MultiplexedConnectivity~E:inventoryEntity--NetworkConnectivity~E:inventoryEntity--Connectivity~versioned" type="Data Element" name="Type" kind="Element">
+            <target name="versioned" typeName="Data Element"/>
+            <inEntity name="TDMFacility" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>boolean</primitiveType>
+      </element>
+      <element id="cs=Channelized Facility(Oracle Provided)+dataElement=0QLFJj-KQCSxnGxJOkgwhA~E:inventoryEntity--TDMFacility~E:inventoryEntity--MultiplexedConnectivity~E:inventoryEntity--NetworkConnectivity~zNetworkLocationEntityCode" type="dataElement" typeName="Data Element" kind="Element" name="zNetworkLocationEntityCode" path="/zNetworkLocationEntityCode" inherited="true">
+        <displayName lang="default">zNetworkLocationEntityCode</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">15</maxLength>
+        <base>
+          <relation ref="ie=TDMFacility+dataElement=E:inventoryEntity--TDMFacility~E:inventoryEntity--MultiplexedConnectivity~E:inventoryEntity--NetworkConnectivity~zNetworkLocationEntityCode" type="Data Element" name="Type" kind="Element">
+            <target name="zNetworkLocationEntityCode" typeName="Data Element"/>
+            <inEntity name="TDMFacility" typeName="Inventory Entity"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <tag>
+          <name>Characteristic</name>
+          <description></description>
+        </tag>
+        <uiSettings>
+          <defaultValue></defaultValue>
+        </uiSettings>
+        <primitiveType>string</primitiveType>
+      </element>
+    </dataElements>
+    <relatedSpecificationList/>
+  </entity>
+</model:Model>

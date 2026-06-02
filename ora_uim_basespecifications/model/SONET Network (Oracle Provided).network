@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:data="http://www.oracle.com/communications/studio/core/model/common/data" xmlns:inv="http://www.mslv.com/studio/inventory/model/specification" xmlns="http://www.mslv.com/studio/inventory/model/specification" xmlns:layout="http://xmlns.oracle.com/communications/sce/poms/model/layout" xsi:type="inv:NetworkSpecificationType" name="SONET Network (Oracle Provided)">
+  <com:displayName lang="[default]">SONET Network (Oracle Provided)</com:displayName>
+  <com:saveVersion>1</com:saveVersion>
+  <com:baseEntityRef>
+    <com:entity>Network</com:entity>
+    <com:entityType>inventoryEntity</com:entityType>
+    <com:relationship>unknown</com:relationship>
+  </com:baseEntityRef>
+  <com:id>5dXeCH5XSamSq667yFoptA</com:id>
+  <data:dataElementNode virtual="true">
+    <com:id>5dXeCH5XSamSq667yFoptA</com:id>
+    <com:elementType>oracle.communications.studio.model.data.StudioModelDataElement</com:elementType>
+    <data:name>SONET Network (Oracle Provided)</data:name>
+    <data:displayName lang="[default]">SONET Network</data:displayName>
+    <data:displayName lang="[default]">SONET Network (Oracle Provided)</data:displayName>
+    <data:primitiveType>none</data:primitiveType>
+  </data:dataElementNode>
+  <data:dataElementDetails xsi:type="data:dataElementCommonDetail">
+    <com:id>DYxeOmV0--+XPZk+t7R3gw</com:id>
+    <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+    <data:dataElementId>5dXeCH5XSamSq667yFoptA</data:dataElementId>
+    <data:defaultValue></data:defaultValue>
+    <data:key></data:key>
+    <data:deprecated>false</data:deprecated>
+    <data:sensitive>false</data:sensitive>
+    <data:minLength>0</data:minLength>
+    <data:maxLength>40</data:maxLength>
+    <data:minMultiplicity>0</data:minMultiplicity>
+    <data:maxMultiplicity>-1</data:maxMultiplicity>
+  </data:dataElementDetails>
+  <data:dataElementDetails xsi:type="layout:uiConfigurationType">
+    <com:id>Wk5u--+8--+O7NAe--+x1w</com:id>
+    <com:elementType>oracle.communications.sce.poms.model.data.LayoutDetailType</com:elementType>
+    <data:dataElementId>5dXeCH5XSamSq667yFoptA</data:dataElementId>
+    <layout:layout>
+      <layout:page>Network Editor</layout:page>
+      <layout:panel>Network Edit Panel</layout:panel>
+      <layout:formLayout>
+        <layout:column>specification</layout:column>
+        <layout:column>networkTopology</layout:column>
+        <layout:column></layout:column>
+        <layout:column>id</layout:column>
+        <layout:column>technology</layout:column>
+        <layout:column></layout:column>
+        <layout:column>name</layout:column>
+        <layout:column>inventoryStatus</layout:column>
+        <layout:column></layout:column>
+        <layout:column>description</layout:column>
+        <layout:column>resourceAssignmentStatus</layout:column>
+        <layout:column></layout:column>
+        <layout:column>ringType</layout:column>
+        <layout:column>protectionType</layout:column>
+        <layout:column></layout:column>
+        <layout:column>enforceSameChannelAssignment</layout:column>
+        <layout:lcolumn>cru</layout:lcolumn>
+        <layout:lcolumn>serialnumber</layout:lcolumn>
+        <layout:lcolumn>lmd</layout:lcolumn>
+        <layout:lcolumn>function</layout:lcolumn>
+        <layout:lcolumn>crd</layout:lcolumn>
+        <layout:lcolumn>lmu</layout:lcolumn>
+      </layout:formLayout>
+    </layout:layout>
+    <layout:layout>
+      <layout:page>Network Summary</layout:page>
+      <layout:panel>Network Summary Panel</layout:panel>
+      <layout:summaryFormLayout>
+        <layout:column>specification</layout:column>
+        <layout:column>networkTopology</layout:column>
+        <layout:column></layout:column>
+        <layout:column>id</layout:column>
+        <layout:column>technology</layout:column>
+        <layout:column></layout:column>
+        <layout:column>name</layout:column>
+        <layout:column>inventoryStatus</layout:column>
+        <layout:column></layout:column>
+        <layout:column>description</layout:column>
+        <layout:column>resourceAssignmentStatus</layout:column>
+        <layout:column></layout:column>
+        <layout:column>protectionType</layout:column>
+        <layout:column>ringType</layout:column>
+        <layout:column></layout:column>
+        <layout:column>enforceSameChannelAssignment</layout:column>
+        <layout:lcolumn>cru</layout:lcolumn>
+        <layout:lcolumn>serialNumber</layout:lcolumn>
+        <layout:lcolumn>lmd</layout:lcolumn>
+        <layout:lcolumn>function</layout:lcolumn>
+        <layout:lcolumn>crd</layout:lcolumn>
+        <layout:lcolumn>lmu</layout:lcolumn>
+      </layout:summaryFormLayout>
+    </layout:layout>
+    <layout:layout>
+      <layout:page>Network Redwood Editor</layout:page>
+      <layout:panel>Network Edit Redwood Panel</layout:panel>
+      <layout:formLayout>
+        <layout:column>resourceSpecification</layout:column>
+        <layout:column>topology</layout:column>
+        <layout:column>id</layout:column>
+        <layout:column></layout:column>
+        <layout:column>technology</layout:column>
+        <layout:column>name</layout:column>
+        <layout:column>lifecycleState</layout:column>
+        <layout:column></layout:column>
+        <layout:column>description</layout:column>
+        <layout:column>lifecycleSubState</layout:column>
+        <layout:column>ringType</layout:column>
+        <layout:column></layout:column>
+        <layout:column>protectionType</layout:column>
+        <layout:column>enforceSameChannelAssignment</layout:column>
+        <layout:lcolumn>serialNumber</layout:lcolumn>
+        <layout:lcolumn>lastModifiedDate</layout:lcolumn>
+        <layout:lcolumn>function</layout:lcolumn>
+        <layout:lcolumn>lastModifiedUser</layout:lcolumn>
+        <layout:lcolumn>startOperatingDate</layout:lcolumn>
+        <layout:lcolumn>createdUser</layout:lcolumn>
+        <layout:sections/>
+      </layout:formLayout>
+    </layout:layout>
+  </data:dataElementDetails>
+  <inv:technology>
+    <com:entity>SONET</com:entity>
+    <com:entityType>technology</com:entityType>
+    <com:relationship>oracle.communications.studio.inventory.REL_TECH</com:relationship>
+  </inv:technology>
+  <inv:entityType>NetworkDAO</inv:entityType>
+</com:modelEntity>
