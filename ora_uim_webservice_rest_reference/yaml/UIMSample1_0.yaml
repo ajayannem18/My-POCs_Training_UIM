@@ -1,0 +1,112 @@
+openapi: 3.0.0
+
+info:
+  title: Find Available Ports API
+  version: 1.0.0
+  description: Retrieve available ports for devices associated with a Service Location or Network Location.
+
+tags:
+  - name: Device Port Management
+    description: Device Port Operations
+
+paths:
+
+  /findAvailablePorts:
+    get:
+      tags:
+        - Device Port Management
+
+      summary: Find Available Ports
+
+      operationId: findAvailablePorts
+
+      description: |
+        Retrieves all logical devices associated with the given
+        Service Location or Network Location and returns available ports.
+
+      parameters:
+
+        - name: serviceLocationCode
+          in: query
+          description: Service Location Entity Code
+          required: false
+          schema:
+            type: string
+
+        - name: networkLocationCode
+          in: query
+          description: Network Location Entity Code
+          required: false
+          schema:
+            type: string
+
+      responses:
+
+        '200':
+          description: Available ports retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FindPortsResponse'
+
+        '400':
+          description: Invalid request
+
+        '404':
+          description: Location not found
+
+        '500':
+          description: Internal Server Error
+
+components:
+
+  schemas:
+
+    FindPortsResponse:
+      type: object
+
+      properties:
+
+        locationCode:
+          type: string
+
+        devices:
+          type: array
+          items:
+            $ref: '#/components/schemas/DeviceInfo'
+
+    DeviceInfo:
+      type: object
+
+      properties:
+
+        deviceName:
+          type: string
+
+        deviceId:
+          type: string
+
+        availablePortCount:
+          type: integer
+
+        availablePorts:
+          type: array
+          items:
+            $ref: '#/components/schemas/PortInfo'
+
+    PortInfo:
+      type: object
+
+      properties:
+
+        portName:
+          type: string
+
+        portId:
+          type: string
+
+        portType:
+          type: string
+
+        lifecycleState:
+          type: string

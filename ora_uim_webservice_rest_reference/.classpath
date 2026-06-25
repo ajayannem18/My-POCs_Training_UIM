@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="bin/main" path="src">
+		<attributes>
+			<attribute name="gradle_scope" value="main"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8/"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.buildship.core.gradleclasspathcontainer">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/AjayAnnem/OneDrive - TSAROLABS PRIVATE LIMITED/Jars_For_REST_WS/Jars_For_REST_WS/capacity_caps.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AjayAnnem/OneDrive - TSAROLABS PRIVATE LIMITED/Jars_For_REST_WS/Jars_For_REST_WS/characteristic_caps.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AjayAnnem/OneDrive - TSAROLABS PRIVATE LIMITED/Jars_For_REST_WS/Jars_For_REST_WS/com.bea.core.apache.commons.lang.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AjayAnnem/OneDrive - TSAROLABS PRIVATE LIMITED/Jars_For_REST_WS/Jars_For_REST_WS/com.bea.core.xml.beaxmlbeans.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AjayAnnem/OneDrive - TSAROLABS PRIVATE LIMITED/Jars_For_REST_WS/Jars_For_REST_WS/commons-io.commons-io.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AjayAnnem/OneDrive - TSAROLABS PRIVATE LIMITED/Jars_For_REST_WS/Jars_For_REST_WS/consumable_caps.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AjayAnnem/OneDrive - TSAROLABS PRIVATE LIMITED/Jars_For_REST_WS/Jars_For_REST_WS/groupenabled_caps.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AjayAnnem/OneDrive - TSAROLABS PRIVATE LIMITED/Jars_For_REST_WS/Jars_For_REST_WS/jackson-annotations-2.17.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AjayAnnem/OneDrive - TSAROLABS PRIVATE LIMITED/Jars_For_REST_WS/Jars_For_REST_WS/jackson-core-2.17.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AjayAnnem/OneDrive - TSAROLABS PRIVATE LIMITED/Jars_For_REST_WS/Jars_For_REST_WS/jackson-databind-2.17.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AjayAnnem/OneDrive - TSAROLABS PRIVATE LIMITED/Jars_For_REST_WS/Jars_For_REST_WS/jackson-jaxrs-base-2.9.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AjayAnnem/OneDrive - TSAROLABS PRIVATE LIMITED/Jars_For_REST_WS/Jars_For_REST_WS/jackson-jaxrs-json-provider-2.9.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AjayAnnem/OneDrive - TSAROLABS PRIVATE LIMITED/Jars_For_REST_WS/Jars_For_REST_WS/javax.annotation.javax.annotation-api.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AjayAnnem/OneDrive - TSAROLABS PRIVATE LIMITED/Jars_For_REST_WS/Jars_For_REST_WS/javax.enterprise.cdi-api.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AjayAnnem/OneDrive - TSAROLABS PRIVATE LIMITED/Jars_For_REST_WS/Jars_For_REST_WS/javax.inject.javax.inject.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AjayAnnem/OneDrive - TSAROLABS PRIVATE LIMITED/Jars_For_REST_WS/Jars_For_REST_WS/javax.servlet.javax.servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AjayAnnem/OneDrive - TSAROLABS PRIVATE LIMITED/Jars_For_REST_WS/Jars_For_REST_WS/javax.transaction.javax.transaction-api.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AjayAnnem/OneDrive - TSAROLABS PRIVATE LIMITED/Jars_For_REST_WS/Jars_For_REST_WS/javax.validation.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AjayAnnem/OneDrive - TSAROLABS PRIVATE LIMITED/Jars_For_REST_WS/Jars_For_REST_WS/javax.ws.rs.javax.ws.rs-api.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AjayAnnem/OneDrive - TSAROLABS PRIVATE LIMITED/Jars_For_REST_WS/Jars_For_REST_WS/org.glassfish.jersey.core.jersey-server.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AjayAnnem/OneDrive - TSAROLABS PRIVATE LIMITED/Jars_For_REST_WS/Jars_For_REST_WS/platformWsFramework.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AjayAnnem/OneDrive - TSAROLABS PRIVATE LIMITED/Jars_For_REST_WS/Jars_For_REST_WS/poms.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AjayAnnem/OneDrive - TSAROLABS PRIVATE LIMITED/Jars_For_REST_WS/Jars_For_REST_WS/swagger-annotations-1.6.13.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AjayAnnem/OneDrive - TSAROLABS PRIVATE LIMITED/Jars_For_REST_WS/Jars_For_REST_WS/uim-api-framework.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AjayAnnem/OneDrive - TSAROLABS PRIVATE LIMITED/Jars_For_REST_WS/Jars_For_REST_WS/uim-caps.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AjayAnnem/OneDrive - TSAROLABS PRIVATE LIMITED/Jars_For_REST_WS/Jars_For_REST_WS/uim-entities.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AjayAnnem/OneDrive - TSAROLABS PRIVATE LIMITED/Jars_For_REST_WS/Jars_For_REST_WS/uim-managers.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AjayAnnem/OneDrive - TSAROLABS PRIVATE LIMITED/Jars_For_REST_WS/Jars_For_REST_WS/uim-webservices-framework.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AjayAnnem/OneDrive - TSAROLABS PRIVATE LIMITED/Jars_For_REST_WS/Jars_For_REST_WS/uim-webservices-rest-adapter.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AjayAnnem/OneDrive - TSAROLABS PRIVATE LIMITED/Jars_For_REST_WS/Jars_For_REST_WS/uim-webservices-rest-framework.jar"/>
+	<classpathentry kind="output" path="bin/default"/>
+</classpath>

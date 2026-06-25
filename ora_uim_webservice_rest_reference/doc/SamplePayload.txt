@@ -1,0 +1,3279 @@
+POSTMAN Testing:
+
+1. logicalDeviceSample testing
+
+POST: Just a Sample the swagger generator api without any implementatiom
+Content-Type:application/json
+EndPoint:
+http://<host>:<port>/ReferenceRestUIM/customInventoryManagement/v3/logicalDeviceSample
+
+Example:
+http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/logicalDeviceSample
+
+RequestBody:
+
+ResponseBody:
+magic!
+
+GET: Gets the Logical Device
+Content-Type:application/json
+EndPoint:
+http://<host>:<port>/ReferenceRestUIM/customInventoryManagement/v3/logicalDeviceSample/<BusinessIdentifierofLD>-<id>
+
+Example:
+http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/logicalDeviceSample/1-1
+
+RequestBody:
+
+ResponseBody:
+{
+    "id": "1-1",
+    "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/1-1",
+    "@type": "LogicalDevice",
+    "@baseType": "LogicalResource",
+    "resourceVersion": "1",
+    "lifecycleState": "INSTALLED",
+    "lifecycleSubState": "UNASSIGNED",
+    "resourceStatus": "Available",
+    "startOperatingDate": "2022-11-14T15:31:15.783Z",
+    "endOperatingDate": "2038-01-19T08:44:07.000Z",
+    "resourceRelationship": [
+        {
+            "relationshipType": "MAPPEDTO",
+            "resourceRef": {
+                "id": "4-1",
+                "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/4-1",
+                "@type": "PhysicalDevice"
+            }
+        }
+    ],
+    "resourceCharacteristic": [],
+    "resourceSpecification": {
+        "id": "OM4 ADM",
+        "href": "http://localhost:7001/InventoryRSOpenAPI/specification/OM4%20ADM",
+        "name": "OM4 ADM",
+        "version": "1",
+        "entityType": "LogicalDevice",
+        "startDate": "2022-11-14T00:00:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "networkLocation": {
+        "atReferredType": "NetworkEntityCode",
+        "id": "HYD001.001",
+        "href": "http://localhost:7001/InventoryRSOpenAPI/place/HYD001.001",
+        "name": "HYD001.001",
+        "@referredType": "NetworkEntityCode"
+    },
+    "serviceLocation": {
+        "atReferredType": "PropertyLocation",
+        "id": "HYD001",
+        "href": "http://localhost:7001/InventoryRSOpenAPI/place/HYD001",
+        "name": "HYD001",
+        "@referredType": "PropertyLocation"
+    },
+    "deviceIdentifier": "HYD001.001",
+    "capacityConsumed": "160.00 Gbps",
+    "totalCapacity": "160.00 Gbps",
+    "percentageConsumed": "100.0",
+    "deviceInterfaces": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/logicalDevice/1-1/deviceInterfaces"
+}
+
+
+
+
+DELETE: Deletes the Logical Device
+Content-Type:application/json
+EndPoint:
+http://<host>:<port>/ReferenceRestUIM/customInventoryManagement/v3/logicalDeviceSample/<BusinessIdentifierofLD>-<id>
+
+Example:
+http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/logicalDeviceSample/1-1
+
+RequestBody:
+
+ResponseBody:
+204 No Content
+
+
+POST: Updates request body provided IG to the Logical Device
+Content-Type:application/json
+EndPoint:http://<host>:<port>/ReferenceRestUIM/customInventoryManagement/v3/logicalDeviceSample/<BusinessIdentifierofLD>-<id>
+
+Example:http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/logicalDeviceSample/1-300003
+
+RequestBody:
+{
+    "inventoryGroup": [
+        {
+            "name": "testing",
+            "igSpecification": {
+                "id": "BATInvGrpSpec",
+                "name": "BATInvGrpSpec"
+            }
+        }
+    ]
+}
+
+
+ResponseBody:
+{
+    "logicalDevice": {
+        "id": "1-300003",
+        "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/1-300003",
+        "@type": "LogicalDevice",
+        "@baseType": "LogicalResource",
+        "resourceVersion": "1",
+        "lifecycleState": "INSTALLED",
+        "lifecycleSubState": "UNASSIGNED",
+        "resourceStatus": "Available",
+        "startOperatingDate": "2022-12-20T14:04:44.907Z",
+        "endOperatingDate": "2038-01-19T08:44:07.000Z",
+        "resourceRelationship": [],
+        "resourceCharacteristic": [],
+        "resourceSpecification": {
+            "id": "ADMSPEC",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/specification/ADMSPEC",
+            "name": "ADMSPEC",
+            "version": "1",
+            "entityType": "LogicalDevice",
+            "startDate": "2022-11-14T00:00:01.000Z",
+            "endDate": "2038-01-19T08:44:07.000Z"
+        },
+        "capacityConsumed": "0.00 Mbps",
+        "totalCapacity": "0.00 Mbps",
+        "percentageConsumed": "0.0",
+        "deviceInterfaces": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/logicalDevice/1-300003/deviceInterfaces"
+    },
+    "inventoryGroup": [
+        {
+            "id": "38-testing",
+            "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-testing",
+            "name": "testing",
+            "igSpecification": {
+                "id": "BATInvGrpSpec",
+                "name": "BATInvGrpSpec",
+                "version": "1",
+                "startDate": "2022-11-14T00:00:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        }
+    ]
+}
+
+
+
+2. ipSubnetSample testing
+
+POST:
+Content-Type:application/json
+EndPoint:http://<host>:<port>/ReferenceRestUIM/customInventoryManagement/v3/ipSubnetSample/<BusinessIdentifierofIP4Subnet>-<IPAddress-PrefixLength-IPAddressDomainName>/<TaskName>
+
+Example:http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/ipSubnetSample/24-1.19.93.0-28 - Global IP Address Domain/PARTITION
+
+RequestBody:
+{
+    "cidrNumber":28,
+    "subnetNum":2
+}
+
+ResponseBody for negative case:
+
+{
+    "code": "9000004",
+    "reason": "[INV-9000004] Internal Server processing failed",
+    "message": [
+        "Partition Prefix length 28 cannot be same as Prefix Length of the Subnet 1.19.93.0/28 to be partitioned"
+    ]
+}
+
+RequestBody:
+{
+    "cidrNumber":29,
+    "subnetNum":2
+}
+
+
+ResponseBody:
+{
+    "subnet": {
+        "id": "24-1.19.93.0-28 - Global IP Address Domain",
+        "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/24-1.19.93.0-28 - Global IP Address Domain",
+        "@type": "IPSubnet",
+        "@baseType": "LogicalResource",
+        "resourceVersion": "1",
+        "lifecycleState": "INSTALLED",
+        "lifecycleSubState": "UNASSIGNED",
+        "resourceStatus": "Available",
+        "startOperatingDate": "2022-12-19T19:33:09.183Z",
+        "endOperatingDate": "2038-01-19T08:44:07.000Z",
+        "resourceRelationship": [],
+        "resourceCharacteristic": [],
+        "resourceSpecification": {
+            "id": "IPv4Subnet",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/specification/IPv4Subnet",
+            "name": "IPv4Subnet",
+            "version": "1",
+            "entityType": "IPSubnet",
+            "startDate": "2022-11-14T00:00:01.000Z",
+            "endDate": "2038-01-19T08:44:07.000Z"
+        },
+        "prefixLength": 28,
+        "isIPNetwork": false,
+        "availableHostCount": 14,
+        "numericLowerAddress": 18046208,
+        "numericUpperAddress": 18046223,
+        "allowHostAtSubnetBoundaries": false,
+        "ipAddressDomain": {
+            "id": "25-Global IP Address Domain",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/25-Global IP Address Domain",
+            "@type": "NetworkAddressDomain"
+        },
+        "ipAddressVersion": "IPV4",
+        "prefix": "255.255.255.240",
+        "isSubnetPartitioned": true,
+        "ipNetwork": {
+            "id": "23-1.19.93.0-28 - Global IP Address Domain",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/23-1.19.93.0-28 - Global IP Address Domain",
+            "@type": "IPNetwork"
+        },
+        "ipAddresses": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/ipSubnet/IPV4/26-1.19.93.0-28 - Global IP Address Domain/ipAddresses",
+        "partitionedSubnets": [
+            {
+                "id": "24-1.19.93.0-29 - Global IP Address Domain",
+                "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/24-1.19.93.0-29 - Global IP Address Domain",
+                "@type": "IPSubnet"
+            },
+            {
+                "id": "24-1.19.93.8-29 - Global IP Address Domain",
+                "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/24-1.19.93.8-29 - Global IP Address Domain",
+                "@type": "IPSubnet"
+            }
+        ]
+    }
+}
+
+
+Example:
+http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/ipSubnetSample/24-1.19.93.0-29 - Global IP Address Domain/JOIN
+
+
+RequestBody:
+{
+    "cidrNumber":28
+}
+
+ResponseBody:
+{
+    "subnet": {
+        "id": "24-1.19.93.0-28 - Global IP Address Domain",
+        "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/24-1.19.93.0-28 - Global IP Address Domain",
+        "@type": "IPSubnet",
+        "@baseType": "LogicalResource",
+        "resourceVersion": "1",
+        "lifecycleState": "INSTALLED",
+        "lifecycleSubState": "UNASSIGNED",
+        "resourceStatus": "Available",
+        "startOperatingDate": "2022-12-20T14:23:09.054Z",
+        "endOperatingDate": "2038-01-19T08:44:07.000Z",
+        "resourceRelationship": [],
+        "resourceCharacteristic": [],
+        "resourceSpecification": {
+            "id": "IPv4Subnet",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/specification/IPv4Subnet",
+            "name": "IPv4Subnet",
+            "version": "1",
+            "entityType": "IPSubnet",
+            "startDate": "2022-11-14T00:00:01.000Z",
+            "endDate": "2038-01-19T08:44:07.000Z"
+        },
+        "prefixLength": 28,
+        "isIPNetwork": false,
+        "availableHostCount": 14,
+        "numericLowerAddress": 18046208,
+        "numericUpperAddress": 18046223,
+        "allowHostAtSubnetBoundaries": false,
+        "ipAddressDomain": {
+            "id": "25-Global IP Address Domain",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/25-Global IP Address Domain",
+            "@type": "NetworkAddressDomain"
+        },
+        "ipAddressVersion": "IPV4",
+        "prefix": "255.255.255.240",
+        "isSubnetPartitioned": false,
+        "ipNetwork": {
+            "id": "23-1.19.93.0-28 - Global IP Address Domain",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/23-1.19.93.0-28 - Global IP Address Domain",
+            "@type": "IPNetwork"
+        },
+        "ipAddresses": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/ipSubnet/IPV4/26-1.19.93.0-28 - Global IP Address Domain/ipAddresses"
+    }
+}
+
+/inventoryGroup:
+
+POST: Creates Inventory Group and associate place to the created InventoryGroup.
+Content-Type:application/json
+EndPoint:
+http://<host>:<port>/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup
+
+Example:
+http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup
+
+RequestBody:
+{
+    "name": "myTesting",
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec"
+},
+    "place": [
+        {
+            "atReferredType": "GeographicLocation",
+            "id": "225001",
+            "@referredType": "GeographicLocation"
+        }
+    ]
+}
+
+
+ResponseBody:
+{
+    "id": "38-myTest",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-myTest",
+    "name": "myTest",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2022-11-14T00:00:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "place": [
+        {
+            "atReferredType": "GeographicLocation",
+            "id": "225001",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/place/225001",
+            "@referredType": "GeographicLocation"
+        }
+    ]
+}
+
+
+GET: Gets the Inventory Group
+Content-Type:application/json
+EndPoint:
+http://<host>:<port>/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/<BusinessIdentifierofIG>-<Name>
+
+Example:
+http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-myTest
+
+RequestBody:
+
+ResponseBody:
+{
+    "id": "38-myTest",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-myTest",
+    "name": "myTest",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2022-11-14T00:00:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "place": [
+        {
+            "atReferredType": "GeographicLocation",
+            "id": "225001",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/place/225001",
+            "@referredType": "GeographicLocation"
+        }
+    ]
+}
+
+DELETE: Deletes the InventoryGroup
+Content-Type:application/json
+EndPoint:
+http://<host>:<port>/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/<BusinessIdentifierofIG>-<Name>
+
+Example:
+http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-myTest
+
+RequestBody:
+
+ResponseBody:
+{
+    "code": "9000004",
+    "reason": "[INV-9000004] Internal Server processing failed",
+    "message": [
+        "Inventory Group myTest cannot be deleted. It has associations to other entities such as resources, places or services."
+    ]
+}
+
+Example:
+http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-myTesting
+
+RequestBody:
+
+ResponseBody:
+204 No Content
+
+
+POST: http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup
+Content-Type:application/json
+
+Request Body:
+
+{
+    "name": "NewPayload1",
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec"
+    },
+    "place": [
+        {
+            "atReferredType": "GeographicLocation",
+            "id": "225001",
+            "@referredType": "GeographicLocation"
+        }
+    ],
+    "parentGroupRef": [
+        {
+            "id": "38-MYtest"
+        },
+        {
+            "id": "38-testIG"
+        }
+    ],
+    "inventoryGroupItems": [
+        {
+            "id": "1",
+            "inventoryGroupItemType": "Party"
+        },
+        {
+            "id": "32-1",
+            "inventoryGroupItemType": "PipeTerminationPoint"
+        },
+        {
+            "id": "4-1",
+            "inventoryGroupItemType": "PhysicalDevice"
+        },
+        {
+            "id": "22-1",
+            "inventoryGroupItemType": "LogicalDeviceAccount"
+        },
+        {
+            "id": "12-1",
+            "inventoryGroupItemType": "CustomObject"
+        },
+        {
+            "id": "29-1",
+            "inventoryGroupItemType": "CustomNetworkAddress"
+        },
+        {
+            "id": "1-150004",
+            "inventoryGroupItemType": "LogicalDevice"
+        },
+        {
+            "id": "8-1",
+            "inventoryGroupItemType": "Equipment"
+        },
+        {
+            "id": "26-1.19.96.2 - Global IP Address Domain",
+            "inventoryGroupItemType": "IPv4Address"
+        }
+    ]
+}
+
+
+Response Body:
+201:
+{
+    "id": "38-NewPayload1",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-NewPayload1",
+    "name": "NewPayload1",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "place": [
+        {
+            "atReferredType": "GeographicLocation",
+            "id": "225001",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/place/225001",
+            "name": "PlaceRef",
+            "@referredType": "GeographicLocation"
+        }
+    ],
+    "parentGroupRef": [
+        {
+            "id": "38-MYtest",
+            "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-MYtest",
+            "name": "MYtest",
+            "igSpecification": {
+                "id": "BATInvGrpSpec",
+                "name": "BATInvGrpSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "38-testIG",
+            "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-testIG",
+            "name": "testIG",
+            "igSpecification": {
+                "id": "BATInvGrpSpec",
+                "name": "BATInvGrpSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        }
+    ],
+    "inventoryGroupItems": [
+        {
+            "id": "1",
+            "inventoryGroupItemType": "Party",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/party/1",
+            "name": "pp",
+            "grpSpecification": {
+                "id": "BATPartySpec",
+                "name": "BATPartySpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "12-1",
+            "inventoryGroupItemType": "CustomObject",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/12-1",
+            "name": "test",
+            "grpSpecification": {
+                "id": "BATCOSpec",
+                "name": "BATCOSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "22-1",
+            "inventoryGroupItemType": "LogicalDeviceAccount",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/22-1",
+            "grpSpecification": {
+                "id": "BATLDASpec",
+                "name": "BATLDASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "4-1",
+            "inventoryGroupItemType": "PhysicalDevice",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/4-1",
+            "name": "BAT_PD",
+            "grpSpecification": {
+                "id": "BATPhysicalDeviceSpec",
+                "name": "BATPhysicalDeviceSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "32-1",
+            "inventoryGroupItemType": "PipeTerminationPoint",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/32-1"
+        },
+        {
+            "id": "29-1",
+            "inventoryGroupItemType": "CustomNetworkAddress",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/29-1",
+            "grpSpecification": {
+                "id": "BATCNASpec",
+                "name": "BATCNASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "8-1",
+            "inventoryGroupItemType": "Equipment",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/8-1",
+            "name": "Test",
+            "grpSpecification": {
+                "id": "BATEquipmentCardSpec",
+                "name": "BATEquipmentCardSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "26-1.19.96.2 - Global IP Address Domain",
+            "inventoryGroupItemType": "IPv4Address",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/26-1.19.96.2%20-%20Global%20IP%20Address%20Domain",
+            "name": "Soapws",
+            "grpSpecification": {
+                "id": "IPv4Address",
+                "name": "IPv4Address",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "1-150004",
+            "inventoryGroupItemType": "LogicalDevice",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/1-150004",
+            "grpSpecification": {
+                "id": "Packet Network Device",
+                "name": "Packet Network Device",
+                "version": "1",
+                "startDate": "2023-03-13T12:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        }
+    ]
+}
+
+
+MERGE: update Inventory Group using merge patch.
+Content-Type:application/merge-patch+json
+EndPoint:
+http://<host>:<port>/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/<BusinessIdentifierofIG>-<Name>
+
+
+Examples:
+PATCH:Deleting Parent IG
+URL: http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-NewPayload1
+
+RequestBody:
+{
+        "parentGroupRef": [
+
+    ]
+}
+
+ResponseBody:
+
+{
+    "id": "38-NewPayload1",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-NewPayload1",
+    "name": "NewPayload1",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "place": [
+        {
+            "atReferredType": "GeographicLocation",
+            "id": "225001",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/place/225001",
+            "name": "PlaceRef",
+            "@referredType": "GeographicLocation"
+        }
+    ],
+    "parentGroupRef": [],
+    "inventoryGroupItems": [
+        {
+            "id": "1",
+            "inventoryGroupItemType": "Party",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/party/1",
+            "name": "pp",
+            "grpSpecification": {
+                "id": "BATPartySpec",
+                "name": "BATPartySpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "12-1",
+            "inventoryGroupItemType": "CustomObject",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/12-1",
+            "name": "test",
+            "grpSpecification": {
+                "id": "BATCOSpec",
+                "name": "BATCOSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "22-1",
+            "inventoryGroupItemType": "LogicalDeviceAccount",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/22-1",
+            "grpSpecification": {
+                "id": "BATLDASpec",
+                "name": "BATLDASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "4-1",
+            "inventoryGroupItemType": "PhysicalDevice",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/4-1",
+            "name": "BAT_PD",
+            "grpSpecification": {
+                "id": "BATPhysicalDeviceSpec",
+                "name": "BATPhysicalDeviceSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "32-1",
+            "inventoryGroupItemType": "PipeTerminationPoint",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/32-1"
+        },
+        {
+            "id": "29-1",
+            "inventoryGroupItemType": "CustomNetworkAddress",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/29-1",
+            "grpSpecification": {
+                "id": "BATCNASpec",
+                "name": "BATCNASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "8-1",
+            "inventoryGroupItemType": "Equipment",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/8-1",
+            "name": "Test",
+            "grpSpecification": {
+                "id": "BATEquipmentCardSpec",
+                "name": "BATEquipmentCardSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "26-1.19.96.2 - Global IP Address Domain",
+            "inventoryGroupItemType": "IPv4Address",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/26-1.19.96.2%20-%20Global%20IP%20Address%20Domain",
+            "name": "Soapws",
+            "grpSpecification": {
+                "id": "IPv4Address",
+                "name": "IPv4Address",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "1-150004",
+            "inventoryGroupItemType": "LogicalDevice",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/1-150004",
+            "grpSpecification": {
+                "id": "Packet Network Device",
+                "name": "Packet Network Device",
+                "version": "1",
+                "startDate": "2023-03-13T12:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        }
+    ]
+}
+
+
+PATCH:Deleting place and update name
+URL: http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-NewPayload3
+RequestBody:
+{
+    "name": "NewPayload5",
+    "place": [
+    ]
+}
+
+ResponseBody:
+{
+    "id": "38-NewPayload5",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-NewPayload5",
+    "name": "NewPayload5",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "parentGroupRef": []
+}
+
+Try to get/Patch the changed name
+URL:http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-NewPayload3
+
+ResponseBody:
+{
+    "code": "9000202",
+    "reason": "[INV-9000202] InventoryGroup not found with ID - 38-NewPayload3"
+}
+
+
+PATCH:Deleting associations from IG
+URL: http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-NewPayload1
+RequestBody:
+{
+    "inventoryGroupItems": [
+        {
+            "id": "1",
+            "inventoryGroupItemType": "Party"
+        }
+    ]
+}
+	
+ResponseBody:Deleted all other and only associated with given party
+{
+    "id": "38-NewPayload1",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-NewPayload1",
+    "name": "NewPayload1",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "place": [
+        {
+            "atReferredType": "GeographicLocation",
+            "id": "225001",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/place/225001",
+            "@referredType": "GeographicLocation"
+        }
+    ],
+    "parentGroupRef": [],
+    "inventoryGroupItems": [
+        {
+            "id": "1",
+            "inventoryGroupItemType": "Party",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/party/1",
+            "name": "pp",
+            "grpSpecification": {
+                "id": "BATPartySpec",
+                "name": "BATPartySpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        }
+    ]
+}
+
+PATCH:Associate Place to IG
+
+URL:http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload
+
+requestbody:
+{
+     "place": [
+        {
+            "id": "225001",
+            "@referredType": "GeographicLocation"
+        }
+    ]
+}
+
+response body:
+{
+    "id": "38-TaskPayload",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload",
+    "name": "TaskPayload",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "place": [
+        {
+            "id": "225001",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/place/225001",
+            "name": "PlaceRef",
+            "@referredType": "GeographicLocation"
+        }
+    ],
+    "parentGroupRef": [],
+    "inventoryGroupItems": [
+        {
+            "id": "50-2",
+            "inventoryGroupItemType": "PropertyLocation",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/place/50-SEC IN_51 SEC TS IN",
+            "name": "SEC IN_51 SEC TS IN",
+            "grpSpecification": {
+                "id": "Property Location",
+                "name": "Property Location",
+                "version": "1",
+                "startDate": "2023-03-13T12:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "28-BATFlowIdentifierSpec#1",
+            "inventoryGroupItemType": "FlowIdentifier",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/28-BATFlowIdentifierSpec%231",
+            "name": "1",
+            "grpSpecification": {
+                "id": "BATFlowIdentifierSpec",
+                "name": "BATFlowIdentifierSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        }
+    ]
+}
+
+
+PATCH: Associate GroupItems to IG
+
+URL: http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-NewPayload1
+
+RequestBody: 
+
+{
+    "inventoryGroupItems": [
+        {
+            "id": "1-150004",
+            "inventoryGroupItemType": "LogicalDevice"
+        }
+    ]
+}
+
+ResponseBody: Deleted party association and associate LD
+
+{
+    "id": "38-NewPayload1",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-NewPayload1",
+    "name": "NewPayload1",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "place": [
+        {
+            "atReferredType": "GeographicLocation",
+            "id": "225001",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/place/225001",
+            "@referredType": "GeographicLocation"
+        }
+    ],
+    "parentGroupRef": [],
+    "inventoryGroupItems": [
+        {
+            "id": "1-150004",
+            "inventoryGroupItemType": "LogicalDevice",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/1-150004",
+            "grpSpecification": {
+                "id": "Packet Network Device",
+                "name": "Packet Network Device",
+                "version": "1",
+                "startDate": "2023-03-13T12:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        }
+    ]
+}
+
+
+
+
+PATCH: Associate Parent InventoryGroup
+URL:http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-NewPayload1
+
+RequestBody:
+
+{
+    "parentGroupRef": [
+        {
+            "id": "38-MYtest"
+        }
+    ]
+}
+
+
+ResponseBody:
+
+{
+    "id": "38-NewPayload1",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-NewPayload1",
+    "name": "NewPayload1",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "place": [
+        {
+            "atReferredType": "GeographicLocation",
+            "id": "225001",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/place/225001",
+            "@referredType": "GeographicLocation"
+        }
+    ],
+    "parentGroupRef": [
+        {
+            "id": "38-MYtest",
+            "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-MYtest",
+            "name": "MYtest",
+            "igSpecification": {
+                "id": "BATInvGrpSpec",
+                "name": "BATInvGrpSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        }
+    ],
+    "inventoryGroupItems": [
+        {
+            "id": "1-150004",
+            "inventoryGroupItemType": "LogicalDevice",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/1-150004",
+            "grpSpecification": {
+                "id": "Packet Network Device",
+                "name": "Packet Network Device",
+                "version": "1",
+                "startDate": "2023-03-13T12:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        }
+    ]
+}
+	
+
+POST: Tasks to ADD(add association), REMOVE (remove association):
+Content-Type:application/json
+EndPoint:
+http://<host>:<port>/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/<BusinessIdentifierofIG>-<Name>/groupItem/{task}
+
+Example:
+Task ADD: Logical Device
+
+POST: http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload/groupItem/ADD
+
+RequestBody: 
+
+{
+                "id": "1-75001",
+            "inventoryGroupItemType": "LogicalDevice"
+}
+
+Response:
+{
+    "id": "38-TaskPayload",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload",
+    "name": "TaskPayload",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "parentGroupRef": [],
+    "inventoryGroupItems": [
+        {
+            "id": "1-75001",
+            "inventoryGroupItemType": "LogicalDevice",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/1-75001",
+            "name": "HYD",
+            "grpSpecification": {
+                "id": "BATSDH-STM4LDSpec",
+                "name": "BATSDH-STM4LDSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        }
+    ]
+}
+----------------
+
+Add Party:
+
+POST: http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload/groupItem/ADD
+
+RequestBody: 
+
+{
+                "id": "1",
+            "inventoryGroupItemType": "Party"
+}
+
+Response:
+
+{
+    "id": "38-TaskPayload",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload",
+    "name": "TaskPayload",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "parentGroupRef": [],
+    "inventoryGroupItems": [
+        {
+            "id": "1",
+            "inventoryGroupItemType": "Party",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/party/1",
+            "name": "pp",
+            "grpSpecification": {
+                "id": "BATPartySpec",
+                "name": "BATPartySpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "1-75001",
+            "inventoryGroupItemType": "LogicalDevice",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/1-75001",
+            "name": "HYD",
+            "grpSpecification": {
+                "id": "BATSDH-STM4LDSpec",
+                "name": "BATSDH-STM4LDSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        }
+    ]
+}
+
+
+Add Equipment:
+
+POST: http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload/groupItem/ADD
+
+RequestBody: 
+
+{
+                "id": "8-1",
+            "inventoryGroupItemType": "Equipment"
+}
+
+ResponseBody:
+
+{
+    "id": "38-TaskPayload",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload",
+    "name": "TaskPayload",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "parentGroupRef": [],
+    "inventoryGroupItems": [
+        {
+            "id": "8-1",
+            "inventoryGroupItemType": "Equipment",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/8-1",
+            "name": "Test",
+            "grpSpecification": {
+                "id": "BATEquipmentCardSpec",
+                "name": "BATEquipmentCardSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "1",
+            "inventoryGroupItemType": "Party",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/party/1",
+            "name": "pp",
+            "grpSpecification": {
+                "id": "BATPartySpec",
+                "name": "BATPartySpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "1-75001",
+            "inventoryGroupItemType": "LogicalDevice",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/1-75001",
+            "name": "HYD",
+            "grpSpecification": {
+                "id": "BATSDH-STM4LDSpec",
+                "name": "BATSDH-STM4LDSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        }
+    ]
+}
+
+
+Add CustomNetworkAddress:
+
+POST: http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload/groupItem/ADD
+
+RequestBody: 
+
+{
+                "id": "29-1",
+            "inventoryGroupItemType": "CustomNetworkAddress"
+}
+
+
+ResponseBody:
+
+{
+    "id": "38-TaskPayload",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload",
+    "name": "TaskPayload",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "parentGroupRef": [],
+    "inventoryGroupItems": [
+        {
+            "id": "8-1",
+            "inventoryGroupItemType": "Equipment",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/8-1",
+            "name": "Test",
+            "grpSpecification": {
+                "id": "BATEquipmentCardSpec",
+                "name": "BATEquipmentCardSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "29-1",
+            "inventoryGroupItemType": "CustomNetworkAddress",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/29-1",
+            "grpSpecification": {
+                "id": "BATCNASpec",
+                "name": "BATCNASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "1",
+            "inventoryGroupItemType": "Party",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/party/1",
+            "name": "pp",
+            "grpSpecification": {
+                "id": "BATPartySpec",
+                "name": "BATPartySpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "1-75001",
+            "inventoryGroupItemType": "LogicalDevice",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/1-75001",
+            "name": "HYD",
+            "grpSpecification": {
+                "id": "BATSDH-STM4LDSpec",
+                "name": "BATSDH-STM4LDSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        }
+    ]
+}
+
+
+Add PhysicalDevice:
+
+POST: http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload/groupItem/ADD
+
+RequestBody: 
+
+{
+                "id": "4-1",
+            "inventoryGroupItemType": "PhysicalDevice"
+}
+
+ResponseBody:
+
+{
+    "id": "38-TaskPayload",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload",
+    "name": "TaskPayload",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "parentGroupRef": [],
+    "inventoryGroupItems": [
+        {
+            "id": "8-1",
+            "inventoryGroupItemType": "Equipment",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/8-1",
+            "name": "Test",
+            "grpSpecification": {
+                "id": "BATEquipmentCardSpec",
+                "name": "BATEquipmentCardSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "4-1",
+            "inventoryGroupItemType": "PhysicalDevice",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/4-1",
+            "name": "BAT_PD",
+            "grpSpecification": {
+                "id": "BATPhysicalDeviceSpec",
+                "name": "BATPhysicalDeviceSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "29-1",
+            "inventoryGroupItemType": "CustomNetworkAddress",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/29-1",
+            "grpSpecification": {
+                "id": "BATCNASpec",
+                "name": "BATCNASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "1",
+            "inventoryGroupItemType": "Party",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/party/1",
+            "name": "pp",
+            "grpSpecification": {
+                "id": "BATPartySpec",
+                "name": "BATPartySpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "1-75001",
+            "inventoryGroupItemType": "LogicalDevice",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/1-75001",
+            "name": "HYD",
+            "grpSpecification": {
+                "id": "BATSDH-STM4LDSpec",
+                "name": "BATSDH-STM4LDSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        }
+    ]
+}
+
+Add LogicalDeviceAccount:
+
+POST: http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload/groupItem/ADD
+
+RequestBody: 
+
+{
+                "id": "22-1",
+            "inventoryGroupItemType": "LogicalDeviceAccount"
+}
+
+ResponseBody:
+
+{
+    "id": "38-TaskPayload",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload",
+    "name": "TaskPayload",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "parentGroupRef": [],
+    "inventoryGroupItems": [
+        {
+            "id": "8-1",
+            "inventoryGroupItemType": "Equipment",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/8-1",
+            "name": "Test",
+            "grpSpecification": {
+                "id": "BATEquipmentCardSpec",
+                "name": "BATEquipmentCardSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "22-1",
+            "inventoryGroupItemType": "LogicalDeviceAccount",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/22-1",
+            "grpSpecification": {
+                "id": "BATLDASpec",
+                "name": "BATLDASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "4-1",
+            "inventoryGroupItemType": "PhysicalDevice",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/4-1",
+            "name": "BAT_PD",
+            "grpSpecification": {
+                "id": "BATPhysicalDeviceSpec",
+                "name": "BATPhysicalDeviceSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "29-1",
+            "inventoryGroupItemType": "CustomNetworkAddress",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/29-1",
+            "grpSpecification": {
+                "id": "BATCNASpec",
+                "name": "BATCNASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "1",
+            "inventoryGroupItemType": "Party",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/party/1",
+            "name": "pp",
+            "grpSpecification": {
+                "id": "BATPartySpec",
+                "name": "BATPartySpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "1-75001",
+            "inventoryGroupItemType": "LogicalDevice",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/1-75001",
+            "name": "HYD",
+            "grpSpecification": {
+                "id": "BATSDH-STM4LDSpec",
+                "name": "BATSDH-STM4LDSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        }
+    ]
+}
+
+Add PipeTerminationPoint:
+
+POST: http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload/groupItem/ADD
+
+RequestBody: 
+
+{
+                "id": "32-1",
+            "inventoryGroupItemType": "PipeTerminationPoint"
+}
+
+ResponseBody:
+
+{
+    "id": "38-TaskPayload",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload",
+    "name": "TaskPayload",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "parentGroupRef": [],
+    "inventoryGroupItems": [
+        {
+            "id": "8-1",
+            "inventoryGroupItemType": "Equipment",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/8-1",
+            "name": "Test",
+            "grpSpecification": {
+                "id": "BATEquipmentCardSpec",
+                "name": "BATEquipmentCardSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "32-1",
+            "inventoryGroupItemType": "PipeTerminationPoint",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/32-1"
+        },
+        {
+            "id": "22-1",
+            "inventoryGroupItemType": "LogicalDeviceAccount",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/22-1",
+            "grpSpecification": {
+                "id": "BATLDASpec",
+                "name": "BATLDASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "4-1",
+            "inventoryGroupItemType": "PhysicalDevice",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/4-1",
+            "name": "BAT_PD",
+            "grpSpecification": {
+                "id": "BATPhysicalDeviceSpec",
+                "name": "BATPhysicalDeviceSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "29-1",
+            "inventoryGroupItemType": "CustomNetworkAddress",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/29-1",
+            "grpSpecification": {
+                "id": "BATCNASpec",
+                "name": "BATCNASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "1",
+            "inventoryGroupItemType": "Party",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/party/1",
+            "name": "pp",
+            "grpSpecification": {
+                "id": "BATPartySpec",
+                "name": "BATPartySpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "1-75001",
+            "inventoryGroupItemType": "LogicalDevice",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/1-75001",
+            "name": "HYD",
+            "grpSpecification": {
+                "id": "BATSDH-STM4LDSpec",
+                "name": "BATSDH-STM4LDSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        }
+    ]
+}
+
+Add CustomObject:
+
+POST: http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload/groupItem/ADD
+
+RequestBody: 
+
+{
+                "id": "12-1",
+            "inventoryGroupItemType": "CustomObject"
+}
+
+ResponseBody:
+
+{
+    "id": "38-TaskPayload",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload",
+    "name": "TaskPayload",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "parentGroupRef": [],
+    "inventoryGroupItems": [
+        {
+            "id": "8-1",
+            "inventoryGroupItemType": "Equipment",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/8-1",
+            "name": "Test",
+            "grpSpecification": {
+                "id": "BATEquipmentCardSpec",
+                "name": "BATEquipmentCardSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "12-1",
+            "inventoryGroupItemType": "CustomObject",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/12-1",
+            "name": "test",
+            "grpSpecification": {
+                "id": "BATCOSpec",
+                "name": "BATCOSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "32-1",
+            "inventoryGroupItemType": "PipeTerminationPoint",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/32-1"
+        },
+        {
+            "id": "22-1",
+            "inventoryGroupItemType": "LogicalDeviceAccount",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/22-1",
+            "grpSpecification": {
+                "id": "BATLDASpec",
+                "name": "BATLDASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "4-1",
+            "inventoryGroupItemType": "PhysicalDevice",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/4-1",
+            "name": "BAT_PD",
+            "grpSpecification": {
+                "id": "BATPhysicalDeviceSpec",
+                "name": "BATPhysicalDeviceSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "29-1",
+            "inventoryGroupItemType": "CustomNetworkAddress",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/29-1",
+            "grpSpecification": {
+                "id": "BATCNASpec",
+                "name": "BATCNASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "1",
+            "inventoryGroupItemType": "Party",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/party/1",
+            "name": "pp",
+            "grpSpecification": {
+                "id": "BATPartySpec",
+                "name": "BATPartySpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "1-75001",
+            "inventoryGroupItemType": "LogicalDevice",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/1-75001",
+            "name": "HYD",
+            "grpSpecification": {
+                "id": "BATSDH-STM4LDSpec",
+                "name": "BATSDH-STM4LDSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        }
+    ]
+}
+
+Add IPv4Address:
+
+POST: http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload/groupItem/ADD
+
+RequestBody: 
+
+{
+                "id": "26-1.19.96.2 - Global IP Address Domain",
+            "inventoryGroupItemType": "IPv4Address"
+}
+
+ResponseBody:
+
+{
+    "id": "38-TaskPayload",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload",
+    "name": "TaskPayload",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "parentGroupRef": [],
+    "inventoryGroupItems": [
+        {
+            "id": "8-1",
+            "inventoryGroupItemType": "Equipment",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/8-1",
+            "name": "Test",
+            "grpSpecification": {
+                "id": "BATEquipmentCardSpec",
+                "name": "BATEquipmentCardSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "12-1",
+            "inventoryGroupItemType": "CustomObject",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/12-1",
+            "name": "test",
+            "grpSpecification": {
+                "id": "BATCOSpec",
+                "name": "BATCOSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "32-1",
+            "inventoryGroupItemType": "PipeTerminationPoint",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/32-1"
+        },
+        {
+            "id": "22-1",
+            "inventoryGroupItemType": "LogicalDeviceAccount",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/22-1",
+            "grpSpecification": {
+                "id": "BATLDASpec",
+                "name": "BATLDASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "4-1",
+            "inventoryGroupItemType": "PhysicalDevice",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/4-1",
+            "name": "BAT_PD",
+            "grpSpecification": {
+                "id": "BATPhysicalDeviceSpec",
+                "name": "BATPhysicalDeviceSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "29-1",
+            "inventoryGroupItemType": "CustomNetworkAddress",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/29-1",
+            "grpSpecification": {
+                "id": "BATCNASpec",
+                "name": "BATCNASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "1",
+            "inventoryGroupItemType": "Party",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/party/1",
+            "name": "pp",
+            "grpSpecification": {
+                "id": "BATPartySpec",
+                "name": "BATPartySpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "26-1.19.96.2 - Global IP Address Domain",
+            "inventoryGroupItemType": "IPv4Address",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/26-1.19.96.2%20-%20Global%20IP%20Address%20Domain",
+            "name": "Soapws",
+            "grpSpecification": {
+                "id": "IPv4Address",
+                "name": "IPv4Address",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "1-75001",
+            "inventoryGroupItemType": "LogicalDevice",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/1-75001",
+            "name": "HYD",
+            "grpSpecification": {
+                "id": "BATSDH-STM4LDSpec",
+                "name": "BATSDH-STM4LDSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        }
+    ]
+}
+
+POST: ADD TN
+URL:
+http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload/groupItem/ADD
+
+RequestBody: 
+
+{
+                "id": "21-10",
+            "inventoryGroupItemType": "TelephoneNumber"
+}
+
+Responsebody:
+{
+    "id": "38-TaskPayload",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload",
+    "name": "TaskPayload",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "parentGroupRef": [],
+    "inventoryGroupItems": [
+        {
+            "id": "8-1",
+            "inventoryGroupItemType": "Equipment",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/8-1",
+            "name": "Test",
+            "grpSpecification": {
+                "id": "BATEquipmentCardSpec",
+                "name": "BATEquipmentCardSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "32-1",
+            "inventoryGroupItemType": "PipeTerminationPoint",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/32-1"
+        },
+        {
+            "id": "22-1",
+            "inventoryGroupItemType": "LogicalDeviceAccount",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/22-1",
+            "grpSpecification": {
+                "id": "BATLDASpec",
+                "name": "BATLDASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "4-1",
+            "inventoryGroupItemType": "PhysicalDevice",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/4-1",
+            "name": "BAT_PD",
+            "grpSpecification": {
+                "id": "BATPhysicalDeviceSpec",
+                "name": "BATPhysicalDeviceSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "29-1",
+            "inventoryGroupItemType": "CustomNetworkAddress",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/29-1",
+            "grpSpecification": {
+                "id": "BATCNASpec",
+                "name": "BATCNASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "21-10",
+            "inventoryGroupItemType": "TelephoneNumber",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/21-10",
+            "name": "10",
+            "grpSpecification": {
+                "id": "BATTNSpec",
+                "name": "BATTNSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        }
+    ]
+}
+
+POST: ADD IPSubnet
+URL:
+http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload/groupItem/ADD
+
+RequestBody: 
+
+{
+                "id": "24-192.16.2.0-24 - Global IP Address Domain",
+            "inventoryGroupItemType": "IPSubnet"
+}
+
+responsebody:
+
+{
+    "id": "38-TaskPayload",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload",
+    "name": "TaskPayload",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "parentGroupRef": [],
+    "inventoryGroupItems": [
+        {
+            "id": "8-1",
+            "inventoryGroupItemType": "Equipment",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/8-1",
+            "name": "Test",
+            "grpSpecification": {
+                "id": "BATEquipmentCardSpec",
+                "name": "BATEquipmentCardSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "32-1",
+            "inventoryGroupItemType": "PipeTerminationPoint",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/32-1"
+        },
+        {
+            "id": "22-1",
+            "inventoryGroupItemType": "LogicalDeviceAccount",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/22-1",
+            "grpSpecification": {
+                "id": "BATLDASpec",
+                "name": "BATLDASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "4-1",
+            "inventoryGroupItemType": "PhysicalDevice",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/4-1",
+            "name": "BAT_PD",
+            "grpSpecification": {
+                "id": "BATPhysicalDeviceSpec",
+                "name": "BATPhysicalDeviceSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "29-1",
+            "inventoryGroupItemType": "CustomNetworkAddress",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/29-1",
+            "grpSpecification": {
+                "id": "BATCNASpec",
+                "name": "BATCNASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "21-10",
+            "inventoryGroupItemType": "TelephoneNumber",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/21-10",
+            "name": "10",
+            "grpSpecification": {
+                "id": "BATTNSpec",
+                "name": "BATTNSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "24-192.16.2.0/24 - Global IP Address Domain",
+            "inventoryGroupItemType": "IPSubnet",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/24-192.16.2.0-24 - Global IP Address Domain",
+            "grpSpecification": {
+                "id": "IPv4Subnet",
+                "name": "IPv4Subnet",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        }
+    ]
+}
+
+
+POST: ADD Pipe
+URL:
+http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload/groupItem/ADD
+
+RequestBody: 
+
+{
+                "id": "30-75001",
+            "inventoryGroupItemType": "Pipe"
+}
+
+ResponseBody:
+
+{
+    "id": "38-TaskPayload",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload",
+    "name": "TaskPayload",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "parentGroupRef": [],
+    "inventoryGroupItems": [
+        {
+            "id": "8-1",
+            "inventoryGroupItemType": "Equipment",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/8-1",
+            "name": "Test",
+            "grpSpecification": {
+                "id": "BATEquipmentCardSpec",
+                "name": "BATEquipmentCardSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "29-1",
+            "inventoryGroupItemType": "CustomNetworkAddress",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/29-1",
+            "grpSpecification": {
+                "id": "BATCNASpec",
+                "name": "BATCNASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "4-1",
+            "inventoryGroupItemType": "PhysicalDevice",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/4-1",
+            "name": "BAT_PD",
+            "grpSpecification": {
+                "id": "BATPhysicalDeviceSpec",
+                "name": "BATPhysicalDeviceSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "22-1",
+            "inventoryGroupItemType": "LogicalDeviceAccount",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/22-1",
+            "grpSpecification": {
+                "id": "BATLDASpec",
+                "name": "BATLDASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "32-1",
+            "inventoryGroupItemType": "PipeTerminationPoint",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/32-1"
+        },
+        {
+            "id": "30-75001",
+            "inventoryGroupItemType": "Pipe",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/30-75001",
+            "grpSpecification": {
+                "id": "100GE",
+                "name": "100GE",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        }
+    ]
+}
+
+
+
+POST: ADD propertyLocation:
+
+URL:
+http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload2/groupItem/ADD
+
+RequestBody: 
+
+{
+                "id": "50-SEC IN_51 SEC TS IN",
+            "inventoryGroupItemType": "PropertyLocation"
+}
+
+response:
+
+{
+    "id": "38-TaskPayload2",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload2",
+    "name": "TaskPayload2",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "parentGroupRef": [],
+    "inventoryGroupItems": [
+        {
+            "id": "50-2",
+            "inventoryGroupItemType": "PropertyLocation",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/place/50-SEC IN_51 SEC TS IN",
+            "name": "SEC IN_51 SEC TS IN",
+            "grpSpecification": {
+                "id": "Property Location",
+                "name": "Property Location",
+                "version": "1",
+                "startDate": "2023-03-13T12:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        }
+    ]
+}
+
+POST :ADD of FI
+URL:http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload2/groupItem/ADD
+
+request:
+{
+    "id": "28-BATFlowIdentifierSpec#1",
+    "inventoryGroupItemType": "FlowIdentifier"
+}
+
+response:
+{
+    "id": "38-TaskPayload2",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload2",
+    "name": "TaskPayload2",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "parentGroupRef": [],
+    "inventoryGroupItems": [
+        {
+            "id": "28-BATFlowIdentifierSpec#1",
+            "inventoryGroupItemType": "FlowIdentifier",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/28-BATFlowIdentifierSpec%231",
+            "name": "1",
+            "grpSpecification": {
+                "id": "BATFlowIdentifierSpec",
+                "name": "BATFlowIdentifierSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        }
+    ]
+}
+
+-------------------------------------------
+Task REMOVE: Logical Device
+
+POST: http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload/groupItem/REMOVE
+
+requestBody: 
+{
+                "id": "1-75001",
+            "inventoryGroupItemType": "LogicalDevice"
+}
+response:
+{
+    "id": "38-TaskPayload",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload",
+    "name": "TaskPayload",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "parentGroupRef": [],
+    "inventoryGroupItems": [
+        {
+            "id": "8-1",
+            "inventoryGroupItemType": "Equipment",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/8-1",
+            "name": "Test",
+            "grpSpecification": {
+                "id": "BATEquipmentCardSpec",
+                "name": "BATEquipmentCardSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "1",
+            "inventoryGroupItemType": "Party",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/party/1",
+            "name": "pp",
+            "grpSpecification": {
+                "id": "BATPartySpec",
+                "name": "BATPartySpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "29-1",
+            "inventoryGroupItemType": "CustomNetworkAddress",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/29-1",
+            "grpSpecification": {
+                "id": "BATCNASpec",
+                "name": "BATCNASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "4-1",
+            "inventoryGroupItemType": "PhysicalDevice",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/4-1",
+            "name": "BAT_PD",
+            "grpSpecification": {
+                "id": "BATPhysicalDeviceSpec",
+                "name": "BATPhysicalDeviceSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "22-1",
+            "inventoryGroupItemType": "LogicalDeviceAccount",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/22-1",
+            "grpSpecification": {
+                "id": "BATLDASpec",
+                "name": "BATLDASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "32-1",
+            "inventoryGroupItemType": "PipeTerminationPoint",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/32-1"
+        },
+        {
+            "id": "12-1",
+            "inventoryGroupItemType": "CustomObject",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/12-1",
+            "name": "test",
+            "grpSpecification": {
+                "id": "BATCOSpec",
+                "name": "BATCOSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "26-1.19.96.2 - Global IP Address Domain",
+            "inventoryGroupItemType": "IPv4Address",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/26-1.19.96.2%20-%20Global%20IP%20Address%20Domain",
+            "name": "Soapws",
+            "grpSpecification": {
+                "id": "IPv4Address",
+                "name": "IPv4Address",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        }
+    ]
+}
+
+-----------
+POST:Remove task on CO:
+URL: http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload/groupItem/REMOVE
+
+RequestBody:
+
+{
+                "id": "12-1",
+            "inventoryGroupItemType": "CustomObject"
+}
+response:
+{
+    "id": "38-TaskPayload",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload",
+    "name": "TaskPayload",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "parentGroupRef": [],
+    "inventoryGroupItems": [
+        {
+            "id": "8-1",
+            "inventoryGroupItemType": "Equipment",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/8-1",
+            "name": "Test",
+            "grpSpecification": {
+                "id": "BATEquipmentCardSpec",
+                "name": "BATEquipmentCardSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "1",
+            "inventoryGroupItemType": "Party",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/party/1",
+            "name": "pp",
+            "grpSpecification": {
+                "id": "BATPartySpec",
+                "name": "BATPartySpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "29-1",
+            "inventoryGroupItemType": "CustomNetworkAddress",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/29-1",
+            "grpSpecification": {
+                "id": "BATCNASpec",
+                "name": "BATCNASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "4-1",
+            "inventoryGroupItemType": "PhysicalDevice",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/4-1",
+            "name": "BAT_PD",
+            "grpSpecification": {
+                "id": "BATPhysicalDeviceSpec",
+                "name": "BATPhysicalDeviceSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "22-1",
+            "inventoryGroupItemType": "LogicalDeviceAccount",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/22-1",
+            "grpSpecification": {
+                "id": "BATLDASpec",
+                "name": "BATLDASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "32-1",
+            "inventoryGroupItemType": "PipeTerminationPoint",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/32-1"
+        },
+        {
+            "id": "26-1.19.96.2 - Global IP Address Domain",
+            "inventoryGroupItemType": "IPv4Address",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/26-1.19.96.2%20-%20Global%20IP%20Address%20Domain",
+            "name": "Soapws",
+            "grpSpecification": {
+                "id": "IPv4Address",
+                "name": "IPv4Address",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        }
+    ]
+}
+--------------------------
+POST : Removal of Party :
+
+URL: http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload/groupItem/REMOVE
+
+
+RequestBody:
+
+{
+                "id": "1",
+            "inventoryGroupItemType": "Party"
+}
+
+Response:
+{
+    "id": "38-TaskPayload",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload",
+    "name": "TaskPayload",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "parentGroupRef": [],
+    "inventoryGroupItems": [
+        {
+            "id": "8-1",
+            "inventoryGroupItemType": "Equipment",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/8-1",
+            "name": "Test",
+            "grpSpecification": {
+                "id": "BATEquipmentCardSpec",
+                "name": "BATEquipmentCardSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "29-1",
+            "inventoryGroupItemType": "CustomNetworkAddress",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/29-1",
+            "grpSpecification": {
+                "id": "BATCNASpec",
+                "name": "BATCNASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "4-1",
+            "inventoryGroupItemType": "PhysicalDevice",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/4-1",
+            "name": "BAT_PD",
+            "grpSpecification": {
+                "id": "BATPhysicalDeviceSpec",
+                "name": "BATPhysicalDeviceSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "22-1",
+            "inventoryGroupItemType": "LogicalDeviceAccount",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/22-1",
+            "grpSpecification": {
+                "id": "BATLDASpec",
+                "name": "BATLDASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "32-1",
+            "inventoryGroupItemType": "PipeTerminationPoint",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/32-1"
+        },
+        {
+            "id": "26-1.19.96.2 - Global IP Address Domain",
+            "inventoryGroupItemType": "IPv4Address",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/26-1.19.96.2%20-%20Global%20IP%20Address%20Domain",
+            "name": "Soapws",
+            "grpSpecification": {
+                "id": "IPv4Address",
+                "name": "IPv4Address",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        }
+    ]
+}
+---------------
+POST: Remove IPV4Address
+URL : http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload/groupItem/REMOVE
+
+requestbody:
+
+{
+                "id": "26-1.19.96.2 - Global IP Address Domain",
+            "inventoryGroupItemType": "IPv4Address"
+}
+
+Response:
+
+{
+    "id": "38-TaskPayload",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload",
+    "name": "TaskPayload",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "parentGroupRef": [],
+    "inventoryGroupItems": [
+        {
+            "id": "8-1",
+            "inventoryGroupItemType": "Equipment",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/8-1",
+            "name": "Test",
+            "grpSpecification": {
+                "id": "BATEquipmentCardSpec",
+                "name": "BATEquipmentCardSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "29-1",
+            "inventoryGroupItemType": "CustomNetworkAddress",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/29-1",
+            "grpSpecification": {
+                "id": "BATCNASpec",
+                "name": "BATCNASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "4-1",
+            "inventoryGroupItemType": "PhysicalDevice",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/4-1",
+            "name": "BAT_PD",
+            "grpSpecification": {
+                "id": "BATPhysicalDeviceSpec",
+                "name": "BATPhysicalDeviceSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "22-1",
+            "inventoryGroupItemType": "LogicalDeviceAccount",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/22-1",
+            "grpSpecification": {
+                "id": "BATLDASpec",
+                "name": "BATLDASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "32-1",
+            "inventoryGroupItemType": "PipeTerminationPoint",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/32-1"
+        }
+    ]
+}
+------------------
+
+POST:Remove TN:
+URL:http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload/groupItem/REMOVE
+
+requestbody:
+{
+                "id": "21-10",
+            "inventoryGroupItemType": "TelephoneNumber"
+}
+
+Response:
+{
+    "id": "38-TaskPayload",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload",
+    "name": "TaskPayload",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "parentGroupRef": [],
+    "inventoryGroupItems": [
+        {
+            "id": "8-1",
+            "inventoryGroupItemType": "Equipment",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/8-1",
+            "name": "Test",
+            "grpSpecification": {
+                "id": "BATEquipmentCardSpec",
+                "name": "BATEquipmentCardSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "32-1",
+            "inventoryGroupItemType": "PipeTerminationPoint",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/32-1"
+        },
+        {
+            "id": "22-1",
+            "inventoryGroupItemType": "LogicalDeviceAccount",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/22-1",
+            "grpSpecification": {
+                "id": "BATLDASpec",
+                "name": "BATLDASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "4-1",
+            "inventoryGroupItemType": "PhysicalDevice",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/4-1",
+            "name": "BAT_PD",
+            "grpSpecification": {
+                "id": "BATPhysicalDeviceSpec",
+                "name": "BATPhysicalDeviceSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "29-1",
+            "inventoryGroupItemType": "CustomNetworkAddress",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/29-1",
+            "grpSpecification": {
+                "id": "BATCNASpec",
+                "name": "BATCNASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "24-192.16.2.0/24 - Global IP Address Domain",
+            "inventoryGroupItemType": "IPSubnet",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/24-192.16.2.0-24 - Global IP Address Domain",
+            "grpSpecification": {
+                "id": "IPv4Subnet",
+                "name": "IPv4Subnet",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        }
+    ]
+}
+-----------------
+Remove IPV4Subnet:
+
+POST: http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload/groupItem/REMOVE
+
+
+requestbody:
+
+{
+                "id": "24-192.16.2.0-24 - Global IP Address Domain",
+            "inventoryGroupItemType": "IPv4Subnet"
+}
+
+Response:
+{
+    "id": "38-TaskPayload",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload",
+    "name": "TaskPayload",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "parentGroupRef": [],
+    "inventoryGroupItems": [
+        {
+            "id": "8-1",
+            "inventoryGroupItemType": "Equipment",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/8-1",
+            "name": "Test",
+            "grpSpecification": {
+                "id": "BATEquipmentCardSpec",
+                "name": "BATEquipmentCardSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "29-1",
+            "inventoryGroupItemType": "CustomNetworkAddress",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/29-1",
+            "grpSpecification": {
+                "id": "BATCNASpec",
+                "name": "BATCNASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "4-1",
+            "inventoryGroupItemType": "PhysicalDevice",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/4-1",
+            "name": "BAT_PD",
+            "grpSpecification": {
+                "id": "BATPhysicalDeviceSpec",
+                "name": "BATPhysicalDeviceSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "22-1",
+            "inventoryGroupItemType": "LogicalDeviceAccount",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/22-1",
+            "grpSpecification": {
+                "id": "BATLDASpec",
+                "name": "BATLDASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "32-1",
+            "inventoryGroupItemType": "PipeTerminationPoint",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/32-1"
+        }
+    ]
+}
+----------------
+
+POST:Removal of PIpe: 
+URL: http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload/groupItem/REMOVE
+
+requestbody:
+{
+                "id": "30-75001",
+            "inventoryGroupItemType": "Pipe"
+}
+
+Response:
+{
+    "id": "38-TaskPayload",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload",
+    "name": "TaskPayload",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "parentGroupRef": [],
+    "inventoryGroupItems": [
+        {
+            "id": "8-1",
+            "inventoryGroupItemType": "Equipment",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/8-1",
+            "name": "Test",
+            "grpSpecification": {
+                "id": "BATEquipmentCardSpec",
+                "name": "BATEquipmentCardSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "29-1",
+            "inventoryGroupItemType": "CustomNetworkAddress",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/29-1",
+            "grpSpecification": {
+                "id": "BATCNASpec",
+                "name": "BATCNASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "4-1",
+            "inventoryGroupItemType": "PhysicalDevice",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/4-1",
+            "name": "BAT_PD",
+            "grpSpecification": {
+                "id": "BATPhysicalDeviceSpec",
+                "name": "BATPhysicalDeviceSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "22-1",
+            "inventoryGroupItemType": "LogicalDeviceAccount",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/22-1",
+            "grpSpecification": {
+                "id": "BATLDASpec",
+                "name": "BATLDASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "32-1",
+            "inventoryGroupItemType": "PipeTerminationPoint",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/32-1"
+        }
+    ]
+}
+--------------------
+POST :Removal of FI
+URL:http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload2/groupItem/REMOVE
+
+request:
+{
+    "id": "28-BATFlowIdentifierSpec#1",
+    "inventoryGroupItemType": "FlowIdentifier"
+}
+response:
+{
+    "id": "38-TaskPayload2",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload2",
+    "name": "TaskPayload2",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "parentGroupRef": []
+}
+-----------------------
+Removal of PD:
+
+POST: http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload/groupItem/REMOVE
+
+
+request:
+
+{
+                "id": "4-1",
+            "inventoryGroupItemType": "PhysicalDevice"
+}
+Response:
+
+{
+    "id": "38-TaskPayload",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload",
+    "name": "TaskPayload",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "parentGroupRef": [],
+    "inventoryGroupItems": [
+        {
+            "id": "8-1",
+            "inventoryGroupItemType": "Equipment",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/8-1",
+            "name": "Test",
+            "grpSpecification": {
+                "id": "BATEquipmentCardSpec",
+                "name": "BATEquipmentCardSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "29-1",
+            "inventoryGroupItemType": "CustomNetworkAddress",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/29-1",
+            "grpSpecification": {
+                "id": "BATCNASpec",
+                "name": "BATCNASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "22-1",
+            "inventoryGroupItemType": "LogicalDeviceAccount",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/22-1",
+            "grpSpecification": {
+                "id": "BATLDASpec",
+                "name": "BATLDASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "32-1",
+            "inventoryGroupItemType": "PipeTerminationPoint",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/32-1"
+        }
+    ]
+}
+----------------
+
+Removal of LDA:
+
+POST: http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload/groupItem/REMOVE
+
+
+request:
+
+{
+                "id": "22-1",
+            "inventoryGroupItemType": "LogicalDeviceAccount"
+}
+
+Response:
+
+{
+    "id": "38-TaskPayload",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload",
+    "name": "TaskPayload",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "parentGroupRef": [],
+    "inventoryGroupItems": [
+        {
+            "id": "8-1",
+            "inventoryGroupItemType": "Equipment",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/8-1",
+            "name": "Test",
+            "grpSpecification": {
+                "id": "BATEquipmentCardSpec",
+                "name": "BATEquipmentCardSpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "29-1",
+            "inventoryGroupItemType": "CustomNetworkAddress",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/29-1",
+            "grpSpecification": {
+                "id": "BATCNASpec",
+                "name": "BATCNASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "32-1",
+            "inventoryGroupItemType": "PipeTerminationPoint",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/32-1"
+        }
+    ]
+}
+
+--------------------
+
+removal of Equipment:
+
+POST:http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload/groupItem/REMOVE
+
+URL:
+{
+                "id": "8-1",
+            "inventoryGroupItemType": "Equipment"
+}
+
+Response:
+{
+    "id": "38-TaskPayload",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload",
+    "name": "TaskPayload",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "parentGroupRef": [],
+    "inventoryGroupItems": [
+        {
+            "id": "29-1",
+            "inventoryGroupItemType": "CustomNetworkAddress",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/29-1",
+            "grpSpecification": {
+                "id": "BATCNASpec",
+                "name": "BATCNASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        },
+        {
+            "id": "32-1",
+            "inventoryGroupItemType": "PipeTerminationPoint",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/32-1"
+        }
+    ]
+}
+-------------
+Removal of PTP:
+
+POST: http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload/groupItem/REMOVE
+
+Request:
+{
+                "id": "32-1",
+            "inventoryGroupItemType": "PipeTerminationPoint"
+}
+
+Response:
+{
+    "id": "38-TaskPayload",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload",
+    "name": "TaskPayload",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "parentGroupRef": [],
+    "inventoryGroupItems": [
+        {
+            "id": "29-1",
+            "inventoryGroupItemType": "CustomNetworkAddress",
+            "href": "http://localhost:7001/InventoryRSOpenAPI/resourceInventoryManagement/v3/resource/29-1",
+            "grpSpecification": {
+                "id": "BATCNASpec",
+                "name": "BATCNASpec",
+                "version": "1",
+                "startDate": "2023-03-06T05:30:01.000Z",
+                "endDate": "2038-01-19T08:44:07.000Z"
+            }
+        }
+    ]
+}
+---------------
+Removal of CustomNetworkAddress:
+
+POST: http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload/groupItem/REMOVE
+
+Request:
+{
+                "id": "29-1",
+            "inventoryGroupItemType": "CustomNetworkAddress"
+}
+
+Response:
+{
+    "id": "38-TaskPayload",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload",
+    "name": "TaskPayload",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "parentGroupRef": []
+}
+-----------------------
+
+POST :remove property Location:
+URL:
+http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload2/groupItem/REMOVE
+
+request:
+
+{
+                "id": "50-SEC IN_51 SEC TS IN",
+            "inventoryGroupItemType": "PropertyLocation"
+}
+
+Response:
+{
+    "id": "38-TaskPayload2",
+    "href": "http://localhost:7001/ReferenceRestUIM/customInventoryManagement/v3/inventoryGroup/38-TaskPayload2",
+    "name": "TaskPayload2",
+    "igSpecification": {
+        "id": "BATInvGrpSpec",
+        "name": "BATInvGrpSpec",
+        "version": "1",
+        "startDate": "2023-03-06T05:30:01.000Z",
+        "endDate": "2038-01-19T08:44:07.000Z"
+    },
+    "startDate": "2022-11-14T00:00:01.000Z",
+    "parentGroupRef": []
+}
+
+NOTE: Service is not GroupEnabled so as per framework extension is not possible so we are not supporting Service for association

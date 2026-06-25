@@ -1,0 +1,18 @@
+{
+	"serializableModel": true,
+	"dateLibrary":"legacy",
+	"java8":false,
+	"useBeanValidation":true,
+	"interfaceOnly":false,
+	"modelPackage": "oracle.communications.inventory.rest.model",
+	"apiPackage": "oracle.communications.inventory.rest.api",
+	"invokerPackage": "oracle.communications.inventory.rest.invoker",
+	"modelNameSuffix" : "Type",
+	"delegatePattern" : true,
+	"delegatePackage" : "oracle.communications.inventory.rest.delegate",
+	"allowUnicodeIdentifiers" : true,
+	"generateModelDocumentation" : false,
+	"generateApiDocumentation" : false,
+	"generateSupportingFiles " : false,
+	"hideGenerationTimestamp": true
+}
