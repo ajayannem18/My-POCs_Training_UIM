@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:data="http://www.oracle.com/communications/studio/core/model/common/data" xmlns:inv="http://www.mslv.com/studio/inventory/model/specification" xmlns="http://www.mslv.com/studio/inventory/model/specification" xsi:type="inv:EquipmentSpecificationType" name="DUAL_PORT_NIC_Card">
+  <com:saveVersion>2</com:saveVersion>
+  <com:baseEntityRef>
+    <com:entity>Equipment</com:entity>
+    <com:entityType>inventoryEntity</com:entityType>
+    <com:relationship>unknown</com:relationship>
+  </com:baseEntityRef>
+  <com:id>oip0FxDDQEqKDb3HWF0Cfg</com:id>
+  <data:dataElementNode virtual="true">
+    <com:id>oip0FxDDQEqKDb3HWF0Cfg</com:id>
+    <com:elementType>oracle.communications.studio.model.data.StudioModelDataElement</com:elementType>
+    <data:name>DUAL_PORT_NIC</data:name>
+    <data:displayName lang="[default]">DUAL_PORT_NIC</data:displayName>
+    <data:primitiveType>none</data:primitiveType>
+  </data:dataElementNode>
+  <data:dataElementDetails xsi:type="data:dataElementCommonDetail">
+    <com:id>bacNW00gRkyHqpg97Qk94g</com:id>
+    <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+    <data:dataElementId>oip0FxDDQEqKDb3HWF0Cfg</data:dataElementId>
+    <data:defaultValue></data:defaultValue>
+    <data:key></data:key>
+    <data:deprecated>false</data:deprecated>
+    <data:sensitive>false</data:sensitive>
+    <data:minLength>0</data:minLength>
+    <data:maxLength>40</data:maxLength>
+    <data:minMultiplicity>0</data:minMultiplicity>
+    <data:maxMultiplicity>-1</data:maxMultiplicity>
+  </data:dataElementDetails>
+  <inv:relatedSpecification>
+    <com:entity>eth0</com:entity>
+    <com:entityType>port</com:entityType>
+    <com:relationship>DUAL_PORT_NIC_Card To eth0</com:relationship>
+    <inv:data xsi:type="inv:SpecificationRelationshipReferenceDataType">
+      <inv:relationship>CHILD</inv:relationship>
+      <inv:status>ACTIVE</inv:status>
+      <inv:parentsToChildMin>1</inv:parentsToChildMin>
+      <inv:parentsToChildMax>1</inv:parentsToChildMax>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>eth1</com:entity>
+    <com:entityType>port</com:entityType>
+    <com:relationship>DUAL_PORT_NIC_Card To eth1</com:relationship>
+    <inv:data xsi:type="inv:SpecificationRelationshipReferenceDataType">
+      <inv:relationship>CHILD</inv:relationship>
+      <inv:status>ACTIVE</inv:status>
+      <inv:parentsToChildMin>1</inv:parentsToChildMin>
+      <inv:parentsToChildMax>1</inv:parentsToChildMax>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:relatedSpecification>
+    <com:entity>NIC_SLOT_1</com:entity>
+    <com:entityType>equipmentHolder</com:entityType>
+    <com:relationship>DUAL_PORT_NIC_Card To NIC_SLOT_1</com:relationship>
+    <inv:data xsi:type="inv:SpecificationRelationshipReferenceDataType">
+      <inv:relationship>CHILD</inv:relationship>
+      <inv:status>ACTIVE</inv:status>
+      <inv:parentsToChildMin>1</inv:parentsToChildMin>
+      <inv:parentsToChildMax>1</inv:parentsToChildMax>
+    </inv:data>
+  </inv:relatedSpecification>
+  <inv:numberOfHoldersRequired>1</inv:numberOfHoldersRequired>
+  <inv:category>CARD</inv:category>
+</com:modelEntity>

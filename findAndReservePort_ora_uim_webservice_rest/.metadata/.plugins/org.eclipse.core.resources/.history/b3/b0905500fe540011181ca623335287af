@@ -1,0 +1,22 @@
+package telephoneNumberUnassignWithoutTransition;
+
+import oracle.communications.platform.persistence.Finder;
+import oracle.communications.platform.persistence.PersistenceHelper;
+
+public class TN_Unassign {
+public static void unassignTN(){
+	System.out.println("Executing TN unassign method");
+	Finder f=null;
+	
+	try {
+		
+		f=PersistenceHelper.makeFinder();
+		
+	}
+	catch (Exception e) {
+		e.printStackTrace();
+		System.out.println("Error occured");
+	}
+	
+}
+}

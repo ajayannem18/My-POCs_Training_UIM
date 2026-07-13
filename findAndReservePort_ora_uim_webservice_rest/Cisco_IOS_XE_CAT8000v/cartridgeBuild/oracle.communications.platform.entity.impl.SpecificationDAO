@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<extent>
+  <object class="oracle.communications.platform.entity.impl.LogicalDeviceSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Cisco_IOS_XE_CAT8000v/model/Cisco IOS XE-CAT8000v_Sample.device#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-0" version="0">
+    <field name="name">"Cisco IOS XE-CAT8000v_Sample"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.LogicalDeviceDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="consumerAllowSharedConsumption">false</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs">
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-12</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-13</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-14</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-15</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-16</element>
+    </field>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="vendorName">null</field>
+    <field name="modelNumber">null</field>
+    <field name="partNumber">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.DeviceInterfaceSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Cisco_IOS_XE_CAT8000v/model/GigabitEthernet1_Management.deviceInterface#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-1" version="0">
+    <field name="name">"GigabitEthernet1_Management"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.DeviceInterfaceDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="rateCode">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.DeviceInterfaceSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Cisco_IOS_XE_CAT8000v/model/GigabitEthernet2.deviceInterface#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-2" version="0">
+    <field name="name">"GigabitEthernet2"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.DeviceInterfaceDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="rateCode">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.DeviceInterfaceSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Cisco_IOS_XE_CAT8000v/model/GigabitEthernet3.deviceInterface#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-3" version="0">
+    <field name="name">"GigabitEthernet3"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.DeviceInterfaceDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="rateCode">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.DeviceInterfaceSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Cisco_IOS_XE_CAT8000v/model/GigabitEthernet4.deviceInterface#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-4" version="0">
+    <field name="name">"GigabitEthernet4"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.DeviceInterfaceDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="rateCode">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.DeviceInterfaceSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Cisco_IOS_XE_CAT8000v/model/GigabitEthernet5.deviceInterface#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-5" version="0">
+    <field name="name">"GigabitEthernet5"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.DeviceInterfaceDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="rateCode">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.PhysicalDeviceSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Cisco_IOS_XE_CAT8000v/model/Cisco IOS XE-CAT8000v_Sample.physicalDevice#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-6" version="0">
+    <field name="name">"Cisco IOS XE-CAT8000v_Sample"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.PhysicalDeviceDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.EquipmentSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Cisco_IOS_XE_CAT8000v/model/Cisco IOS XE-CAT8000v_Sample_Shelf.equipment#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-7" version="0">
+    <field name="name">"Cisco IOS XE-CAT8000v_Sample_Shelf"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.EquipmentDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="startDate">1779906601000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="modelNumber">null</field>
+    <field name="partNumber">null</field>
+    <field name="vendorName">null</field>
+    <field name="numberOfHoldersRequired">1</field>
+    <field format="enum_name" name="equipmentCategory">SHELF</field>
+    <field name="specIlogData">oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.EquipmentSpecificationIlogDataDAO-0</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.EquipmentHolderSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Cisco_IOS_XE_CAT8000v/model/vmxnet3_Data_EQ.equipmentHolder#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-8" version="0">
+    <field name="name">"vmxnet3_Data_EQ"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.EquipmentHolderDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="startDate">1779906601000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.EquipmentHolderSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Cisco_IOS_XE_CAT8000v/model/vmxnet3_Mgmt_EQ.equipmentHolder#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-9" version="0">
+    <field name="name">"vmxnet3_Mgmt_EQ"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.EquipmentHolderDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="startDate">1779906601000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.PhysicalPortSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Cisco_IOS_XE_CAT8000v/model/cat8000_eth0.port#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-10" version="0">
+    <field name="name">"cat8000_eth0"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.PhysicalPortDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.EquipmentSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Cisco_IOS_XE_CAT8000v/model/vmxnet3_Mgmt_Card.equipment#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-11" version="0">
+    <field name="name">"vmxnet3_Mgmt_Card"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.EquipmentDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs">
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-17</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-18</element>
+    </field>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="modelNumber">null</field>
+    <field name="partNumber">null</field>
+    <field name="vendorName">null</field>
+    <field name="numberOfHoldersRequired">1</field>
+    <field format="enum_name" name="equipmentCategory">CARD</field>
+    <field name="specIlogData">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.PhysicalPortSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Cisco_IOS_XE_CAT8000v/model/cat8000_eth1.port#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-12" version="0">
+    <field name="name">"cat8000_eth1"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.PhysicalPortDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.EquipmentSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Cisco_IOS_XE_CAT8000v/model/vmxnet3_Data_Card.equipment#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-13" version="0">
+    <field name="name">"vmxnet3_Data_Card"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.EquipmentDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs">
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-19</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-20</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-21</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-22</element>
+      <element>oracle.communications.platform.ies.xfile.OID:oracle.communications.platform.entity.impl.SpecificationRelDAO-23</element>
+    </field>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+    <field name="modelNumber">null</field>
+    <field name="partNumber">null</field>
+    <field name="vendorName">null</field>
+    <field name="numberOfHoldersRequired">1</field>
+    <field format="enum_name" name="equipmentCategory">CARD</field>
+    <field name="specIlogData">null</field>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.PhysicalPortSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Cisco_IOS_XE_CAT8000v/model/cat8000_eth2.port#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-14" version="0">
+    <field name="name">"cat8000_eth2"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.PhysicalPortDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.PhysicalPortSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Cisco_IOS_XE_CAT8000v/model/cat8000_eth3.port#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-15" version="0">
+    <field name="name">"cat8000_eth3"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.PhysicalPortDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+  </object>
+  <object class="oracle.communications.platform.entity.impl.PhysicalPortSpecificationDAO" guid="http://xmlns.oracle.com/cgbu/inventory/nowhere/Cisco_IOS_XE_CAT8000v/model/cat8000_eth4.port#1.0.0.0.0_b0" oid="oracle.communications.platform.entity.impl.SpecificationDAO-16" version="0">
+    <field name="name">"cat8000_eth4"</field>
+    <field name="instanceType">"instanceType.oracle.communications.platform.entity.impl.PhysicalPortDAO"</field>
+    <field name="description">null</field>
+    <field name="consumableMayBeShared">false</field>
+    <field name="startDate">1779820201000</field>
+    <field name="relatedSpecs"/>
+    <field mode="skip" name="fromSpecs"/>
+    <field name="enterIdManually">false</field>
+    <field name="type">null</field>
+    <field name="characteristicSpecUsages"/>
+    <field name="extensionPointRuleSets"/>
+    <field name="transitions"/>
+    <field name="media"/>
+  </object>
+</extent>

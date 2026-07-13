@@ -1,0 +1,191 @@
+plugins {
+    id 'org.hidetake.swagger.generator' version '2.18.1'
+    id 'groovy'
+}
+apply plugin: "war"
+
+
+def env = System.getenv()
+println env.COMPUTERNAME
+
+def prop = "etc/" + env.COMPUTERNAME + ".properties"
+println prop
+
+Properties properties = new Properties()
+properties.load(project.file(prop).newDataInputStream())
+println properties.getProperty('FMW_HOME')
+println properties.getProperty('APP_LIB')
+println properties.getProperty('UIM_LIB')
+def FMW_HOME = properties.getProperty('FMW_HOME')
+def APP_LIB = properties.getProperty('APP_LIB')
+def UIM_LIB = properties.getProperty('UIM_LIB')
+def WAR_NAME = properties.getProperty('WAR_NAME') + '.war'
+
+war{
+  enabled = true
+  archiveName = properties.getProperty('WAR_NAME') + '.war'
+}
+
+repositories {
+        mavenCentral()
+        maven {
+            url = "http://plugins.gradle.org/m2/"    
+        }
+        maven {                    
+            url = "https://repo.maven.apache.org/maven2"
+        }
+}
+
+task copyLibs(type: Copy) {
+    from configurations.compile,configurations.swaggerCodegen
+    into 'lib'
+}
+
+sourceSets {
+  main {
+      java {
+          srcDirs = ['src/']
+      }
+      resources {
+          srcDirs = ['src/main/resources']
+      }
+  }
+}
+
+dependencies {
+    providedCompile 'io.swagger:swagger-annotations:1.6.2'
+    providedCompile 'io.swagger.core.v3:swagger-annotations:2.1.10'
+	
+    providedCompile 'com.fasterxml.jackson.core:jackson-core:2.16.2'
+    providedCompile 'com.fasterxml.jackson.core:jackson-annotations:2.16.2'
+    providedCompile 'com.fasterxml.jackson.core:jackson-databind:2.16.2'
+
+    swaggerCodegen 'io.swagger.codegen.v3:swagger-codegen-cli:3.0.16' 
+   
+    providedCompile files(UIM_LIB + '/uim-webservices-rest-adapter.jar')
+    providedCompile files(UIM_LIB + '/uim-webservices-rest-framework.jar')
+
+
+    providedCompile  files(FMW_HOME + '/oracle_common/modules/javax.validation.jar')
+    providedCompile  files(FMW_HOME + '/oracle_common/modules/javax.servlet.javax.servlet-api.jar')
+    providedCompile  files(FMW_HOME + '/wlserver/modules/javax.transaction.javax.transaction-api.jar')
+    providedCompile  files(APP_LIB + '/uim-managers.jar')
+    providedCompile  files(APP_LIB + '/uim-api-framework.jar')
+    providedCompile  files(APP_LIB + '/uim-tools.jar')
+    providedCompile  files(APP_LIB + '/uim-entities.jar')
+    providedCompile  files(APP_LIB + '/platform-persistence.jar')
+    providedCompile  files(APP_LIB + '/core_caps.jar')
+    providedCompile  files(APP_LIB + '/characteristic_caps.jar')
+	providedCompile  files(APP_LIB + '/capacity_caps.jar')
+    providedCompile  files(APP_LIB + '/consumable_caps.jar')
+    providedCompile  files(UIM_LIB + '/platformWsFramework.jar')
+    providedCompile  files(APP_LIB + '/uim-webservices-framework.jar')
+	providedCompile  files(APP_LIB + '/uim-entity-xmlbean.jar')
+	providedCompile  files(APP_LIB + '/poms.jar')
+	providedCompile  files(APP_LIB + '/gson-2.10.jar')
+	
+	providedCompile fileTree(dir: FMW_HOME, include: ['oracle_common/modules/javax.ws.rs.javax.ws.rs-api.jar',
+                                                        'oracle_common/modules/javax.annotation.javax.annotation-api.jar',
+	                                                	'oracle_common/modules/javax.inject.javax.inject.jar',
+                                                        'oracle_common/modules/thirdparty/jackson-jaxrs-json-provider-2.9.9.jar',
+                                                        'oracle_common/modules/thirdparty/jackson-jaxrs-base-2.9.9.jar',
+                                                        'wlserver/modules/javax.enterprise.cdi-api.jar',
+														'wlserver/modules/commons-io.commons-io.jar',
+														'oracle_common/modules/org.glassfish.jersey.core.jersey-server.jar',
+														'oracle_common/modules/com.bea.core.apache.commons.lang.jar'])
+}
+
+project.webAppDirName = 'src/webapp'
+
+swaggerSources {
+	//model files are generated using spring mustache files
+    resourcemodel {
+        inputFile = file('yaml/UIMSample1_0.yaml')
+        code {
+            language = 'spring'
+            templateDir = file('templates/spring-templates/templates-resource/JavaSpring')
+            configFile = file('codegen.config.json')
+            components = ['models']
+            //dependsOn validation//not working plugin is checking for swagger 2.0 spec rather than 3.0
+        }
+    }
+	//api files are generated using jaxrs mustache files
+	resourceapi {
+        inputFile = file('yaml/UIMSample1_0.yaml')
+        code {
+            language = 'jaxrs-resteasy'
+            templateDir = file('templates/templates-resource/JavaJaxRS/resteasy')
+            configFile = file('codegen.config.json')
+            components = ['apis']
+            //dependsOn validation//not working plugin is checking for swagger 2.0 spec rather than 3.0
+        }
+    }
+}
+build {
+ dependsOn 'generateSwaggerCode'
+}
+
+task copyModelToSource(type: Copy) {
+  from ('build/swagger-code-resourcemodel/src/main/java/oracle/communications/inventory/rest/model') {
+    include "*.java"
+    filter { line -> line.replaceAll('import org.springframework.validation.annotation.Validated;', '')}
+	filter { line -> line.replaceAll('@Validated', '') }
+	filter { line -> line.replaceAll('JsonTypeInfo.As.PROPERTY', 'JsonTypeInfo.As.EXISTING_PROPERTY') }
+	filter { line -> line.replaceAll('@JsonTypeId', '@JsonProperty("@type")') }
+  }
+  into "src/oracle/communications/inventory/rest/model"
+}
+
+task copyApiToSource(type: Copy) {
+  from ('build/swagger-code-resourceapi/src/gen/java/oracle/communications/inventory/rest/api') {
+    include "*.java"
+  }
+  into "src/oracle/communications/inventory/rest/api"
+}
+
+task copyApiImplToSource(type: Copy) {
+  from ('build/swagger-code-resourceapi/src/main/java/oracle/communications/inventory/rest/api/impl') {
+    include "*.java"
+  }
+  into "src/oracle/communications/inventory/rest/api/impl"
+}
+
+task copyResources(type: Copy) {
+  from ('config/resources/logging') {
+    include "*.properties"
+  }
+  into properties.getProperty('UIM_HOME') + "/config/resources/logging"
+}
+
+def ReplaceText(source, targetText, replaceText) {
+    if (source.exists() && source.text.contains(targetText))
+        source.write(source.text.replaceAll(targetText, replaceText))
+}
+
+task extractCustomEar(type: Copy) {
+    def zipFile = file(properties.getProperty('EAR_PATH'))
+    def outputDir = file("./META-INF")
+
+    from {
+        zipTree(properties.getProperty('EAR_PATH')).matching { include '**/application.xml' }.singleFile
+    }
+    into outputDir
+}
+
+// replace
+def ReplaceAppText(source, targetText, replaceText) {
+    if (source.exists() && !source.text.contains('WAR_NAME'))
+        source.write(source.text.replaceAll(targetText, replaceText))
+}
+
+task updateApplicationXml() {
+    def applicationXml = new File('META-INF/application.xml')
+
+    ReplaceAppText(applicationXml, "<library-directory>", "<module>\n<web>\n<web-uri>ReferenceRestUIM.war</web-uri>\n<context-root>/ReferenceRestUIM</context-root>\n</web>\n</module>\n<library-directory>")
+
+}
+
+
+
+
+

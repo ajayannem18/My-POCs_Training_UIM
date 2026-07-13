@@ -1,0 +1,20 @@
+package oracle.communications.inventory.rules;
+import com.findServiceById.FindServiceByDeviceId;
+import oracle.communications.inventory.api.framework.logging.Log;
+global Log log;
+
+rule "Find Service by Device Id"
+  salience 0
+ 
+when
+
+then
+//System.out.println("Calling find service method");
+log.info("","Calling dinf service method");
+FindServiceByDeviceId.findServiceById();
+//System.out.println("find service method executed successfully");
+log.info("","Find service method executed successfully");
+
+
+end
+  

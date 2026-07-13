@@ -1,0 +1,15 @@
+1779791578728	Rename resource 'Mellanox ConnectX-6 2x100G NIC_Card.equipment'
+1779795731689	Delete element
+1779795736101	Delete element
+1779796776912	Rename resource 'MgmtEth_DI1.deviceInterface'
+1779796787656	Rename resource '25GE_DI2.deviceInterface'
+1779796797292	Rename resource '100GE_DI3.deviceInterface'
+1779797748073	Delete element
+1779797756116	Delete elements
+1779797826283	Rename resource '100GE Line Port.port'
+1779797841152	Rename resource '25GE Line Port.port'
+1779797862336	Rename resource 'CIMC dedicated Management Port.port'
+1779797878056	Rename resource 'Management Ethernet Port.port'
+1779798263441	Rename resource 'XR NIC Reserved Card.equipment'
+1779860602473	Rename resource 'E1000.equipment'
+1779860680168	Rename resource 'E1000 vNIC.equipment'

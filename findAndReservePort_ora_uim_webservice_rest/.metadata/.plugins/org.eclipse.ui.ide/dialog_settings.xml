@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="CleanDialogSettings">
+		<item value="828" key="DIALOG_WIDTH"/>
+		<item value="false" key="BUILD_ALL"/>
+		<item value="true" key="TOGGLE_SELECTED"/>
+		<item value="595" key="DIALOG_HEIGHT"/>
+		<item value="546" key="DIALOG_X_ORIGIN"/>
+		<item value="184" key="DIALOG_Y_ORIGIN"/>
+		<item value="true" key="BUILD_NOW"/>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item value="true" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value=""/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="D:\FindServiceByDeviceName_CustomWebservice_WS\SRV-UBUNTU-01 (2).zip"/>
+			<item value="C:\Users\AjayAnnem\Downloads\OracleComms_UIM_Sample_SmokeTest_Device.zip"/>
+			<item value="D:\UIM_SDK_7.8\UIM_SDK\cartridges\base\ora_uim_basemeasurements_cartproj.zip"/>
+			<item value="D:\UIM_SDK_7.8\UIM_SDK\cartridges\base\ora_uim_basetechnologies_cartproj.zip"/>
+			<item value="D:\UIM_SDK_7.8\UIM_SDK\cartridges\base\ora_uim_basespecifications_cartproj.zip"/>
+			<item value="D:\UIM_SDK_7.8\UIM_SDK\cartridges\base\ora_uim_baseextpts_cartproj.zip"/>
+			<item value="D:\UIM_SDK_7.8\UIM_SDK\cartridges\base\ora_uim_baserulesets_cartproj.zip"/>
+			<item value="D:\UIM_Training_Workspace_DS\TSARO_Access_Service (2).zip"/>
+			<item value="C:\Users\AjayAnnem\Downloads\Tsaro_Huawei_MA5800-X15.zip"/>
+			<item value="D:\FindServiceByDeviceName_CustomWebservice_WS\MA5800-X15_PE.zip"/>
+			<item value="C:\Users\AjayAnnem\Downloads\Tsaro_Device_PE.zip"/>
+			<item value="D:\UIM_SDK_7.8\UIM_SDK\cartridges\required\ora_uim_model_cartproj.zip"/>
+			<item value="D:\UIM_SDK_7.8\UIM_SDK\cartridges\required\ora_uim_mds_cartproj.zip"/>
+			<item value="D:\UIM_SDK_7.8\UIM_SDK\webservices\reference_webservice.zip"/>
+		</list>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item value="448" key="DIALOG_X_ORIGIN"/>
+		<item value="203" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.ui.dialogs.FilteredResourcesSelectionDialog">
+		<item value="false" key="FilterByLocation"/>
+		<item value="true" key="ShowStatusLine"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Tsaro_Huawei_MA5800-X15/model/FE.port&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Tsaro_Huawei_MA5800-X15/model/GE.port&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Tsaro_Huawei_MA5800-X15/model/10GE.port&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Tsaro_Huawei_MA5800-X15/model/10G EPON.port&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Tsaro_Huawei_MA5800-X15/model/10G GPON.port&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Mobile_Poc/model/Mobile_CFS_Service_Configuration.configuration&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Mobile_Poc/model/IND_TelephoneNumber.tn&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Mobile_Poc/model/SIM.device&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Mobile_Poc/model/Mobile_RFS_Service.service&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/ora_uim_baserulesets/ora_uim_baserulesets.inventoryCartridge&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/ora_uim_baseextpts/ora_uim_baseextpts.inventoryCartridge&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/ora_uim_baseextpts/model/BusinessInteractionManager_createBusinessInteractionAttachment.rstp&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Mobile_Poc/model/ValidateOsmInput.ruleset&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Mobile_Poc/model/ValidateXMLInput.rst&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Mobile_Poc/model/Actions_Mapping.ruleset&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/ora_uim_baseextpts/model/BusinessInteractionManager_getEntityAction.rstp&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/TSARO_Access_Service/model/MapServiceActionsWithUIM.rst&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Mobile_Poc/model/actionsMapping.rst&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Mobile_Poc/model/Design_and_Assign.ruleset&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/ora_uim_baseextpts/model/BaseConfigurationManager_automateConfiguration.rstp&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Mobile_Poc/model/designAndAssign.rst&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/ora_uim_basespecifications/ora_uim_basespecifications.inventoryCartridge&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/ora_uim_basetechnologies/ora_uim_basetechnologies.inventoryCartridge&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_Nexus_9332PQ_Switch/model/QSFP_40G_PORT.port&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_Nexus_9332PQ_Switch/model/Cisco_Nexus_9332PQ_EH.equipmentHolder&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_Nexus_9372PX_E_Switch/model/SFP_PLUS_10G_PORT.port&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_Nexus_9372PX_E_Switch/model/Cisco_Nexus_9372PX_E_EH.equipmentHolder&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_Nexus_9372PX_E_Switch/model/QSFP_PLUS_40G_PORT.port&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_Nexus_9372PX_E_Switch/model/Cisco_Nexus_9372PX_E_Card2.equipment&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_Nexus_9372PX_E_Switch/model/Cisco_Nexus_9372PX_E_EH2.equipmentHolder&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_IOS_XRv_9000/model/E100 vNIC_EH.equipmentHolder&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_IOS_XRv_9000/model/eth0.port&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_IOS_XRv_9000/model/eth1.port&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_IOS_XRv_9000/model/eth2.port&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_IOS_XRv_9000/model/vNIC_EH.equipmentHolder&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_IOS_XRv_9000/model/eth3.port&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_IOS_XRv_9000/model/eth4.port&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_IOS_XRv_9000/model/eth5.port&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_IOS_XRv_9000/model/Gi0_0_0_1.deviceInterface&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_IOS_XRv_9000/model/Gi0_0_0_2.deviceInterface&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_IOS_XRv_9000/model/Gi0_0_0_3.deviceInterface&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_IOS_XRv_9000/model/MgmtEth0_RP0_CPU0_0.deviceInterface&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_IOS_XE_CAT8000v/model/vmxnet3_Mgmt_EQ.equipmentHolder&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_IOS_XE_CAT8000v/model/vmxnet3_Data_EQ.equipmentHolder&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_IOS_XE_CAT8000v/model/cat8000_eth1.port&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_IOS_XE_CAT8000v/model/cat8000_eth2.port&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_IOS_XE_CAT8000v/model/cat8000_eth3.port&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_IOS_XE_CAT8000v/model/cat8000_eth4.port&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_IOS_XE_CAT8000v/model/cat8000_eth0.port&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_IOS_XE_CAT8000v/model/GigabitEthernet1_Management.deviceInterface&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_IOS_XE_CAT8000v/model/GigabitEthernet2.deviceInterface&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_IOS_XE_CAT8000v/model/GigabitEthernet3.deviceInterface&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_IOS_XE_CAT8000v/model/GigabitEthernet4.deviceInterface&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_IOS_XE_CAT8000v/model/GigabitEthernet5.deviceInterface&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/SRV-UBUNTU-01/model/ubuntu_eth0.port&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/SRV-UBUNTU-01/model/ubuntu_eth1.port&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_Nexus_9372PX_E_Switch/model/Cisco Nexus 9372PX-E_QSFP.deviceInterface&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Cisco_Nexus_9372PX_E_Switch/model/Cisco Nexus 9372PX-E_SFP.deviceInterface&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/SRV-UBUNTU-01/model/eth0.deviceInterface&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/SRV-UBUNTU-01/model/eth1.deviceInterface&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;" key="History"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;workingSet workingSetName=&quot;&quot;/&gt;" key="WorkingSet"/>
+		<item value="false" key="ShowDerived"/>
+		<section name="DialogBoundsSettings">
+			<item value="1920" key="DIALOG_WIDTH"/>
+			<item value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+			<item value="1008" key="DIALOG_HEIGHT"/>
+			<item value="11" key="DIALOG_X_ORIGIN"/>
+			<item value="11" key="DIALOG_Y_ORIGIN"/>
+		</section>
+	</section>
+</section>

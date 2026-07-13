@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:tns="http://xmlns.oracle.com/communications/sce/dictionary/SRV-UBUNTU-01/SRV-UBUNTU-01" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/communications/sce/dictionary/SRV-UBUNTU-01/SRV-UBUNTU-01">
+    <xs:simpleType name="OS_Version">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="Server_Role">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

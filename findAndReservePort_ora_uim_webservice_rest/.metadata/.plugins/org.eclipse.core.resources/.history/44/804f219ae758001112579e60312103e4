@@ -1,0 +1,94 @@
+package com.findServiceById;
+
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+
+import javax.transaction.UserTransaction;
+
+import oracle.communications.inventory.api.entity.LogicalDevice;
+import oracle.communications.inventory.api.entity.Service;
+import oracle.communications.inventory.api.framework.logging.Log;
+import oracle.communications.platform.persistence.Finder;
+import oracle.communications.platform.persistence.PersistenceHelper;
+
+public class FindServiceByDeviceId {
+
+    public static void findServiceById() {
+
+        UserTransaction ut = null;
+        Finder f = null;
+
+        try {
+
+            System.out.println("Executing findServiceById method");
+  
+            ut = PersistenceHelper.makePersistenceManager().getTransaction();
+            f = PersistenceHelper.makeFinder();
+
+            ut.begin();
+            Logger log =
+                    LoggerFactory.getLogger(Test.class);
+            List<String> ids = Arrays.asList("1", "2", "3", "4");
+
+            for (String id : ids) {
+
+                Iterator<LogicalDevice> itr =
+                        f.findById(LogicalDevice.class, id).iterator();
+
+                if (!itr.hasNext()) {
+                	log.info("No device Found",itr);
+                    System.out.println("No device found with id : " + id);
+                    continue;
+                }
+
+                LogicalDevice ld = itr.next();
+
+                System.out.println("Logical device found with id :"+id+"and name : " + ld.getName());
+
+                if (ld.getCurrentAssignment() == null ||
+                        ld.getCurrentAssignment().getConsumer() == null) {
+
+                    System.out.println("No service assigned for device id : " + id);
+                    continue;
+                }
+
+                Service service =
+                        (Service) ld.getCurrentAssignment().getConsumer();
+
+                System.out.println("Service Name : " + service.getName());
+                System.out.println("Serive details are : "+service);
+
+                if (service.getConfigurations() != null &&
+                        !service.getConfigurations().isEmpty()) {
+
+                    String scvId =
+                            service.getConfigurations().get(0).getVersionId();
+
+                    System.out.println("SCV Id : " + scvId);
+                    System.out.println("Service Configuration details : "+service.getConfigurations().iterator().next());
+                }
+            }
+
+            ut.commit();
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+
+            try {
+                if (ut != null) {
+                    ut.rollback();
+                }
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+
+        } finally {
+
+            if (f != null) {
+                f.close();
+            }
+        }
+    }
+}

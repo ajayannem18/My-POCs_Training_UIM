@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns="http://www.mslv.com/studio/core/model/common" xmlns:data="http://www.oracle.com/communications/studio/core/model/common/data" xmlns:layout="http://xmlns.oracle.com/communications/sce/poms/model/layout" xmlns:poms="http://xmlns.oracle.com/communications/sce/poms/model/poms" xmlns:specification="http://www.mslv.com/studio/inventory/model/specification" xsi:type="com:dataDictionaryCompanionType" name="Cisco_IOS_XRv_9000_companion">
+  <com:displayName>Cisco_IOS_XRv_9000</com:displayName>
+  <com:saveVersion>5</com:saveVersion>
+  <com:id>xNZqnALGS7y7hMPemM+gFQ</com:id>
+  <com:dataDictionaryNode>
+    <com:entity>Cisco_IOS_XRv_9000</com:entity>
+    <com:entityType>xsd</com:entityType>
+    <com:relationship>com.mslv.studio.core.data.dictionary.extension</com:relationship>
+    <com:element>RAM</com:element>
+    <com:elementType>anyType</com:elementType>
+    <com:baseElement>string</com:baseElement>
+    <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
+    <com:dataElementId>RAM</com:dataElementId>
+    <com:displayName lang="en"></com:displayName>
+    <com:displayName>RAM</com:displayName>
+    <com:minCardinality>0</com:minCardinality>
+    <com:maxCardinality>1</com:maxCardinality>
+    <com:dataDictionaryDetails>
+      <com:detail xsi:type="data:dataElementCommonDetail">
+        <com:id>NTl7UIx3REuYINPCe+osKA</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+        <data:dataElementId>RAM</data:dataElementId>
+        <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
+        <data:minLength>1</data:minLength>
+        <data:maxLength>-1</data:maxLength>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementEnumerationDetail">
+        <com:id>wgS98E9HSTmD6wRiWEjt-A</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</com:elementType>
+        <data:dataElementId>RAM</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementInformationDetails">
+        <com:id>M+058iLMQfqmUIWFnE-tig</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</com:elementType>
+        <data:dataElementId>RAM</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="layout:hintDetail">
+        <com:id>W+VktfTaRG6RkEtXwTwQqw</com:id>
+        <com:elementType>oracle.communications.sce.poms.model.data.UIHintsDetail</com:elementType>
+        <data:dataElementId>RAM</data:dataElementId>
+        <layout:hints/>
+      </com:detail>
+      <com:detail xsi:type="poms:valueComplexType" linkEnabled="false" overrideDictionaryValues="false" queryEnabled="false" valueEnabled="false">
+        <com:id>co0S74XxS42Kdv0zOeBaVg</com:id>
+        <com:elementType>oracle.communications.sce.poms.model.data.ValueElementDetail</com:elementType>
+        <data:dataElementId>RAM</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="specification:CharElementDetailType">
+        <com:id>QhQhi43lQPiB50EgFSVjIA</com:id>
+        <com:elementType>oracle.communications.studio.inventory.model.data.StudioModelDataElementCharDetailType</com:elementType>
+        <data:dataElementId>RAM</data:dataElementId>
+        <specification:startTimestamp>0</specification:startTimestamp>
+        <specification:endTimestamp>0</specification:endTimestamp>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementTagDetails">
+        <com:id>IRpv8SRETXqyQM1pANrN2w</com:id>
+        <com:elementType>oracle.communications.studio.model.tag.StudioModelTagDetails</com:elementType>
+        <data:dataElementId>RAM</data:dataElementId>
+        <data:tags>
+          <data:id>oracle.communications.studio.inventory.dataelement.characteristic</data:id>
+          <data:name>Characteristic</data:name>
+        </data:tags>
+      </com:detail>
+    </com:dataDictionaryDetails>
+  </com:dataDictionaryNode>
+  <com:dataDictionaryNode>
+    <com:entity>Cisco_IOS_XRv_9000</com:entity>
+    <com:entityType>xsd</com:entityType>
+    <com:relationship>com.mslv.studio.core.data.dictionary.extension</com:relationship>
+    <com:element>vCPU</com:element>
+    <com:elementType>anyType</com:elementType>
+    <com:baseElement>string</com:baseElement>
+    <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
+    <com:dataElementId>vCPU</com:dataElementId>
+    <com:displayName lang="en"></com:displayName>
+    <com:displayName>V CPU</com:displayName>
+    <com:minCardinality>0</com:minCardinality>
+    <com:maxCardinality>1</com:maxCardinality>
+    <com:dataDictionaryDetails>
+      <com:detail xsi:type="data:dataElementCommonDetail">
+        <com:id>V4ItC12vRnmdmYFQ8u5f0g</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+        <data:dataElementId>vCPU</data:dataElementId>
+        <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
+        <data:minLength>1</data:minLength>
+        <data:maxLength>-1</data:maxLength>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementEnumerationDetail">
+        <com:id>afOyu4PiSu6WD6ADdpx2zg</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</com:elementType>
+        <data:dataElementId>vCPU</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementInformationDetails">
+        <com:id>bgC2GDP4TE+D5eeqXM5Qyw</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</com:elementType>
+        <data:dataElementId>vCPU</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="layout:hintDetail">
+        <com:id>mygLfPieR4+UaQrMFXW4iw</com:id>
+        <com:elementType>oracle.communications.sce.poms.model.data.UIHintsDetail</com:elementType>
+        <data:dataElementId>vCPU</data:dataElementId>
+        <layout:hints/>
+      </com:detail>
+      <com:detail xsi:type="poms:valueComplexType" linkEnabled="false" overrideDictionaryValues="false" queryEnabled="false" valueEnabled="false">
+        <com:id>fNobfzqPQNqmEYk6KKpkkw</com:id>
+        <com:elementType>oracle.communications.sce.poms.model.data.ValueElementDetail</com:elementType>
+        <data:dataElementId>vCPU</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="specification:CharElementDetailType">
+        <com:id>QjD4VBoqQmCPjbi71UZ7IA</com:id>
+        <com:elementType>oracle.communications.studio.inventory.model.data.StudioModelDataElementCharDetailType</com:elementType>
+        <data:dataElementId>vCPU</data:dataElementId>
+        <specification:startTimestamp>0</specification:startTimestamp>
+        <specification:endTimestamp>0</specification:endTimestamp>
+      </com:detail>
+    </com:dataDictionaryDetails>
+  </com:dataDictionaryNode>
+</com:modelEntity>

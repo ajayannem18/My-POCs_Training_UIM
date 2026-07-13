@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns="http://www.mslv.com/studio/core/model/common" xmlns:data="http://www.oracle.com/communications/studio/core/model/common/data" xmlns:layout="http://xmlns.oracle.com/communications/sce/poms/model/layout" xmlns:poms="http://xmlns.oracle.com/communications/sce/poms/model/poms" xmlns:specification="http://www.mslv.com/studio/inventory/model/specification" xsi:type="com:dataDictionaryCompanionType" name="Cisco_Nexus_9372PX_E_Switch_companion">
+  <com:displayName>Cisco_Nexus_9372PX_E_Switch</com:displayName>
+  <com:saveVersion>14</com:saveVersion>
+  <com:id>utRurYWeSyWX08x6tEyrAA</com:id>
+  <com:dataDictionaryNode>
+    <com:entity>Cisco_Nexus_9372PX_E_Switch</com:entity>
+    <com:entityType>xsd</com:entityType>
+    <com:relationship>com.mslv.studio.core.data.dictionary.extension</com:relationship>
+    <com:element>Vendor</com:element>
+    <com:elementType>anyType</com:elementType>
+    <com:baseElement>string</com:baseElement>
+    <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
+    <com:dataElementId>Vendor</com:dataElementId>
+    <com:displayName lang="en"></com:displayName>
+    <com:displayName>Vendor</com:displayName>
+    <com:minCardinality>0</com:minCardinality>
+    <com:maxCardinality>1</com:maxCardinality>
+    <com:dataDictionaryDetails>
+      <com:detail xsi:type="data:dataElementCommonDetail">
+        <com:id>phrJ9z9AT4O3Gn6dbvwPbA</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+        <data:dataElementId>Vendor</data:dataElementId>
+        <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
+        <data:minLength>1</data:minLength>
+        <data:maxLength>-1</data:maxLength>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementEnumerationDetail">
+        <com:id>kuiH6EvsSBeiNLvGEurcnA</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</com:elementType>
+        <data:dataElementId>Vendor</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementInformationDetails">
+        <com:id>RTvJWiiFRmOt43XQyDCFXQ</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</com:elementType>
+        <data:dataElementId>Vendor</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="layout:hintDetail">
+        <com:id>f5FxrGs9QjSH2s2a78mxXQ</com:id>
+        <com:elementType>oracle.communications.sce.poms.model.data.UIHintsDetail</com:elementType>
+        <data:dataElementId>Vendor</data:dataElementId>
+        <layout:hints/>
+      </com:detail>
+      <com:detail xsi:type="poms:valueComplexType" linkEnabled="false" overrideDictionaryValues="false" queryEnabled="false" valueEnabled="false">
+        <com:id>GtAVhD3jRP2YkONltFdO+g</com:id>
+        <com:elementType>oracle.communications.sce.poms.model.data.ValueElementDetail</com:elementType>
+        <data:dataElementId>Vendor</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="specification:CharElementDetailType">
+        <com:id>p40vcEJxTl6xbg3NzgrW5w</com:id>
+        <com:elementType>oracle.communications.studio.inventory.model.data.StudioModelDataElementCharDetailType</com:elementType>
+        <data:dataElementId>Vendor</data:dataElementId>
+        <specification:startTimestamp>0</specification:startTimestamp>
+        <specification:endTimestamp>0</specification:endTimestamp>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementTagDetails">
+        <com:id>kK5BmuP5SgS9V3YV6OfVmg</com:id>
+        <com:elementType>oracle.communications.studio.model.tag.StudioModelTagDetails</com:elementType>
+        <data:dataElementId>Vendor</data:dataElementId>
+        <data:tags>
+          <data:id>oracle.communications.studio.inventory.dataelement.characteristic</data:id>
+          <data:name>Characteristic</data:name>
+        </data:tags>
+      </com:detail>
+    </com:dataDictionaryDetails>
+  </com:dataDictionaryNode>
+  <com:dataDictionaryNode>
+    <com:entity>Cisco_Nexus_9372PX_E_Switch</com:entity>
+    <com:entityType>xsd</com:entityType>
+    <com:relationship>com.mslv.studio.core.data.dictionary.extension</com:relationship>
+    <com:element>Model</com:element>
+    <com:elementType>anyType</com:elementType>
+    <com:baseElement>string</com:baseElement>
+    <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
+    <com:dataElementId>Model</com:dataElementId>
+    <com:displayName lang="en"></com:displayName>
+    <com:displayName>Model</com:displayName>
+    <com:minCardinality>0</com:minCardinality>
+    <com:maxCardinality>1</com:maxCardinality>
+    <com:dataDictionaryDetails>
+      <com:detail xsi:type="data:dataElementCommonDetail">
+        <com:id>QZH2Ho-mS1OKzwVobXc0fg</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+        <data:dataElementId>Model</data:dataElementId>
+        <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
+        <data:minLength>1</data:minLength>
+        <data:maxLength>-1</data:maxLength>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementEnumerationDetail">
+        <com:id>eIxR3f6eSdiCyFeQ7y0imA</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</com:elementType>
+        <data:dataElementId>Model</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementInformationDetails">
+        <com:id>c7DqMARhRYyZ4yZURICxDg</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</com:elementType>
+        <data:dataElementId>Model</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="layout:hintDetail">
+        <com:id>bwlm62-9S4SIJefTNelotA</com:id>
+        <com:elementType>oracle.communications.sce.poms.model.data.UIHintsDetail</com:elementType>
+        <data:dataElementId>Model</data:dataElementId>
+        <layout:hints/>
+      </com:detail>
+      <com:detail xsi:type="poms:valueComplexType" linkEnabled="false" overrideDictionaryValues="false" queryEnabled="false" valueEnabled="false">
+        <com:id>WMyW6DYPQfGXYoUTqbwEmA</com:id>
+        <com:elementType>oracle.communications.sce.poms.model.data.ValueElementDetail</com:elementType>
+        <data:dataElementId>Model</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="specification:CharElementDetailType">
+        <com:id>vnKIl9usSL6aGgVBxoamIQ</com:id>
+        <com:elementType>oracle.communications.studio.inventory.model.data.StudioModelDataElementCharDetailType</com:elementType>
+        <data:dataElementId>Model</data:dataElementId>
+        <specification:startTimestamp>0</specification:startTimestamp>
+        <specification:endTimestamp>0</specification:endTimestamp>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementTagDetails">
+        <com:id>2JtIKFLUSAKsQycM4tD5ig</com:id>
+        <com:elementType>oracle.communications.studio.model.tag.StudioModelTagDetails</com:elementType>
+        <data:dataElementId>Model</data:dataElementId>
+        <data:tags>
+          <data:id>oracle.communications.studio.inventory.dataelement.characteristic</data:id>
+          <data:name>Characteristic</data:name>
+        </data:tags>
+      </com:detail>
+    </com:dataDictionaryDetails>
+  </com:dataDictionaryNode>
+  <com:dataDictionaryNode>
+    <com:entity>Cisco_Nexus_9372PX_E_Switch</com:entity>
+    <com:entityType>xsd</com:entityType>
+    <com:relationship>com.mslv.studio.core.data.dictionary.extension</com:relationship>
+    <com:element>DeviceType</com:element>
+    <com:elementType>anyType</com:elementType>
+    <com:baseElement>string</com:baseElement>
+    <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
+    <com:dataElementId>DeviceType</com:dataElementId>
+    <com:displayName lang="en"></com:displayName>
+    <com:displayName>Device Type</com:displayName>
+    <com:minCardinality>0</com:minCardinality>
+    <com:maxCardinality>1</com:maxCardinality>
+    <com:dataDictionaryDetails>
+      <com:detail xsi:type="data:dataElementCommonDetail">
+        <com:id>x4UwfYyURvWA91VpB7+n3Q</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+        <data:dataElementId>DeviceType</data:dataElementId>
+        <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
+        <data:minLength>1</data:minLength>
+        <data:maxLength>-1</data:maxLength>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementEnumerationDetail">
+        <com:id>DcK-vJJhS3S6eAU6UUi--w</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</com:elementType>
+        <data:dataElementId>DeviceType</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementInformationDetails">
+        <com:id>a1TsjF1wS5aK3WC3gf9i6Q</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</com:elementType>
+        <data:dataElementId>DeviceType</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="layout:hintDetail">
+        <com:id>WZKPlNhtTzS5DeaSXnX1Qg</com:id>
+        <com:elementType>oracle.communications.sce.poms.model.data.UIHintsDetail</com:elementType>
+        <data:dataElementId>DeviceType</data:dataElementId>
+        <layout:hints/>
+      </com:detail>
+      <com:detail xsi:type="poms:valueComplexType" linkEnabled="false" overrideDictionaryValues="false" queryEnabled="false" valueEnabled="false">
+        <com:id>kySqxVt+Ti6jW9xA93EMPA</com:id>
+        <com:elementType>oracle.communications.sce.poms.model.data.ValueElementDetail</com:elementType>
+        <data:dataElementId>DeviceType</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="specification:CharElementDetailType">
+        <com:id>eKe6sta3Rii6+GmFqDljlw</com:id>
+        <com:elementType>oracle.communications.studio.inventory.model.data.StudioModelDataElementCharDetailType</com:elementType>
+        <data:dataElementId>DeviceType</data:dataElementId>
+        <specification:startTimestamp>0</specification:startTimestamp>
+        <specification:endTimestamp>0</specification:endTimestamp>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementTagDetails">
+        <com:id>8Lm0TRhlTFu8c9I5fMxaqQ</com:id>
+        <com:elementType>oracle.communications.studio.model.tag.StudioModelTagDetails</com:elementType>
+        <data:dataElementId>DeviceType</data:dataElementId>
+        <data:tags>
+          <data:id>oracle.communications.studio.inventory.dataelement.characteristic</data:id>
+          <data:name>Characteristic</data:name>
+        </data:tags>
+      </com:detail>
+    </com:dataDictionaryDetails>
+  </com:dataDictionaryNode>
+  <com:dataDictionaryNode>
+    <com:entity>Cisco_Nexus_9372PX_E_Switch</com:entity>
+    <com:entityType>xsd</com:entityType>
+    <com:relationship>com.mslv.studio.core.data.dictionary.extension</com:relationship>
+    <com:element>RU_Size</com:element>
+    <com:elementType>anyType</com:elementType>
+    <com:baseElement>string</com:baseElement>
+    <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
+    <com:dataElementId>RU_Size</com:dataElementId>
+    <com:displayName lang="en"></com:displayName>
+    <com:displayName>RU Size</com:displayName>
+    <com:minCardinality>0</com:minCardinality>
+    <com:maxCardinality>1</com:maxCardinality>
+    <com:dataDictionaryDetails>
+      <com:detail xsi:type="data:dataElementCommonDetail">
+        <com:id>jf4Wm5QCT2m2jGRBR4i+9w</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+        <data:dataElementId>RU_Size</data:dataElementId>
+        <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
+        <data:minLength>1</data:minLength>
+        <data:maxLength>-1</data:maxLength>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementEnumerationDetail">
+        <com:id>pCAprzAjR8+0S4pFrHmGeQ</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</com:elementType>
+        <data:dataElementId>RU_Size</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementInformationDetails">
+        <com:id>DYDv7ttdSqq9lvjmMQ2-kw</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</com:elementType>
+        <data:dataElementId>RU_Size</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="layout:hintDetail">
+        <com:id>YRaO2-sVQ8O+Y13ik6nS5g</com:id>
+        <com:elementType>oracle.communications.sce.poms.model.data.UIHintsDetail</com:elementType>
+        <data:dataElementId>RU_Size</data:dataElementId>
+        <layout:hints/>
+      </com:detail>
+      <com:detail xsi:type="poms:valueComplexType" linkEnabled="false" overrideDictionaryValues="false" queryEnabled="false" valueEnabled="false">
+        <com:id>YATX8OB1SB2Yhc5oC3ao2A</com:id>
+        <com:elementType>oracle.communications.sce.poms.model.data.ValueElementDetail</com:elementType>
+        <data:dataElementId>RU_Size</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="specification:CharElementDetailType">
+        <com:id>pZXNN-mCS-OcLXiLHggnOw</com:id>
+        <com:elementType>oracle.communications.studio.inventory.model.data.StudioModelDataElementCharDetailType</com:elementType>
+        <data:dataElementId>RU_Size</data:dataElementId>
+        <specification:startTimestamp>0</specification:startTimestamp>
+        <specification:endTimestamp>0</specification:endTimestamp>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementTagDetails">
+        <com:id>ZEJ0b1FSTMSOHm+Up4ht6Q</com:id>
+        <com:elementType>oracle.communications.studio.model.tag.StudioModelTagDetails</com:elementType>
+        <data:dataElementId>RU_Size</data:dataElementId>
+        <data:tags>
+          <data:id>oracle.communications.studio.inventory.dataelement.characteristic</data:id>
+          <data:name>Characteristic</data:name>
+        </data:tags>
+      </com:detail>
+    </com:dataDictionaryDetails>
+  </com:dataDictionaryNode>
+  <com:dataDictionaryNode>
+    <com:entity>Cisco_Nexus_9372PX_E_Switch</com:entity>
+    <com:entityType>xsd</com:entityType>
+    <com:relationship>com.mslv.studio.core.data.dictionary.extension</com:relationship>
+    <com:element>PacketRate</com:element>
+    <com:elementType>anyType</com:elementType>
+    <com:baseElement>string</com:baseElement>
+    <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
+    <com:dataElementId>PacketRate</com:dataElementId>
+    <com:displayName lang="en"></com:displayName>
+    <com:displayName>Packet Rate</com:displayName>
+    <com:minCardinality>0</com:minCardinality>
+    <com:maxCardinality>1</com:maxCardinality>
+    <com:dataDictionaryDetails>
+      <com:detail xsi:type="data:dataElementCommonDetail">
+        <com:id>Qc+FNfiwQ+2-axMXiBk+xQ</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+        <data:dataElementId>PacketRate</data:dataElementId>
+        <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
+        <data:minLength>1</data:minLength>
+        <data:maxLength>-1</data:maxLength>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementEnumerationDetail">
+        <com:id>9vUi0XbmTQ+25mmaoadPmQ</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</com:elementType>
+        <data:dataElementId>PacketRate</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementInformationDetails">
+        <com:id>udRuAmhfRfyvsFUQJ20pag</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</com:elementType>
+        <data:dataElementId>PacketRate</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="layout:hintDetail">
+        <com:id>JKMnnwxrQrSE3K16eo-nAA</com:id>
+        <com:elementType>oracle.communications.sce.poms.model.data.UIHintsDetail</com:elementType>
+        <data:dataElementId>PacketRate</data:dataElementId>
+        <layout:hints/>
+      </com:detail>
+      <com:detail xsi:type="poms:valueComplexType" linkEnabled="false" overrideDictionaryValues="false" queryEnabled="false" valueEnabled="false">
+        <com:id>Uk3Um7S1SWOuOgTpXWYMzw</com:id>
+        <com:elementType>oracle.communications.sce.poms.model.data.ValueElementDetail</com:elementType>
+        <data:dataElementId>PacketRate</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="specification:CharElementDetailType">
+        <com:id>tVDjPa5aS8OZL6n+W9eC+w</com:id>
+        <com:elementType>oracle.communications.studio.inventory.model.data.StudioModelDataElementCharDetailType</com:elementType>
+        <data:dataElementId>PacketRate</data:dataElementId>
+        <specification:startTimestamp>0</specification:startTimestamp>
+        <specification:endTimestamp>0</specification:endTimestamp>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementTagDetails">
+        <com:id>7OByrcNYQjGr9bo4rHZTNQ</com:id>
+        <com:elementType>oracle.communications.studio.model.tag.StudioModelTagDetails</com:elementType>
+        <data:dataElementId>PacketRate</data:dataElementId>
+        <data:tags>
+          <data:id>oracle.communications.studio.inventory.dataelement.characteristic</data:id>
+          <data:name>Characteristic</data:name>
+        </data:tags>
+      </com:detail>
+    </com:dataDictionaryDetails>
+  </com:dataDictionaryNode>
+  <com:dataDictionaryNode>
+    <com:entity>Cisco_Nexus_9372PX_E_Switch</com:entity>
+    <com:entityType>xsd</com:entityType>
+    <com:relationship>com.mslv.studio.core.data.dictionary.extension</com:relationship>
+    <com:element>BandWidth</com:element>
+    <com:elementType>anyType</com:elementType>
+    <com:baseElement>string</com:baseElement>
+    <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
+    <com:dataElementId>BandWidth</com:dataElementId>
+    <com:displayName lang="en"></com:displayName>
+    <com:displayName>Band Width</com:displayName>
+    <com:minCardinality>0</com:minCardinality>
+    <com:maxCardinality>1</com:maxCardinality>
+    <com:dataDictionaryDetails>
+      <com:detail xsi:type="data:dataElementCommonDetail">
+        <com:id>EntIqw6TSzSKENeU8MbZWA</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+        <data:dataElementId>BandWidth</data:dataElementId>
+        <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
+        <data:minLength>1</data:minLength>
+        <data:maxLength>-1</data:maxLength>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementEnumerationDetail">
+        <com:id>I4J6bnxYSwiwRFMYPZ28Wg</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</com:elementType>
+        <data:dataElementId>BandWidth</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementInformationDetails">
+        <com:id>qVWQ6OuHRX6mVtm6Osgwxg</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</com:elementType>
+        <data:dataElementId>BandWidth</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="layout:hintDetail">
+        <com:id>UCJj4EOmRQqDM6LZpoUVSQ</com:id>
+        <com:elementType>oracle.communications.sce.poms.model.data.UIHintsDetail</com:elementType>
+        <data:dataElementId>BandWidth</data:dataElementId>
+        <layout:hints/>
+      </com:detail>
+      <com:detail xsi:type="poms:valueComplexType" linkEnabled="false" overrideDictionaryValues="false" queryEnabled="false" valueEnabled="false">
+        <com:id>tsoGl+BQRKakBvQ-w870Cw</com:id>
+        <com:elementType>oracle.communications.sce.poms.model.data.ValueElementDetail</com:elementType>
+        <data:dataElementId>BandWidth</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="specification:CharElementDetailType">
+        <com:id>zVlEoffrRU2Pa7F680bSig</com:id>
+        <com:elementType>oracle.communications.studio.inventory.model.data.StudioModelDataElementCharDetailType</com:elementType>
+        <data:dataElementId>BandWidth</data:dataElementId>
+        <specification:startTimestamp>0</specification:startTimestamp>
+        <specification:endTimestamp>0</specification:endTimestamp>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementTagDetails">
+        <com:id>1Ong7ky-STWjbxXobZ53yw</com:id>
+        <com:elementType>oracle.communications.studio.model.tag.StudioModelTagDetails</com:elementType>
+        <data:dataElementId>BandWidth</data:dataElementId>
+        <data:tags>
+          <data:id>oracle.communications.studio.inventory.dataelement.characteristic</data:id>
+          <data:name>Characteristic</data:name>
+        </data:tags>
+      </com:detail>
+    </com:dataDictionaryDetails>
+  </com:dataDictionaryNode>
+</com:modelEntity>
