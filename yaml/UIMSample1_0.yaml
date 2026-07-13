@@ -1,0 +1,154 @@
+openapi: 3.0.1
+
+info:
+  title: Port Reservation Feasibility API
+  description: |
+    Finds the nearest POP based on customer coordinates,
+    reserves the first available Physical Port,
+    creates an INFORMATIONAL Condition,
+    and returns Reservation details.
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:7001/uim-rest
+
+paths:
+
+  /physicalPorts/reserveFeasibility:
+
+    post:
+
+      tags:
+        - Physical Port
+
+      summary: Reserve a Physical Port for Feasibility
+
+      description: |
+        Finds the nearest POP using customer latitude and longitude.
+        Searches all Physical Devices in that POP.
+        Filters ports that are:
+          - Not Assigned
+          - Do not have any active Condition.
+        Reserves the first available port.
+        Creates an INFORMATIONAL Condition.
+        Returns Reservation Number and Port ID.
+
+      operationId: reserveFeasibilityPort
+
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ReservePortRequest'
+
+      responses:
+
+        '200':
+          description: Reservation completed successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReservePortResponse'
+
+        '400':
+          description: Invalid Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReservePortResponse'
+
+        '404':
+          description: No Free Port Available
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReservePortResponse'
+
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReservePortResponse'
+
+components:
+
+  schemas:
+
+    ReservePortRequest:
+
+      type: object
+
+      required:
+        - customerLatitude
+        - customerLongitude
+        - description
+
+      properties:
+
+        customerLatitude:
+          type: number
+          format: double
+          example: 17.44319536777247
+
+        customerLongitude:
+          type: number
+          format: double
+          example: 78.37898402212943
+
+        description:
+          type: string
+          example: Reserve Port for Feasibility
+
+
+    ReservePortResponse:
+
+      type: object
+
+      properties:
+
+        success:
+          type: boolean
+          example: true
+
+        description:
+          type: string
+          example: Reserved Successfully
+
+        reservationNumber:
+          type: integer
+          format: int64
+          example: 75001
+
+        resourceId:
+          type: string
+          example: "225006-225002"
+
+        physicalDevice:
+          type: string
+          example: cat8000v.cisco.com
+
+        popLocation:
+          type: string
+          example: 5A-MINDSPACE
+
+        reservationType:
+          type: string
+          example: SHORTTERM
+
+        reservedFor:
+          type: string
+          example: FEASIBILITY
+
+        reservedForType:
+          type: string
+          example: CUSTOMER
+
+        conditionType:
+          type: string
+          example: INFORMATIONAL
+
+        conditionReason:
+          type: string
+          example: "75001"
